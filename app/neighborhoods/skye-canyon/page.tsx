@@ -66,61 +66,61 @@ export default function SkyeCanyonPage() {
       />
       <Navbar />
       <main className="pt-24 pb-16">
-        <div className="container mx-auto px-4">
+        <div className="lmhy-container">
           {/* Breadcrumb */}
           <div className="max-w-6xl mx-auto mb-6">
-            <nav className="text-sm text-slate-500">
-              <Link href="/" className="hover:text-blue-600">Home</Link>
+            <nav className="text-sm text-lmhy-charcoal/60">
+              <Link href="/" className="hover:text-lmhy-coral">Home</Link>
               {" / "}
-              <Link href="/neighborhoods" className="hover:text-blue-600">Neighborhoods</Link>
+              <Link href="/neighborhoods" className="hover:text-lmhy-coral">Neighborhoods</Link>
               {" / "}
-              <span className="text-slate-900">Skye Canyon</span>
+              <span className="text-lmhy-charcoal">Skye Canyon</span>
             </nav>
           </div>
 
           {/* Hero */}
           <div className="max-w-4xl mx-auto text-center mb-16">
-            <div className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <div className="inline-block bg-lmhy-coral/10 text-lmhy-coral-dark px-4 py-2 rounded-full text-sm font-semibold mb-6">
               Berkshire Hathaway HomeServices Nevada Properties
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-lmhy-charcoal mb-6">
               Berkshire Hathaway HomeServices Skye Canyon
             </h1>
-            <p className="text-xl text-slate-600">
+            <p className="text-xl text-lmhy-charcoal/70">
               Northwest Las Vegas's fastest-growing community. Discover Skye Canyon with{" "}
               <strong>Berkshire Hathaway HomeServices</strong> and Dr. Jan Duffy.
             </p>
           </div>
 
           {/* Market Stats */}
-          <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
+          <section className="mb-16 bg-lmhy-charcoal text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-2xl font-bold mb-8 text-center">
               Skye Canyon Real Estate Market | January 2026
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-400 mb-1">$550,000</div>
-                <div className="text-slate-300 text-sm">Median Home Price</div>
+                <div className="text-3xl font-bold text-lmhy-gold mb-1">$550,000</div>
+                <div className="text-white/70 text-sm">Median Home Price</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-green-400 mb-1">21 Days</div>
-                <div className="text-slate-300 text-sm">Avg. Days on Market</div>
+                <div className="text-white/70 text-sm">Avg. Days on Market</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold mb-1">124</div>
-                <div className="text-slate-300 text-sm">Active Listings</div>
+                <div className="text-white/70 text-sm">Active Listings</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-green-400 mb-1">+5.5%</div>
-                <div className="text-slate-300 text-sm">YoY Appreciation</div>
+                <div className="text-white/70 text-sm">YoY Appreciation</div>
               </div>
             </div>
           </section>
 
           {/* Main Content */}
           <section className="mb-16 max-w-5xl mx-auto">
-            <div className="prose prose-lg max-w-none text-slate-700">
-              <h2 className="text-3xl font-bold text-slate-900 mb-6">
+            <div className="prose prose-lg max-w-none text-lmhy-charcoal/80">
+              <h2 className="text-3xl font-bold text-lmhy-charcoal mb-6">
                 Skye Canyon: Northwest Las Vegas's Most Exciting New Community
               </h2>
               <p>
@@ -148,26 +148,26 @@ export default function SkyeCanyonPage() {
               </p>
 
               {/* Community Highlights */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Community Highlights</h3>
+              <h3 className="text-2xl font-bold text-lmhy-charcoal mt-12 mb-6">Community Highlights</h3>
               <div className="grid md:grid-cols-2 gap-8 not-prose">
-                <div className="bg-slate-50 p-6 rounded-xl">
+                <div className="bg-lmhy-sand/20 p-6 rounded-xl">
                   <div className="flex items-center mb-4">
-                    <Users className="h-8 w-8 text-blue-600 mr-3" />
-                    <h4 className="font-bold text-slate-900 text-lg">Skye Center Amenities</h4>
+                    <Users className="h-8 w-8 text-lmhy-coral mr-3" />
+                    <h4 className="font-bold text-lmhy-charcoal text-lg">Skye Center Amenities</h4>
                   </div>
-                  <p className="text-slate-600">
+                  <p className="text-lmhy-charcoal/70">
                     Skye Center is the community's social hub, featuring resort-style pools, a modern
                     fitness center, sports courts, and community gathering spaces. The facility hosts
                     year-round events from outdoor movie nights to fitness classes, creating a vibrant
                     community atmosphere. Nothing else in northwest Las Vegas compares.
                   </p>
                 </div>
-                <div className="bg-slate-50 p-6 rounded-xl">
+                <div className="bg-lmhy-sand/20 p-6 rounded-xl">
                   <div className="flex items-center mb-4">
-                    <Mountain className="h-8 w-8 text-blue-600 mr-3" />
-                    <h4 className="font-bold text-slate-900 text-lg">Mountain Views & Open Space</h4>
+                    <Mountain className="h-8 w-8 text-lmhy-coral mr-3" />
+                    <h4 className="font-bold text-lmhy-charcoal text-lg">Mountain Views & Open Space</h4>
                   </div>
-                  <p className="text-slate-600">
+                  <p className="text-lmhy-charcoal/70">
                     Skye Canyon's position at the base of the mountains provides stunning views and
                     easy access to outdoor recreation. Adjacent Floyd Lamb Park offers 680 acres of
                     lakes, wildlife, and natural beauty. The community's trail system connects to
@@ -177,16 +177,16 @@ export default function SkyeCanyonPage() {
               </div>
 
               {/* Schools */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Skye Canyon Schools</h3>
-              <div className="not-prose bg-white border border-slate-200 rounded-xl p-6">
-                <p className="text-slate-700 mb-4">
+              <h3 className="text-2xl font-bold text-lmhy-charcoal mt-12 mb-6">Skye Canyon Schools</h3>
+              <div className="not-prose bg-white border border-lmhy-sand/60 rounded-xl p-6">
+                <p className="text-lmhy-charcoal/80 mb-4">
                   Skye Canyon features newer schools purpose-built for the community, plus access to
                   established northwest schools:
                 </p>
                 <div className="grid md:grid-cols-3 gap-4">
                   <div>
-                    <h5 className="font-bold text-slate-900 mb-2">Elementary</h5>
-                    <ul className="text-slate-600 text-sm space-y-1">
+                    <h5 className="font-bold text-lmhy-charcoal mb-2">Elementary</h5>
+                    <ul className="text-lmhy-charcoal/70 text-sm space-y-1">
                       <li>• Skye Canyon Elementary (New)</li>
                       <li>• Floyd Elementary</li>
                       <li>• Mabel Hoggard Elementary</li>
@@ -194,8 +194,8 @@ export default function SkyeCanyonPage() {
                     </ul>
                   </div>
                   <div>
-                    <h5 className="font-bold text-slate-900 mb-2">Middle & High</h5>
-                    <ul className="text-slate-600 text-sm space-y-1">
+                    <h5 className="font-bold text-lmhy-charcoal mb-2">Middle & High</h5>
+                    <ul className="text-lmhy-charcoal/70 text-sm space-y-1">
                       <li>• Shadow Ridge High School</li>
                       <li>• Arbor View High School</li>
                       <li>• Bilbray Middle School</li>
@@ -203,8 +203,8 @@ export default function SkyeCanyonPage() {
                     </ul>
                   </div>
                   <div>
-                    <h5 className="font-bold text-slate-900 mb-2">Charter/Private</h5>
-                    <ul className="text-slate-600 text-sm space-y-1">
+                    <h5 className="font-bold text-lmhy-charcoal mb-2">Charter/Private</h5>
+                    <ul className="text-lmhy-charcoal/70 text-sm space-y-1">
                       <li>• Pinecrest Academy</li>
                       <li>• Somerset Academy</li>
                       <li>• Coral Academy</li>
@@ -215,41 +215,41 @@ export default function SkyeCanyonPage() {
               </div>
 
               {/* Commute Times */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Commute Times from Skye Canyon</h3>
+              <h3 className="text-2xl font-bold text-lmhy-charcoal mt-12 mb-6">Commute Times from Skye Canyon</h3>
               <div className="not-prose overflow-x-auto">
-                <table className="w-full bg-white border border-slate-200 rounded-lg">
-                  <thead className="bg-slate-50">
+                <table className="w-full bg-white border border-lmhy-sand/60 rounded-lg">
+                  <thead className="bg-lmhy-sand/20">
                     <tr>
-                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Destination</th>
-                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Distance</th>
-                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Drive Time</th>
-                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Rush Hour</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold text-lmhy-charcoal">Destination</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold text-lmhy-charcoal">Distance</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold text-lmhy-charcoal">Drive Time</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold text-lmhy-charcoal">Rush Hour</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-slate-200">
                     <tr><td className="px-4 py-3">Downtown Summerlin</td><td className="px-4 py-3">8 miles</td><td className="px-4 py-3">15 min</td><td className="px-4 py-3">20-30 min</td></tr>
-                    <tr className="bg-slate-50"><td className="px-4 py-3">Las Vegas Strip</td><td className="px-4 py-3">18 miles</td><td className="px-4 py-3">25 min</td><td className="px-4 py-3">35-50 min</td></tr>
+                    <tr className="bg-lmhy-sand/20"><td className="px-4 py-3">Las Vegas Strip</td><td className="px-4 py-3">18 miles</td><td className="px-4 py-3">25 min</td><td className="px-4 py-3">35-50 min</td></tr>
                     <tr><td className="px-4 py-3">McCarran Airport (LAS)</td><td className="px-4 py-3">22 miles</td><td className="px-4 py-3">28 min</td><td className="px-4 py-3">40-55 min</td></tr>
-                    <tr className="bg-slate-50"><td className="px-4 py-3">Centennial Hills</td><td className="px-4 py-3">5 miles</td><td className="px-4 py-3">10 min</td><td className="px-4 py-3">12-18 min</td></tr>
+                    <tr className="bg-lmhy-sand/20"><td className="px-4 py-3">Centennial Hills</td><td className="px-4 py-3">5 miles</td><td className="px-4 py-3">10 min</td><td className="px-4 py-3">12-18 min</td></tr>
                     <tr><td className="px-4 py-3">Floyd Lamb Park</td><td className="px-4 py-3">Adjacent</td><td className="px-4 py-3">5 min</td><td className="px-4 py-3">5 min</td></tr>
                   </tbody>
                 </table>
               </div>
 
               {/* Builders */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Active Builders in Skye Canyon</h3>
+              <h3 className="text-2xl font-bold text-lmhy-charcoal mt-12 mb-6">Active Builders in Skye Canyon</h3>
               <div className="not-prose grid md:grid-cols-2 gap-6">
-                <div className="bg-slate-50 rounded-xl p-6">
-                  <h5 className="font-bold text-slate-900 mb-3">Premium Builders</h5>
-                  <ul className="text-slate-600 text-sm space-y-2">
+                <div className="bg-lmhy-sand/20 rounded-xl p-6">
+                  <h5 className="font-bold text-lmhy-charcoal mb-3">Premium Builders</h5>
+                  <ul className="text-lmhy-charcoal/70 text-sm space-y-2">
                     <li><strong>Toll Brothers:</strong> Luxury homes from $600K-$800K. Known for quality and customization.</li>
                     <li><strong>Woodside Homes:</strong> Mid-range to premium, $500K-$700K. Strong value.</li>
                     <li><strong>Shea Homes:</strong> Energy-efficient designs, $550K-$750K.</li>
                   </ul>
                 </div>
-                <div className="bg-slate-50 rounded-xl p-6">
-                  <h5 className="font-bold text-slate-900 mb-3">Value Builders</h5>
-                  <ul className="text-slate-600 text-sm space-y-2">
+                <div className="bg-lmhy-sand/20 rounded-xl p-6">
+                  <h5 className="font-bold text-lmhy-charcoal mb-3">Value Builders</h5>
+                  <ul className="text-lmhy-charcoal/70 text-sm space-y-2">
                     <li><strong>Lennar:</strong> Entry to mid-range, $450K-$600K. "Everything's Included" packages.</li>
                     <li><strong>KB Home:</strong> Energy Star certified, $420K-$550K. Customization options.</li>
                     <li><strong>Century Communities:</strong> Affordable entry points, $400K-$520K.</li>
@@ -258,11 +258,11 @@ export default function SkyeCanyonPage() {
               </div>
 
               {/* Amenities */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Skye Canyon Amenities</h3>
+              <h3 className="text-2xl font-bold text-lmhy-charcoal mt-12 mb-6">Skye Canyon Amenities</h3>
               <div className="not-prose grid md:grid-cols-2 gap-6">
-                <div className="bg-blue-50 border border-blue-200 rounded-xl p-6">
-                  <h5 className="font-bold text-slate-900 mb-3">Skye Center Features</h5>
-                  <ul className="text-slate-600 text-sm space-y-2">
+                <div className="bg-lmhy-coral/5 border border-blue-200 rounded-xl p-6">
+                  <h5 className="font-bold text-lmhy-charcoal mb-3">Skye Center Features</h5>
+                  <ul className="text-lmhy-charcoal/70 text-sm space-y-2">
                     <li>• Resort-style pool with cabanas</li>
                     <li>• Zero-entry family pool and splash pad</li>
                     <li>• Lap pool for fitness swimming</li>
@@ -272,8 +272,8 @@ export default function SkyeCanyonPage() {
                   </ul>
                 </div>
                 <div className="bg-green-50 border border-green-200 rounded-xl p-6">
-                  <h5 className="font-bold text-slate-900 mb-3">Outdoor Recreation</h5>
-                  <ul className="text-slate-600 text-sm space-y-2">
+                  <h5 className="font-bold text-lmhy-charcoal mb-3">Outdoor Recreation</h5>
+                  <ul className="text-lmhy-charcoal/70 text-sm space-y-2">
                     <li>• Floyd Lamb Park (680 acres adjacent)</li>
                     <li>• 10+ miles of community trails</li>
                     <li>• Multiple neighborhood parks</li>
@@ -304,15 +304,15 @@ export default function SkyeCanyonPage() {
 
           {/* Expert Quote */}
           <section className="mb-16 max-w-4xl mx-auto">
-            <div className="bg-blue-50 border-l-4 border-blue-600 rounded-lg p-8">
-              <blockquote className="text-lg text-slate-700 italic mb-4">
+            <div className="bg-lmhy-coral/5 border-l-4 border-lmhy-coral rounded-lg p-8">
+              <blockquote className="text-lg text-lmhy-charcoal/80 italic mb-4">
                 "Skye Canyon is where young families want to be right now. The amenities are incredible,
                 the homes are modern and energy-efficient, and the community vibe is exactly what people
                 are looking for. As a Berkshire Hathaway HomeServices agent, I make sure my clients get
                 the best value—whether that's negotiating builder upgrades or finding a resale with
                 features already included."
               </blockquote>
-              <cite className="text-slate-900 font-semibold">
+              <cite className="text-lmhy-charcoal font-semibold">
                 — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
               </cite>
             </div>
@@ -320,45 +320,45 @@ export default function SkyeCanyonPage() {
 
           {/* FAQ Section */}
           <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+            <h2 className="text-3xl font-bold text-lmhy-charcoal mb-8 text-center">
               Frequently Asked Questions About Skye Canyon
             </h2>
             <div className="space-y-6">
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
+              <div className="bg-white border border-lmhy-sand/60 rounded-lg p-6">
+                <h3 className="font-bold text-lmhy-charcoal mb-2">
                   What is the current median home price in Skye Canyon?
                 </h3>
-                <p className="text-slate-600">
+                <p className="text-lmhy-charcoal/70">
                   As of January 2026, Skye Canyon's median home price is $550,000, up 5.5% year-over-year.
                   New construction ranges from $450,000 to $800,000, while resales offer additional
                   options across all price points.
                 </p>
               </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
+              <div className="bg-white border border-lmhy-sand/60 rounded-lg p-6">
+                <h3 className="font-bold text-lmhy-charcoal mb-2">
                   What amenities does Skye Canyon offer?
                 </h3>
-                <p className="text-slate-600">
+                <p className="text-lmhy-charcoal/70">
                   Skye Canyon features Skye Center, a 15-acre amenity complex with resort-style pools,
                   fitness center, sports courts, and event spaces. The community also offers miles of
                   trails, parks, and is adjacent to Floyd Lamb Park.
                 </p>
               </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
+              <div className="bg-white border border-lmhy-sand/60 rounded-lg p-6">
+                <h3 className="font-bold text-lmhy-charcoal mb-2">
                   Is Skye Canyon good for families?
                 </h3>
-                <p className="text-slate-600">
+                <p className="text-lmhy-charcoal/70">
                   Yes, Skye Canyon is designed for families with new schools, extensive children's
                   amenities, community events, and safe neighborhoods. The community hosts family-friendly
                   events throughout the year at Skye Center.
                 </p>
               </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
+              <div className="bg-white border border-lmhy-sand/60 rounded-lg p-6">
+                <h3 className="font-bold text-lmhy-charcoal mb-2">
                   Why use Berkshire Hathaway HomeServices for Skye Canyon new construction?
                 </h3>
-                <p className="text-slate-600">
+                <p className="text-lmhy-charcoal/70">
                   BHHS provides free buyer representation on new construction purchases—the builder pays
                   our commission. Dr. Jan Duffy can negotiate upgrades, review contracts, and ensure
                   your interests are protected when builder sales agents work for the builder.
@@ -368,27 +368,27 @@ export default function SkyeCanyonPage() {
           </section>
 
           {/* CTA */}
-          <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
+          <section className="text-center bg-lmhy-coral text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Discover Skye Canyon Living
             </h2>
-            <p className="text-xl text-blue-100 mb-8">
+            <p className="text-xl text-white/85 mb-8">
               Contact Dr. Jan Duffy, your Berkshire Hathaway HomeServices Skye Canyon specialist,
               for expert guidance on new construction and resale homes.
             </p>
             <a
               href="tel:+17025001942"
-              className="inline-flex items-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
+              className="inline-flex items-center bg-white text-lmhy-coral px-8 py-4 rounded-md font-bold text-lg hover:bg-lmhy-cream transition-colors"
             >
               <Phone className="h-5 w-5 mr-2" />
               Call (702) 500-1942
             </a>
-            <p className="mt-4 text-blue-200 text-sm">
+            <p className="mt-4 text-white/70 text-sm">
               Berkshire Hathaway HomeServices Nevada Properties
             </p>
           </section>
         </div>
-        <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
+        <div className="text-center text-sm text-lmhy-charcoal/60 mt-8">Last Updated: January 2026</div>
       </main>
       <RealScoutListings />
       <Footer />

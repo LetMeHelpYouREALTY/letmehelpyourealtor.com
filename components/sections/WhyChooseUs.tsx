@@ -1,67 +1,67 @@
-import { Shield, TrendingUp, Users, Award, Clock, Home } from "lucide-react";
+import { Shield, TrendingUp, Users, Award, Clock, HeartHandshake } from "lucide-react";
 
 const features = [
   {
+    icon: HeartHandshake,
+    title: "Let Me Help You",
+    description:
+      "Personal, direct access to Dr. Jan — not a call center. Your goals drive every recommendation.",
+  },
+  {
     icon: Shield,
-    title: "Trusted Expertise",
-    description: "Serving Las Vegas and Henderson since 2008 with proven results.",
+    title: "BHHS Trust",
+    description:
+      "Backed by Berkshire Hathaway HomeServices — ethical standards and global referral network.",
   },
   {
     icon: TrendingUp,
-    title: "Market Knowledge",
-    description: "Deep understanding of local market trends and neighborhood insights.",
+    title: "June 2026 Market Intel",
+    description:
+      "Pricing, concessions, and inventory data updated for today's balanced Clark County market.",
   },
   {
     icon: Users,
-    title: "Personalized Service",
-    description: "Dedicated attention to every client with customized solutions.",
+    title: "Hyperlocal Knowledge",
+    description:
+      "Summerlin to Henderson, Skye Canyon to Southern Highlands — neighborhood-level expertise.",
   },
   {
     icon: Award,
     title: "Proven Results",
-    description: "500+ successful transactions and satisfied clients.",
+    description: "$127M+ closed · 500+ families · serving Las Vegas since 2008.",
   },
   {
     icon: Clock,
     title: "Responsive",
-    description: "Quick response times and seamless communication throughout.",
-  },
-  {
-    icon: Home,
-    title: "Full Service",
-    description: "Complete support from search to closing and beyond.",
+    description: "I answer my own phone. Quick responses when timelines matter.",
   },
 ];
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-16 md:py-24 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
-            Why Choose Us
+    <section className="lmhy-section bg-lmhy-cream">
+      <div className="lmhy-container">
+        <div className="text-center mb-12 max-w-2xl mx-auto">
+          <span className="lmhy-badge mb-4">Why Dr. Jan</span>
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-lmhy-charcoal mb-4">
+            Why Let Me Help You?
           </h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Experience the difference of working with a trusted real estate professional
+          <p className="text-lg text-lmhy-charcoal/70">
+            In a market with 30,000+ licensed agents, you need someone who combines hyperlocal
+            knowledge with the resources to actually help you win.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {features.map((feature) => {
-            const Icon = feature.icon;
-            return (
-              <div
-                key={feature.title}
-                className="flex flex-col items-center text-center p-6 rounded-lg hover:bg-slate-50 transition-colors"
-              >
-                <div className="bg-blue-100 rounded-full p-4 mb-4">
-                  <Icon className="h-8 w-8 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-2">{feature.title}</h3>
-                <p className="text-slate-600">{feature.description}</p>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          {features.map(({ icon: Icon, title, description }) => (
+            <div key={title} className="lmhy-card text-center">
+              <div className="bg-lmhy-sage/15 rounded-full p-4 w-14 h-14 mx-auto mb-4 flex items-center justify-center">
+                <Icon className="h-7 w-7 text-lmhy-sage" />
               </div>
-            );
-          })}
+              <h3 className="font-display font-bold text-lg text-lmhy-charcoal mb-2">{title}</h3>
+              <p className="text-sm text-lmhy-charcoal/70">{description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

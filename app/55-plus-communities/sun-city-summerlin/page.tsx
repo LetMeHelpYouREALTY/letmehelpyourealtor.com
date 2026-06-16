@@ -15,8 +15,9 @@ import {
   CheckCircle,
 } from "lucide-react";
 import type { Metadata } from "next";
+import { withPageCanonical } from "@/lib/page-metadata";
 
-export const metadata: Metadata = {
+const pageMetadata: Metadata = {
   title: "Sun City Summerlin Homes for Sale | Berkshire Hathaway HomeServices",
   description:
     "Nevada's largest 55+ community. Sun City Summerlin homes from $320K-$850K. 3 golf courses, 4 rec centers, 100+ clubs. Dr. Jan Duffy, BHHS specialist. Call (702) 500-1942.",
@@ -28,6 +29,8 @@ export const metadata: Metadata = {
     "Berkshire Hathaway Sun City",
   ],
 };
+
+export const metadata = withPageCanonical(pageMetadata, "/55-plus-communities/sun-city-summerlin");
 
 const communitySchema = {
   "@context": "https://schema.org",
@@ -56,15 +59,15 @@ export default function SunCitySummerlinPage() {
       />
       <Navbar />
       <main className="pt-24 pb-16">
-        <div className="container mx-auto px-4">
+        <div className="lmhy-container">
           {/* Breadcrumb */}
           <div className="max-w-6xl mx-auto mb-6">
-            <nav className="text-sm text-slate-500">
-              <Link href="/" className="hover:text-blue-600">Home</Link>
+            <nav className="text-sm text-lmhy-charcoal/60">
+              <Link href="/" className="hover:text-lmhy-coral">Home</Link>
               {" / "}
-              <Link href="/55-plus-communities" className="hover:text-blue-600">55+ Communities</Link>
+              <Link href="/55-plus-communities" className="hover:text-lmhy-coral">55+ Communities</Link>
               {" / "}
-              <span className="text-slate-900">Sun City Summerlin</span>
+              <span className="text-lmhy-charcoal">Sun City Summerlin</span>
             </nav>
           </div>
 
@@ -74,43 +77,43 @@ export default function SunCitySummerlinPage() {
               <Trophy className="h-4 w-4 mr-2" />
               Nevada's Largest 55+ Community
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-lmhy-charcoal mb-6">
               Sun City Summerlin
             </h1>
-            <p className="text-xl text-slate-600">
+            <p className="text-xl text-lmhy-charcoal/70">
               7,700+ homes. 3 golf courses. 4 recreation centers. The gold standard of active adult living.
             </p>
           </div>
 
           {/* Quick Stats */}
-          <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
+          <section className="mb-16 bg-lmhy-charcoal text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-2xl font-bold mb-8 text-center">
               Sun City Summerlin at a Glance
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="text-3xl font-bold text-amber-400 mb-1">$320K-$850K</div>
-                <div className="text-slate-300 text-sm">Price Range</div>
+                <div className="text-white/70 text-sm">Price Range</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-amber-400 mb-1">$155-$195</div>
-                <div className="text-slate-300 text-sm">Monthly HOA</div>
+                <div className="text-white/70 text-sm">Monthly HOA</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold mb-1">7,700+</div>
-                <div className="text-slate-300 text-sm">Homes</div>
+                <div className="text-white/70 text-sm">Homes</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-green-400 mb-1">55+</div>
-                <div className="text-slate-300 text-sm">Age Requirement</div>
+                <div className="text-white/70 text-sm">Age Requirement</div>
               </div>
             </div>
           </section>
 
           {/* About */}
           <section className="mb-16 max-w-4xl mx-auto">
-            <div className="prose prose-lg max-w-none text-slate-700">
-              <h2 className="text-3xl font-bold text-slate-900 mb-6">
+            <div className="prose prose-lg max-w-none text-lmhy-charcoal/80">
+              <h2 className="text-3xl font-bold text-lmhy-charcoal mb-6">
                 About Sun City Summerlin
               </h2>
               <p>
@@ -137,40 +140,40 @@ export default function SunCitySummerlinPage() {
 
           {/* Amenities */}
           <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+            <h2 className="text-3xl font-bold text-lmhy-charcoal mb-8 text-center">
               World-Class Amenities
             </h2>
             <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-white border border-slate-200 rounded-xl p-6">
+              <div className="bg-white border border-lmhy-sand/60 rounded-xl p-6">
                 <div className="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
                   <Trophy className="h-6 w-6 text-green-600" />
                 </div>
-                <h3 className="font-bold text-slate-900 mb-2">3 Golf Courses</h3>
-                <ul className="text-slate-600 text-sm space-y-1">
+                <h3 className="font-bold text-lmhy-charcoal mb-2">3 Golf Courses</h3>
+                <ul className="text-lmhy-charcoal/70 text-sm space-y-1">
                   <li>• Highland Falls (executive)</li>
                   <li>• Palm Valley (championship)</li>
                   <li>• Eagle Crest (championship)</li>
                   <li>• Affordable resident rates</li>
                 </ul>
               </div>
-              <div className="bg-white border border-slate-200 rounded-xl p-6">
-                <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                  <Dumbbell className="h-6 w-6 text-blue-600" />
+              <div className="bg-white border border-lmhy-sand/60 rounded-xl p-6">
+                <div className="bg-lmhy-coral/10 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                  <Dumbbell className="h-6 w-6 text-lmhy-coral" />
                 </div>
-                <h3 className="font-bold text-slate-900 mb-2">4 Recreation Centers</h3>
-                <ul className="text-slate-600 text-sm space-y-1">
+                <h3 className="font-bold text-lmhy-charcoal mb-2">4 Recreation Centers</h3>
+                <ul className="text-lmhy-charcoal/70 text-sm space-y-1">
                   <li>• Mountain Shadows</li>
                   <li>• Sun Shadows</li>
                   <li>• Pinnacle</li>
                   <li>• Desert Vista</li>
                 </ul>
               </div>
-              <div className="bg-white border border-slate-200 rounded-xl p-6">
+              <div className="bg-white border border-lmhy-sand/60 rounded-xl p-6">
                 <div className="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
                   <Users className="h-6 w-6 text-purple-600" />
                 </div>
-                <h3 className="font-bold text-slate-900 mb-2">100+ Clubs & Activities</h3>
-                <ul className="text-slate-600 text-sm space-y-1">
+                <h3 className="font-bold text-lmhy-charcoal mb-2">100+ Clubs & Activities</h3>
+                <ul className="text-lmhy-charcoal/70 text-sm space-y-1">
                   <li>• Sports leagues</li>
                   <li>• Arts & crafts</li>
                   <li>• Travel groups</li>
@@ -181,57 +184,57 @@ export default function SunCitySummerlinPage() {
           </section>
 
           {/* Neighborhoods */}
-          <section className="mb-16 bg-slate-50 rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
+          <section className="mb-16 bg-lmhy-sand/20 rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
+            <h2 className="text-3xl font-bold text-lmhy-charcoal mb-6 text-center">
               Sun City Summerlin Neighborhoods
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-white rounded-xl p-6 border border-slate-200">
-                <h3 className="font-bold text-slate-900 mb-2">The Highlands</h3>
-                <p className="text-slate-600 text-sm mb-3">
+              <div className="bg-white rounded-xl p-6 border border-lmhy-sand/60">
+                <h3 className="font-bold text-lmhy-charcoal mb-2">The Highlands</h3>
+                <p className="text-lmhy-charcoal/70 text-sm mb-3">
                   Original section with mature landscaping. Walking distance to Highland Falls golf
                   and Mountain Shadows rec center. Homes $320K-$500K.
                 </p>
-                <div className="text-xs text-slate-500">Best for: Golf lovers, budget-conscious buyers</div>
+                <div className="text-xs text-lmhy-charcoal/60">Best for: Golf lovers, budget-conscious buyers</div>
               </div>
-              <div className="bg-white rounded-xl p-6 border border-slate-200">
-                <h3 className="font-bold text-slate-900 mb-2">Sun Terrace</h3>
-                <p className="text-slate-600 text-sm mb-3">
+              <div className="bg-white rounded-xl p-6 border border-lmhy-sand/60">
+                <h3 className="font-bold text-lmhy-charcoal mb-2">Sun Terrace</h3>
+                <p className="text-lmhy-charcoal/70 text-sm mb-3">
                   Elevated homes with Strip and mountain views. Near Sun Shadows rec center.
                   Premium lots command $450K-$700K.
                 </p>
-                <div className="text-xs text-slate-500">Best for: View seekers, larger homes</div>
+                <div className="text-xs text-lmhy-charcoal/60">Best for: View seekers, larger homes</div>
               </div>
-              <div className="bg-white rounded-xl p-6 border border-slate-200">
-                <h3 className="font-bold text-slate-900 mb-2">Eagle Crest</h3>
-                <p className="text-slate-600 text-sm mb-3">
+              <div className="bg-white rounded-xl p-6 border border-lmhy-sand/60">
+                <h3 className="font-bold text-lmhy-charcoal mb-2">Eagle Crest</h3>
+                <p className="text-lmhy-charcoal/70 text-sm mb-3">
                   Newer section (2000s) with updated floor plans. Adjacent to Eagle Crest golf course.
                   Homes $400K-$650K.
                 </p>
-                <div className="text-xs text-slate-500">Best for: Modern amenities, golf course views</div>
+                <div className="text-xs text-lmhy-charcoal/60">Best for: Modern amenities, golf course views</div>
               </div>
-              <div className="bg-white rounded-xl p-6 border border-slate-200">
-                <h3 className="font-bold text-slate-900 mb-2">Pinnacle/Del Webb</h3>
-                <p className="text-slate-600 text-sm mb-3">
+              <div className="bg-white rounded-xl p-6 border border-lmhy-sand/60">
+                <h3 className="font-bold text-lmhy-charcoal mb-2">Pinnacle/Del Webb</h3>
+                <p className="text-lmhy-charcoal/70 text-sm mb-3">
                   Premium custom and semi-custom homes. Largest lots, highest elevations, best views.
                   $600K-$850K+.
                 </p>
-                <div className="text-xs text-slate-500">Best for: Luxury buyers, privacy</div>
+                <div className="text-xs text-lmhy-charcoal/60">Best for: Luxury buyers, privacy</div>
               </div>
             </div>
           </section>
 
           {/* Why Choose */}
           <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+            <h2 className="text-3xl font-bold text-lmhy-charcoal mb-8 text-center">
               Why Buyers Choose Sun City Summerlin
             </h2>
             <div className="space-y-4">
               <div className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                 <div>
-                  <strong className="text-slate-900">Lowest HOA fees in Las Vegas 55+ market</strong>
-                  <p className="text-slate-600 text-sm">
+                  <strong className="text-lmhy-charcoal">Lowest HOA fees in Las Vegas 55+ market</strong>
+                  <p className="text-lmhy-charcoal/70 text-sm">
                     $155-$195/month includes all amenities—significantly less than newer communities
                   </p>
                 </div>
@@ -239,8 +242,8 @@ export default function SunCitySummerlinPage() {
               <div className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                 <div>
-                  <strong className="text-slate-900">Established community with mature landscaping</strong>
-                  <p className="text-slate-600 text-sm">
+                  <strong className="text-lmhy-charcoal">Established community with mature landscaping</strong>
+                  <p className="text-lmhy-charcoal/70 text-sm">
                     No construction noise, trees and vegetation fully grown, neighborhood character established
                   </p>
                 </div>
@@ -248,8 +251,8 @@ export default function SunCitySummerlinPage() {
               <div className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                 <div>
-                  <strong className="text-slate-900">Proximity to Red Rock Canyon and Summerlin amenities</strong>
-                  <p className="text-slate-600 text-sm">
+                  <strong className="text-lmhy-charcoal">Proximity to Red Rock Canyon and Summerlin amenities</strong>
+                  <p className="text-lmhy-charcoal/70 text-sm">
                     Downtown Summerlin shopping and dining minutes away, hiking trails nearby
                   </p>
                 </div>
@@ -257,8 +260,8 @@ export default function SunCitySummerlinPage() {
               <div className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                 <div>
-                  <strong className="text-slate-900">Mountain View Hospital on property</strong>
-                  <p className="text-slate-600 text-sm">
+                  <strong className="text-lmhy-charcoal">Mountain View Hospital on property</strong>
+                  <p className="text-lmhy-charcoal/70 text-sm">
                     Full-service hospital adjacent to community—peace of mind for residents
                   </p>
                 </div>
@@ -268,15 +271,15 @@ export default function SunCitySummerlinPage() {
 
           {/* Expert Quote */}
           <section className="mb-16 max-w-4xl mx-auto">
-            <div className="bg-blue-50 border-l-4 border-blue-600 rounded-r-xl p-8">
-              <blockquote className="text-lg text-slate-700 italic mb-4">
+            <div className="bg-lmhy-coral/5 border-l-4 border-lmhy-coral rounded-r-xl p-8">
+              <blockquote className="text-lg text-lmhy-charcoal/80 italic mb-4">
                 "Sun City Summerlin offers the best value in Las Vegas 55+ living. Where else can
                 you get three golf courses, four rec centers, and 100+ clubs for under $200/month?
                 As a <strong>Berkshire Hathaway HomeServices</strong> agent, I help buyers navigate
                 the community's various neighborhoods to find the perfect fit—whether they want
                 golf course views, mountain views, or proximity to their favorite rec center."
               </blockquote>
-              <cite className="text-slate-900 font-semibold">
+              <cite className="text-lmhy-charcoal font-semibold">
                 — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
               </cite>
             </div>
@@ -308,7 +311,7 @@ export default function SunCitySummerlinPage() {
             </div>
           </section>
         </div>
-        <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
+        <div className="text-center text-sm text-lmhy-charcoal/60 mt-8">Last Updated: January 2026</div>
       </main>
       <RealScoutListings />
       <Footer />

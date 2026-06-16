@@ -5,8 +5,9 @@ import CalendlyWidget from "@/components/calendly/CalendlyWidget";
 import Link from "next/link";
 import { Phone, CheckCircle, Home, TrendingUp, MapPin, Calculator, Clock, DollarSign } from "lucide-react";
 import type { Metadata } from "next";
+import { withPageCanonical } from "@/lib/page-metadata";
 
-export const metadata: Metadata = {
+const pageMetadata: Metadata = {
   title: "Free Home Valuation Las Vegas | What's Your Home Worth? | Berkshire Hathaway HomeServices",
   description:
     "Get a free, accurate home valuation in Las Vegas from Dr. Jan Duffy at Berkshire Hathaway HomeServices. Expert CMA analysis for Summerlin, Henderson, Green Valley & all Las Vegas neighborhoods. Call (702) 500-1942.",
@@ -20,6 +21,8 @@ export const metadata: Metadata = {
     "Henderson home value",
   ],
 };
+
+export const metadata = withPageCanonical(pageMetadata, "/home-valuation");
 
 // FAQ Schema for SEO
 const faqSchema = {
@@ -70,27 +73,27 @@ export default function HomeValuationPage() {
       />
       <Navbar />
       <main className="pt-24 pb-16">
-        <div className="container mx-auto px-4">
+        <div className="lmhy-container">
           {/* Breadcrumb */}
           <div className="max-w-6xl mx-auto mb-6">
-            <nav className="text-sm text-slate-500">
-              <Link href="/" className="hover:text-blue-600">Home</Link>
+            <nav className="text-sm text-lmhy-charcoal/60">
+              <Link href="/" className="hover:text-lmhy-coral">Home</Link>
               {" / "}
-              <Link href="/sellers" className="hover:text-blue-600">Sellers</Link>
+              <Link href="/sellers" className="hover:text-lmhy-coral">Sellers</Link>
               {" / "}
-              <span className="text-slate-900">Home Valuation</span>
+              <span className="text-lmhy-charcoal">Home Valuation</span>
             </nav>
           </div>
 
           {/* Hero */}
           <div className="max-w-4xl mx-auto text-center mb-16">
-            <div className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <div className="inline-block bg-lmhy-coral/10 text-lmhy-coral-dark px-4 py-2 rounded-full text-sm font-semibold mb-6">
               Berkshire Hathaway HomeServices Nevada Properties
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-lmhy-charcoal mb-6">
               What's Your Las Vegas Home Worth?
             </h1>
-            <p className="text-xl text-slate-600">
+            <p className="text-xl text-lmhy-charcoal/70">
               Get a free, no-obligation home valuation from Dr. Jan Duffy at{" "}
               <strong>Berkshire Hathaway HomeServices</strong>. Accurate pricing backed by 17+ years
               of Las Vegas market expertise and $127M+ in closed transactions.
@@ -99,15 +102,15 @@ export default function HomeValuationPage() {
 
           <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto mb-16">
             {/* Calendly Widget */}
-            <div className="bg-white border border-slate-200 rounded-lg overflow-hidden">
-              <div className="bg-blue-600 text-white p-4 text-center">
+            <div className="bg-white border border-lmhy-sand/60 rounded-lg overflow-hidden">
+              <div className="bg-lmhy-coral text-white p-4 text-center">
                 <h2 className="text-2xl font-bold">Schedule Your Free Valuation</h2>
-                <p className="text-blue-100 text-sm mt-1">
+                <p className="text-white/85 text-sm mt-1">
                   Book a consultation with Dr. Jan Duffy
                 </p>
               </div>
               <CalendlyWidget url="showing" height="650px" />
-              <p className="text-xs text-slate-500 text-center p-4 border-t border-slate-200">
+              <p className="text-xs text-lmhy-charcoal/60 text-center p-4 border-t border-lmhy-sand/60">
                 No obligation. No pressure. Just accurate information from Berkshire Hathaway
                 HomeServices.
               </p>
@@ -115,9 +118,9 @@ export default function HomeValuationPage() {
 
             {/* Value Prop */}
             <div className="space-y-8">
-              <div className="bg-slate-900 text-white rounded-lg p-8">
+              <div className="bg-lmhy-charcoal text-white rounded-lg p-8">
                 <h2 className="text-2xl font-bold mb-4">Why Request a BHHS Valuation?</h2>
-                <p className="text-slate-300 mb-6">
+                <p className="text-white/70 mb-6">
                   Online estimators like Zillow's "Zestimate" can be off by 10% or more—that's
                   $45,000+ on a typical Las Vegas home. Dr. Jan Duffy provides a comprehensive
                   market analysis using current MLS data, recent comparable sales, and her expertise
@@ -141,46 +144,46 @@ export default function HomeValuationPage() {
               </div>
 
               {/* Market Stats */}
-              <div className="bg-blue-50 rounded-lg p-8">
-                <h3 className="font-bold text-slate-900 mb-4">Las Vegas Market | January 2026</h3>
+              <div className="bg-lmhy-coral/5 rounded-lg p-8">
+                <h3 className="font-bold text-lmhy-charcoal mb-4">Las Vegas Market | January 2026</h3>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-blue-600">$450K</div>
-                    <div className="text-sm text-slate-600">Median Home Price</div>
+                    <div className="text-2xl font-bold text-lmhy-coral">$450K</div>
+                    <div className="text-sm text-lmhy-charcoal/70">Median Home Price</div>
                   </div>
                   <div className="text-center">
                     <div className="text-2xl font-bold text-green-600">+4.2%</div>
-                    <div className="text-sm text-slate-600">YoY Appreciation</div>
+                    <div className="text-sm text-lmhy-charcoal/70">YoY Appreciation</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-blue-600">28 Days</div>
-                    <div className="text-sm text-slate-600">Avg. Days on Market</div>
+                    <div className="text-2xl font-bold text-lmhy-coral">28 Days</div>
+                    <div className="text-sm text-lmhy-charcoal/70">Avg. Days on Market</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-blue-600">2.1 Mo</div>
-                    <div className="text-sm text-slate-600">Inventory</div>
+                    <div className="text-2xl font-bold text-lmhy-coral">2.1 Mo</div>
+                    <div className="text-sm text-lmhy-charcoal/70">Inventory</div>
                   </div>
                 </div>
               </div>
 
               {/* Expert Quote */}
-              <div className="bg-slate-50 rounded-lg p-6">
-                <blockquote className="text-slate-700 italic mb-3">
+              <div className="bg-lmhy-sand/20 rounded-lg p-6">
+                <blockquote className="text-lmhy-charcoal/80 italic mb-3">
                   "Pricing your home correctly from day one is the single most important factor in
                   getting top dollar. That's why I use comprehensive market analysis—not just
                   algorithms—to determine your home's true value."
                 </blockquote>
-                <cite className="text-slate-900 font-semibold text-sm">
+                <cite className="text-lmhy-charcoal font-semibold text-sm">
                   — Dr. Jan Duffy, BHHS Nevada Properties
                 </cite>
               </div>
 
               {/* Call Option */}
               <div className="text-center">
-                <p className="text-slate-600 mb-4">Prefer to talk? Call Dr. Jan directly:</p>
+                <p className="text-lmhy-charcoal/70 mb-4">Prefer to talk? Call Dr. Jan directly:</p>
                 <a
                   href="tel:+17025001942"
-                  className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-bold transition-colors"
+                  className="inline-flex items-center bg-lmhy-coral hover:bg-lmhy-coral-dark text-white px-6 py-3 rounded-md font-bold transition-colors"
                 >
                   <Phone className="h-5 w-5 mr-2" />
                   (702) 500-1942
@@ -191,10 +194,10 @@ export default function HomeValuationPage() {
 
           {/* Why Online Estimates Fall Short */}
           <section className="max-w-5xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+            <h2 className="text-3xl font-bold text-lmhy-charcoal mb-8 text-center">
               Why Online Home Value Estimates Often Miss the Mark
             </h2>
-            <div className="prose prose-lg max-w-none text-slate-700">
+            <div className="prose prose-lg max-w-none text-lmhy-charcoal/80">
               <p>
                 If you've checked Zillow, Redfin, or other online home value tools, you've likely
                 noticed the estimates can vary wildly—sometimes by $50,000 or more. That's because
@@ -272,55 +275,55 @@ export default function HomeValuationPage() {
           </section>
 
           {/* Factors Affecting Value */}
-          <section className="max-w-5xl mx-auto mb-16 bg-slate-50 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+          <section className="max-w-5xl mx-auto mb-16 bg-lmhy-sand/20 rounded-2xl p-8 md:p-12">
+            <h2 className="text-3xl font-bold text-lmhy-charcoal mb-8 text-center">
               Key Factors That Affect Your Las Vegas Home's Value
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="bg-white rounded-lg p-6 shadow-sm">
-                <MapPin className="h-8 w-8 text-blue-600 mb-4" />
-                <h3 className="font-bold text-slate-900 mb-2">Location & Neighborhood</h3>
-                <p className="text-slate-600 text-sm">
+                <MapPin className="h-8 w-8 text-lmhy-coral mb-4" />
+                <h3 className="font-bold text-lmhy-charcoal mb-2">Location & Neighborhood</h3>
+                <p className="text-lmhy-charcoal/70 text-sm">
                   Summerlin commands 20-40% premiums over comparable homes in other areas. School
                   zones, HOA quality, and proximity to amenities significantly impact value.
                 </p>
               </div>
               <div className="bg-white rounded-lg p-6 shadow-sm">
-                <Home className="h-8 w-8 text-blue-600 mb-4" />
-                <h3 className="font-bold text-slate-900 mb-2">Size & Layout</h3>
-                <p className="text-slate-600 text-sm">
+                <Home className="h-8 w-8 text-lmhy-coral mb-4" />
+                <h3 className="font-bold text-lmhy-charcoal mb-2">Size & Layout</h3>
+                <p className="text-lmhy-charcoal/70 text-sm">
                   Square footage, bedroom/bathroom count, and functional floor plans matter. Open
                   concepts and first-floor master suites command premiums in today's market.
                 </p>
               </div>
               <div className="bg-white rounded-lg p-6 shadow-sm">
-                <TrendingUp className="h-8 w-8 text-blue-600 mb-4" />
-                <h3 className="font-bold text-slate-900 mb-2">Upgrades & Condition</h3>
-                <p className="text-slate-600 text-sm">
+                <TrendingUp className="h-8 w-8 text-lmhy-coral mb-4" />
+                <h3 className="font-bold text-lmhy-charcoal mb-2">Upgrades & Condition</h3>
+                <p className="text-lmhy-charcoal/70 text-sm">
                   Updated kitchens and bathrooms return 60-80% of investment. Flooring, paint,
                   fixtures, and overall maintenance affect buyer perception and offers.
                 </p>
               </div>
               <div className="bg-white rounded-lg p-6 shadow-sm">
-                <DollarSign className="h-8 w-8 text-blue-600 mb-4" />
-                <h3 className="font-bold text-slate-900 mb-2">Market Conditions</h3>
-                <p className="text-slate-600 text-sm">
+                <DollarSign className="h-8 w-8 text-lmhy-coral mb-4" />
+                <h3 className="font-bold text-lmhy-charcoal mb-2">Market Conditions</h3>
+                <p className="text-lmhy-charcoal/70 text-sm">
                   Interest rates, inventory levels, and seasonal demand fluctuate. January 2026
                   shows 2.1 months inventory—still a seller's market but more balanced than 2021-2022.
                 </p>
               </div>
               <div className="bg-white rounded-lg p-6 shadow-sm">
-                <Calculator className="h-8 w-8 text-blue-600 mb-4" />
-                <h3 className="font-bold text-slate-900 mb-2">Lot Characteristics</h3>
-                <p className="text-slate-600 text-sm">
+                <Calculator className="h-8 w-8 text-lmhy-coral mb-4" />
+                <h3 className="font-bold text-lmhy-charcoal mb-2">Lot Characteristics</h3>
+                <p className="text-lmhy-charcoal/70 text-sm">
                   Lot size, views, privacy, and outdoor features like pools add 5-15% to value.
                   Corner lots, cul-de-sacs, and premium positions command higher prices.
                 </p>
               </div>
               <div className="bg-white rounded-lg p-6 shadow-sm">
-                <Clock className="h-8 w-8 text-blue-600 mb-4" />
-                <h3 className="font-bold text-slate-900 mb-2">Age & Systems</h3>
-                <p className="text-slate-600 text-sm">
+                <Clock className="h-8 w-8 text-lmhy-coral mb-4" />
+                <h3 className="font-bold text-lmhy-charcoal mb-2">Age & Systems</h3>
+                <p className="text-lmhy-charcoal/70 text-sm">
                   Newer homes (built 2015+) often sell for more per square foot. However, older
                   homes with updated HVAC, roof, and electrical can compete effectively.
                 </p>
@@ -330,17 +333,17 @@ export default function HomeValuationPage() {
 
           {/* Neighborhood Values */}
           <section className="max-w-5xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+            <h2 className="text-3xl font-bold text-lmhy-charcoal mb-8 text-center">
               Las Vegas Neighborhood Home Values | January 2026
             </h2>
             <div className="overflow-x-auto">
-              <table className="w-full bg-white border border-slate-200 rounded-lg">
-                <thead className="bg-slate-50">
+              <table className="w-full bg-white border border-lmhy-sand/60 rounded-lg">
+                <thead className="bg-lmhy-sand/20">
                   <tr>
-                    <th className="px-6 py-3 text-left text-sm font-semibold text-slate-900">Neighborhood</th>
-                    <th className="px-6 py-3 text-left text-sm font-semibold text-slate-900">Median Price</th>
-                    <th className="px-6 py-3 text-left text-sm font-semibold text-slate-900">YoY Change</th>
-                    <th className="px-6 py-3 text-left text-sm font-semibold text-slate-900">Avg $/SqFt</th>
+                    <th className="px-6 py-3 text-left text-sm font-semibold text-lmhy-charcoal">Neighborhood</th>
+                    <th className="px-6 py-3 text-left text-sm font-semibold text-lmhy-charcoal">Median Price</th>
+                    <th className="px-6 py-3 text-left text-sm font-semibold text-lmhy-charcoal">YoY Change</th>
+                    <th className="px-6 py-3 text-left text-sm font-semibold text-lmhy-charcoal">Avg $/SqFt</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -352,32 +355,32 @@ export default function HomeValuationPage() {
                     { area: "North Las Vegas", price: "$385,000", change: "+3.2%", sqft: "$210" },
                     { area: "Centennial Hills", price: "$495,000", change: "+4.8%", sqft: "$240" },
                   ].map((row, index) => (
-                    <tr key={row.area} className={index % 2 === 0 ? "bg-white" : "bg-slate-50"}>
-                      <td className="px-6 py-4 font-medium text-slate-900">{row.area}</td>
-                      <td className="px-6 py-4 text-slate-700">{row.price}</td>
+                    <tr key={row.area} className={index % 2 === 0 ? "bg-white" : "bg-lmhy-sand/20"}>
+                      <td className="px-6 py-4 font-medium text-lmhy-charcoal">{row.area}</td>
+                      <td className="px-6 py-4 text-lmhy-charcoal/80">{row.price}</td>
                       <td className="px-6 py-4 text-green-600 font-medium">{row.change}</td>
-                      <td className="px-6 py-4 text-slate-700">{row.sqft}</td>
+                      <td className="px-6 py-4 text-lmhy-charcoal/80">{row.sqft}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
-            <p className="text-center text-slate-500 text-sm mt-4">
+            <p className="text-center text-lmhy-charcoal/60 text-sm mt-4">
               Values represent single-family homes. Your specific home may vary based on features and condition.
             </p>
           </section>
 
           {/* The Valuation Process */}
           <section className="max-w-5xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+            <h2 className="text-3xl font-bold text-lmhy-charcoal mb-8 text-center">
               The BHHS Home Valuation Process
             </h2>
             <div className="space-y-6">
               <div className="flex items-start">
-                <div className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">1</div>
-                <div className="bg-white border border-slate-200 rounded-xl p-6 flex-grow">
-                  <h3 className="font-bold text-slate-900 mb-2">Share Your Property Details</h3>
-                  <p className="text-slate-600">
+                <div className="bg-lmhy-coral text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">1</div>
+                <div className="bg-white border border-lmhy-sand/60 rounded-xl p-6 flex-grow">
+                  <h3 className="font-bold text-lmhy-charcoal mb-2">Share Your Property Details</h3>
+                  <p className="text-lmhy-charcoal/70">
                     Schedule a consultation through the calendar above or call Dr. Jan directly.
                     Provide your address, basic property information, and any recent upgrades or
                     improvements you've made. Photos are helpful but not required initially.
@@ -385,10 +388,10 @@ export default function HomeValuationPage() {
                 </div>
               </div>
               <div className="flex items-start">
-                <div className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">2</div>
-                <div className="bg-white border border-slate-200 rounded-xl p-6 flex-grow">
-                  <h3 className="font-bold text-slate-900 mb-2">Comprehensive Market Analysis</h3>
-                  <p className="text-slate-600">
+                <div className="bg-lmhy-coral text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">2</div>
+                <div className="bg-white border border-lmhy-sand/60 rounded-xl p-6 flex-grow">
+                  <h3 className="font-bold text-lmhy-charcoal mb-2">Comprehensive Market Analysis</h3>
+                  <p className="text-lmhy-charcoal/70">
                     Dr. Jan researches recent comparable sales, current active listings, and expired
                     listings in your area. She analyzes price trends, days on market, and buyer
                     demand specific to your neighborhood and property type.
@@ -396,10 +399,10 @@ export default function HomeValuationPage() {
                 </div>
               </div>
               <div className="flex items-start">
-                <div className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">3</div>
-                <div className="bg-white border border-slate-200 rounded-xl p-6 flex-grow">
-                  <h3 className="font-bold text-slate-900 mb-2">Feature Adjustments</h3>
-                  <p className="text-slate-600">
+                <div className="bg-lmhy-coral text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">3</div>
+                <div className="bg-white border border-lmhy-sand/60 rounded-xl p-6 flex-grow">
+                  <h3 className="font-bold text-lmhy-charcoal mb-2">Feature Adjustments</h3>
+                  <p className="text-lmhy-charcoal/70">
                     Your home's unique features are factored in: upgrades, lot characteristics,
                     views, pool, solar, and condition. These adjustments ensure the valuation
                     reflects what buyers will actually pay for your specific property.
@@ -407,10 +410,10 @@ export default function HomeValuationPage() {
                 </div>
               </div>
               <div className="flex items-start">
-                <div className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">4</div>
-                <div className="bg-white border border-slate-200 rounded-xl p-6 flex-grow">
-                  <h3 className="font-bold text-slate-900 mb-2">Pricing Strategy Consultation</h3>
-                  <p className="text-slate-600">
+                <div className="bg-lmhy-coral text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">4</div>
+                <div className="bg-white border border-lmhy-sand/60 rounded-xl p-6 flex-grow">
+                  <h3 className="font-bold text-lmhy-charcoal mb-2">Pricing Strategy Consultation</h3>
+                  <p className="text-lmhy-charcoal/70">
                     Within 24-48 hours, you'll receive a detailed CMA report with a recommended
                     price range. Dr. Jan will walk you through the data, explain the methodology,
                     and answer any questions—with absolutely no pressure to list.
@@ -422,7 +425,7 @@ export default function HomeValuationPage() {
 
           {/* FAQ Section */}
           <section className="max-w-4xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+            <h2 className="text-3xl font-bold text-lmhy-charcoal mb-8 text-center">
               Frequently Asked Questions About Home Valuations
             </h2>
             <div className="space-y-4">
@@ -448,46 +451,46 @@ export default function HomeValuationPage() {
                   a: "Not necessarily. Dr. Jan can provide an initial valuation based on property records, MLS data, and information you provide. However, a brief walk-through helps identify features and upgrades that add value. There's no need to stage or prepare extensively.",
                 },
               ].map((faq, index) => (
-                <div key={index} className="bg-white border border-slate-200 rounded-lg p-6">
-                  <h3 className="font-bold text-slate-900 mb-2">{faq.q}</h3>
-                  <p className="text-slate-600">{faq.a}</p>
+                <div key={index} className="bg-white border border-lmhy-sand/60 rounded-lg p-6">
+                  <h3 className="font-bold text-lmhy-charcoal mb-2">{faq.q}</h3>
+                  <p className="text-lmhy-charcoal/70">{faq.a}</p>
                 </div>
               ))}
             </div>
           </section>
 
           {/* CTA */}
-          <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
+          <section className="text-center bg-lmhy-coral text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Ready to Know What Your Home Is Worth?
             </h2>
-            <p className="text-xl text-blue-100 mb-8">
+            <p className="text-xl text-white/85 mb-8">
               Get a free, no-obligation home valuation from Dr. Jan Duffy and Berkshire Hathaway
               HomeServices Nevada Properties. Accurate pricing. Expert guidance. Zero pressure.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+17025001942"
-                className="inline-flex items-center justify-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
+                className="inline-flex items-center justify-center bg-white text-lmhy-coral px-8 py-4 rounded-md font-bold text-lg hover:bg-lmhy-cream transition-colors"
               >
                 <Phone className="h-5 w-5 mr-2" />
                 Call (702) 500-1942
               </a>
               <Link
                 href="/sellers"
-                className="inline-flex items-center justify-center bg-blue-500 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-400 transition-colors"
+                className="inline-flex items-center justify-center bg-lmhy-coral text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-lmhy-coral-dark transition-colors"
               >
                 Learn About Selling
               </Link>
             </div>
-            <p className="mt-4 text-blue-200 text-sm">
+            <p className="mt-4 text-white/70 text-sm">
               Berkshire Hathaway HomeServices Nevada Properties
             </p>
           </section>
         </div>
 
         {/* Last Updated */}
-        <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
+        <div className="text-center text-sm text-lmhy-charcoal/60 mt-8">Last Updated: January 2026</div>
       </main>
       <RealScoutListings />
       <Footer />

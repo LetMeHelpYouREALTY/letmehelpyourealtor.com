@@ -116,16 +116,16 @@ export default function NeighborhoodsPage() {
     <>
       <Navbar />
       <main className="pt-24 pb-16">
-        <div className="container mx-auto px-4">
+        <div className="lmhy-container">
           {/* Hero */}
           <div className="max-w-4xl mx-auto text-center mb-16">
-            <div className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <div className="inline-block bg-lmhy-coral/10 text-lmhy-coral-dark px-4 py-2 rounded-full text-sm font-semibold mb-6">
               Berkshire Hathaway HomeServices Nevada Properties
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-lmhy-charcoal mb-6">
               Las Vegas & Henderson Neighborhoods
             </h1>
-            <p className="text-xl text-slate-600">
+            <p className="text-xl text-lmhy-charcoal/70">
               Explore the best communities in Southern Nevada with Dr. Jan Duffy, your{" "}
               <strong>Berkshire Hathaway HomeServices</strong> neighborhood expert
             </p>
@@ -138,26 +138,26 @@ export default function NeighborhoodsPage() {
                 <Link
                   key={neighborhood.slug}
                   href={`/neighborhoods/${neighborhood.slug}`}
-                  className="bg-white border border-slate-200 rounded-lg p-6 hover:shadow-lg transition-all hover:border-blue-300 group"
+                  className="bg-white border border-lmhy-sand/60 rounded-lg p-6 hover:shadow-lg transition-all hover:border-lmhy-coral/30 group"
                 >
                   <div className="flex justify-between items-start mb-3">
                     <div>
-                      <h2 className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+                      <h2 className="text-xl font-bold text-lmhy-charcoal group-hover:text-lmhy-coral transition-colors">
                         {neighborhood.name}
                       </h2>
-                      <p className="text-sm text-slate-500">{neighborhood.bestFor}</p>
+                      <p className="text-sm text-lmhy-charcoal/60">{neighborhood.bestFor}</p>
                     </div>
                     <div className="text-right">
-                      <div className="font-bold text-slate-900">{neighborhood.medianPrice}</div>
+                      <div className="font-bold text-lmhy-charcoal">{neighborhood.medianPrice}</div>
                       <div className="text-sm text-green-600">{neighborhood.priceChange} YoY</div>
                     </div>
                   </div>
-                  <p className="text-slate-600 text-sm mb-4">{neighborhood.description}</p>
+                  <p className="text-lmhy-charcoal/70 text-sm mb-4">{neighborhood.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {neighborhood.highlights.map((highlight) => (
                       <span
                         key={highlight}
-                        className="bg-slate-100 text-slate-700 text-xs px-2 py-1 rounded"
+                        className="bg-slate-100 text-lmhy-charcoal/80 text-xs px-2 py-1 rounded"
                       >
                         {highlight}
                       </span>
@@ -170,42 +170,42 @@ export default function NeighborhoodsPage() {
 
           {/* Expert Quote */}
           <section className="mb-16 max-w-4xl mx-auto">
-            <div className="bg-slate-50 rounded-lg p-8">
-              <blockquote className="text-lg text-slate-700 italic mb-4">
+            <div className="bg-lmhy-sand/20 rounded-lg p-8">
+              <blockquote className="text-lg text-lmhy-charcoal/80 italic mb-4">
                 "Every Las Vegas neighborhood has its own personality. Whether you want the
                 family-friendly parks of Summerlin, the established charm of Green Valley, or the
                 luxury of The Ridges, I'll help you find the community that matches your lifestyle.
                 That's the Berkshire Hathaway HomeServices difference—personalized guidance backed
                 by local expertise."
               </blockquote>
-              <cite className="text-slate-900 font-semibold">
+              <cite className="text-lmhy-charcoal font-semibold">
                 — Dr. Jan Duffy, BHHS Nevada Properties
               </cite>
             </div>
           </section>
 
           {/* Neighborhood Services */}
-          <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
+          <section className="mb-16 bg-lmhy-charcoal text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-2xl font-bold mb-8 text-center">Neighborhood Services</h2>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="text-center">
-                <MapPin className="h-12 w-12 text-blue-400 mx-auto mb-3" />
+                <MapPin className="h-12 w-12 text-lmhy-gold mx-auto mb-3" />
                 <h3 className="font-bold mb-2">Area Tours</h3>
-                <p className="text-slate-400 text-sm">
+                <p className="text-lmhy-charcoal/50 text-sm">
                   Personalized neighborhood tours to help you experience each community firsthand
                 </p>
               </div>
               <div className="text-center">
-                <GraduationCap className="h-12 w-12 text-blue-400 mx-auto mb-3" />
+                <GraduationCap className="h-12 w-12 text-lmhy-gold mx-auto mb-3" />
                 <h3 className="font-bold mb-2">School Research</h3>
-                <p className="text-slate-400 text-sm">
+                <p className="text-lmhy-charcoal/50 text-sm">
                   Detailed school district information, ratings, and enrollment guidance
                 </p>
               </div>
               <div className="text-center">
-                <Home className="h-12 w-12 text-blue-400 mx-auto mb-3" />
+                <Home className="h-12 w-12 text-lmhy-gold mx-auto mb-3" />
                 <h3 className="font-bold mb-2">Home Matching</h3>
-                <p className="text-slate-400 text-sm">
+                <p className="text-lmhy-charcoal/50 text-sm">
                   Find homes that match your criteria in the neighborhoods you love
                 </p>
               </div>
@@ -213,29 +213,29 @@ export default function NeighborhoodsPage() {
           </section>
 
           {/* CTA */}
-          <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
+          <section className="text-center bg-lmhy-coral text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Need Help Choosing a Neighborhood?
             </h2>
-            <p className="text-xl text-blue-100 mb-8">
+            <p className="text-xl text-white/85 mb-8">
               Dr. Jan Duffy knows every Las Vegas community inside and out. Call for personalized
               neighborhood recommendations.
             </p>
             <a
               href="tel:+17025001942"
-              className="inline-flex items-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
+              className="inline-flex items-center bg-white text-lmhy-coral px-8 py-4 rounded-md font-bold text-lg hover:bg-lmhy-cream transition-colors"
             >
               <Phone className="h-5 w-5 mr-2" />
               Call (702) 500-1942
             </a>
-            <p className="mt-4 text-blue-200 text-sm">
+            <p className="mt-4 text-white/70 text-sm">
               Berkshire Hathaway HomeServices Nevada Properties
             </p>
           </section>
         </div>
 
         {/* Last Updated */}
-        <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
+        <div className="text-center text-sm text-lmhy-charcoal/60 mt-8">Last Updated: January 2026</div>
       </main>
       <RealScoutListings />
       <Footer />

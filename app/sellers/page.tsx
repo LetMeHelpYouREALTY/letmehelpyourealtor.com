@@ -18,8 +18,9 @@ import {
   Award,
 } from "lucide-react";
 import type { Metadata } from "next";
+import { withPageCanonical } from "@/lib/page-metadata";
 
-export const metadata: Metadata = {
+const pageMetadata: Metadata = {
   title: "Sell Your Las Vegas Home | Berkshire Hathaway HomeServices",
   description:
     "Sell your Las Vegas or Henderson home for top dollar with Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Free home valuation. World-class marketing. Call (702) 500-1942.",
@@ -33,6 +34,8 @@ export const metadata: Metadata = {
     "Summerlin home selling",
   ],
 };
+
+export const metadata = withPageCanonical(pageMetadata, "/sellers");
 
 const sellerSchema = {
   "@context": "https://schema.org",
@@ -131,22 +134,22 @@ export default function SellersPage() {
       />
       <Navbar />
       <main className="pt-24 pb-16">
-        <div className="container mx-auto px-4">
+        <div className="lmhy-container">
           {/* Hero */}
           <div className="max-w-4xl mx-auto text-center mb-16">
-            <div className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <div className="inline-block bg-lmhy-coral/10 text-lmhy-coral-dark px-4 py-2 rounded-full text-sm font-semibold mb-6">
               Berkshire Hathaway HomeServices Nevada Properties
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-lmhy-charcoal mb-6">
               Sell Your Las Vegas Home for Top Dollar
             </h1>
-            <p className="text-xl text-slate-600 mb-8">
+            <p className="text-xl text-lmhy-charcoal/70 mb-8">
               When you list with <strong>Berkshire Hathaway HomeServices</strong>, you get
               world-class marketing, expert pricing, and a name that buyers trust. Dr. Jan Duffy 
               has been serving Las Vegas since 2008—helping sellers achieve top-dollar results 
               with proven marketing strategies and skilled negotiation.
             </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm text-slate-500">
+            <div className="flex flex-wrap justify-center gap-4 text-sm text-lmhy-charcoal/60">
               <span className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Free Home Valuation</span>
               <span className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-1" /> World-Class Marketing</span>
               <span className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Expert Negotiation</span>
@@ -154,11 +157,11 @@ export default function SellersPage() {
           </div>
 
           {/* Market Stats */}
-          <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
+          <section className="mb-16 bg-lmhy-charcoal text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-2xl font-bold mb-4 text-center">
               Las Vegas Seller Market Statistics | January 2026
             </h2>
-            <p className="text-slate-300 text-center max-w-3xl mx-auto mb-8">
+            <p className="text-white/70 text-center max-w-3xl mx-auto mb-8">
               The Las Vegas housing market remains favorable for sellers with low inventory and 
               steady demand. Well-priced homes are selling quickly, and appreciation continues 
               to outpace national averages. Here's what sellers need to know about current conditions.
@@ -166,29 +169,29 @@ export default function SellersPage() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="text-3xl font-bold text-green-400 mb-1">+4.2%</div>
-                <div className="text-slate-300 text-sm">Year-Over-Year Appreciation</div>
+                <div className="text-white/70 text-sm">Year-Over-Year Appreciation</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold mb-1">28 Days</div>
-                <div className="text-slate-300 text-sm">Avg. Days on Market</div>
+                <div className="text-white/70 text-sm">Avg. Days on Market</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold mb-1">2.1 Mo</div>
-                <div className="text-slate-300 text-sm">Inventory (Seller's Market)</div>
+                <div className="text-white/70 text-sm">Inventory (Seller's Market)</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold mb-1">98.5%</div>
-                <div className="text-slate-300 text-sm">List-to-Sale Price Ratio</div>
+                <div className="text-white/70 text-sm">List-to-Sale Price Ratio</div>
               </div>
             </div>
           </section>
 
           {/* Benefits */}
           <section className="mb-16 max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
+            <h2 className="text-3xl font-bold text-lmhy-charcoal mb-4 text-center">
               The Berkshire Hathaway HomeServices Selling Advantage
             </h2>
-            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
+            <p className="text-lmhy-charcoal/70 text-center max-w-3xl mx-auto mb-8">
               Not all real estate agents can deliver the same results. When you choose a 
               Berkshire Hathaway HomeServices agent, you're choosing world-class marketing, 
               a global network of buyers, and the most trusted name in real estate.
@@ -199,13 +202,13 @@ export default function SellersPage() {
                 return (
                   <div
                     key={benefit.title}
-                    className="bg-white border border-slate-200 rounded-xl p-8 hover:shadow-lg transition-shadow"
+                    className="bg-white border border-lmhy-sand/60 rounded-xl p-8 hover:shadow-lg transition-shadow"
                   >
-                    <div className="bg-blue-100 rounded-full p-4 w-16 h-16 flex items-center justify-center mb-6">
-                      <Icon className="h-8 w-8 text-blue-600" />
+                    <div className="bg-lmhy-coral/10 rounded-full p-4 w-16 h-16 flex items-center justify-center mb-6">
+                      <Icon className="h-8 w-8 text-lmhy-coral" />
                     </div>
-                    <h3 className="text-xl font-bold text-slate-900 mb-3">{benefit.title}</h3>
-                    <p className="text-slate-600">{benefit.description}</p>
+                    <h3 className="text-xl font-bold text-lmhy-charcoal mb-3">{benefit.title}</h3>
+                    <p className="text-lmhy-charcoal/70">{benefit.description}</p>
                   </div>
                 );
               })}
@@ -213,11 +216,11 @@ export default function SellersPage() {
           </section>
 
           {/* Selling Process */}
-          <section className="mb-16 bg-slate-50 rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
+          <section className="mb-16 bg-lmhy-sand/20 rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
+            <h2 className="text-3xl font-bold text-lmhy-charcoal mb-4 text-center">
               The Home Selling Process
             </h2>
-            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
+            <p className="text-lmhy-charcoal/70 text-center max-w-3xl mx-auto mb-8">
               Selling a home involves many steps, but you don't have to navigate them alone. 
               Dr. Jan Duffy manages every detail from initial valuation to closing day, keeping 
               you informed and in control throughout the process.
@@ -226,14 +229,14 @@ export default function SellersPage() {
               {sellingProcess.map((item) => (
                 <div
                   key={item.step}
-                  className="flex gap-6 items-start bg-white rounded-lg p-6 border border-slate-200"
+                  className="flex gap-6 items-start bg-white rounded-lg p-6 border border-lmhy-sand/60"
                 >
-                  <div className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold flex-shrink-0">
+                  <div className="bg-lmhy-coral text-white w-10 h-10 rounded-full flex items-center justify-center font-bold flex-shrink-0">
                     {item.step}
                   </div>
                   <div>
-                    <h3 className="font-bold text-slate-900 mb-2">{item.title}</h3>
-                    <p className="text-slate-600 text-sm">{item.description}</p>
+                    <h3 className="font-bold text-lmhy-charcoal mb-2">{item.title}</h3>
+                    <p className="text-lmhy-charcoal/70 text-sm">{item.description}</p>
                   </div>
                 </div>
               ))}
@@ -242,10 +245,10 @@ export default function SellersPage() {
 
           {/* Seller Types */}
           <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
+            <h2 className="text-3xl font-bold text-lmhy-charcoal mb-4 text-center">
               Specialized Services for Every Seller
             </h2>
-            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
+            <p className="text-lmhy-charcoal/70 text-center max-w-3xl mx-auto mb-8">
               Every seller's situation is unique. Whether you're upgrading, downsizing, dealing 
               with a life change, or relocating for work, Dr. Jan provides customized strategies 
               that address your specific needs and timeline.
@@ -253,73 +256,73 @@ export default function SellersPage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <Link
                 href="/sellers/move-up"
-                className="bg-white border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-shadow group"
+                className="bg-white border border-lmhy-sand/60 rounded-xl p-6 hover:shadow-lg transition-shadow group"
               >
                 <div className="text-3xl mb-4">🏡</div>
-                <h3 className="font-bold text-lg text-slate-900 mb-2 group-hover:text-blue-600">
+                <h3 className="font-bold text-lg text-lmhy-charcoal mb-2 group-hover:text-lmhy-coral">
                   Move-Up Sellers
                 </h3>
-                <p className="text-slate-600 text-sm mb-3">
+                <p className="text-lmhy-charcoal/70 text-sm mb-3">
                   Leverage your equity into your dream home. Coordinated buy & sell strategies.
                 </p>
-                <span className="text-blue-600 font-semibold text-sm">Learn More →</span>
+                <span className="text-lmhy-coral font-semibold text-sm">Learn More →</span>
               </Link>
               <Link
                 href="/sellers/downsizing"
-                className="bg-white border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-shadow group"
+                className="bg-white border border-lmhy-sand/60 rounded-xl p-6 hover:shadow-lg transition-shadow group"
               >
                 <div className="text-3xl mb-4">🌴</div>
-                <h3 className="font-bold text-lg text-slate-900 mb-2 group-hover:text-blue-600">
+                <h3 className="font-bold text-lg text-lmhy-charcoal mb-2 group-hover:text-lmhy-coral">
                   Downsizing
                 </h3>
-                <p className="text-slate-600 text-sm mb-3">
+                <p className="text-lmhy-charcoal/70 text-sm mb-3">
                   Extract equity, simplify life. 55+ communities and low-maintenance options.
                 </p>
-                <span className="text-blue-600 font-semibold text-sm">Learn More →</span>
+                <span className="text-lmhy-coral font-semibold text-sm">Learn More →</span>
               </Link>
               <Link
                 href="/sellers/divorce-probate"
-                className="bg-white border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-shadow group"
+                className="bg-white border border-lmhy-sand/60 rounded-xl p-6 hover:shadow-lg transition-shadow group"
               >
                 <div className="text-3xl mb-4">⚖️</div>
-                <h3 className="font-bold text-lg text-slate-900 mb-2 group-hover:text-blue-600">
+                <h3 className="font-bold text-lg text-lmhy-charcoal mb-2 group-hover:text-lmhy-coral">
                   Divorce & Probate
                 </h3>
-                <p className="text-slate-600 text-sm mb-3">
+                <p className="text-lmhy-charcoal/70 text-sm mb-3">
                   Sensitive situations handled with discretion and professionalism.
                 </p>
-                <span className="text-blue-600 font-semibold text-sm">Learn More →</span>
+                <span className="text-lmhy-coral font-semibold text-sm">Learn More →</span>
               </Link>
               <Link
                 href="/sellers/relocation"
-                className="bg-white border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-shadow group"
+                className="bg-white border border-lmhy-sand/60 rounded-xl p-6 hover:shadow-lg transition-shadow group"
               >
                 <div className="text-3xl mb-4">✈️</div>
-                <h3 className="font-bold text-lg text-slate-900 mb-2 group-hover:text-blue-600">
+                <h3 className="font-bold text-lg text-lmhy-charcoal mb-2 group-hover:text-lmhy-coral">
                   Relocation
                 </h3>
-                <p className="text-slate-600 text-sm mb-3">
+                <p className="text-lmhy-charcoal/70 text-sm mb-3">
                   Moving for work? BHHS nationwide network coordinates both ends.
                 </p>
-                <span className="text-blue-600 font-semibold text-sm">Learn More →</span>
+                <span className="text-lmhy-coral font-semibold text-sm">Learn More →</span>
               </Link>
             </div>
           </section>
 
           {/* Expert Quote */}
           <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
+            <h2 className="text-3xl font-bold text-lmhy-charcoal mb-6 text-center">
               Expert Selling Advice
             </h2>
-            <div className="bg-slate-50 rounded-lg p-8">
-              <blockquote className="text-lg text-slate-700 italic mb-4">
+            <div className="bg-lmhy-sand/20 rounded-lg p-8">
+              <blockquote className="text-lg text-lmhy-charcoal/80 italic mb-4">
                 "Pricing your home correctly from day one is the single most important factor in
                 getting top dollar. Overpriced homes sit on the market, and every day on market costs 
                 you money—both in carrying costs and buyer perception. That's why I use comprehensive 
                 market analysis and my experience serving Las Vegas since 2008 to price homes right 
                 the first time. The result? My listings typically sell within 2% of asking price."
               </blockquote>
-              <cite className="text-slate-900 font-semibold">
+              <cite className="text-lmhy-charcoal font-semibold">
                 — Dr. Jan Duffy, BHHS Nevada Properties | Serving Las Vegas Since 2008
               </cite>
             </div>
@@ -327,30 +330,30 @@ export default function SellersPage() {
 
           {/* What's Included */}
           <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
+            <h2 className="text-3xl font-bold text-lmhy-charcoal mb-4 text-center">
               What's Included When You List with BHHS
             </h2>
-            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
+            <p className="text-lmhy-charcoal/70 text-center max-w-3xl mx-auto mb-8">
               When you list with Dr. Jan Duffy at Berkshire Hathaway HomeServices, you receive 
               comprehensive marketing and support services designed to maximize your home's 
               exposure and sale price.
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
               {includedServices.map((item) => (
-                <div key={item} className="flex items-center bg-white p-4 rounded-lg border border-slate-200">
+                <div key={item} className="flex items-center bg-white p-4 rounded-lg border border-lmhy-sand/60">
                   <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
-                  <span className="text-slate-700 text-sm">{item}</span>
+                  <span className="text-lmhy-charcoal/80 text-sm">{item}</span>
                 </div>
               ))}
             </div>
           </section>
 
           {/* Home Valuation CTA */}
-          <section className="mb-16 bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
+          <section className="mb-16 bg-lmhy-coral text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <h2 className="text-3xl font-bold mb-4">What's Your Home Worth?</h2>
-                <p className="text-blue-100 mb-6">
+                <p className="text-white/85 mb-6">
                   Get a free, no-obligation home valuation from Dr. Jan Duffy. Using current MLS
                   data and expertise serving Las Vegas since 2008, you'll know exactly what your 
                   home could sell for in today's market. No algorithms—just real analysis from 
@@ -358,15 +361,15 @@ export default function SellersPage() {
                 </p>
                 <Link
                   href="/home-valuation"
-                  className="inline-block bg-white text-blue-600 px-8 py-3 rounded-md font-bold hover:bg-blue-50 transition-colors"
+                  className="inline-block bg-white text-lmhy-coral px-8 py-3 rounded-md font-bold hover:bg-lmhy-cream transition-colors"
                 >
                   Get Free Valuation
                 </Link>
               </div>
               <div className="text-center">
-                <TrendingUp className="h-24 w-24 text-blue-200 mx-auto mb-4" />
+                <TrendingUp className="h-24 w-24 text-white/70 mx-auto mb-4" />
                 <p className="text-2xl font-bold">$450,000</p>
-                <p className="text-blue-200">Median Home Price (Jan 2026)</p>
+                <p className="text-white/70">Median Home Price (Jan 2026)</p>
                 <p className="text-blue-300 text-sm mt-2">Up 4.2% from last year</p>
               </div>
             </div>
@@ -374,10 +377,10 @@ export default function SellersPage() {
 
           {/* FAQ */}
           <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
+            <h2 className="text-3xl font-bold text-lmhy-charcoal mb-4 text-center">
               Frequently Asked Questions About Selling in Las Vegas
             </h2>
-            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
+            <p className="text-lmhy-charcoal/70 text-center max-w-3xl mx-auto mb-8">
               Selling your home raises many questions. Here are answers to the most common 
               concerns from Las Vegas home sellers.
             </p>
@@ -408,18 +411,18 @@ export default function SellersPage() {
                   a: "Not necessarily. Many homes sell while occupied. However, vacant homes are easier to show and stage. Dr. Jan will help you develop a strategy based on your specific situation and timeline.",
                 },
               ].map((faq, index) => (
-                <div key={index} className="bg-slate-50 rounded-lg p-6">
-                  <h3 className="font-bold text-slate-900 mb-2">{faq.q}</h3>
-                  <p className="text-slate-600">{faq.a}</p>
+                <div key={index} className="bg-lmhy-sand/20 rounded-lg p-6">
+                  <h3 className="font-bold text-lmhy-charcoal mb-2">{faq.q}</h3>
+                  <p className="text-lmhy-charcoal/70">{faq.a}</p>
                 </div>
               ))}
             </div>
           </section>
 
           {/* CTA */}
-          <section className="text-center bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
+          <section className="text-center bg-lmhy-charcoal text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Sell Your Las Vegas Home?</h2>
-            <p className="text-xl text-slate-300 mb-8">
+            <p className="text-xl text-white/70 mb-8">
               Schedule a free listing consultation with Dr. Jan Duffy and discover what your home
               could sell for with Berkshire Hathaway HomeServices. No obligation, no pressure—just 
               honest advice and expert analysis.
@@ -427,7 +430,7 @@ export default function SellersPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+17025001942"
-                className="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-md font-bold text-lg transition-colors"
+                className="inline-flex items-center justify-center bg-lmhy-coral hover:bg-lmhy-coral-dark text-white px-8 py-4 rounded-md font-bold text-lg transition-colors"
               >
                 <Phone className="h-5 w-5 mr-2" />
                 Call (702) 500-1942
@@ -439,14 +442,14 @@ export default function SellersPage() {
                 Schedule Consultation
               </Link>
             </div>
-            <p className="mt-4 text-slate-400 text-sm">
+            <p className="mt-4 text-lmhy-charcoal/50 text-sm">
               Berkshire Hathaway HomeServices Nevada Properties
             </p>
           </section>
         </div>
 
         {/* Last Updated */}
-        <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
+        <div className="text-center text-sm text-lmhy-charcoal/60 mt-8">Last Updated: January 2026</div>
       </main>
       <RealScoutListings />
       <Footer />

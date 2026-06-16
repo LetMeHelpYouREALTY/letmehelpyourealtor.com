@@ -18,8 +18,9 @@ import {
   Users,
 } from "lucide-react";
 import type { Metadata } from "next";
+import { withPageCanonical } from "@/lib/page-metadata";
 
-export const metadata: Metadata = {
+const pageMetadata: Metadata = {
   title: "Las Vegas Luxury Homes for Sale | Berkshire Hathaway HomeServices",
   description:
     "Discover Las Vegas luxury real estate with Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. The Ridges, MacDonald Highlands, Summerlin, Southern Highlands. $1M+ homes. Call (702) 500-1942.",
@@ -34,6 +35,8 @@ export const metadata: Metadata = {
     "luxury real estate agent Las Vegas",
   ],
 };
+
+export const metadata = withPageCanonical(pageMetadata, "/luxury-homes");
 
 const luxurySchema = {
   "@context": "https://schema.org",
@@ -122,22 +125,22 @@ export default function LuxuryHomesPage() {
       />
       <Navbar />
       <main className="pt-24 pb-16">
-        <div className="container mx-auto px-4">
+        <div className="lmhy-container">
           {/* Hero */}
           <div className="max-w-4xl mx-auto text-center mb-16">
-            <div className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <div className="inline-block bg-lmhy-coral/10 text-lmhy-coral-dark px-4 py-2 rounded-full text-sm font-semibold mb-6">
               Berkshire Hathaway HomeServices Nevada Properties
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-lmhy-charcoal mb-6">
               Las Vegas Luxury Real Estate
             </h1>
-            <p className="text-xl text-slate-600 mb-8">
+            <p className="text-xl text-lmhy-charcoal/70 mb-8">
               <strong>Berkshire Hathaway HomeServices</strong> represents the gold standard in
               luxury real estate. When you're buying or selling a $1M+ home, trust matters more than
               ever. Our global network, discretion, and expertise ensure your luxury transaction 
               receives the exceptional service it deserves.
             </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm text-slate-500">
+            <div className="flex flex-wrap justify-center gap-4 text-sm text-lmhy-charcoal/60">
               <span className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-1" /> White Glove Service</span>
               <span className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Global Buyer Network</span>
               <span className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Discrete Transactions</span>
@@ -145,41 +148,41 @@ export default function LuxuryHomesPage() {
           </div>
 
           {/* Luxury Stats */}
-          <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
+          <section className="mb-16 bg-lmhy-charcoal text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-2xl font-bold mb-4 text-center">
               Las Vegas Luxury Market Statistics | January 2026
             </h2>
-            <p className="text-slate-300 text-center max-w-3xl mx-auto mb-8">
+            <p className="text-white/70 text-center max-w-3xl mx-auto mb-8">
               The Las Vegas luxury market continues to attract affluent buyers from California, 
               the Midwest, and international markets. Understanding current market conditions 
               is essential for both buyers and sellers in this segment.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-400 mb-1">$1.2M</div>
-                <div className="text-slate-300 text-sm">Median Luxury Price</div>
+                <div className="text-3xl font-bold text-lmhy-gold mb-1">$1.2M</div>
+                <div className="text-white/70 text-sm">Median Luxury Price</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-green-400 mb-1">+8.5%</div>
-                <div className="text-slate-300 text-sm">YoY Appreciation</div>
+                <div className="text-white/70 text-sm">YoY Appreciation</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold mb-1">890</div>
-                <div className="text-slate-300 text-sm">Active $1M+ Listings</div>
+                <div className="text-white/70 text-sm">Active $1M+ Listings</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold mb-1">45 Days</div>
-                <div className="text-slate-300 text-sm">Avg. Days on Market</div>
+                <div className="text-white/70 text-sm">Avg. Days on Market</div>
               </div>
             </div>
           </section>
 
           {/* Why BHHS for Luxury */}
           <section className="mb-16 max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
+            <h2 className="text-3xl font-bold text-lmhy-charcoal mb-4 text-center">
               Why Choose Berkshire Hathaway for Luxury Real Estate
             </h2>
-            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
+            <p className="text-lmhy-charcoal/70 text-center max-w-3xl mx-auto mb-8">
               In luxury real estate, the agent you choose can impact both the sale price and 
               the transaction experience. Berkshire Hathaway HomeServices agents bring resources, 
               reputation, and expertise that make a measurable difference in this competitive segment.
@@ -209,12 +212,12 @@ export default function LuxuryHomesPage() {
               ].map((item) => {
                 const Icon = item.icon;
                 return (
-                  <div key={item.title} className="text-center p-6 bg-slate-50 rounded-xl">
-                    <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                      <Icon className="h-8 w-8 text-blue-600" />
+                  <div key={item.title} className="text-center p-6 bg-lmhy-sand/20 rounded-xl">
+                    <div className="bg-lmhy-coral/10 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                      <Icon className="h-8 w-8 text-lmhy-coral" />
                     </div>
                     <h3 className="font-bold text-lg mb-2">{item.title}</h3>
-                    <p className="text-slate-600 text-sm">{item.desc}</p>
+                    <p className="text-lmhy-charcoal/70 text-sm">{item.desc}</p>
                   </div>
                 );
               })}
@@ -223,11 +226,11 @@ export default function LuxuryHomesPage() {
 
           {/* Expert Quote */}
           <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
+            <h2 className="text-3xl font-bold text-lmhy-charcoal mb-6 text-center">
               Expert Luxury Real Estate Guidance
             </h2>
-            <div className="bg-slate-50 rounded-lg p-8">
-              <blockquote className="text-lg text-slate-700 italic mb-4">
+            <div className="bg-lmhy-sand/20 rounded-lg p-8">
+              <blockquote className="text-lg text-lmhy-charcoal/80 italic mb-4">
                 "Luxury buyers expect discretion, market expertise, and flawless execution. In this
                 price range, one wrong move can cost hundreds of thousands of dollars. That's why
                 the Berkshire Hathaway HomeServices name matters—it tells buyers and sellers alike
@@ -235,7 +238,7 @@ export default function LuxuryHomesPage() {
                 $1 million to over $10 million, and every transaction receives my full attention 
                 and the complete resources of BHHS."
               </blockquote>
-              <cite className="text-slate-900 font-semibold">
+              <cite className="text-lmhy-charcoal font-semibold">
                 — Dr. Jan Duffy, BHHS Nevada Properties | Serving Las Vegas Since 2008
               </cite>
             </div>
@@ -243,10 +246,10 @@ export default function LuxuryHomesPage() {
 
           {/* Luxury Neighborhoods */}
           <section className="mb-16 max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
+            <h2 className="text-3xl font-bold text-lmhy-charcoal mb-4 text-center">
               Premier Las Vegas Luxury Communities
             </h2>
-            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
+            <p className="text-lmhy-charcoal/70 text-center max-w-3xl mx-auto mb-8">
               Las Vegas offers some of the most desirable luxury communities in the Southwest. From 
               ultra-exclusive guard-gated enclaves to lakefront estates, these premier neighborhoods 
               attract discerning buyers seeking the finest in design, amenities, and lifestyle.
@@ -255,21 +258,21 @@ export default function LuxuryHomesPage() {
               {luxuryNeighborhoods.map((neighborhood) => (
                 <div
                   key={neighborhood.name}
-                  className="bg-white border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-shadow"
+                  className="bg-white border border-lmhy-sand/60 rounded-xl p-6 hover:shadow-lg transition-shadow"
                 >
                   <div className="flex justify-between items-start mb-3">
                     <div>
-                      <h3 className="font-bold text-lg text-slate-900">{neighborhood.name}</h3>
-                      <p className="text-sm text-slate-500">{neighborhood.location}</p>
+                      <h3 className="font-bold text-lg text-lmhy-charcoal">{neighborhood.name}</h3>
+                      <p className="text-sm text-lmhy-charcoal/60">{neighborhood.location}</p>
                     </div>
-                    <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-1 rounded">
+                    <span className="bg-lmhy-coral/10 text-lmhy-coral-dark text-xs font-semibold px-2 py-1 rounded">
                       {neighborhood.priceRange}
                     </span>
                   </div>
-                  <p className="text-slate-600 text-sm mb-4">{neighborhood.description}</p>
+                  <p className="text-lmhy-charcoal/70 text-sm mb-4">{neighborhood.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {neighborhood.features.map((feature) => (
-                      <span key={feature} className="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded">
+                      <span key={feature} className="bg-slate-100 text-lmhy-charcoal/70 text-xs px-2 py-1 rounded">
                         {feature}
                       </span>
                     ))}
@@ -280,7 +283,7 @@ export default function LuxuryHomesPage() {
             <div className="text-center mt-8">
               <Link
                 href="/neighborhoods"
-                className="text-blue-600 font-semibold hover:text-blue-700 inline-flex items-center"
+                className="text-lmhy-coral font-semibold hover:text-lmhy-coral-dark inline-flex items-center"
               >
                 Explore All Neighborhoods <ArrowRight className="h-4 w-4 ml-2" />
               </Link>
@@ -288,17 +291,17 @@ export default function LuxuryHomesPage() {
           </section>
 
           {/* Luxury Services */}
-          <section className="mb-16 bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-6xl mx-auto">
+          <section className="mb-16 bg-lmhy-coral text-white rounded-2xl p-8 md:p-12 max-w-6xl mx-auto">
             <h2 className="text-2xl font-bold mb-4 text-center">Luxury Home Marketing Services</h2>
-            <p className="text-blue-100 text-center max-w-3xl mx-auto mb-8">
+            <p className="text-white/85 text-center max-w-3xl mx-auto mb-8">
               Selling a luxury home requires more than just an MLS listing. Dr. Jan Duffy provides 
               comprehensive marketing services that showcase your property to qualified buyers 
               worldwide through Berkshire Hathaway HomeServices' premium marketing channels.
             </p>
             <div className="grid md:grid-cols-2 gap-4">
               {luxuryServices.map((service) => (
-                <div key={service} className="flex items-center bg-blue-500/30 p-4 rounded-lg">
-                  <CheckCircle className="h-5 w-5 text-blue-200 mr-3 flex-shrink-0" />
+                <div key={service} className="flex items-center bg-lmhy-coral/30 p-4 rounded-lg">
+                  <CheckCircle className="h-5 w-5 text-white/70 mr-3 flex-shrink-0" />
                   <span>{service}</span>
                 </div>
               ))}
@@ -307,63 +310,63 @@ export default function LuxuryHomesPage() {
 
           {/* Buying vs Selling */}
           <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+            <h2 className="text-3xl font-bold text-lmhy-charcoal mb-8 text-center">
               Luxury Buyer & Seller Services
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-slate-50 rounded-xl p-8">
-                <h3 className="font-bold text-xl text-slate-900 mb-4 flex items-center">
-                  <Home className="h-6 w-6 text-blue-600 mr-2" />
+              <div className="bg-lmhy-sand/20 rounded-xl p-8">
+                <h3 className="font-bold text-xl text-lmhy-charcoal mb-4 flex items-center">
+                  <Home className="h-6 w-6 text-lmhy-coral mr-2" />
                   For Luxury Buyers
                 </h3>
-                <p className="text-slate-600 mb-4">
+                <p className="text-lmhy-charcoal/70 mb-4">
                   Access to exclusive listings, off-market opportunities, and discrete showings. 
                   Dr. Jan provides personalized search services for discerning buyers seeking 
                   Las Vegas's finest properties.
                 </p>
                 <ul className="space-y-2">
-                  <li className="flex items-center text-slate-700">
+                  <li className="flex items-center text-lmhy-charcoal/80">
                     <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
                     Off-market property access
                   </li>
-                  <li className="flex items-center text-slate-700">
+                  <li className="flex items-center text-lmhy-charcoal/80">
                     <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
                     Private, scheduled showings
                   </li>
-                  <li className="flex items-center text-slate-700">
+                  <li className="flex items-center text-lmhy-charcoal/80">
                     <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
                     Expert negotiation
                   </li>
-                  <li className="flex items-center text-slate-700">
+                  <li className="flex items-center text-lmhy-charcoal/80">
                     <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
                     Confidential representation
                   </li>
                 </ul>
               </div>
-              <div className="bg-slate-50 rounded-xl p-8">
-                <h3 className="font-bold text-xl text-slate-900 mb-4 flex items-center">
-                  <DollarSign className="h-6 w-6 text-blue-600 mr-2" />
+              <div className="bg-lmhy-sand/20 rounded-xl p-8">
+                <h3 className="font-bold text-xl text-lmhy-charcoal mb-4 flex items-center">
+                  <DollarSign className="h-6 w-6 text-lmhy-coral mr-2" />
                   For Luxury Sellers
                 </h3>
-                <p className="text-slate-600 mb-4">
+                <p className="text-lmhy-charcoal/70 mb-4">
                   World-class marketing that reaches qualified buyers globally. The Berkshire 
                   Hathaway brand attracts serious buyers and commands premium prices for 
                   exceptional properties.
                 </p>
                 <ul className="space-y-2">
-                  <li className="flex items-center text-slate-700">
+                  <li className="flex items-center text-lmhy-charcoal/80">
                     <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
                     Professional photography & video
                   </li>
-                  <li className="flex items-center text-slate-700">
+                  <li className="flex items-center text-lmhy-charcoal/80">
                     <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
                     Global marketing syndication
                   </li>
-                  <li className="flex items-center text-slate-700">
+                  <li className="flex items-center text-lmhy-charcoal/80">
                     <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
                     Off-market sale options
                   </li>
-                  <li className="flex items-center text-slate-700">
+                  <li className="flex items-center text-lmhy-charcoal/80">
                     <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
                     Strategic pricing analysis
                   </li>
@@ -374,10 +377,10 @@ export default function LuxuryHomesPage() {
 
           {/* FAQ */}
           <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
+            <h2 className="text-3xl font-bold text-lmhy-charcoal mb-4 text-center">
               Frequently Asked Questions About Las Vegas Luxury Homes
             </h2>
-            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
+            <p className="text-lmhy-charcoal/70 text-center max-w-3xl mx-auto mb-8">
               Luxury real estate transactions involve unique considerations. Here are answers 
               to common questions from buyers and sellers in this market segment.
             </p>
@@ -408,20 +411,20 @@ export default function LuxuryHomesPage() {
                   a: "The process is similar to standard purchases but with additional considerations. Proof of funds is typically required before showings. Inspections are more extensive. Dr. Jan coordinates all aspects, including working with attorneys, financial advisors, and other professionals as needed.",
                 },
               ].map((faq, index) => (
-                <div key={index} className="bg-slate-50 rounded-lg p-6">
-                  <h3 className="font-bold text-slate-900 mb-2">{faq.q}</h3>
-                  <p className="text-slate-600">{faq.a}</p>
+                <div key={index} className="bg-lmhy-sand/20 rounded-lg p-6">
+                  <h3 className="font-bold text-lmhy-charcoal mb-2">{faq.q}</h3>
+                  <p className="text-lmhy-charcoal/70">{faq.a}</p>
                 </div>
               ))}
             </div>
           </section>
 
           {/* CTA */}
-          <section className="text-center bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
+          <section className="text-center bg-lmhy-charcoal text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Discover Las Vegas Luxury Living
             </h2>
-            <p className="text-xl text-slate-300 mb-8">
+            <p className="text-xl text-white/70 mb-8">
               Whether buying or selling a luxury property, Dr. Jan Duffy provides the expertise and
               Berkshire Hathaway prestige your transaction deserves. Confidential consultations 
               available for discerning clients.
@@ -429,7 +432,7 @@ export default function LuxuryHomesPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+17025001942"
-                className="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-md font-bold text-lg transition-colors"
+                className="inline-flex items-center justify-center bg-lmhy-coral hover:bg-lmhy-coral-dark text-white px-8 py-4 rounded-md font-bold text-lg transition-colors"
               >
                 <Phone className="h-5 w-5 mr-2" />
                 Call (702) 500-1942
@@ -441,14 +444,14 @@ export default function LuxuryHomesPage() {
                 Schedule Private Consultation
               </Link>
             </div>
-            <p className="mt-4 text-slate-400 text-sm">
+            <p className="mt-4 text-lmhy-charcoal/50 text-sm">
               Berkshire Hathaway HomeServices Nevada Properties
             </p>
           </section>
         </div>
 
         {/* Last Updated */}
-        <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
+        <div className="text-center text-sm text-lmhy-charcoal/60 mt-8">Last Updated: January 2026</div>
       </main>
       <RealScoutListings />
       <Footer />

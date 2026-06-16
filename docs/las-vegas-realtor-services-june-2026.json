@@ -1,0 +1,387 @@
+{
+  "run_id": "trun_5dc72e8f4c8a4584b252f2a6e30fa9f3",
+  "interaction_id": "trun_5dc72e8f4c8a4584b252f2a6e30fa9f3",
+  "result_url": "https://platform.parallel.ai/play/deep-research/trun_5dc72e8f4c8a4584b252f2a6e30fa9f3",
+  "status": "completed",
+  "output": {
+    "basis": [
+      {
+        "field": "executive_summary",
+        "reasoning": "",
+        "citations": [],
+        "confidence": ""
+      },
+      {
+        "field": "las_vegas_market_conditions_june_2026_enters_buyer_favorable_territory",
+        "reasoning": "**Evaluating market conditions**\n\nI need to output a BasicFieldEvaluatorOutput that includes a scratchpad, completeness, and supported fields. To check completeness, I'll see if the field answer aligns with the query about Las Vegas market conditions entering buyer-favorable territory by June 2026. It looks like the answer does provide relevant data, so I'd say completeness is true. \n\nNext, I'll check if the excerpts support this field answer. They do, indicating that support is also true. Now, let's craft the final JSON.",
+        "citations": [
+          {
+            "url": "https://www.nevadarealestategroup.com/blog/las-vegas-real-estate-market-report-may-2026/",
+            "excerpts": [
+              "The Las Vegas housing market in May 2026 is balanced and buyer-favorable for the first time in three years, with a median single-family sale price near $498,000, days on market near 38, and 4.6 months of supply across Clark County."
+            ],
+            "title": "Las Vegas Real Estate Market Report: May 2026"
+          },
+          {
+            "url": "https://www.nevadarealestategroup.com/blog/las-vegas-housing-market-forecast-summer-2026/",
+            "excerpts": [
+              "The luxury slice (priced $1.5M+) tracks differently from the broader market. Q1 2026 luxury median was $2.15M, up 5.8 percent year over year \u2014"
+            ],
+            "title": "Las Vegas Housing Market Forecast Summer 2026 | Chris Nevada"
+          },
+          {
+            "url": "https://utopiahomestaging.com/2026-las-vegas-real-estate-market-forecast/",
+            "excerpts": [
+              "The Las Vegas housing market in 2026 reflects a transition toward balance. Unlike the extreme seller's market of 2021-2022 or the uncertainty of 2023-2024, this"
+            ],
+            "title": "2026 Las Vegas Real Estate Market Forecast: For Sellers"
+          },
+          {
+            "url": "https://huntingtonandellis.com/blog/why-2026-is-becoming-a-buyers-market-in-las-vegas-and-how-to-take-advantage",
+            "excerpts": [
+              "After years of rapid price growth and intense competition, the Las Vegas housing market is beginning to rebalance. In 2026, rising inventory and reduced buyer competition are creating conditions that increasingly favor buyers offering more choices, stronger negotiation power, and less pressure to rush decisions."
+            ],
+            "title": "Why 2026 Is Becoming a Buyer's Market in Las Vegas and How to ..."
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "field": "buyer_services_post_nar_settlement_representation_redefined",
+        "reasoning": "Completeness: The field_answer provides a comprehensive overview of changes to buyer representation post-NAR settlement, Nevada AB 258, and how commissions are disclosed and negotiated, plus service tiers and strategic implications. It appears to cover multiple dimensions a reader would expect (legal changes, compensation structure, service tiers, case scenario, and homeowner demands). Therefore completeness is true.\n\nSupported: The excerpts provided include statements about: (1) NAR settlement affecting MLS advertising of buyer-agent commissions and negotiations instead of ranges, (2) a reported average commission around 5.71%, and (3) a May 2026 Las Vegas market snapshot. The field_answer includes these points and additional claims (e.g., Nevada-specific AB 258, written Buyer-Broker Agreements, and explicit mandatory nature) that are not directly supported by the excerpts. Since not all the factual assertions in the field_answer are backed by the excerpts, the overall support from excerpts is not complete. Therefore, supported is false.",
+        "citations": [
+          {
+            "url": "https://www.kallanlvre.com/blog/nevada-buyer-agent-commissions/",
+            "excerpts": [
+              "Apr 18, 2026 \u2014 After the NAR settlement took effect August 17, 2024, buyer-agent commissions can no longer be advertised on the MLS. They are negotiated"
+            ],
+            "title": "Nevada Buyer Agent Commissions in 2026 | KALLANLVRE"
+          },
+          {
+            "url": "https://listwithclever.com/average-real-estate-commission-rate/nevada/las-vegas/",
+            "excerpts": [
+              "The data: Our February 2026 survey of local agents found that the average real estate commission in Las Vegas is 5.71%, which is about equal to the national"
+            ],
+            "title": "Average Real Estate Commission in Las Vegas, NV: 2026 ..."
+          },
+          {
+            "url": "https://www.nevadarealestategroup.com/blog/las-vegas-real-estate-market-report-may-2026/",
+            "excerpts": [
+              "The Las Vegas housing market in May 2026 is balanced and buyer-favorable for the first time in three years, with a median single-family sale price near $498,000, days on market near 38, and 4.6 months of supply across Clark County."
+            ],
+            "title": "Las Vegas Real Estate Market Report: May 2026"
+          }
+        ],
+        "confidence": "medium"
+      },
+      {
+        "field": "seller_services_professional_marketing_meets_concession_strategy",
+        "reasoning": "**Analyzing output requirements**\n\nI need to generate JSON as per the output schema that includes scratchpad, completeness, and supported fields. The field description isn't clear, but the field_answer covers seller services and marketing concessions. Considering its detail about price reductions and other data points, the completeness appears true. However, the excerpts don\u2019t support specific claims made in the field answer regarding percentages. So, while the completeness is true, the supported field should be false. I'll clarify this in the JSON output.**Preparing JSON output**\n\nI need to ensure that I include reasoning in the output, but the schema specifically calls for fields: scratchpad, completeness, and supported. I\u2019ll fill the scratchpad with the reasoning steps taken for this task. Since the schema is clear, I just need to focus on populating these fields correctly and accurately. Let\u2019s produce the JSON output now, sticking to the requirements. I think I'm on the right track!",
+        "citations": [
+          {
+            "url": "https://utopiahomestaging.com/2026-las-vegas-real-estate-market-forecast/",
+            "excerpts": [
+              "The Las Vegas housing market in 2026 reflects a transition toward balance. Unlike the extreme seller's market of 2021-2022 or the uncertainty of 2023-2024, this"
+            ],
+            "title": "2026 Las Vegas Real Estate Market Forecast: For Sellers"
+          },
+          {
+            "url": "https://www.nevadarealestategroup.com/blog/las-vegas-real-estate-market-report-may-2026/",
+            "excerpts": [
+              "The Las Vegas housing market in May 2026 is balanced and buyer-favorable for the first time in three years, with a median single-family sale price near $498,000, days on market near 38, and 4.6 months of supply across Clark County."
+            ],
+            "title": "Las Vegas Real Estate Market Report: May 2026"
+          },
+          {
+            "url": "https://listwithclever.com/average-real-estate-commission-rate/nevada/las-vegas/",
+            "excerpts": [
+              "The data: Our February 2026 survey of local agents found that the average real estate commission in Las Vegas is 5.71%, which is about equal to the national"
+            ],
+            "title": "Average Real Estate Commission in Las Vegas, NV: 2026 ..."
+          }
+        ],
+        "confidence": "medium"
+      },
+      {
+        "field": "relocation_services_california_exodus_drives_inbound_demand",
+        "reasoning": "**Evaluating relocation service output**\n\nI'm thinking about how to create an output that fits the schema with scratchpad, completeness bool, and supported bool. It seems like the field is expected to discuss relocation services driven by California's exodus, especially to places like Nevada due to zero tax.\n\nThe field answer seems reasonably complete, mentioning various points about these services, even if some details might be missing.\n\nNow, I'll check if excerpts support this conclusion, and they do. So, I can mark both completeness and support as true!",
+        "citations": [
+          {
+            "url": "https://www.nevadarealestategroup.com/blog/california-to-las-vegas-2026-updated-relocation-guide/",
+            "excerpts": [
+              "Apr 21, 2026 \u2014 The team provides California-to-Las-Vegas relocation briefings covering submarkets, schools, taxes, and 90-day timelines. About Chris Nevada."
+            ],
+            "title": "California to Las Vegas 2026: Updated Relocation Guide"
+          },
+          {
+            "url": "https://huntingtonandellis.com/relocation",
+            "excerpts": [
+              "We specialize in Las Vegas corporate relocation, executive relocation services, luxury home relocation, military relocation, employee transfers, and global real"
+            ],
+            "title": "Relocation | Las Vegas Real Estate"
+          },
+          {
+            "url": "https://www.nevadarealestategroup.com/blog/las-vegas-55-plus-community-guide-2026/",
+            "excerpts": [
+              "The complete 2026 guide to Las Vegas 55+ communities. Compare Sun City Summerlin, Sun City Anthem, Solera, Siena, and Heritage at Cadence"
+            ],
+            "title": "Las Vegas 55+ Community Guide: Sun City, Anthem & Active Adult ..."
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "field": "55_communities_active_adult_demand_fueled_by_tax_advantages",
+        "reasoning": "**Evaluating JSON completeness**\n\nAlright, I need to output JSON according to the schema, taking into account scratchpad and completeness. I'm trying to determine if the field description is accurate. It looks like the field is about 55 communities for active adults driven by tax advantages. The field answer seems to provide a detailed list, but I need to evaluate whether it fully answers the field description since some specifics aren't provided. It seems nearly complete, but could be speculative regarding prices and community numbers. I'll set completeness to true if all expected aspects are covered.**Assessing completeness and support**\n\nI can\u2019t pinpoint the exact field description, but it looks like it\u2019s meant to cover active adult 55+ communities in Las Vegas that benefit from tax advantages. The answer gives us details about HOA due diligence, tax benefits, and price ranges, which seems pretty complete. The excerpts reference 30 communities, but they don\u2019t list all specifics, like the five flagship communities. Thus, while field completeness might be true, support based on excerpts could be marked as false.**Producing JSON output**\n\nI need to generate the JSON according to the output schema. It requires including a scratchpad string for my reasoning process, but I shouldn\u2019t detail my whole thought process. The schema still asks for this scratchpad, so I\u2019ll include a brief summary of the assessment steps and conclusions instead of the entire chain-of-thought. I'll ensure it\u2019s concise and non-sensitive. I'll finalize it with completeness set to true, supported set to false, and the scratchpad reflecting a brief reasoning summary. Let\u2019s put this together!",
+        "citations": [
+          {
+            "url": "https://vegas55plus.com/",
+            "excerpts": [
+              "Find your perfect home in a 55+ community in Las Vegas. Call Us 702-275-7717 30 active adult retirement communities. From $650K to $1M+"
+            ],
+            "title": "55+ Communities in Las Vegas"
+          },
+          {
+            "url": "https://www.nevadarealestategroup.com/blog/las-vegas-55-plus-community-guide-2026/",
+            "excerpts": [
+              "The complete 2026 guide to Las Vegas 55+ communities. Compare Sun City Summerlin, Sun City Anthem, Solera, Siena, and Heritage at Cadence"
+            ],
+            "title": "Las Vegas 55+ Community Guide: Sun City, Anthem & Active Adult ..."
+          }
+        ],
+        "confidence": "medium"
+      },
+      {
+        "field": "luxury_market_trophy_properties_defy_broader_softening",
+        "reasoning": "**Assessing JSON completeness**\n\nI need to produce JSON according to a specific schema, and I should focus on the completeness of certain fields. One field to assess is \"luxury_market_trophy_properties_defy_broader_softening,\" which should summarize various data points like the luxury median and total closings. The excerpts provided support some of the claims, but I\u2019m questioning whether they cover everything needed. It appears that some data points might be mentioned in the field answer but not in the excerpts, which raises a completeness concern.**Evaluating completeness and support**\n\nI need to assess completeness in relation to market balance in the luxury real estate sector. Excerpt 1 mentions $2.15M, while Excerpt 2 seems less clear. The field answer refers to specific locations like MacDonald Highlands and The Ridges, but I wonder if Excerpt 0 really addresses them. It looks like Excerpt 4 discusses luxury trends, which could support robustness. \n\nOverall, the field answer includes several specific data points even if not all were strictly in the excerpts, so I think I\u2019d mark completeness as true.**Assessing support from the excerpts**\n\nI noticed that the 8.4 months supply and the details about the 169 closings in February 2026, including the 23 above $3M, are not mentioned in any excerpts. This leads me to think that the field answer isn\u2019t fully supported by the excerpts. The instructions say to set the supported variable to true only when there's full support, which isn\u2019t the case here. So, I\u2019ll mark it as false and provide some reasoning to clarify this.",
+        "citations": [
+          {
+            "url": "https://www.luxuryhomes.com/blog/2026/05/25/why-las-vegas-luxury-real-estate-is-attracting-high-end-buyers-in-2026/",
+            "excerpts": [
+              "Las Vegas luxury real estate in 2026 is best described as a stable, high-demand but normalized market, where activity remains strong even as the extreme urgency of past years has faded."
+            ],
+            "title": "Why Las Vegas Luxury Real Estate Is Attracting High-End Buyers in ..."
+          },
+          {
+            "url": "https://www.nevadarealestategroup.com/blog/las-vegas-housing-market-forecast-summer-2026/",
+            "excerpts": [
+              "The luxury slice (priced $1.5M+) tracks differently from the broader market. Q1 2026 luxury median was $2.15M, up 5.8 percent year over year \u2014"
+            ],
+            "title": "Las Vegas Housing Market Forecast Summer 2026 | Chris Nevada"
+          },
+          {
+            "url": "https://utopiahomestaging.com/2026-las-vegas-real-estate-market-forecast/",
+            "excerpts": [
+              "The Las Vegas housing market in 2026 reflects a transition toward balance. Unlike the extreme seller's market of 2021-2022 or the uncertainty of 2023-2024, this"
+            ],
+            "title": "2026 Las Vegas Real Estate Market Forecast: For Sellers"
+          },
+          {
+            "url": "https://www.nevadarealestategroup.com/blog/las-vegas-real-estate-market-report-may-2026/",
+            "excerpts": [
+              "The Las Vegas housing market in May 2026 is balanced and buyer-favorable for the first time in three years, with a median single-family sale price near $498,000, days on market near 38, and 4.6 months of supply across Clark County."
+            ],
+            "title": "Las Vegas Real Estate Market Report: May 2026"
+          },
+          {
+            "url": "https://isluxury.com/blog/luxury-real-estate-trends-vegas/",
+            "excerpts": [
+              "Despite fluctuations in the broader economy, the demand for luxury properties in Las Vegas remains robust. a moderation in demand."
+            ],
+            "title": "Las Vegas Real Estate Trends - IS Luxury"
+          }
+        ],
+        "confidence": "medium"
+      },
+      {
+        "field": "investment_property_services_yield_driven_strategy_after_investor_pullback",
+        "reasoning": "**Evaluating JSON completeness**\n\nI need to create a JSON that includes necessary fields, especially focusing on the title related to an \"investment property services yield-driven strategy after investor pullback.\" The field_answer cites various data points and claims, but I notice some of the information isn't explicitly supported by the excerpts provided\u2014especially those regarding rent yields and investor shares. Excerpts do have inventory figures, but they don\u2019t fully validate all the facts. Completeness seems to hinge on how well the field_answer addresses the query, although the specifics aren't entirely clear here.**Assessing completeness and support**\n\nThe answer I\u2019m looking at provides yield figures and discusses services, which suggests it might be complete. However, I need to follow the instructions and evaluate completeness based on the field answer itself, regardless of the excerpts. Since the analysis addresses the query directly, I can mark completeness as true. On the other hand, some numbers in the answer aren\u2019t supported by the excerpts, so I\u2019ll note that support is false. I\u2019ll create the output with the required fields accordingly.",
+        "citations": [
+          {
+            "url": "https://www.nevadarealestategroup.com/blog/las-vegas-housing-market-forecast-summer-2026/",
+            "excerpts": [
+              "The luxury slice (priced $1.5M+) tracks differently from the broader market. Q1 2026 luxury median was $2.15M, up 5.8 percent year over year \u2014"
+            ],
+            "title": "Las Vegas Housing Market Forecast Summer 2026 | Chris Nevada"
+          },
+          {
+            "url": "https://www.ricelasvegas.com/investment-housing-trends-las-vegas/",
+            "excerpts": [
+              "These are the Las Vegas and Henderson single-family home sales trends for the 30-day period ending 4/15/2026. Inventory increased from 6,850 to 7,050 homes, a"
+            ],
+            "title": "Housing Market Trends In Las Vegas 2026 - 2027"
+          }
+        ],
+        "confidence": "medium"
+      },
+      {
+        "field": "new_construction_buyer_advocacy_the_critical_service_gap",
+        "reasoning": "**Evaluating completeness of field answers**\n\nI need to create JSON that matches the BasicFieldEvaluatorOutput format, including scratchpad, completeness, and support. I\u2019m assessing the completeness of the field answer related to new construction buyer advocacy in Las Vegas, specifically in relation to the critical service gap. The field answer discusses various topics like commissions and market conditions but may not completely align with the critical service gap in buyer advocacy. It's reasonably complete for its field focus, but the exact completeness ultimately depends on the unknown field description.**Confirming completeness and support**\n\nI\u2019m evaluating the answer for completeness, and it seems to hold true. The excerpts do show the Las Vegas market and aspects of new construction representation. They somewhat support claims like builder-paid commissions and buyer representation. So it seems like there's some adequate support here. The field answer also includes citations, which reference sources that discuss builder negotiations and representation. I\u2019ll mark both completeness and support as true, and I\u2019m ready to craft the JSON with a concise scratchpad explaining my reasoning steps.",
+        "citations": [
+          {
+            "url": "https://www.nevadarealestategroup.com/blog/las-vegas-housing-market-forecast-summer-2026/",
+            "excerpts": [
+              "The luxury slice (priced $1.5M+) tracks differently from the broader market. Q1 2026 luxury median was $2.15M, up 5.8 percent year over year \u2014"
+            ],
+            "title": "Las Vegas Housing Market Forecast Summer 2026 | Chris Nevada"
+          },
+          {
+            "url": "https://utopiahomestaging.com/2026-las-vegas-real-estate-market-forecast/",
+            "excerpts": [
+              "The Las Vegas housing market in 2026 reflects a transition toward balance. Unlike the extreme seller's market of 2021-2022 or the uncertainty of 2023-2024, this"
+            ],
+            "title": "2026 Las Vegas Real Estate Market Forecast: For Sellers"
+          },
+          {
+            "url": "https://www.nevadarealestategroup.com/blog/best-real-estate-agent-for-new-construction-in-las-vegas-your-2026-guide-to-builder-negotiations-and-expert-representation/",
+            "excerpts": [
+              "Chris Nevada of the Nevada Real Estate Group at LPT Realty is the top-ranked new construction agent in Las Vegas for 2026."
+            ],
+            "title": "Best Agent for New Construction Las Vegas | Builder Negotiation ..."
+          },
+          {
+            "url": "https://www.homesforsale.vegas/new-construction-realtors/",
+            "excerpts": [
+              "Feb 17, 2022 \u2014 Builders pay for you to have buyer representation in Las Vegas, NV, and most of the country. They offer you buyer representation in Nevada"
+            ],
+            "title": "7 Reasons To Use A New Construction Home Realtor"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "field": "hyperlocal_seo_services_the_digital_differentiator_homeowners_need",
+        "reasoning": "**Preparing JSON output**\n\nI need to create JSON following the specified schema, including fields like scratchpad, completeness, and supported boolean values. For completeness, I'll check if the field_answer discusses hyperlocal SEO services, and since it does, I'll mark it as true. Then, I need to see if the excerpts support this field answer. The excerpts mention local SEO elements, which align well, so that\u2019s a yes for supported too. Let\u2019s craft a concise scratchpad with my reasoning and ensure it fits the required structure!",
+        "citations": [
+          {
+            "url": "https://smrtlv.io/seo-for-realtors-las-vegas",
+            "excerpts": [
+              "SEO for Las Vegas realtors and real estate agents. Rank for neighborhood searches, dominate Google Maps, and capture homebuyer and seller leads organically."
+            ],
+            "title": "SEO for Realtors and Real Estate Agents in Las Vegas | Smart LV"
+          },
+          {
+            "url": "https://www.followupboss.com/blog/hyperlocal-real-estate-marketing",
+            "excerpts": [
+              "Hyperlocal marketing targets potential customers in a very specific geographic area\u2014often as small as a few specific neighborhoods\u2014rather than"
+            ],
+            "title": "How to use hyperlocal real estate marketing to attract more leads"
+          },
+          {
+            "url": "https://agentfire.com/blog/local-seo-for-real-estate/",
+            "excerpts": [
+              "Local SEO for real estate helps you dominate neighborhood-specific searches, attracting qualified buyers and sellers in your market."
+            ],
+            "title": "Local SEO for Real Estate: A Complete Guide [2025] - AgentFire"
+          },
+          {
+            "url": "https://www.homestack.com/blog/13-hyperlocal-real-estate-marketing-ideas-to-attract-more-leads",
+            "excerpts": [
+              "Aug 14, 2025 \u2014 Hyperlocal real estate marketing is all about nailing down potential customers in a super-specific area\u2014sometimes just a few neighborhoods\u2014"
+            ],
+            "title": "13 Hyperlocal Real Estate Marketing Ideas to Attract More ..."
+          },
+          {
+            "url": "https://www.propertyradar.com/blog/hyperlocal-marketing-for-real-estate-agents-investors-and-contractors",
+            "excerpts": [
+              "Hyperlocal marketing means that you're combining your local expertise with digital insights to discover your best potential clients and then you're reaching"
+            ],
+            "title": "Hyperlocal Marketing 101: Real Estate Agents, Investors & ..."
+          },
+          {
+            "url": "https://rainstreamweb.com/real-estate-seo-services-lasvegas/",
+            "excerpts": [
+              "Rainstream provides focused real estate SEO services in Las Vegas, engineered specifically for brokerages, agents, and property management teams"
+            ],
+            "title": "Real Estate SEO Services in Las Vegas - RainStream Technologies"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "field": "synthesis_cross_cutting_insights_across_service_categories",
+        "reasoning": "",
+        "citations": [],
+        "confidence": ""
+      }
+    ],
+    "content": {
+      "executive_summary": "- **Buyer-Favorable Market Shift**: Las Vegas has 4.6 months of supply as of May 2026, the most balanced market since 2018, with 31% of closings including seller concessions averaging $7,800 - buyers should demand aggressive negotiation representation and concession strategy from their REALTOR.\n- **Post-NAR Settlement Service Tiers**: Nevada Assembly Bill 258 made written Buyer-Broker Agreements mandatory as of October 1, 2025; buyers can now negotiate flat fees, hourly rates, or percentage commissions with expanded service tiers (full-service, limited, consultation-only) - homeowners must explicitly define services before signing.\n- **Luxury Outperformance**: The $1.5M+ segment posted a 5.8% year-over-year price gain with a Q1 2026 median of $2.15M, yet carries 8.4 months of supply - luxury sellers need agents with trophy-property marketing and patience; buyers gain rare leverage in this tier.\n- **55+ Community Boom**: Five major active-adult communities ranging from $385K to $1.2M+ are drawing retirees from high-tax states, fueled by Nevada's zero state income, estate, and Social Security taxes - REALTORS specializing in 55+ HOA review and special-assessment auditing are in peak demand.\n- **Investor Yield Compression**: Investor buyer share dropped to 19% of Q1 2026 purchases from a 28% peak in 2021, with single-family rental yields running 5.4% to 6.1% - investors need agents who can identify high-yield submarkets and negotiate builder incentives.\n- **New Construction Advocacy Gap**: Builder representatives hold fiduciary duty to the builder, not the buyer; buyers who fail to register their agent on the first model-home visit permanently forfeit representation - new-construction buyer advocacy is among the fastest-growing service demands.\n- **Hyperlocal SEO as Competitive Differentiator**: Over 30,000 licensed agents compete in Las Vegas metro while Zillow, Redfin, and Realtor.com lock up the first search-results page - agents who build neighborhood landing pages, Google Business Profiles, and community-specific content capture leads that generic portals cannot.\n- **Relocation Pipeline from California**: California-to-Las-Vegas relocation remains the dominant inbound flow, driven by Nevada's zero state income tax and cost of living 2% below the national average - relocation briefings covering submarkets, schools, taxes, and 90-day timelines are a must-have service.\n- **Commission Restructuring**: The average total commission in Southern Nevada is 5.71% (2.98% listing side, 2.73% buyer side), but low-commission brokers offering 1.5% listing fees are gaining traction - sellers should compare full-service versus discount models against their home's price tier.\n- **Concession Strategy Emergence**: Seller concessions appear in 31% of closings, commonly as 2-1 temporary buydowns and closing-cost credits - listing agents who structure concessions strategically close faster than those relying on price cuts.\n- **Pre-Underwriting Advantage**: Buyers who obtain pre-underwriting (not just pre-approval) and use local lenders gain competitive positioning even in a softening market - this is now a baseline expectation for serious buyer representation.\n- **Starter-Home Scarcity**: Entry-level homes under $500K have only 2.8 months of supply versus 8.4 months for luxury - first-time buyer agents face the most competitive segment and must offer speed, appraisal-gap strategies, and tight financing terms.\n\n---",
+      "las_vegas_market_conditions_june_2026_enters_buyer_favorable_territory": "The Las Vegas housing market in mid-2026 is balanced and buyer-favorable for the first time in three years. The median single-family sale price sits near **$498,000** as of May 2026, up **2.1% year-over-year**, while condos and townhomes average **$298,000** (up 1.4% YoY) [las_vegas_market_conditions_june_2026_enters_buyer_favorable_territory[0]] [38]. Regional variances are pronounced: Summerlin South commands approximately $810,000, while North Las Vegas averages roughly $415,000 [las_vegas_market_conditions_june_2026_enters_buyer_favorable_territory[0]] [38]. The summer 2026 forecast projects median sale prices between **$485,000 and $498,000** with list-to-sale ratios of 97% to 99% [las_vegas_market_conditions_june_2026_enters_buyer_favorable_territory[1]] [4].\n\nApproximately **7,400 active single-family listings** are on the market, yielding **4.6 months of supply** across Clark County [las_vegas_market_conditions_june_2026_enters_buyer_favorable_territory[0]] [38]. However, supply varies dramatically by price tier: starter homes under $500K have just **2.8 months** of supply (still competitive), while luxury properties above $1.5M carry **8.4 months** of supply (clearly favoring buyers) [las_vegas_market_conditions_june_2026_enters_buyer_favorable_territory[0]] [38]. The median days on market stands at **38 days**, with monthly new listings tracking near 3,100 and approximately 2,650 closed sales [las_vegas_market_conditions_june_2026_enters_buyer_favorable_territory[0]] [38]. The Market Action Index registers **34** in metro/Henderson and **38** in North Las Vegas - both below the neutral threshold of 30, confirming buyer-favorable conditions [las_vegas_market_conditions_june_2026_enters_buyer_favorable_territory[2]] [7]. Mortgage rates for the 30-year fixed average **6.46%** as of April 2026 [las_vegas_market_conditions_june_2026_enters_buyer_favorable_territory[2]] [7].\n\nThe transition matters because it reshapes what homeowners need from their REALTOR. In a seller's market, any agent could list and close. In a buyer-favorable market, sellers need agents who can price precisely using three-month closed comps (not stale six-month data), structure concessions strategically, and deploy professional marketing packages including drone work, video tours, and high-quality photography [las_vegas_market_conditions_june_2026_enters_buyer_favorable_territory[0]] [38]. Buyers, meanwhile, gain real negotiating power for the first time since 2018 and need agents who can exploit it - not just paperwork processors [las_vegas_market_conditions_june_2026_enters_buyer_favorable_territory[3]] [43].\n\n| Metric | Value | Source |\n|---|---|---|\n| Median SFR price (May 2026) | ~$498,000 | Nevada Real Estate Group |\n| Months of supply (Clark County) | 4.6 | Nevada Real Estate Group |\n| Months of supply (<$500K) | 2.8 | Nevada Real Estate Group |\n| Months of supply ($1.5M+) | 8.4 | Nevada Real Estate Group |\n| Median days on market | 38 | Nevada Real Estate Group |\n| 30-year fixed mortgage rate | 6.46% | Utopia Home Staging |\n| Price reductions (active listings) | 33% | Utopia Home Staging |\n| Seller concessions in closings | 31% (~$7,800 median) | Nevada Real Estate Group |\n| YoY appreciation (2026 forecast) | 1-4% | Multiple sources |\n\nStarter homes remain scarce while luxury inventory is oversupplied. This divergence means a single strategy cannot serve both segments - agents must specialize by price tier.\n\n---",
+      "buyer_services_post_nar_settlement_representation_redefined": "The August 2024 NAR settlement and Nevada's Assembly Bill 258 (effective October 1, 2025) have fundamentally changed what buyer services look like in Las Vegas. Buyer-agent commissions can no longer be advertised on the MLS, and **written Buyer-Broker Agreements are mandatory** before an agent can legally show property or write an offer [buyer_services_post_nar_settlement_representation_redefined[0]] [23]. Oral agreements are no longer legally recognized in Nevada [buyer_services_post_nar_settlement_representation_redefined[0]] [23]. This means buyers must now explicitly negotiate the scope and cost of representation upfront.\n\nIn Southern Nevada, the average total commission is **5.71%**, split between a **2.98% listing agent** share and a **2.73% buyer agent** share [buyer_services_post_nar_settlement_representation_redefined[1]] [18]. While many sellers still offer 2.5% to 3% toward the buyer's agent as a closing concession, these offers are no longer advertised upfront on the MLS [buyer_services_post_nar_settlement_representation_redefined[0]] [23]. Compensation must now be expressed as an objective number rather than a range [buyer_services_post_nar_settlement_representation_redefined[0]] [23].\n\nService tiers have expanded significantly. Buyers can now choose from **full-service representation**, **limited service** (tour and contract review only), or **hourly consultations**, and can negotiate commission structures including flat fees, hourly rates, or percentages [buyer_services_post_nar_settlement_representation_redefined[0]] [23]. The buyer's agent may be paid via a seller concession, paid directly by the buyer, or through a higher purchase price paired with a seller credit [buyer_services_post_nar_settlement_representation_redefined[0]] [23]. This flexibility is new and creates both opportunity and confusion for homeowners.\n\nCase study: A first-time buyer in the starter-home segment (under $500K, where supply is only 2.8 months) needs a full-service agent who can move fast - pre-underwriting rather than just pre-approval, appraisal-gap clauses, and tight financing terms to compete with cash offers [buyer_services_post_nar_settlement_representation_redefined[2]] [38]. A buyer in the luxury tier ($1.5M+, 8.4 months supply) has far more room to negotiate price, concessions, and even commission structure - a limited-service or hourly agent may suffice if the buyer is experienced. The divergence is critical: one-size-fits-all buyer representation no longer matches the market.\n\n**What homeowners should demand from buyer representation in June 2026**: written agreement clarity on scope and cost; local lender recommendations (not just national pre-approvals); concession-negotiation skill; tier-specific strategy (speed for starters, leverage for luxury); and new-construction advocacy if purchasing from builders.\n\n---",
+      "seller_services_professional_marketing_meets_concession_strategy": "Sellers in Las Vegas face a market where **33% of active listings have reduced their price** [seller_services_professional_marketing_meets_concession_strategy[0]] [7] and **31% of closings include seller concessions** averaging approximately $7,800 [seller_services_professional_marketing_meets_concession_strategy[1]] [38]. The era of listing at any price and waiting for multiple offers is over. Success now requires a rigorous comparative market analysis based on three-month closed comps (not the stale six-month data that worked in 2021-2022) and a professional marketing package including drone work, video tours, and high-quality photography [seller_services_professional_marketing_meets_concession_strategy[1]] [38].\n\nStandard seller service packages include lock boxes, yard signs, and professional photography [seller_services_professional_marketing_meets_concession_strategy[2]] [18]. However, the market shift means sellers increasingly need agents who understand concession architecture. Common concession forms in 2026 include **2-1 temporary buydowns** and **closing-cost credits** [seller_services_professional_marketing_meets_concession_strategy[1]] [38]. A well-structured buydown can be more cost-effective than a price reduction because it directly addresses the buyer's monthly payment concern (critical at 6.46% mortgage rates) while preserving the home's comparable-sale value.\n\nCase study: Consider a $500,000 listing in Henderson. A 3% price reduction drops the list to $485,000, reducing the comparable value for the entire neighborhood. A 2-1 buydown costing approximately $7,800 instead keeps the sale price at $500,000, lowers the buyer's effective rate for two years, and costs less than the price cut. The listing agent who understands this distinction delivers materially better outcomes - and this is precisely the service differentiation homeowners should demand.\n\nThe commission landscape is also fragmenting. While the average listing commission is **2.98%** [seller_services_professional_marketing_meets_concession_strategy[2]] [18], low-commission brokers offering **1.5% listing fees** are gaining traction [seller_services_professional_marketing_meets_concession_strategy[2]] [18]. Some sellers are moving toward these discount models, but the trade-off is real: in a market where 33% of listings require price reductions, the agent who prices correctly from day one and structures concessions strategically may save the seller far more than the 1.5% commission difference. **91% of homeowners planning to sell still intend to use a realtor** [seller_services_professional_marketing_meets_concession_strategy[2]] [18], indicating that professional representation remains valued even as fee structures evolve.\n\n---",
+      "relocation_services_california_exodus_drives_inbound_demand": "Las Vegas relocation services are experiencing sustained demand, primarily driven by the **California-to-Nevada pipeline**. Nevada Real Estate Group provides California-to-Las-Vegas relocation briefings covering submarkets, schools, taxes, and 90-day timelines [relocation_services_california_exodus_drives_inbound_demand[0]] [17]. Huntington & Ellis specializes in **corporate relocation, executive relocation, luxury home relocation, military relocation, employee transfers, and global real estate services** [relocation_services_california_exodus_drives_inbound_demand[1]] [16]. The value proposition is straightforward: Nevada has **zero state income tax**, a **cost of living 2% below the national average**, and no estate or Social Security taxes [relocation_services_california_exodus_drives_inbound_demand[2]] [5].\n\nRelocating buyers face unique challenges that demand specialized REALTOR services. They need area orientation tours covering distinct submarkets (Summerlin, Henderson, North Las Vegas, Southwest), school-district mapping, commute-time analysis, and an understanding of how HOA and master-plan fee structures work across different communities [relocation_services_california_exodus_drives_inbound_demand[0]] [17]. Corporate relocation clients often have 90-day timelines and housing-allowance constraints that require agents to operate at high velocity with deep inventory knowledge.\n\nThe mechanism driving relocation demand is structural, not cyclical: California's top marginal income tax rate of 13.3% versus Nevada's 0% creates a permanent incentive for high-income individuals to relocate. This is especially powerful for retirees drawing Social Security and investment income, and for remote workers whose income is portable. The implication for REALTOR services is that relocation expertise is not a niche - it is a core competency that intersects with 55+ community specialization, luxury representation, and investment advisory.\n\n---",
+      "55_communities_active_adult_demand_fueled_by_tax_advantages": "Las Vegas hosts approximately **30 active adult retirement communities** with pricing from $650K to $1M+ [55_communities_active_adult_demand_fueled_by_tax_advantages[0]] [2]. The 2026 market features five flagship communities, each with distinct price points and amenity profiles:\n\n| Community | Price Range | HOA/Master Plan Fees | Key Features |\n|---|---|---|---|\n| Sun City Summerlin | $385K - $950K+ | $115-$320/mo | Established community, golf courses |\n| Sun City Anthem | $425K - $1.2M+ | $115-$320/mo | Henderson location, premium amenities |\n| Siena | $465K - $1.1M | $115-$320/mo | Age-restricted, resort-style living |\n| Solera at Anthem | $420K - $725K | $115-$320/mo | Smaller community, intimate feel |\n| Heritage at Cadence | $485K - $950K+ | $115-$320/mo | Modern construction, 35,000+ sq ft Heritage Club |\n\nSources: [55_communities_active_adult_demand_fueled_by_tax_advantages[1]] [5], [55_communities_active_adult_demand_fueled_by_tax_advantages[0]] [2]\n\nHeritage at Cadence stands out for modern construction (newer building codes, energy efficiency) and its 35,000+ sq ft Heritage Club featuring a resort-style pool and fitness center [55_communities_active_adult_demand_fueled_by_tax_advantages[1]] [5]. Sun City Summerlin offers the lowest entry point at $385K but has older construction stock.\n\nThe critical service 55+ buyers need from their REALTOR is **HOA due diligence**. Buyers are cautioned to prioritize reviews of HOA history, special assessments, and amenity replacement schedules to avoid costly mistakes [55_communities_active_adult_demand_fueled_by_tax_advantages[1]] [5]. A special assessment of several thousand dollars can erase years of HOA-fee savings, and amenity replacement schedules (roof, pool, common areas) directly affect future fee increases. This is a specialized skill set that general-practice agents often lack.\n\nNevada's tax structure is the structural magnet: **no state income tax, no estate tax, and no Social Security tax** [55_communities_active_adult_demand_fueled_by_tax_advantages[1]] [5]. For retirees relocating from California, the effective tax savings can exceed $20,000 per year on a $200,000 retirement income - a figure that often covers the entire HOA and housing cost differential.\n\n---",
+      "luxury_market_trophy_properties_defy_broader_softening": "The Las Vegas luxury segment ($1.5M+) is described as a **stable, high-demand but normalized market** where activity remains strong even as the extreme urgency of past years has faded [luxury_market_trophy_properties_defy_broader_softening[0]] [1]. The Q1 2026 luxury median was **$2.15M, up 5.8% year-over-year** [luxury_market_trophy_properties_defy_broader_softening[1]] [4]. February 2026 saw **169 luxury closings, including 23 above $3 million** [luxury_market_trophy_properties_defy_broader_softening[2]] [7], and one month recorded over **178 closings above $1M** [luxury_market_trophy_properties_defy_broader_softening[0]] [1].\n\nDemand is driven by **wealth migration from high-tax states** like New York and California, attracted by Nevada's zero state income tax [luxury_market_trophy_properties_defy_broader_softening[0]] [1]. Trophy properties offering privacy, unique design, and land continue to attract strong interest, particularly in premier communities like **MacDonald Highlands** and **The Ridges** [luxury_market_trophy_properties_defy_broader_softening[0]] [1]. Standard luxury homes face more price sensitivity than trophy properties [luxury_market_trophy_properties_defy_broader_softening[0]] [1], creating a bifurcated market within the luxury tier itself.\n\nDespite robust demand, luxury carries **8.4 months of supply** [luxury_market_trophy_properties_defy_broader_softening[3]] [38], meaning buyers have significant selection and negotiating leverage. This creates a tension: prices are rising (5.8% YoY), but inventory gives buyers the upper hand. The mechanism is that new luxury construction and developer inventory are adding supply faster than inbound wealth migration absorbs it.\n\nLuxury sellers need REALTORS with international marketing reach, developer relationships, and patience for longer selling timelines. Luxury buyers need agents who understand the distinction between \"standard luxury\" (negotiable) and \"trophy properties\" (still competitive), and who can structure offers that account for the 8.4-month supply leverage. The demand for luxury market reports from IS Luxury and similar analytics providers reflects this need for segment-specific intelligence [luxury_market_trophy_properties_defy_broader_softening[4]] [3].\n\n---",
+      "investment_property_services_yield_driven_strategy_after_investor_pullback": "Investor demand in Las Vegas has cooled from its pandemic peak but remains significant. Investor buyer share sits at **19% of Q1 2026 purchases**, down from a **28% peak in 2021** [investment_property_services_yield_driven_strategy_after_investor_pullback[0]] [4]. Single-family rental yields run **5.4% to 6.1%** [investment_property_services_yield_driven_strategy_after_investor_pullback[0]] [4]. The Rice Real Estate 2026-2027 trends report provides granular data: inventory increased from 6,850 to 7,050 homes in the 30-day period ending April 15, 2026, with closed sales holding steady [investment_property_services_yield_driven_strategy_after_investor_pullback[1]] [8].\n\nThe investor pullback is driven by two mechanisms. First, mortgage rates at 6.46% compress cash-flow margins on financed purchases, making the 5.4-6.1% rental yield less attractive on a leveraged basis. Second, rising inventory gives investors less urgency - there is no bidding-war pressure. However, this creates an opportunity for investors with cash or low leverage: more inventory means better selection and the ability to negotiate price and terms, particularly on properties that have been sitting.\n\nInvestment-focused REALTOR services in demand include: submarket yield analysis (not all zip codes deliver 6.1%), property management referrals, rent comp research, cap-rate modeling, and 1031 exchange coordination. Rice Real Estate's dual role as brokerage and property manager illustrates the integrated model investors prefer [investment_property_services_yield_driven_strategy_after_investor_pullback[1]] [8]. Agents who can provide data-driven investment briefings rather than generic MLS searches are capturing the remaining investor demand.\n\n---",
+      "new_construction_buyer_advocacy_the_critical_service_gap": "New construction represents a significant and growing segment of Las Vegas realtor service demand. The median new-construction closing price was **$514,291**, with price points ranging from **$340,000 to $1.4 million** [new_construction_buyer_advocacy_the_critical_service_gap[0]] [4], [new_construction_buyer_advocacy_the_critical_service_gap[1]] [7]. The critical issue is that the **builder's sales representative has a fiduciary duty to the builder, not the buyer**, and aims to sell homes at the highest price with minimal concessions [new_construction_buyer_advocacy_the_critical_service_gap[2]] [28]. Using a buyer's agent **does not cost the buyer more**, as the builder pays the commission regardless [new_construction_buyer_advocacy_the_critical_service_gap[2]] [28].\n\nNew construction agents provide specialized services that can save buyers between **$10,000 and $30,000** through upgrade negotiations alone [new_construction_buyer_advocacy_the_critical_service_gap[2]] [28]:\n\n| Service | What the Agent Does | Typical Savings |\n|---|---|---|\n| Builder negotiations | Leverages inventory and end-of-quarter pressure for unadvertised incentives | $5,000-$15,000 in builder credits |\n| Upgrade negotiations | Identifies overpriced design center items; advises post-closing installation | $10,000-$30,000 on flooring, lighting, finishes |\n| Lot selection | Evaluates premiums based on view corridors, traffic, future development | Long-term equity optimization |\n| Contract review | Flags builder-favorable legal provisions | Risk mitigation (non-quantifiable) |\n| Build management | Milestone inspections and final punchlist reviews | Construction deficiency correction |\n\nSource: [new_construction_buyer_advocacy_the_critical_service_gap[2]] [28]\n\nThe single most important rule for Las Vegas new-construction buyers: **register an agent during the very first visit to a model home**. Failing to do so may permanently forfeit the right to representation at that community [new_construction_buyer_advocacy_the_critical_service_gap[2]] [28]. Additionally, buyers should compare builder-preferred lender quotes with at least two other lenders to ensure the best terms [new_construction_buyer_advocacy_the_critical_service_gap[2]] [28], [new_construction_buyer_advocacy_the_critical_service_gap[3]] [29]. This is a service gap where many buyers unknowingly leave money on the table.\n\n---",
+      "hyperlocal_seo_services_the_digital_differentiator_homeowners_need": "Las Vegas real estate is one of the most hypercompetitive search markets in the country, with over **30,000 active licensed agents** in the metro competing for the same buyers and sellers [hyperlocal_seo_services_the_digital_differentiator_homeowners_need[0]] [37]. Zillow, Redfin, and Realtor.com have locked up the first page for generic searches like \"Las Vegas homes for sale\" [hyperlocal_seo_services_the_digital_differentiator_homeowners_need[0]] [37], making it nearly impossible for individual agents to rank at the city level. The answer is hyperlocal SEO - targeting neighborhood-specific searches where the big portals are too broad to compete effectively.\n\nHyperlocal SEO for real estate involves targeting potential customers in a very specific geographic area - often as small as a few specific neighborhoods - rather than a city-wide audience [hyperlocal_seo_services_the_digital_differentiator_homeowners_need[1]] [11]. The specific services homeowners should expect from a REALTOR's digital presence include:\n\n1. **Neighborhood Landing Pages**: Individual pages for specific communities (e.g., \"Homes for Sale in Summerlin,\" \"Sun City Anthem Real Estate\") that rank for long-tail neighborhood searches [hyperlocal_seo_services_the_digital_differentiator_homeowners_need[2]] [13], [hyperlocal_seo_services_the_digital_differentiator_homeowners_need[0]] [37]\n2. **Google Business Profile Optimization**: Claimed, verified, and regularly updated profile with posts, photos, and reviews that drives local pack visibility [hyperlocal_seo_services_the_digital_differentiator_homeowners_need[2]] [13]\n3. **Community-Specific Content**: Market reports, neighborhood guides, school ratings, and lifestyle content for each target area [hyperlocal_seo_services_the_digital_differentiator_homeowners_need[3]] [12], [hyperlocal_seo_services_the_digital_differentiator_homeowners_need[4]] [10]\n4. **Local Keyword Targeting**: Optimizing for queries like \"real estate agent in [neighborhood]\" rather than \"Las Vegas real estate agent\" [hyperlocal_seo_services_the_digital_differentiator_homeowners_need[0]] [37]\n5. **Reputation and Review Management**: Encouraging reviews that mention specific neighborhoods and service types [hyperlocal_seo_services_the_digital_differentiator_homeowners_need[2]] [13]\n\nRainStream Technologies provides focused real estate SEO services in Las Vegas engineered specifically for brokerages, agents, and property management teams [hyperlocal_seo_services_the_digital_differentiator_homeowners_need[5]] [35]. Smart LV offers SEO for Las Vegas realtors to \"rank for neighborhood searches, dominate Google Maps, and capture homebuyer and seller leads organically\" [hyperlocal_seo_services_the_digital_differentiator_homeowners_need[0]] [37]. These specialized providers reflect the market demand for digital differentiation.\n\n**Why homeowners should care about their REALTOR's hyperlocal SEO**: An agent with strong neighborhood-level search presence attracts more qualified leads for the homeowner's specific property. A listing on a community-specific page (\"Sun City Summerlin homes for sale\") reaches buyers who have already self-selected for that neighborhood - they are further along in the decision funnel than someone searching broadly for \"Las Vegas homes.\" This means more showings, faster sales, and potentially higher offers. Homeowners selling in 2026's buyer-favorable market should ask prospective agents: \"What neighborhood pages do you rank for?\" and \"Show me your Google Business Profile.\" The answer reveals whether the agent can deliver digital exposure that generic MLS listings cannot.\n\n---",
+      "synthesis_cross_cutting_insights_across_service_categories": "The eight service areas examined are not independent columns - they intersect in ways that define which REALTORS will thrive in June 2026 Las Vegas and which homeowners will achieve optimal outcomes.\n\n**Intersection 1: Relocation drives 55+, luxury, and investment demand.** The California-to-Nevada pipeline is the single largest structural force. It simultaneously feeds 55+ community demand (retirees seeking tax savings), luxury demand (high-income remote workers and executives), and investment demand (investors following population growth). A REALTOR who can serve relocating clients across all three segments captures compounding referral networks.\n\n**Intersection 2: Post-NAR settlement commission flexibility intersects with market conditions.** In a buyer-favorable market with 4.6 months supply, buyers have leverage to negotiate not just price but also their agent's commission structure. Conversely, sellers facing 33% price reductions need agents who can justify full commissions through concession expertise and professional marketing. The agents who will struggle are those who cannot articulate a clear value proposition beyond \"I'll open doors and file paperwork.\"\n\n**Intersection 3: Hyperlocal SEO is the distribution layer for every service.** Whether a REALTOR specializes in 55+ communities, luxury listings, new construction, or relocation, hyperlocal SEO is how clients find them. An agent who ranks for \"Sun City Summerlin REALTOR\" captures the 55+ relocation buyer. An agent who ranks for \"MacDonald Highlands luxury homes\" captures the trophy-property seeker. An agent who ranks for \"new construction Las Vegas buyer agent\" captures the builder-community buyer. Digital presence is not a separate service - it is the mechanism by which all other services are discovered.\n\n**Intersection 4: New construction advocacy is the most underserved demand.** Among all service categories, new construction buyer representation has the largest gap between need and awareness. Buyers routinely walk into model homes without agents, forfeiting $10,000-$30,000 in potential savings and all negotiation leverage. This service intersects with investment (investors buying new builds), relocation (new arrivals buying new construction), and 55+ (Heritage at Cadence is new construction in a 55+ community). The REALTOR who makes new-construction advocacy a centerpiece of their practice addresses a genuine market failure.\n\n**Tension: Discount commissions versus full-service value.** The emergence of 1.5% listing brokers creates a real dilemma for sellers. In a market where professional marketing (drone, video, photography) and concession strategy (buydowns versus price cuts) directly affect net proceeds, the cheapest commission does not yield the highest net. A 1.5% commission on a $500,000 listing saves $7,400 compared to 2.98%, but a poorly priced listing that requires a 3% price reduction costs $15,000. The arithmetic favors full-service representation in a buyer-favorable market, but only if the agent actually delivers the expertise - not all full-commission agents do.\n\n---"
+    },
+    "type": "json",
+    "beta_fields": null,
+    "mcp_tool_calls": null,
+    "output_schema": {
+      "type": "object",
+      "properties": {
+        "executive_summary": {
+          "type": "string",
+          "title": "Executive Summary"
+        },
+        "las_vegas_market_conditions_june_2026_enters_buyer_favorable_territory": {
+          "type": "string",
+          "title": "Las Vegas Market Conditions: June 2026 Enters Buyer-Favorable Territory"
+        },
+        "buyer_services_post_nar_settlement_representation_redefined": {
+          "type": "string",
+          "title": "Buyer Services: Post-NAR Settlement Representation Redefined"
+        },
+        "seller_services_professional_marketing_meets_concession_strategy": {
+          "type": "string",
+          "title": "Seller Services: Professional Marketing Meets Concession Strategy"
+        },
+        "relocation_services_california_exodus_drives_inbound_demand": {
+          "type": "string",
+          "title": "Relocation Services: California Exodus Drives Inbound Demand"
+        },
+        "55_communities_active_adult_demand_fueled_by_tax_advantages": {
+          "type": "string",
+          "title": "55+ Communities: Active-Adult Demand Fueled by Tax Advantages"
+        },
+        "luxury_market_trophy_properties_defy_broader_softening": {
+          "type": "string",
+          "title": "Luxury Market: Trophy Properties Defy Broader Softening"
+        },
+        "investment_property_services_yield_driven_strategy_after_investor_pullback": {
+          "type": "string",
+          "title": "Investment Property Services: Yield-Driven Strategy After Investor Pullback"
+        },
+        "new_construction_buyer_advocacy_the_critical_service_gap": {
+          "type": "string",
+          "title": "New Construction Buyer Advocacy: The Critical Service Gap"
+        },
+        "hyperlocal_seo_services_the_digital_differentiator_homeowners_need": {
+          "type": "string",
+          "title": "Hyperlocal SEO Services: The Digital Differentiator Homeowners Need"
+        },
+        "synthesis_cross_cutting_insights_across_service_categories": {
+          "type": "string",
+          "title": "Synthesis: Cross-Cutting Insights Across Service Categories"
+        }
+      },
+      "required": [
+        "executive_summary",
+        "las_vegas_market_conditions_june_2026_enters_buyer_favorable_territory",
+        "buyer_services_post_nar_settlement_representation_redefined",
+        "seller_services_professional_marketing_meets_concession_strategy",
+        "relocation_services_california_exodus_drives_inbound_demand",
+        "55_communities_active_adult_demand_fueled_by_tax_advantages",
+        "luxury_market_trophy_properties_defy_broader_softening",
+        "investment_property_services_yield_driven_strategy_after_investor_pullback",
+        "new_construction_buyer_advocacy_the_critical_service_gap",
+        "hyperlocal_seo_services_the_digital_differentiator_homeowners_need",
+        "synthesis_cross_cutting_insights_across_service_categories"
+      ]
+    }
+  }
+}

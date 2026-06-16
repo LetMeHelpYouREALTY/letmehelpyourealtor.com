@@ -40,11 +40,11 @@ export default function SecurityPolicyPage() {
               disclosing it to us responsibly.
             </p>
             
-            <div className="bg-blue-50 border-l-4 border-blue-500 p-6 my-6">
+            <div className="bg-lmhy-coral/5 border-l-4 border-blue-500 p-6 my-6">
               <h3 className="font-semibold text-blue-900 mb-3">
                 How to Report
               </h3>
-              <ul className="space-y-2 text-blue-800">
+              <ul className="space-y-2 text-lmhy-coral-dark">
                 <li>
                   <strong>Email:</strong>{' '}
                   <a href="mailto:security@heyberkshire.com" className="underline">
@@ -246,13 +246,13 @@ export default function SecurityPolicyPage() {
               </p>
               <p className="mb-2">
                 Email:{' '}
-                <a href="mailto:info@heyberkshire.com" className="text-blue-600 underline">
+                <a href="mailto:info@heyberkshire.com" className="text-lmhy-coral underline">
                   info@heyberkshire.com
                 </a>
               </p>
               <p>
                 Phone:{' '}
-                <a href="tel:+17025001942" className="text-blue-600 underline">
+                <a href="tel:+17025001942" className="text-lmhy-coral underline">
                   (702) 500-1942
                 </a>
               </p>

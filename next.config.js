@@ -20,21 +20,16 @@ const nextConfig = {
   // Performance optimizations
   swcMinify: true,
 
-  // Redirect non-www to www
+  // Apex → www (308). Vercel also redirects at the edge; keep for self-host/Cloudflare.
   async redirects() {
     return [
       {
-        source: '/:path*',
-        has: [
-          {
-            type: 'host',
-            value: 'heyberkshire.com',
-          },
-        ],
-        destination: 'https://www.heyberkshire.com/:path*',
+        source: "/:path*",
+        has: [{ type: "host", value: "letmehelpyourealtor.com" }],
+        destination: "https://www.letmehelpyourealtor.com/:path*",
         permanent: true,
       },
-    ]
+    ];
   },
 
   // Python API rewrites
@@ -64,7 +59,7 @@ const nextConfig = {
               "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://em.realscout.com https://www.realscout.com https://assets.calendly.com https://www.googletagmanager.com https://www.google-analytics.com",
               "style-src 'self' 'unsafe-inline' https://em.realscout.com https://www.realscout.com https://assets.calendly.com",
               "img-src 'self' data: blob: https: http:",
-              "font-src 'self' data: https://assets.calendly.com",
+              "font-src 'self' data: https://assets.calendly.com https://fonts.gstatic.com",
               "connect-src 'self' https://em.realscout.com https://www.realscout.com https://openrouter.ai https://api.openai.com https://calendly.com https://www.google-analytics.com https://analytics.google.com https://*.ingest.sentry.io",
               "frame-src 'self' https://em.realscout.com https://www.realscout.com https://calendly.com https://assets.calendly.com https://www.google.com https://maps.google.com https://*.google.com",
               "worker-src 'self' blob:",

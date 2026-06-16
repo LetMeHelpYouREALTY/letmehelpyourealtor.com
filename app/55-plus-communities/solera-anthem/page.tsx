@@ -64,19 +64,19 @@ export default function SoleraAnthemPage() {
       />
       <Navbar />
       <main className="pt-24 pb-16">
-        <div className="container mx-auto px-4">
+        <div className="lmhy-container">
           {/* Breadcrumb */}
           <div className="max-w-6xl mx-auto mb-6">
-            <nav className="text-sm text-slate-500">
-              <Link href="/" className="hover:text-blue-600">
+            <nav className="text-sm text-lmhy-charcoal/60">
+              <Link href="/" className="hover:text-lmhy-coral">
                 Home
               </Link>
               {" / "}
-              <Link href="/55-plus-communities" className="hover:text-blue-600">
+              <Link href="/55-plus-communities" className="hover:text-lmhy-coral">
                 55+ Communities
               </Link>
               {" / "}
-              <span className="text-slate-900">Solera at Anthem</span>
+              <span className="text-lmhy-charcoal">Solera at Anthem</span>
             </nav>
           </div>
 
@@ -86,17 +86,17 @@ export default function SoleraAnthemPage() {
               <Heart className="h-4 w-4 mr-2" />
               Intimate Guard-Gated 55+ Community
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-lmhy-charcoal mb-6">
               Solera at Anthem
             </h1>
-            <p className="text-xl text-slate-600">
+            <p className="text-xl text-lmhy-charcoal/70">
               The close-knit alternative to mega-communities. Guard-gated security
               in Henderson's safest neighborhood.
             </p>
           </div>
 
           {/* Quick Stats */}
-          <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
+          <section className="mb-16 bg-lmhy-charcoal text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-2xl font-bold mb-8 text-center">
               Solera at Anthem at a Glance
             </h2>
@@ -105,31 +105,31 @@ export default function SoleraAnthemPage() {
                 <div className="text-3xl font-bold text-teal-400 mb-1">
                   $380K-$650K
                 </div>
-                <div className="text-slate-300 text-sm">Price Range</div>
+                <div className="text-white/70 text-sm">Price Range</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-teal-400 mb-1">
                   $170-$210
                 </div>
-                <div className="text-slate-300 text-sm">Monthly HOA</div>
+                <div className="text-white/70 text-sm">Monthly HOA</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold mb-1">1,200+</div>
-                <div className="text-slate-300 text-sm">Homes</div>
+                <div className="text-white/70 text-sm">Homes</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-teal-400 mb-1">
                   55+ Only
                 </div>
-                <div className="text-slate-300 text-sm">All Residents</div>
+                <div className="text-white/70 text-sm">All Residents</div>
               </div>
             </div>
           </section>
 
           {/* About */}
           <section className="mb-16 max-w-4xl mx-auto">
-            <div className="prose prose-lg max-w-none text-slate-700">
-              <h2 className="text-3xl font-bold text-slate-900 mb-6">
+            <div className="prose prose-lg max-w-none text-lmhy-charcoal/80">
+              <h2 className="text-3xl font-bold text-lmhy-charcoal mb-6">
                 About Solera at Anthem
               </h2>
               <p>
@@ -163,10 +163,10 @@ export default function SoleraAnthemPage() {
               <div className="flex items-start">
                 <Users className="h-8 w-8 text-teal-600 mr-4 flex-shrink-0 mt-1" />
                 <div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-4">
+                  <h3 className="text-xl font-bold text-lmhy-charcoal mb-4">
                     All Residents 55+
                   </h3>
-                  <p className="text-slate-700 mb-4">
+                  <p className="text-lmhy-charcoal/80 mb-4">
                     Most 55+ communities allow younger spouses under the 80/20
                     HOPA rule. Solera is different—
                     <strong>every resident must be 55 or older</strong>. This
@@ -178,15 +178,15 @@ export default function SoleraAnthemPage() {
                       <div className="font-bold text-teal-600 mb-1">
                         Solera at Anthem
                       </div>
-                      <div className="text-sm text-slate-600">
+                      <div className="text-sm text-lmhy-charcoal/70">
                         100% of residents 55+
                       </div>
                     </div>
                     <div className="bg-white rounded-lg p-4">
-                      <div className="font-bold text-slate-500 mb-1">
+                      <div className="font-bold text-lmhy-charcoal/60 mb-1">
                         Most 55+ Communities
                       </div>
-                      <div className="text-sm text-slate-600">
+                      <div className="text-sm text-lmhy-charcoal/70">
                         80% with 55+ resident, 20% can be younger
                       </div>
                     </div>
@@ -198,46 +198,46 @@ export default function SoleraAnthemPage() {
 
           {/* Amenities */}
           <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+            <h2 className="text-3xl font-bold text-lmhy-charcoal mb-8 text-center">
               Community Amenities
             </h2>
             <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-white border border-slate-200 rounded-xl p-6">
+              <div className="bg-white border border-lmhy-sand/60 rounded-xl p-6">
                 <div className="bg-teal-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
                   <Shield className="h-6 w-6 text-teal-600" />
                 </div>
-                <h3 className="font-bold text-slate-900 mb-2">
+                <h3 className="font-bold text-lmhy-charcoal mb-2">
                   Guard-Gated Security
                 </h3>
-                <ul className="text-slate-600 text-sm space-y-1">
+                <ul className="text-lmhy-charcoal/70 text-sm space-y-1">
                   <li>• 24/7 manned gate</li>
                   <li>• Visitor verification</li>
                   <li>• Community patrol</li>
                   <li>• Peace of mind</li>
                 </ul>
               </div>
-              <div className="bg-white border border-slate-200 rounded-xl p-6">
-                <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                  <Dumbbell className="h-6 w-6 text-blue-600" />
+              <div className="bg-white border border-lmhy-sand/60 rounded-xl p-6">
+                <div className="bg-lmhy-coral/10 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                  <Dumbbell className="h-6 w-6 text-lmhy-coral" />
                 </div>
-                <h3 className="font-bold text-slate-900 mb-2">
+                <h3 className="font-bold text-lmhy-charcoal mb-2">
                   Clubhouse & Fitness
                 </h3>
-                <ul className="text-slate-600 text-sm space-y-1">
+                <ul className="text-lmhy-charcoal/70 text-sm space-y-1">
                   <li>• Resort-style pool</li>
                   <li>• Spa & relaxation</li>
                   <li>• Fitness center</li>
                   <li>• Meeting rooms</li>
                 </ul>
               </div>
-              <div className="bg-white border border-slate-200 rounded-xl p-6">
+              <div className="bg-white border border-lmhy-sand/60 rounded-xl p-6">
                 <div className="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
                   <HomeIcon className="h-6 w-6 text-green-600" />
                 </div>
-                <h3 className="font-bold text-slate-900 mb-2">
+                <h3 className="font-bold text-lmhy-charcoal mb-2">
                   Tennis & Recreation
                 </h3>
-                <ul className="text-slate-600 text-sm space-y-1">
+                <ul className="text-lmhy-charcoal/70 text-sm space-y-1">
                   <li>• Tennis courts</li>
                   <li>• Pickleball</li>
                   <li>• Bocce ball</li>
@@ -248,19 +248,19 @@ export default function SoleraAnthemPage() {
           </section>
 
           {/* Henderson Location */}
-          <section className="mb-16 bg-slate-50 rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
+          <section className="mb-16 bg-lmhy-sand/20 rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
+            <h2 className="text-3xl font-bold text-lmhy-charcoal mb-6 text-center">
               Henderson: America's Safest Large City
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-white rounded-xl p-6 border border-slate-200">
+              <div className="bg-white rounded-xl p-6 border border-lmhy-sand/60">
                 <div className="flex items-start">
                   <Shield className="h-6 w-6 text-teal-600 mr-3 flex-shrink-0" />
                   <div>
-                    <h3 className="font-bold text-slate-900 mb-2">
+                    <h3 className="font-bold text-lmhy-charcoal mb-2">
                       Top Safety Rankings
                     </h3>
-                    <p className="text-slate-600 text-sm">
+                    <p className="text-lmhy-charcoal/70 text-sm">
                       Henderson consistently ranks as one of the safest large
                       cities in America. Double security: Henderson's safety plus
                       Solera's guard gate.
@@ -268,42 +268,42 @@ export default function SoleraAnthemPage() {
                   </div>
                 </div>
               </div>
-              <div className="bg-white rounded-xl p-6 border border-slate-200">
+              <div className="bg-white rounded-xl p-6 border border-lmhy-sand/60">
                 <div className="flex items-start">
                   <Mountain className="h-6 w-6 text-teal-600 mr-3 flex-shrink-0" />
                   <div>
-                    <h3 className="font-bold text-slate-900 mb-2">
+                    <h3 className="font-bold text-lmhy-charcoal mb-2">
                       Anthem Master-Planned Community
                     </h3>
-                    <p className="text-slate-600 text-sm">
+                    <p className="text-lmhy-charcoal/70 text-sm">
                       Located within the prestigious Anthem master-planned
                       community. Beautiful mountain views and desert landscapes.
                     </p>
                   </div>
                 </div>
               </div>
-              <div className="bg-white rounded-xl p-6 border border-slate-200">
+              <div className="bg-white rounded-xl p-6 border border-lmhy-sand/60">
                 <div className="flex items-start">
                   <MapPin className="h-6 w-6 text-teal-600 mr-3 flex-shrink-0" />
                   <div>
-                    <h3 className="font-bold text-slate-900 mb-2">
+                    <h3 className="font-bold text-lmhy-charcoal mb-2">
                       Near Sun City Anthem
                     </h3>
-                    <p className="text-slate-600 text-sm">
+                    <p className="text-lmhy-charcoal/70 text-sm">
                       Adjacent to Sun City Anthem with access to nearby golf,
                       dining, and the vibrant Anthem community.
                     </p>
                   </div>
                 </div>
               </div>
-              <div className="bg-white rounded-xl p-6 border border-slate-200">
+              <div className="bg-white rounded-xl p-6 border border-lmhy-sand/60">
                 <div className="flex items-start">
                   <DollarSign className="h-6 w-6 text-teal-600 mr-3 flex-shrink-0" />
                   <div>
-                    <h3 className="font-bold text-slate-900 mb-2">
+                    <h3 className="font-bold text-lmhy-charcoal mb-2">
                       Lower HOA Than Larger Communities
                     </h3>
-                    <p className="text-slate-600 text-sm">
+                    <p className="text-lmhy-charcoal/70 text-sm">
                       $170-$210/month—less than Sun City Anthem's $180-$230
                       because you're not subsidizing massive amenity complexes.
                     </p>
@@ -315,17 +315,17 @@ export default function SoleraAnthemPage() {
 
           {/* Why Choose Solera */}
           <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+            <h2 className="text-3xl font-bold text-lmhy-charcoal mb-8 text-center">
               Why Buyers Choose Solera at Anthem
             </h2>
             <div className="space-y-4">
               <div className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                 <div>
-                  <strong className="text-slate-900">
+                  <strong className="text-lmhy-charcoal">
                     Intimate community where neighbors become friends
                   </strong>
-                  <p className="text-slate-600 text-sm">
+                  <p className="text-lmhy-charcoal/70 text-sm">
                     1,200 homes vs. 7,000+—you'll actually know your neighbors
                   </p>
                 </div>
@@ -333,10 +333,10 @@ export default function SoleraAnthemPage() {
               <div className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                 <div>
-                  <strong className="text-slate-900">
+                  <strong className="text-lmhy-charcoal">
                     All residents 55+—no exceptions
                   </strong>
-                  <p className="text-slate-600 text-sm">
+                  <p className="text-lmhy-charcoal/70 text-sm">
                     Consistent community demographic with shared life experiences
                   </p>
                 </div>
@@ -344,10 +344,10 @@ export default function SoleraAnthemPage() {
               <div className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                 <div>
-                  <strong className="text-slate-900">
+                  <strong className="text-lmhy-charcoal">
                     Guard-gated in America's safest city
                   </strong>
-                  <p className="text-slate-600 text-sm">
+                  <p className="text-lmhy-charcoal/70 text-sm">
                     Double layer of security: Henderson's safety record plus 24/7
                     guard gate
                   </p>
@@ -356,10 +356,10 @@ export default function SoleraAnthemPage() {
               <div className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                 <div>
-                  <strong className="text-slate-900">
+                  <strong className="text-lmhy-charcoal">
                     Lower HOA than mega-communities
                   </strong>
-                  <p className="text-slate-600 text-sm">
+                  <p className="text-lmhy-charcoal/70 text-sm">
                     Pay for what you use, not massive golf courses and rec centers
                     you may not need
                   </p>
@@ -370,8 +370,8 @@ export default function SoleraAnthemPage() {
 
           {/* Expert Quote */}
           <section className="mb-16 max-w-4xl mx-auto">
-            <div className="bg-blue-50 border-l-4 border-blue-600 rounded-r-xl p-8">
-              <blockquote className="text-lg text-slate-700 italic mb-4">
+            <div className="bg-lmhy-coral/5 border-l-4 border-lmhy-coral rounded-r-xl p-8">
+              <blockquote className="text-lg text-lmhy-charcoal/80 italic mb-4">
                 "Solera at Anthem is perfect for buyers who find Sun City
                 overwhelming. It's intimate, genuinely guard-gated, and everyone
                 is actually 55+. The community feels like a neighborhood, not a
@@ -380,7 +380,7 @@ export default function SoleraAnthemPage() {
                 recommend Solera to buyers who prioritize community connection
                 over endless amenities."
               </blockquote>
-              <cite className="text-slate-900 font-semibold">
+              <cite className="text-lmhy-charcoal font-semibold">
                 — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
               </cite>
             </div>
@@ -418,7 +418,7 @@ export default function SoleraAnthemPage() {
             </p>
           </section>
         </div>
-        <div className="text-center text-sm text-slate-500 mt-8">
+        <div className="text-center text-sm text-lmhy-charcoal/60 mt-8">
           Last Updated: January 2026
         </div>
       </main>

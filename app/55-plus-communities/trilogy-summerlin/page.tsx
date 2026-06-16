@@ -64,19 +64,19 @@ export default function TrilogySummerlinPage() {
       />
       <Navbar />
       <main className="pt-24 pb-16">
-        <div className="container mx-auto px-4">
+        <div className="lmhy-container">
           {/* Breadcrumb */}
           <div className="max-w-6xl mx-auto mb-6">
-            <nav className="text-sm text-slate-500">
-              <Link href="/" className="hover:text-blue-600">
+            <nav className="text-sm text-lmhy-charcoal/60">
+              <Link href="/" className="hover:text-lmhy-coral">
                 Home
               </Link>
               {" / "}
-              <Link href="/55-plus-communities" className="hover:text-blue-600">
+              <Link href="/55-plus-communities" className="hover:text-lmhy-coral">
                 55+ Communities
               </Link>
               {" / "}
-              <span className="text-slate-900">Trilogy at Summerlin</span>
+              <span className="text-lmhy-charcoal">Trilogy at Summerlin</span>
             </nav>
           </div>
 
@@ -86,17 +86,17 @@ export default function TrilogySummerlinPage() {
               <Sparkles className="h-4 w-4 mr-2" />
               Luxury Resort-Style 55+ Living
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-lmhy-charcoal mb-6">
               Trilogy at Summerlin
             </h1>
-            <p className="text-xl text-slate-600">
+            <p className="text-xl text-lmhy-charcoal/70">
               Where five-star resort living meets 55+ community. Farm-to-table
               dining, world-class spa, and contemporary homes.
             </p>
           </div>
 
           {/* Quick Stats */}
-          <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
+          <section className="mb-16 bg-lmhy-charcoal text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-2xl font-bold mb-8 text-center">
               Trilogy at Summerlin at a Glance
             </h2>
@@ -105,31 +105,31 @@ export default function TrilogySummerlinPage() {
                 <div className="text-3xl font-bold text-rose-400 mb-1">
                   $500K-$1.1M
                 </div>
-                <div className="text-slate-300 text-sm">Price Range</div>
+                <div className="text-white/70 text-sm">Price Range</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-rose-400 mb-1">
                   $250-$350
                 </div>
-                <div className="text-slate-300 text-sm">Monthly HOA</div>
+                <div className="text-white/70 text-sm">Monthly HOA</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold mb-1">800+</div>
-                <div className="text-slate-300 text-sm">Homes</div>
+                <div className="text-white/70 text-sm">Homes</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-rose-400 mb-1">
                   Luxury
                 </div>
-                <div className="text-slate-300 text-sm">Resort Amenities</div>
+                <div className="text-white/70 text-sm">Resort Amenities</div>
               </div>
             </div>
           </section>
 
           {/* About */}
           <section className="mb-16 max-w-4xl mx-auto">
-            <div className="prose prose-lg max-w-none text-slate-700">
-              <h2 className="text-3xl font-bold text-slate-900 mb-6">
+            <div className="prose prose-lg max-w-none text-lmhy-charcoal/80">
+              <h2 className="text-3xl font-bold text-lmhy-charcoal mb-6">
                 About Trilogy at Summerlin
               </h2>
               <p>
@@ -161,10 +161,10 @@ export default function TrilogySummerlinPage() {
               <div className="flex items-start">
                 <Star className="h-8 w-8 text-rose-600 mr-4 flex-shrink-0 mt-1" />
                 <div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-4">
+                  <h3 className="text-xl font-bold text-lmhy-charcoal mb-4">
                     The Trilogy Difference: Resort-Style Living
                   </h3>
-                  <p className="text-slate-700 mb-4">
+                  <p className="text-lmhy-charcoal/80 mb-4">
                     Trilogy isn't just a 55+ community with a nice clubhouse—it's
                     a resort experience you happen to live in. The difference is
                     in the details.
@@ -172,28 +172,28 @@ export default function TrilogySummerlinPage() {
                   <div className="grid md:grid-cols-3 gap-4">
                     <div className="bg-white rounded-lg p-4 text-center">
                       <UtensilsCrossed className="h-6 w-6 text-rose-600 mx-auto mb-2" />
-                      <div className="font-bold text-slate-900 text-sm">
+                      <div className="font-bold text-lmhy-charcoal text-sm">
                         Farm-to-Table Restaurant
                       </div>
-                      <div className="text-xs text-slate-600">
+                      <div className="text-xs text-lmhy-charcoal/70">
                         Full-service dining, not a snack bar
                       </div>
                     </div>
                     <div className="bg-white rounded-lg p-4 text-center">
                       <Sparkles className="h-6 w-6 text-rose-600 mx-auto mb-2" />
-                      <div className="font-bold text-slate-900 text-sm">
+                      <div className="font-bold text-lmhy-charcoal text-sm">
                         Full-Service Spa
                       </div>
-                      <div className="text-xs text-slate-600">
+                      <div className="text-xs text-lmhy-charcoal/70">
                         Treatments, not just a hot tub
                       </div>
                     </div>
                     <div className="bg-white rounded-lg p-4 text-center">
                       <HomeIcon className="h-6 w-6 text-rose-600 mx-auto mb-2" />
-                      <div className="font-bold text-slate-900 text-sm">
+                      <div className="font-bold text-lmhy-charcoal text-sm">
                         Contemporary Homes
                       </div>
-                      <div className="text-xs text-slate-600">
+                      <div className="text-xs text-lmhy-charcoal/70">
                         Designer finishes throughout
                       </div>
                     </div>
@@ -205,46 +205,46 @@ export default function TrilogySummerlinPage() {
 
           {/* Amenities */}
           <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+            <h2 className="text-3xl font-bold text-lmhy-charcoal mb-8 text-center">
               Luxury Amenities
             </h2>
             <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-white border border-slate-200 rounded-xl p-6">
+              <div className="bg-white border border-lmhy-sand/60 rounded-xl p-6">
                 <div className="bg-rose-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
                   <UtensilsCrossed className="h-6 w-6 text-rose-600" />
                 </div>
-                <h3 className="font-bold text-slate-900 mb-2">
+                <h3 className="font-bold text-lmhy-charcoal mb-2">
                   Farm-to-Table Dining
                 </h3>
-                <ul className="text-slate-600 text-sm space-y-1">
+                <ul className="text-lmhy-charcoal/70 text-sm space-y-1">
                   <li>• On-site restaurant</li>
                   <li>• Chef-prepared meals</li>
                   <li>• Indoor & patio seating</li>
                   <li>• Full bar & wine selection</li>
                 </ul>
               </div>
-              <div className="bg-white border border-slate-200 rounded-xl p-6">
+              <div className="bg-white border border-lmhy-sand/60 rounded-xl p-6">
                 <div className="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
                   <Sparkles className="h-6 w-6 text-purple-600" />
                 </div>
-                <h3 className="font-bold text-slate-900 mb-2">
+                <h3 className="font-bold text-lmhy-charcoal mb-2">
                   Spa & Wellness Center
                 </h3>
-                <ul className="text-slate-600 text-sm space-y-1">
+                <ul className="text-lmhy-charcoal/70 text-sm space-y-1">
                   <li>• Full-service spa treatments</li>
                   <li>• Massage & facials</li>
                   <li>• Wellness programs</li>
                   <li>• Relaxation lounges</li>
                 </ul>
               </div>
-              <div className="bg-white border border-slate-200 rounded-xl p-6">
-                <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                  <Dumbbell className="h-6 w-6 text-blue-600" />
+              <div className="bg-white border border-lmhy-sand/60 rounded-xl p-6">
+                <div className="bg-lmhy-coral/10 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                  <Dumbbell className="h-6 w-6 text-lmhy-coral" />
                 </div>
-                <h3 className="font-bold text-slate-900 mb-2">
+                <h3 className="font-bold text-lmhy-charcoal mb-2">
                   Fitness & Recreation
                 </h3>
-                <ul className="text-slate-600 text-sm space-y-1">
+                <ul className="text-lmhy-charcoal/70 text-sm space-y-1">
                   <li>• State-of-the-art fitness center</li>
                   <li>• Resort-style pool</li>
                   <li>• Tennis & pickleball</li>
@@ -255,20 +255,20 @@ export default function TrilogySummerlinPage() {
           </section>
 
           {/* Home Features */}
-          <section className="mb-16 bg-slate-50 rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
+          <section className="mb-16 bg-lmhy-sand/20 rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
+            <h2 className="text-3xl font-bold text-lmhy-charcoal mb-6 text-center">
               Contemporary Home Designs
             </h2>
-            <p className="text-lg text-slate-600 text-center mb-8 max-w-3xl mx-auto">
+            <p className="text-lg text-lmhy-charcoal/70 text-center mb-8 max-w-3xl mx-auto">
               Trilogy homes break the mold of traditional 55+ construction with
               modern architecture, open layouts, and designer-selected finishes.
             </p>
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-white rounded-xl p-6 border border-slate-200">
-                <h3 className="font-bold text-slate-900 mb-3">
+              <div className="bg-white rounded-xl p-6 border border-lmhy-sand/60">
+                <h3 className="font-bold text-lmhy-charcoal mb-3">
                   Architecture & Design
                 </h3>
-                <ul className="text-slate-600 text-sm space-y-2">
+                <ul className="text-lmhy-charcoal/70 text-sm space-y-2">
                   <li className="flex items-start">
                     <CheckCircle className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
                     Contemporary desert modern aesthetic
@@ -287,11 +287,11 @@ export default function TrilogySummerlinPage() {
                   </li>
                 </ul>
               </div>
-              <div className="bg-white rounded-xl p-6 border border-slate-200">
-                <h3 className="font-bold text-slate-900 mb-3">
+              <div className="bg-white rounded-xl p-6 border border-lmhy-sand/60">
+                <h3 className="font-bold text-lmhy-charcoal mb-3">
                   Features & Finishes
                 </h3>
-                <ul className="text-slate-600 text-sm space-y-2">
+                <ul className="text-lmhy-charcoal/70 text-sm space-y-2">
                   <li className="flex items-start">
                     <CheckCircle className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
                     Chef's kitchens with premium appliances
@@ -315,17 +315,17 @@ export default function TrilogySummerlinPage() {
 
           {/* Why Choose Trilogy */}
           <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+            <h2 className="text-3xl font-bold text-lmhy-charcoal mb-8 text-center">
               Why Buyers Choose Trilogy at Summerlin
             </h2>
             <div className="space-y-4">
               <div className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                 <div>
-                  <strong className="text-slate-900">
+                  <strong className="text-lmhy-charcoal">
                     True resort lifestyle, not just amenities
                   </strong>
-                  <p className="text-slate-600 text-sm">
+                  <p className="text-lmhy-charcoal/70 text-sm">
                     On-site restaurant, full-service spa, and hospitality-trained
                     staff create a resort experience
                   </p>
@@ -334,10 +334,10 @@ export default function TrilogySummerlinPage() {
               <div className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                 <div>
-                  <strong className="text-slate-900">
+                  <strong className="text-lmhy-charcoal">
                     Contemporary homes, not dated designs
                   </strong>
-                  <p className="text-slate-600 text-sm">
+                  <p className="text-lmhy-charcoal/70 text-sm">
                     Modern architecture with open floor plans and designer
                     finishes—a departure from traditional 55+ construction
                   </p>
@@ -346,10 +346,10 @@ export default function TrilogySummerlinPage() {
               <div className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                 <div>
-                  <strong className="text-slate-900">
+                  <strong className="text-lmhy-charcoal">
                     Boutique community size
                   </strong>
-                  <p className="text-slate-600 text-sm">
+                  <p className="text-lmhy-charcoal/70 text-sm">
                     800+ homes—large enough for vibrant programming, small enough
                     for genuine community
                   </p>
@@ -358,10 +358,10 @@ export default function TrilogySummerlinPage() {
               <div className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                 <div>
-                  <strong className="text-slate-900">
+                  <strong className="text-lmhy-charcoal">
                     Premium Summerlin location
                   </strong>
-                  <p className="text-slate-600 text-sm">
+                  <p className="text-lmhy-charcoal/70 text-sm">
                     Near Downtown Summerlin, Red Rock Canyon, and top golf
                     courses—the best of Las Vegas at your doorstep
                   </p>
@@ -372,8 +372,8 @@ export default function TrilogySummerlinPage() {
 
           {/* Expert Quote */}
           <section className="mb-16 max-w-4xl mx-auto">
-            <div className="bg-blue-50 border-l-4 border-blue-600 rounded-r-xl p-8">
-              <blockquote className="text-lg text-slate-700 italic mb-4">
+            <div className="bg-lmhy-coral/5 border-l-4 border-lmhy-coral rounded-r-xl p-8">
+              <blockquote className="text-lg text-lmhy-charcoal/80 italic mb-4">
                 "Trilogy at Summerlin is for buyers who want more than a 55+
                 community—they want a lifestyle. The on-site restaurant, spa, and
                 contemporary homes create an experience you simply can't find
@@ -382,7 +382,7 @@ export default function TrilogySummerlinPage() {
                 luxury 55+ buyers, I recommend Trilogy to those who appreciate
                 quality and won't settle for ordinary."
               </blockquote>
-              <cite className="text-slate-900 font-semibold">
+              <cite className="text-lmhy-charcoal font-semibold">
                 — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
               </cite>
             </div>
@@ -420,7 +420,7 @@ export default function TrilogySummerlinPage() {
             </p>
           </section>
         </div>
-        <div className="text-center text-sm text-slate-500 mt-8">
+        <div className="text-center text-sm text-lmhy-charcoal/60 mt-8">
           Last Updated: January 2026
         </div>
       </main>

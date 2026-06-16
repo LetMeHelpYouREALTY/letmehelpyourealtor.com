@@ -101,7 +101,7 @@ export default function AIChatWidget() {
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
-          className="fixed bottom-6 right-6 bg-blue-600 hover:bg-blue-700 text-white rounded-full p-4 shadow-lg z-50 transition-all hover:scale-110"
+          className="fixed bottom-6 right-6 bg-lmhy-coral hover:bg-lmhy-coral-dark text-white rounded-full p-4 shadow-lg z-50 transition-all hover:scale-110"
           aria-label="Open chat"
         >
           <MessageCircle className="h-6 w-6" />
@@ -110,16 +110,16 @@ export default function AIChatWidget() {
 
       {/* Chat Widget */}
       {isOpen && (
-        <div className="fixed bottom-6 right-6 w-96 h-[600px] bg-white rounded-lg shadow-2xl z-50 flex flex-col border border-slate-200">
+        <div className="fixed bottom-6 right-6 w-96 h-[600px] bg-white rounded-lg shadow-2xl z-50 flex flex-col border border-lmhy-sand/60">
           {/* Header */}
-          <div className="bg-blue-600 text-white p-4 rounded-t-lg flex justify-between items-center">
+          <div className="bg-lmhy-coral text-white p-4 rounded-t-lg flex justify-between items-center">
             <div>
               <h3 className="font-semibold">Real Estate Assistant</h3>
-              <p className="text-xs text-blue-100">Ask me anything!</p>
+              <p className="text-xs text-white/85">Ask me anything!</p>
             </div>
             <button
               onClick={() => setIsOpen(false)}
-              className="hover:bg-blue-700 rounded p-1 transition-colors"
+              className="hover:bg-lmhy-coral-dark rounded p-1 transition-colors"
               aria-label="Close chat"
             >
               <X className="h-5 w-5" />
@@ -138,8 +138,8 @@ export default function AIChatWidget() {
                 <div
                   className={`max-w-[80%] rounded-lg p-3 ${
                     message.role === "user"
-                      ? "bg-blue-600 text-white"
-                      : "bg-slate-100 text-slate-900"
+                      ? "bg-lmhy-coral text-white"
+                      : "bg-slate-100 text-lmhy-charcoal"
                   }`}
                 >
                   <p className="text-sm whitespace-pre-wrap">{message.content}</p>
@@ -149,7 +149,7 @@ export default function AIChatWidget() {
             {isLoading && (
               <div className="flex justify-start">
                 <div className="bg-slate-100 rounded-lg p-3">
-                  <Loader2 className="h-5 w-5 animate-spin text-blue-600" />
+                  <Loader2 className="h-5 w-5 animate-spin text-lmhy-coral" />
                 </div>
               </div>
             )}
@@ -157,7 +157,7 @@ export default function AIChatWidget() {
           </div>
 
           {/* Input */}
-          <div className="p-4 border-t border-slate-200">
+          <div className="p-4 border-t border-lmhy-sand/60">
             <div className="flex gap-2">
               <Input
                 ref={inputRef}
@@ -171,7 +171,7 @@ export default function AIChatWidget() {
               <Button
                 onClick={handleSend}
                 disabled={isLoading || !input.trim()}
-                className="bg-blue-600 hover:bg-blue-700"
+                className="bg-lmhy-coral hover:bg-lmhy-coral-dark"
               >
                 {isLoading ? (
                   <Loader2 className="h-4 w-4 animate-spin" />
@@ -180,7 +180,7 @@ export default function AIChatWidget() {
                 )}
               </Button>
             </div>
-            <p className="text-xs text-slate-500 mt-2 text-center">
+            <p className="text-xs text-lmhy-charcoal/60 mt-2 text-center">
               Powered by AI • Contact: (702) 500-1942
             </p>
           </div>

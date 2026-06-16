@@ -66,61 +66,61 @@ export default function TheRidgesPage() {
       />
       <Navbar />
       <main className="pt-24 pb-16">
-        <div className="container mx-auto px-4">
+        <div className="lmhy-container">
           {/* Breadcrumb */}
           <div className="max-w-6xl mx-auto mb-6">
-            <nav className="text-sm text-slate-500">
-              <Link href="/" className="hover:text-blue-600">Home</Link>
+            <nav className="text-sm text-lmhy-charcoal/60">
+              <Link href="/" className="hover:text-lmhy-coral">Home</Link>
               {" / "}
-              <Link href="/neighborhoods" className="hover:text-blue-600">Neighborhoods</Link>
+              <Link href="/neighborhoods" className="hover:text-lmhy-coral">Neighborhoods</Link>
               {" / "}
-              <span className="text-slate-900">The Ridges</span>
+              <span className="text-lmhy-charcoal">The Ridges</span>
             </nav>
           </div>
 
           {/* Hero */}
           <div className="max-w-4xl mx-auto text-center mb-16">
-            <div className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <div className="inline-block bg-lmhy-coral/10 text-lmhy-coral-dark px-4 py-2 rounded-full text-sm font-semibold mb-6">
               Berkshire Hathaway HomeServices Nevada Properties
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-lmhy-charcoal mb-6">
               Berkshire Hathaway HomeServices The Ridges
             </h1>
-            <p className="text-xl text-slate-600">
+            <p className="text-xl text-lmhy-charcoal/70">
               Las Vegas's most prestigious address. Experience The Ridges luxury with{" "}
               <strong>Berkshire Hathaway HomeServices</strong> and Dr. Jan Duffy.
             </p>
           </div>
 
           {/* Market Stats */}
-          <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
+          <section className="mb-16 bg-lmhy-charcoal text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-2xl font-bold mb-8 text-center">
               The Ridges Luxury Market | January 2026
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-400 mb-1">$2.5M</div>
-                <div className="text-slate-300 text-sm">Median Home Price</div>
+                <div className="text-3xl font-bold text-lmhy-gold mb-1">$2.5M</div>
+                <div className="text-white/70 text-sm">Median Home Price</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-green-400 mb-1">67 Days</div>
-                <div className="text-slate-300 text-sm">Avg. Days on Market</div>
+                <div className="text-white/70 text-sm">Avg. Days on Market</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold mb-1">42</div>
-                <div className="text-slate-300 text-sm">Active Listings</div>
+                <div className="text-white/70 text-sm">Active Listings</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-green-400 mb-1">+8.2%</div>
-                <div className="text-slate-300 text-sm">YoY Appreciation</div>
+                <div className="text-white/70 text-sm">YoY Appreciation</div>
               </div>
             </div>
           </section>
 
           {/* Main Content */}
           <section className="mb-16 max-w-5xl mx-auto">
-            <div className="prose prose-lg max-w-none text-slate-700">
-              <h2 className="text-3xl font-bold text-slate-900 mb-6">
+            <div className="prose prose-lg max-w-none text-lmhy-charcoal/80">
+              <h2 className="text-3xl font-bold text-lmhy-charcoal mb-6">
                 The Ridges: Las Vegas's Ultimate Address for Discerning Buyers
               </h2>
               <p>
@@ -149,14 +149,14 @@ export default function TheRidgesPage() {
               </p>
 
               {/* Community Highlights */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Community Highlights</h3>
+              <h3 className="text-2xl font-bold text-lmhy-charcoal mt-12 mb-6">Community Highlights</h3>
               <div className="grid md:grid-cols-2 gap-8 not-prose">
-                <div className="bg-slate-50 p-6 rounded-xl">
+                <div className="bg-lmhy-sand/20 p-6 rounded-xl">
                   <div className="flex items-center mb-4">
-                    <Shield className="h-8 w-8 text-blue-600 mr-3" />
-                    <h4 className="font-bold text-slate-900 text-lg">Unmatched Privacy & Security</h4>
+                    <Shield className="h-8 w-8 text-lmhy-coral mr-3" />
+                    <h4 className="font-bold text-lmhy-charcoal text-lg">Unmatched Privacy & Security</h4>
                   </div>
-                  <p className="text-slate-600">
+                  <p className="text-lmhy-charcoal/70">
                     The Ridges offers 24/7 guard-gated security with roving patrols, giving residents
                     the peace of mind they expect at this price point. The community's exclusivity—only
                     900 homes across nearly 800 acres—ensures privacy that's impossible to find in
@@ -164,12 +164,12 @@ export default function TheRidgesPage() {
                     individuals for whom privacy is non-negotiable.
                   </p>
                 </div>
-                <div className="bg-slate-50 p-6 rounded-xl">
+                <div className="bg-lmhy-sand/20 p-6 rounded-xl">
                   <div className="flex items-center mb-4">
-                    <Mountain className="h-8 w-8 text-blue-600 mr-3" />
-                    <h4 className="font-bold text-slate-900 text-lg">Unrivaled Views & Location</h4>
+                    <Mountain className="h-8 w-8 text-lmhy-coral mr-3" />
+                    <h4 className="font-bold text-lmhy-charcoal text-lg">Unrivaled Views & Location</h4>
                   </div>
-                  <p className="text-slate-600">
+                  <p className="text-lmhy-charcoal/70">
                     Positioned along Red Rock Canyon's foothills, The Ridges offers views that no other
                     Las Vegas community can match. Properties feature vistas of the Strip's glittering
                     skyline, the rugged Spring Mountains, and the desert floor stretching to the horizon.
@@ -180,70 +180,70 @@ export default function TheRidgesPage() {
               </div>
 
               {/* The Six Villages */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">The Six Villages of The Ridges</h3>
+              <h3 className="text-2xl font-bold text-lmhy-charcoal mt-12 mb-6">The Six Villages of The Ridges</h3>
               <div className="not-prose grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <div className="bg-white border border-slate-200 rounded-xl p-5">
-                  <h5 className="font-bold text-slate-900 mb-2">Bear's Best</h5>
-                  <p className="text-slate-600 text-sm">Surrounds Bear's Best Golf Club. Premium golf course lots with Strip and mountain views. $2M-$8M.</p>
+                <div className="bg-white border border-lmhy-sand/60 rounded-xl p-5">
+                  <h5 className="font-bold text-lmhy-charcoal mb-2">Bear's Best</h5>
+                  <p className="text-lmhy-charcoal/70 text-sm">Surrounds Bear's Best Golf Club. Premium golf course lots with Strip and mountain views. $2M-$8M.</p>
                 </div>
-                <div className="bg-white border border-slate-200 rounded-xl p-5">
-                  <h5 className="font-bold text-slate-900 mb-2">Falcon Ridge</h5>
-                  <p className="text-slate-600 text-sm">Elevated position with panoramic views. Custom estates on large lots. $2.5M-$10M.</p>
+                <div className="bg-white border border-lmhy-sand/60 rounded-xl p-5">
+                  <h5 className="font-bold text-lmhy-charcoal mb-2">Falcon Ridge</h5>
+                  <p className="text-lmhy-charcoal/70 text-sm">Elevated position with panoramic views. Custom estates on large lots. $2.5M-$10M.</p>
                 </div>
-                <div className="bg-white border border-slate-200 rounded-xl p-5">
-                  <h5 className="font-bold text-slate-900 mb-2">Azure</h5>
-                  <p className="text-slate-600 text-sm">Contemporary architecture with dramatic Strip views. Modern luxury homes. $1.8M-$5M.</p>
+                <div className="bg-white border border-lmhy-sand/60 rounded-xl p-5">
+                  <h5 className="font-bold text-lmhy-charcoal mb-2">Azure</h5>
+                  <p className="text-lmhy-charcoal/70 text-sm">Contemporary architecture with dramatic Strip views. Modern luxury homes. $1.8M-$5M.</p>
                 </div>
-                <div className="bg-white border border-slate-200 rounded-xl p-5">
-                  <h5 className="font-bold text-slate-900 mb-2">Talon Ridge</h5>
-                  <p className="text-slate-600 text-sm">Semi-custom homes with Red Rock backdrop. Entry to The Ridges lifestyle. $1.5M-$3M.</p>
+                <div className="bg-white border border-lmhy-sand/60 rounded-xl p-5">
+                  <h5 className="font-bold text-lmhy-charcoal mb-2">Talon Ridge</h5>
+                  <p className="text-lmhy-charcoal/70 text-sm">Semi-custom homes with Red Rock backdrop. Entry to The Ridges lifestyle. $1.5M-$3M.</p>
                 </div>
-                <div className="bg-white border border-slate-200 rounded-xl p-5">
-                  <h5 className="font-bold text-slate-900 mb-2">Silver Ridge</h5>
-                  <p className="text-slate-600 text-sm">Exclusive custom lot community. Architectural masterpieces. $3M-$15M.</p>
+                <div className="bg-white border border-lmhy-sand/60 rounded-xl p-5">
+                  <h5 className="font-bold text-lmhy-charcoal mb-2">Silver Ridge</h5>
+                  <p className="text-lmhy-charcoal/70 text-sm">Exclusive custom lot community. Architectural masterpieces. $3M-$15M.</p>
                 </div>
-                <div className="bg-white border border-slate-200 rounded-xl p-5">
-                  <h5 className="font-bold text-slate-900 mb-2">Eagle Hills</h5>
-                  <p className="text-slate-600 text-sm">Newest village with modern designs. Desert contemporary style. $2M-$6M.</p>
+                <div className="bg-white border border-lmhy-sand/60 rounded-xl p-5">
+                  <h5 className="font-bold text-lmhy-charcoal mb-2">Eagle Hills</h5>
+                  <p className="text-lmhy-charcoal/70 text-sm">Newest village with modern designs. Desert contemporary style. $2M-$6M.</p>
                 </div>
               </div>
 
               {/* Commute & Location */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Location & Accessibility</h3>
+              <h3 className="text-2xl font-bold text-lmhy-charcoal mt-12 mb-6">Location & Accessibility</h3>
               <div className="not-prose overflow-x-auto">
-                <table className="w-full bg-white border border-slate-200 rounded-lg">
-                  <thead className="bg-slate-50">
+                <table className="w-full bg-white border border-lmhy-sand/60 rounded-lg">
+                  <thead className="bg-lmhy-sand/20">
                     <tr>
-                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Destination</th>
-                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Distance</th>
-                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Drive Time</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold text-lmhy-charcoal">Destination</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold text-lmhy-charcoal">Distance</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold text-lmhy-charcoal">Drive Time</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-slate-200">
                     <tr><td className="px-4 py-3">Downtown Summerlin</td><td className="px-4 py-3">3 miles</td><td className="px-4 py-3">8 min</td></tr>
-                    <tr className="bg-slate-50"><td className="px-4 py-3">Red Rock Canyon</td><td className="px-4 py-3">4 miles</td><td className="px-4 py-3">10 min</td></tr>
+                    <tr className="bg-lmhy-sand/20"><td className="px-4 py-3">Red Rock Canyon</td><td className="px-4 py-3">4 miles</td><td className="px-4 py-3">10 min</td></tr>
                     <tr><td className="px-4 py-3">Las Vegas Strip</td><td className="px-4 py-3">15 miles</td><td className="px-4 py-3">20 min</td></tr>
-                    <tr className="bg-slate-50"><td className="px-4 py-3">McCarran Airport (LAS)</td><td className="px-4 py-3">18 miles</td><td className="px-4 py-3">25 min</td></tr>
+                    <tr className="bg-lmhy-sand/20"><td className="px-4 py-3">McCarran Airport (LAS)</td><td className="px-4 py-3">18 miles</td><td className="px-4 py-3">25 min</td></tr>
                     <tr><td className="px-4 py-3">Private Aviation (HND)</td><td className="px-4 py-3">12 miles</td><td className="px-4 py-3">18 min</td></tr>
                   </tbody>
                 </table>
               </div>
 
               {/* Luxury Amenities */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Nearby Luxury Amenities</h3>
+              <h3 className="text-2xl font-bold text-lmhy-charcoal mt-12 mb-6">Nearby Luxury Amenities</h3>
               <div className="not-prose grid md:grid-cols-2 gap-6">
-                <div className="bg-slate-50 rounded-xl p-6">
-                  <h5 className="font-bold text-slate-900 mb-3">Golf & Recreation</h5>
-                  <ul className="text-slate-600 text-sm space-y-2">
+                <div className="bg-lmhy-sand/20 rounded-xl p-6">
+                  <h5 className="font-bold text-lmhy-charcoal mb-3">Golf & Recreation</h5>
+                  <ul className="text-lmhy-charcoal/70 text-sm space-y-2">
                     <li><strong>Bear's Best Golf Club:</strong> Jack Nicklaus "tribute" course with 18 replica holes from his best designs.</li>
                     <li><strong>Red Rock Country Club:</strong> Two Arnold Palmer courses, just outside The Ridges gates.</li>
                     <li><strong>TPC Las Vegas:</strong> 15 minutes away, hosts PGA Tour events.</li>
                     <li><strong>Red Rock Canyon:</strong> World-class hiking, biking, and rock climbing minutes away.</li>
                   </ul>
                 </div>
-                <div className="bg-slate-50 rounded-xl p-6">
-                  <h5 className="font-bold text-slate-900 mb-3">Shopping & Services</h5>
-                  <ul className="text-slate-600 text-sm space-y-2">
+                <div className="bg-lmhy-sand/20 rounded-xl p-6">
+                  <h5 className="font-bold text-lmhy-charcoal mb-3">Shopping & Services</h5>
+                  <ul className="text-lmhy-charcoal/70 text-sm space-y-2">
                     <li><strong>Downtown Summerlin:</strong> High-end shopping including Apple, Nordstrom, Williams Sonoma.</li>
                     <li><strong>Tivoli Village:</strong> Upscale outdoor shopping with Restoration Hardware, fine dining.</li>
                     <li><strong>Concierge Services:</strong> Private chefs, housekeeping, property management available.</li>
@@ -253,16 +253,16 @@ export default function TheRidgesPage() {
               </div>
 
               {/* Schools */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Schools Serving The Ridges</h3>
-              <div className="not-prose bg-white border border-slate-200 rounded-xl p-6">
-                <p className="text-slate-700 mb-4">
+              <h3 className="text-2xl font-bold text-lmhy-charcoal mt-12 mb-6">Schools Serving The Ridges</h3>
+              <div className="not-prose bg-white border border-lmhy-sand/60 rounded-xl p-6">
+                <p className="text-lmhy-charcoal/80 mb-4">
                   The Ridges is served by top-rated public schools in the Palo Verde cluster, plus Las Vegas's
                   finest private school options:
                 </p>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <h5 className="font-bold text-slate-900 mb-2">Public Schools</h5>
-                    <ul className="text-slate-600 text-sm space-y-1">
+                    <h5 className="font-bold text-lmhy-charcoal mb-2">Public Schools</h5>
+                    <ul className="text-lmhy-charcoal/70 text-sm space-y-1">
                       <li>• Palo Verde High School (8/10)</li>
                       <li>• Sig Rogich Middle School (9/10)</li>
                       <li>• Marion Earl Elementary</li>
@@ -270,8 +270,8 @@ export default function TheRidgesPage() {
                     </ul>
                   </div>
                   <div>
-                    <h5 className="font-bold text-slate-900 mb-2">Private Schools</h5>
-                    <ul className="text-slate-600 text-sm space-y-1">
+                    <h5 className="font-bold text-lmhy-charcoal mb-2">Private Schools</h5>
+                    <ul className="text-lmhy-charcoal/70 text-sm space-y-1">
                       <li>• The Meadows School (K-12)</li>
                       <li>• Bishop Gorman High School</li>
                       <li>• Faith Lutheran Middle & High</li>
@@ -302,14 +302,14 @@ export default function TheRidgesPage() {
 
           {/* Expert Quote */}
           <section className="mb-16 max-w-4xl mx-auto">
-            <div className="bg-blue-50 border-l-4 border-blue-600 rounded-lg p-8">
-              <blockquote className="text-lg text-slate-700 italic mb-4">
+            <div className="bg-lmhy-coral/5 border-l-4 border-lmhy-coral rounded-lg p-8">
+              <blockquote className="text-lg text-lmhy-charcoal/80 italic mb-4">
                 "The Ridges attracts clients who expect the very best—and they recognize Berkshire Hathaway
                 HomeServices as a brand that matches their standards. In luxury real estate, discretion and
                 trust are everything. My clients know their privacy is protected and their interests come first.
                 That's the BHHS difference in high-end transactions."
               </blockquote>
-              <cite className="text-slate-900 font-semibold">
+              <cite className="text-lmhy-charcoal font-semibold">
                 — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
               </cite>
             </div>
@@ -317,45 +317,45 @@ export default function TheRidgesPage() {
 
           {/* FAQ Section */}
           <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+            <h2 className="text-3xl font-bold text-lmhy-charcoal mb-8 text-center">
               Frequently Asked Questions About The Ridges
             </h2>
             <div className="space-y-6">
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
+              <div className="bg-white border border-lmhy-sand/60 rounded-lg p-6">
+                <h3 className="font-bold text-lmhy-charcoal mb-2">
                   What is the current median home price in The Ridges?
                 </h3>
-                <p className="text-slate-600">
+                <p className="text-lmhy-charcoal/70">
                   As of January 2026, The Ridges median home price is $2.5 million. Properties range from
                   $1.5 million for smaller homes to over $15 million for custom estates with Strip and
                   Red Rock views.
                 </p>
               </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
+              <div className="bg-white border border-lmhy-sand/60 rounded-lg p-6">
+                <h3 className="font-bold text-lmhy-charcoal mb-2">
                   How exclusive is The Ridges community?
                 </h3>
-                <p className="text-slate-600">
+                <p className="text-lmhy-charcoal/70">
                   The Ridges is one of Las Vegas's most exclusive communities with 24/7 guard-gated security,
                   only 900 home sites across six distinct villages, and strict architectural guidelines
                   ensuring estate-quality construction throughout.
                 </p>
               </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
+              <div className="bg-white border border-lmhy-sand/60 rounded-lg p-6">
+                <h3 className="font-bold text-lmhy-charcoal mb-2">
                   What celebrities and executives live in The Ridges?
                 </h3>
-                <p className="text-slate-600">
+                <p className="text-lmhy-charcoal/70">
                   While privacy prevents naming residents, The Ridges is known for attracting professional
                   athletes, entertainment executives, casino industry leaders, and high-net-worth individuals
                   seeking privacy and luxury in Las Vegas.
                 </p>
               </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
+              <div className="bg-white border border-lmhy-sand/60 rounded-lg p-6">
+                <h3 className="font-bold text-lmhy-charcoal mb-2">
                   Why use Berkshire Hathaway HomeServices for luxury home purchases?
                 </h3>
-                <p className="text-slate-600">
+                <p className="text-lmhy-charcoal/70">
                   BHHS represents a brand synonymous with trust and discretion—essential in luxury
                   transactions. Our agents like Dr. Jan Duffy have access to off-market listings, understand
                   high-end buyer requirements, and provide the confidentiality luxury clients expect.
@@ -365,27 +365,27 @@ export default function TheRidgesPage() {
           </section>
 
           {/* CTA */}
-          <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
+          <section className="text-center bg-lmhy-coral text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Experience The Ridges Luxury
             </h2>
-            <p className="text-xl text-blue-100 mb-8">
+            <p className="text-xl text-white/85 mb-8">
               Contact Dr. Jan Duffy for a confidential consultation about buying or selling
               in Las Vegas's most prestigious community.
             </p>
             <a
               href="tel:+17025001942"
-              className="inline-flex items-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
+              className="inline-flex items-center bg-white text-lmhy-coral px-8 py-4 rounded-md font-bold text-lg hover:bg-lmhy-cream transition-colors"
             >
               <Phone className="h-5 w-5 mr-2" />
               Call (702) 500-1942
             </a>
-            <p className="mt-4 text-blue-200 text-sm">
+            <p className="mt-4 text-white/70 text-sm">
               Berkshire Hathaway HomeServices Nevada Properties
             </p>
           </section>
         </div>
-        <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
+        <div className="text-center text-sm text-lmhy-charcoal/60 mt-8">Last Updated: January 2026</div>
       </main>
       <RealScoutListings />
       <Footer />

@@ -1,516 +1,127 @@
 import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
+import ServicesGridJune2026 from "@/components/letmehelpyou/ServicesGridJune2026";
+import HowIHelpProcess from "@/components/letmehelpyou/HowIHelpProcess";
+import MarketSnapshotJune2026 from "@/components/letmehelpyou/MarketSnapshotJune2026";
+import LMHYCTA from "@/components/letmehelpyou/LMHYCTA";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
-import Link from "next/link";
-import {
-  Home,
-  TrendingUp,
-  DollarSign,
-  Building,
-  Plane,
-  Calculator,
-  Star,
-  Users,
-  Phone,
-  CheckCircle,
-  Award,
-  Shield,
-  Clock,
-  Heart,
-  ArrowRight,
-} from "lucide-react";
+import { getPageDomainConfig } from "@/lib/get-domain-config";
+import { agentInfo, siteConfig } from "@/lib/site-config";
+import { june2026Services } from "@/lib/letmehelpyou-services";
 import type { Metadata } from "next";
+import { withPageCanonical } from "@/lib/page-metadata";
 
-export const metadata: Metadata = {
-  title: "Real Estate Services Las Vegas | Berkshire Hathaway HomeServices",
+const pageMetadata: Metadata = {
+  title: `Las Vegas Realtor Services — June 2026 | ${siteConfig.name}`,
   description:
-    "Comprehensive real estate services from Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Buying, selling, luxury, investment, relocation, 55+ communities, and new construction. Call (702) 500-1942.",
+    "June 2026 Las Vegas realtor services: buyer advocacy, seller concession strategy, California relocation, 55+ communities, new construction advocacy, luxury, and investment consulting. Dr. Jan Duffy, BHHS Nevada.",
   keywords: [
-    "Las Vegas real estate services",
-    "Berkshire Hathaway services",
-    "home buying Las Vegas",
-    "home selling Henderson",
-    "luxury real estate services",
-    "55+ community specialist",
-    "California relocation Las Vegas",
+    "Las Vegas realtor services June 2026",
+    "buyer agent Las Vegas",
+    "seller concessions Las Vegas",
+    "Let Me Help You realtor",
+    "Dr Jan Duffy services",
   ],
 };
 
-const servicesSchema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  provider: {
-    "@type": "RealEstateAgent",
-    name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
-    telephone: "+17025001942",
-  },
-  areaServed: "Las Vegas, Henderson, Summerlin, Clark County NV",
-  serviceType: "Real Estate Services",
-};
+export const metadata = withPageCanonical(pageMetadata, "/services");
 
-const coreServices = [
-  {
-    icon: Home,
-    title: "Home Buying Services",
-    slug: "buyers",
-    description:
-      "Expert guidance through every step of the home buying process. Free buyer representation—the seller pays the commission, so you get professional advocacy at no cost to you.",
-    highlights: ["Full MLS access", "Expert negotiation", "Contract protection", "Closing coordination"],
-    stats: { label: "Buyers Helped", value: "300+" },
-  },
-  {
-    icon: TrendingUp,
-    title: "Home Selling Services",
-    slug: "sellers",
-    description:
-      "Maximize your home's value with professional marketing, accurate pricing, and expert negotiation from Berkshire Hathaway HomeServices—the most trusted name in real estate.",
-    highlights: ["World-class marketing", "Accurate pricing", "Global exposure", "Staging guidance"],
-    stats: { label: "Homes Sold", value: "500+" },
-  },
-  {
-    icon: Star,
-    title: "Luxury Home Services",
-    slug: "luxury-homes",
-    description:
-      "Specialized expertise in Las Vegas luxury real estate. The Ridges, MacDonald Highlands, Southern Highlands, and the most prestigious communities in Southern Nevada.",
-    highlights: ["Discretion", "Global buyer network", "White-glove service", "Premium marketing"],
-    stats: { label: "Luxury Volume", value: "$45M+" },
-  },
-  {
-    icon: Building,
-    title: "New Construction Services",
-    slug: "new-construction",
-    description:
-      "Free buyer representation on any new construction purchase. The builder pays—you get contract review, upgrade negotiation, and construction monitoring at no cost.",
-    highlights: ["Free representation", "Upgrade negotiation", "Contract review", "Construction oversight"],
-    stats: { label: "New Builds", value: "150+" },
-  },
-];
+export default async function ServicesPage() {
+  const config = await getPageDomainConfig();
 
-const specializedServices = [
-  {
-    icon: DollarSign,
-    title: "Investment Property Consulting",
-    slug: "investment-properties",
-    description:
-      "Strategic consulting for rental properties, fix-and-flip opportunities, and portfolio building. Las Vegas offers some of the best rental yields in the country.",
-    highlights: ["ROI analysis", "Market research", "1031 exchange help", "Property management referrals"],
-  },
-  {
-    icon: Plane,
-    title: "Relocation Services",
-    slug: "relocation",
-    description:
-      "Comprehensive relocation assistance for moves to Las Vegas. Berkshire Hathaway HomeServices' global network of 50,000+ agents makes interstate transitions seamless.",
-    highlights: ["Neighborhood matching", "School research", "Remote buying", "Moving coordination"],
-  },
-  {
-    icon: Users,
-    title: "55+ Community Specialist",
-    slug: "55-plus-communities",
-    description:
-      "Expert guidance for active adult communities including Sun City Summerlin, Sun City Anthem, Del Webb Lake Las Vegas, and other premier 55+ communities in Las Vegas.",
-    highlights: ["Community tours", "HOA analysis", "Amenity comparisons", "Resale insights"],
-  },
-  {
-    icon: Calculator,
-    title: "Home Valuation Services",
-    slug: "home-valuation",
-    description:
-      "Free, no-obligation home valuations using current MLS data, recent comparable sales, and deep local market knowledge from serving Las Vegas since 2008.",
-    highlights: ["Accurate pricing", "No obligation", "Detailed analysis", "Market trends"],
-  },
-];
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Las Vegas Real Estate Services — June 2026",
+    description: siteConfig.description,
+    numberOfItems: june2026Services.length,
+    itemListElement: june2026Services.map((s, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      item: {
+        "@type": "Service",
+        name: s.title,
+        description: s.description,
+        url: `${siteConfig.url}${s.href}`,
+        provider: {
+          "@type": "RealEstateAgent",
+          name: agentInfo.name,
+          telephone: agentInfo.phoneTel.replace("tel:", ""),
+        },
+        areaServed: "Las Vegas, Henderson, Summerlin, Clark County NV",
+      },
+    })),
+  };
 
-const buyerTypes = [
-  {
-    title: "California Relocators",
-    href: "/buyers/california-relocator",
-    description: "Moving from CA? Save on state income tax and enjoy 40-60% lower home prices.",
-  },
-  {
-    title: "First-Time Home Buyers",
-    href: "/buyers/first-time-buyers",
-    description: "FHA, VA, down payment assistance, and step-by-step guidance for your first purchase.",
-  },
-  {
-    title: "Luxury Home Buyers",
-    href: "/buyers/luxury-homes-las-vegas",
-    description: "Guard-gated estates, Strip views, custom builds, and discrete representation.",
-  },
-];
-
-const sellerTypes = [
-  {
-    title: "Move-Up Sellers",
-    href: "/sellers/move-up",
-    description: "Leverage your equity to upgrade your lifestyle with coordinated buy-and-sell.",
-  },
-  {
-    title: "Downsizing Sellers",
-    href: "/sellers/downsizing",
-    description: "Extract equity and transition to low-maintenance living in 55+ communities.",
-  },
-  {
-    title: "Divorce & Probate Sales",
-    href: "/sellers/divorce-probate",
-    description: "Sensitive situations handled with discretion, fairness, and legal coordination.",
-  },
-  {
-    title: "Relocation Sellers",
-    href: "/sellers/relocation",
-    description: "Selling from out of state? Remote coordination with BHHS network support.",
-  },
-];
-
-export default function ServicesPage() {
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       <Navbar />
-      <main className="pt-24 pb-16">
-        <div className="container mx-auto px-4">
-          {/* Hero */}
-          <div className="max-w-4xl mx-auto text-center mb-16">
-            <div className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              Berkshire Hathaway HomeServices Nevada Properties
-            </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-              Las Vegas Real Estate Services
+      <main>
+        <section className="relative pt-32 pb-16 bg-desert-gradient text-white overflow-hidden">
+          <div className="absolute inset-0 bg-sunset-glow pointer-events-none" />
+          <div className="lmhy-container relative z-10 text-center max-w-3xl mx-auto">
+            <span className="lmhy-badge bg-white/10 text-lmhy-sand border border-white/20 mb-6">
+              June 2026 Service Guide
+            </span>
+            <h1 className="text-4xl md:text-5xl font-display font-bold mb-6">
+              Las Vegas Realtor Services
             </h1>
-            <p className="text-xl text-slate-600 mb-8">
-              Comprehensive real estate solutions from Dr. Jan Duffy, backed by the most trusted
-              name in the business—<strong>Berkshire Hathaway HomeServices</strong>. Whether you're 
-              buying your first home, selling a luxury estate, or relocating from California, 
-              you'll receive expert guidance every step of the way.
+            <p className="text-lg text-white/85 leading-relaxed">
+              The market shifted. Homeowners need different help in June 2026 — concession
+              negotiation, buyer-broker clarity, relocation briefings, and hyperlocal neighborhood
+              expertise. Here is exactly how{" "}
+              <strong className="text-lmhy-sand">Let Me Help You</strong> serves the Valley.
             </p>
-            <div className="flex flex-wrap justify-center gap-6 text-sm">
-              <div className="flex items-center">
-                <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                <span>Serving Las Vegas Since 2008</span>
-              </div>
-              <div className="flex items-center">
-                <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                <span>$127M+ in Transactions</span>
-              </div>
-              <div className="flex items-center">
-                <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                <span>500+ Satisfied Clients</span>
-              </div>
-            </div>
           </div>
+        </section>
 
-          {/* Core Services Section */}
-          <section className="mb-16 max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
-              Core Real Estate Services
+        <ServicesGridJune2026 showAll />
+        <MarketSnapshotJune2026 />
+        <HowIHelpProcess />
+
+        <section className="lmhy-section bg-white">
+          <div className="lmhy-container max-w-4xl mx-auto">
+            <h2 className="text-3xl font-display font-bold text-lmhy-charcoal mb-6 text-center">
+              Buyer vs. Seller in June 2026
             </h2>
-            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              These foundational services cover the majority of real estate transactions in Las Vegas. 
-              Each service is delivered with the professionalism, resources, and ethical standards 
-              that define Berkshire Hathaway HomeServices—the only real estate brand backed by 
-              Warren Buffett's Berkshire Hathaway Inc.
-            </p>
-            <div className="grid md:grid-cols-2 gap-6">
-              {coreServices.map((service) => {
-                const Icon = service.icon;
-                return (
-                  <Link
-                    key={service.slug}
-                    href={`/${service.slug}`}
-                    className="bg-white border border-slate-200 rounded-xl p-8 hover:shadow-lg hover:border-blue-300 transition-all group"
-                  >
-                    <div className="flex items-start gap-4">
-                      <div className="bg-blue-100 rounded-lg p-3 group-hover:bg-blue-600 transition-colors flex-shrink-0">
-                        <Icon className="h-6 w-6 text-blue-600 group-hover:text-white transition-colors" />
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex justify-between items-start mb-2">
-                          <h3 className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
-                            {service.title}
-                          </h3>
-                          <span className="text-xs bg-blue-50 text-blue-700 px-2 py-1 rounded">
-                            {service.stats.value} {service.stats.label}
-                          </span>
-                        </div>
-                        <p className="text-slate-600 mb-4 text-sm">{service.description}</p>
-                        <div className="flex flex-wrap gap-2">
-                          {service.highlights.map((highlight) => (
-                            <span
-                              key={highlight}
-                              className="bg-slate-100 text-slate-700 text-xs px-2 py-1 rounded"
-                            >
-                              {highlight}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  </Link>
-                );
-              })}
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="lmhy-card border-l-4 border-l-lmhy-coral">
+                <h3 className="font-display font-bold text-xl text-lmhy-charcoal mb-3">
+                  If You&apos;re Buying
+                </h3>
+                <ul className="space-y-2 text-sm text-lmhy-charcoal/80">
+                  <li>· Demand concession strategy — 31% of deals include seller credits</li>
+                  <li>· Sign a clear buyer-broker agreement (Nevada AB 258)</li>
+                  <li>· Get pre-underwritten, not just pre-approved</li>
+                  <li>· Register your agent before any new-build model home visit</li>
+                </ul>
+              </div>
+              <div className="lmhy-card border-l-4 border-l-lmhy-sage">
+                <h3 className="font-display font-bold text-xl text-lmhy-charcoal mb-3">
+                  If You&apos;re Selling
+                </h3>
+                <ul className="space-y-2 text-sm text-lmhy-charcoal/80">
+                  <li>· Price accurately from day one — overpricing costs weeks</li>
+                  <li>· Structure 2-1 buydowns or closing credits vs. blind price cuts</li>
+                  <li>· Invest in staging and photography for faster DOM</li>
+                  <li>· Compare full-service vs. discount commission models honestly</li>
+                </ul>
+              </div>
             </div>
-          </section>
+            <p className="text-center text-xs text-lmhy-charcoal/50 mt-8">
+              Last updated: June 2026 · Sources: Clark County MLS trends, Nevada AB 258, June 2026
+              market research
+            </p>
+          </div>
+        </section>
 
-          {/* Specialized Services Section */}
-          <section className="mb-16 bg-slate-50 rounded-2xl p-8 md:p-12 max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
-              Specialized Real Estate Services
-            </h2>
-            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Beyond traditional buying and selling, Dr. Jan Duffy offers specialized services 
-              for unique situations. Whether you're an investor building a rental portfolio, 
-              a California family relocating for tax savings, or a retiree seeking the perfect 
-              55+ community, these focused services ensure you receive expert guidance tailored 
-              to your specific needs.
-            </p>
-            <div className="grid md:grid-cols-2 gap-6">
-              {specializedServices.map((service) => {
-                const Icon = service.icon;
-                return (
-                  <Link
-                    key={service.slug}
-                    href={`/${service.slug}`}
-                    className="bg-white border border-slate-200 rounded-lg p-6 hover:shadow-lg hover:border-blue-300 transition-all group"
-                  >
-                    <div className="flex items-start gap-4">
-                      <div className="bg-slate-100 rounded-lg p-3 group-hover:bg-blue-600 transition-colors flex-shrink-0">
-                        <Icon className="h-5 w-5 text-slate-600 group-hover:text-white transition-colors" />
-                      </div>
-                      <div>
-                        <h3 className="font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
-                          {service.title}
-                        </h3>
-                        <p className="text-slate-600 text-sm mb-3">{service.description}</p>
-                        <div className="flex flex-wrap gap-2">
-                          {service.highlights.map((highlight) => (
-                            <span
-                              key={highlight}
-                              className="bg-slate-50 text-slate-600 text-xs px-2 py-1 rounded"
-                            >
-                              {highlight}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  </Link>
-                );
-              })}
-            </div>
-          </section>
-
-          {/* Buyer Types */}
-          <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
-              Services for Every Type of Buyer
-            </h2>
-            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Different buyers have different needs. A first-time buyer needs education and 
-              hand-holding through the process. A California relocator needs tax guidance and 
-              neighborhood matching. A luxury buyer needs discretion and access. Dr. Jan Duffy 
-              tailors her approach to match your specific situation and goals.
-            </p>
-            <div className="grid md:grid-cols-3 gap-6">
-              {buyerTypes.map((type) => (
-                <Link
-                  key={type.href}
-                  href={type.href}
-                  className="bg-white border border-slate-200 rounded-lg p-6 hover:shadow-lg hover:border-blue-300 transition-all group"
-                >
-                  <h3 className="font-bold text-slate-900 mb-2 group-hover:text-blue-600">
-                    {type.title}
-                  </h3>
-                  <p className="text-slate-600 text-sm mb-3">{type.description}</p>
-                  <span className="text-blue-600 text-sm font-semibold flex items-center">
-                    Learn More <ArrowRight className="h-4 w-4 ml-1" />
-                  </span>
-                </Link>
-              ))}
-            </div>
-          </section>
-
-          {/* Seller Types */}
-          <section className="mb-16 max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
-              Services for Every Type of Seller
-            </h2>
-            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Selling a home involves more than just listing it on the MLS. Your situation—whether 
-              you're upgrading, downsizing, dealing with a life change, or relocating—determines 
-              the best strategy. Dr. Jan provides customized selling solutions that address your 
-              specific timeline, financial goals, and circumstances.
-            </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-              {sellerTypes.map((type) => (
-                <Link
-                  key={type.href}
-                  href={type.href}
-                  className="bg-white border border-slate-200 rounded-lg p-5 hover:shadow-lg hover:border-blue-300 transition-all group"
-                >
-                  <h3 className="font-bold text-slate-900 mb-2 group-hover:text-blue-600 text-sm">
-                    {type.title}
-                  </h3>
-                  <p className="text-slate-600 text-xs mb-2">{type.description}</p>
-                  <span className="text-blue-600 text-xs font-semibold">Learn More →</span>
-                </Link>
-              ))}
-            </div>
-          </section>
-
-          {/* Value Proposition */}
-          <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6 text-center">
-              The Berkshire Hathaway HomeServices Difference
-            </h2>
-            <p className="text-lg text-slate-300 text-center max-w-3xl mx-auto mb-8">
-              When you work with a Berkshire Hathaway HomeServices agent, you're backed by a name
-              synonymous with trust, ethical standards, and financial strength—the same principles
-              that built Warren Buffett's empire. This isn't just a logo; it's a commitment to 
-              putting your interests first.
-            </p>
-            <div className="grid md:grid-cols-4 gap-6 text-center mb-8">
-              <div>
-                <div className="text-3xl font-bold text-blue-400 mb-2">50,000+</div>
-                <div className="text-slate-300 text-sm">Agents Worldwide</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-blue-400 mb-2">Since 2008</div>
-                <div className="text-slate-300 text-sm">Serving Las Vegas</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-blue-400 mb-2">$127M+</div>
-                <div className="text-slate-300 text-sm">Volume Closed</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-blue-400 mb-2">4.9★</div>
-                <div className="text-slate-300 text-sm">Client Rating</div>
-              </div>
-            </div>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="text-center">
-                <Shield className="h-10 w-10 text-blue-400 mx-auto mb-3" />
-                <h3 className="font-bold mb-2">Financial Strength</h3>
-                <p className="text-slate-400 text-sm">
-                  Backed by Berkshire Hathaway Inc., providing unmatched stability and trust
-                </p>
-              </div>
-              <div className="text-center">
-                <Award className="h-10 w-10 text-blue-400 mx-auto mb-3" />
-                <h3 className="font-bold mb-2">Ethical Standards</h3>
-                <p className="text-slate-400 text-sm">
-                  Rigorous ethical guidelines ensure your interests always come first
-                </p>
-              </div>
-              <div className="text-center">
-                <Users className="h-10 w-10 text-blue-400 mx-auto mb-3" />
-                <h3 className="font-bold mb-2">Global Network</h3>
-                <p className="text-slate-400 text-sm">
-                  Access to listings and referrals through 50,000+ agents worldwide
-                </p>
-              </div>
-            </div>
-          </section>
-
-          {/* Service Process */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
-              How Our Real Estate Services Work
-            </h2>
-            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Whether you're buying or selling, the process begins with a free consultation 
-              to understand your goals, timeline, and unique circumstances. From there, 
-              Dr. Jan creates a customized strategy that leverages the full resources of 
-              Berkshire Hathaway HomeServices to achieve the best possible outcome.
-            </p>
-            <div className="space-y-6">
-              <div className="flex items-start">
-                <div className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">
-                  1
-                </div>
-                <div>
-                  <h3 className="font-bold text-slate-900 mb-1">Free Consultation</h3>
-                  <p className="text-slate-600 text-sm">
-                    Discuss your goals, timeline, and situation. No pressure, no obligation—just 
-                    honest conversation about how Dr. Jan can help you achieve your real estate goals.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <div className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">
-                  2
-                </div>
-                <div>
-                  <h3 className="font-bold text-slate-900 mb-1">Customized Strategy</h3>
-                  <p className="text-slate-600 text-sm">
-                    Based on your consultation, receive a tailored plan that addresses your specific 
-                    needs—whether that's finding the right neighborhood, pricing your home, or both.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <div className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">
-                  3
-                </div>
-                <div>
-                  <h3 className="font-bold text-slate-900 mb-1">Expert Execution</h3>
-                  <p className="text-slate-600 text-sm">
-                    Dr. Jan handles every detail—marketing, negotiations, paperwork, coordination—
-                    while keeping you informed and in control throughout the process.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <div className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">
-                  4
-                </div>
-                <div>
-                  <h3 className="font-bold text-slate-900 mb-1">Successful Closing & Beyond</h3>
-                  <p className="text-slate-600 text-sm">
-                    Close your transaction with confidence. Dr. Jan remains available for questions, 
-                    referrals, and future real estate needs long after the closing table.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* CTA */}
-          <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Get Started?</h2>
-            <p className="text-xl text-blue-100 mb-8">
-              Contact Dr. Jan Duffy for a free consultation about any of our real estate services. 
-              Whether you're buying, selling, investing, or relocating, you'll receive expert 
-              guidance backed by Berkshire Hathaway HomeServices.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+17025001942"
-                className="inline-flex items-center justify-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
-              >
-                <Phone className="h-5 w-5 mr-2" />
-                Call (702) 500-1942
-              </a>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center bg-blue-500 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-400 transition-colors"
-              >
-                Schedule Consultation
-              </Link>
-            </div>
-            <p className="mt-4 text-blue-200 text-sm">
-              Berkshire Hathaway HomeServices Nevada Properties
-            </p>
-          </section>
-        </div>
-
-        {/* Last Updated */}
-        <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
+        <RealScoutListings />
+        <LMHYCTA config={config} />
       </main>
-      <RealScoutListings />
       <Footer />
     </>
   );

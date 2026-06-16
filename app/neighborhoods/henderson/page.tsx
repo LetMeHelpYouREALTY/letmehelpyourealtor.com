@@ -82,61 +82,61 @@ export default function HendersonPage() {
       />
       <Navbar />
       <main className="pt-24 pb-16">
-        <div className="container mx-auto px-4">
+        <div className="lmhy-container">
           {/* Breadcrumb */}
           <div className="max-w-6xl mx-auto mb-6">
-            <nav className="text-sm text-slate-500">
-              <Link href="/" className="hover:text-blue-600">Home</Link>
+            <nav className="text-sm text-lmhy-charcoal/60">
+              <Link href="/" className="hover:text-lmhy-coral">Home</Link>
               {" / "}
-              <Link href="/neighborhoods" className="hover:text-blue-600">Neighborhoods</Link>
+              <Link href="/neighborhoods" className="hover:text-lmhy-coral">Neighborhoods</Link>
               {" / "}
-              <span className="text-slate-900">Henderson</span>
+              <span className="text-lmhy-charcoal">Henderson</span>
             </nav>
           </div>
 
           {/* Hero */}
           <div className="max-w-4xl mx-auto text-center mb-16">
-            <div className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <div className="inline-block bg-lmhy-coral/10 text-lmhy-coral-dark px-4 py-2 rounded-full text-sm font-semibold mb-6">
               Berkshire Hathaway HomeServices Nevada Properties
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-lmhy-charcoal mb-6">
               Berkshire Hathaway HomeServices Henderson
             </h1>
-            <p className="text-xl text-slate-600">
+            <p className="text-xl text-lmhy-charcoal/70">
               Nevada's safest city. Find your Henderson home with Dr. Jan Duffy, your trusted{" "}
               <strong>Berkshire Hathaway HomeServices</strong> Henderson specialist.
             </p>
           </div>
 
           {/* Market Stats */}
-          <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
+          <section className="mb-16 bg-lmhy-charcoal text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-2xl font-bold mb-8 text-center">
               Henderson Real Estate Market | January 2026
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-400 mb-1">$485,000</div>
-                <div className="text-slate-300 text-sm">Median Home Price</div>
+                <div className="text-3xl font-bold text-lmhy-gold mb-1">$485,000</div>
+                <div className="text-white/70 text-sm">Median Home Price</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-green-400 mb-1">24 Days</div>
-                <div className="text-slate-300 text-sm">Avg. Days on Market</div>
+                <div className="text-white/70 text-sm">Avg. Days on Market</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold mb-1">1,280</div>
-                <div className="text-slate-300 text-sm">Active Listings</div>
+                <div className="text-white/70 text-sm">Active Listings</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-green-400 mb-1">+5.1%</div>
-                <div className="text-slate-300 text-sm">YoY Appreciation</div>
+                <div className="text-white/70 text-sm">YoY Appreciation</div>
               </div>
             </div>
           </section>
 
           {/* Main Content */}
           <section className="mb-16 max-w-5xl mx-auto">
-            <div className="prose prose-lg max-w-none text-slate-700">
-              <h2 className="text-3xl font-bold text-slate-900 mb-6">
+            <div className="prose prose-lg max-w-none text-lmhy-charcoal/80">
+              <h2 className="text-3xl font-bold text-lmhy-charcoal mb-6">
                 Why Henderson Is Nevada's Best-Kept Secret
               </h2>
               <p>
@@ -163,26 +163,26 @@ export default function HendersonPage() {
               </p>
 
               {/* Community Highlights */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Community Highlights</h3>
+              <h3 className="text-2xl font-bold text-lmhy-charcoal mt-12 mb-6">Community Highlights</h3>
               <div className="grid md:grid-cols-2 gap-8 not-prose">
-                <div className="bg-slate-50 p-6 rounded-xl">
+                <div className="bg-lmhy-sand/20 p-6 rounded-xl">
                   <div className="flex items-center mb-4">
-                    <Shield className="h-8 w-8 text-blue-600 mr-3" />
-                    <h4 className="font-bold text-slate-900 text-lg">America's Safest City</h4>
+                    <Shield className="h-8 w-8 text-lmhy-coral mr-3" />
+                    <h4 className="font-bold text-lmhy-charcoal text-lg">America's Safest City</h4>
                   </div>
-                  <p className="text-slate-600">
+                  <p className="text-lmhy-charcoal/70">
                     Henderson has been named the safest city in Nevada and consistently ranks among America's
                     safest large cities. The Henderson Police Department's community policing approach and
                     active neighborhood watch programs contribute to exceptionally low crime rates that give
                     families peace of mind.
                   </p>
                 </div>
-                <div className="bg-slate-50 p-6 rounded-xl">
+                <div className="bg-lmhy-sand/20 p-6 rounded-xl">
                   <div className="flex items-center mb-4">
-                    <Users className="h-8 w-8 text-blue-600 mr-3" />
-                    <h4 className="font-bold text-slate-900 text-lg">Family-First Community</h4>
+                    <Users className="h-8 w-8 text-lmhy-coral mr-3" />
+                    <h4 className="font-bold text-lmhy-charcoal text-lg">Family-First Community</h4>
                   </div>
-                  <p className="text-slate-600">
+                  <p className="text-lmhy-charcoal/70">
                     Henderson is designed for families. The city operates over 60 parks, multiple recreation
                     centers, and hundreds of youth programs. The Henderson Libraries system is award-winning,
                     and community events throughout the year—from the Henderson Farmers Market to the annual
@@ -192,16 +192,16 @@ export default function HendersonPage() {
               </div>
 
               {/* School Districts */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Henderson School Districts</h3>
-              <div className="not-prose bg-white border border-slate-200 rounded-xl p-6">
-                <p className="text-slate-700 mb-4">
+              <h3 className="text-2xl font-bold text-lmhy-charcoal mt-12 mb-6">Henderson School Districts</h3>
+              <div className="not-prose bg-white border border-lmhy-sand/60 rounded-xl p-6">
+                <p className="text-lmhy-charcoal/80 mb-4">
                   Henderson offers some of Nevada's best public schools through Clark County School District,
                   plus excellent charter and private options:
                 </p>
                 <div className="grid md:grid-cols-3 gap-4">
                   <div>
-                    <h5 className="font-bold text-slate-900 mb-2">Elementary Schools</h5>
-                    <ul className="text-slate-600 text-sm space-y-1">
+                    <h5 className="font-bold text-lmhy-charcoal mb-2">Elementary Schools</h5>
+                    <ul className="text-lmhy-charcoal/70 text-sm space-y-1">
                       <li>• John C. Vanderburg (9/10)</li>
                       <li>• Elise L. Wolff Elementary</li>
                       <li>• C.T. Sewell Elementary</li>
@@ -210,8 +210,8 @@ export default function HendersonPage() {
                     </ul>
                   </div>
                   <div>
-                    <h5 className="font-bold text-slate-900 mb-2">Middle & High Schools</h5>
-                    <ul className="text-slate-600 text-sm space-y-1">
+                    <h5 className="font-bold text-lmhy-charcoal mb-2">Middle & High Schools</h5>
+                    <ul className="text-lmhy-charcoal/70 text-sm space-y-1">
                       <li>• Coronado High School (8/10)</li>
                       <li>• Green Valley High School</li>
                       <li>• Foothill High School</li>
@@ -220,8 +220,8 @@ export default function HendersonPage() {
                     </ul>
                   </div>
                   <div>
-                    <h5 className="font-bold text-slate-900 mb-2">Private Schools</h5>
-                    <ul className="text-slate-600 text-sm space-y-1">
+                    <h5 className="font-bold text-lmhy-charcoal mb-2">Private Schools</h5>
+                    <ul className="text-lmhy-charcoal/70 text-sm space-y-1">
                       <li>• Henderson International School</li>
                       <li>• Coral Academy of Science</li>
                       <li>• Pinecrest Academy</li>
@@ -233,41 +233,41 @@ export default function HendersonPage() {
               </div>
 
               {/* Commute Times */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Commute Times from Henderson</h3>
+              <h3 className="text-2xl font-bold text-lmhy-charcoal mt-12 mb-6">Commute Times from Henderson</h3>
               <div className="not-prose overflow-x-auto">
-                <table className="w-full bg-white border border-slate-200 rounded-lg">
-                  <thead className="bg-slate-50">
+                <table className="w-full bg-white border border-lmhy-sand/60 rounded-lg">
+                  <thead className="bg-lmhy-sand/20">
                     <tr>
-                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Destination</th>
-                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Distance</th>
-                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Drive Time</th>
-                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Rush Hour</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold text-lmhy-charcoal">Destination</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold text-lmhy-charcoal">Distance</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold text-lmhy-charcoal">Drive Time</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold text-lmhy-charcoal">Rush Hour</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-slate-200">
                     <tr><td className="px-4 py-3">Las Vegas Strip</td><td className="px-4 py-3">8 miles</td><td className="px-4 py-3">15 min</td><td className="px-4 py-3">20-35 min</td></tr>
-                    <tr className="bg-slate-50"><td className="px-4 py-3">McCarran Airport (LAS)</td><td className="px-4 py-3">6 miles</td><td className="px-4 py-3">12 min</td><td className="px-4 py-3">15-25 min</td></tr>
+                    <tr className="bg-lmhy-sand/20"><td className="px-4 py-3">McCarran Airport (LAS)</td><td className="px-4 py-3">6 miles</td><td className="px-4 py-3">12 min</td><td className="px-4 py-3">15-25 min</td></tr>
                     <tr><td className="px-4 py-3">Downtown Las Vegas</td><td className="px-4 py-3">12 miles</td><td className="px-4 py-3">18 min</td><td className="px-4 py-3">25-40 min</td></tr>
-                    <tr className="bg-slate-50"><td className="px-4 py-3">Summerlin</td><td className="px-4 py-3">22 miles</td><td className="px-4 py-3">28 min</td><td className="px-4 py-3">40-55 min</td></tr>
+                    <tr className="bg-lmhy-sand/20"><td className="px-4 py-3">Summerlin</td><td className="px-4 py-3">22 miles</td><td className="px-4 py-3">28 min</td><td className="px-4 py-3">40-55 min</td></tr>
                     <tr><td className="px-4 py-3">Lake Mead</td><td className="px-4 py-3">15 miles</td><td className="px-4 py-3">20 min</td><td className="px-4 py-3">20-25 min</td></tr>
                   </tbody>
                 </table>
               </div>
-              <p className="text-slate-600 text-sm mt-2 not-prose">
+              <p className="text-lmhy-charcoal/70 text-sm mt-2 not-prose">
                 Henderson's central location provides excellent access to the 215 Beltway and I-515/US-95,
                 making commutes to all parts of the valley convenient.
               </p>
 
               {/* Major Employers */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Major Henderson Employers</h3>
+              <h3 className="text-2xl font-bold text-lmhy-charcoal mt-12 mb-6">Major Henderson Employers</h3>
               <div className="not-prose grid md:grid-cols-2 gap-6">
-                <ul className="text-slate-600 space-y-2">
+                <ul className="text-lmhy-charcoal/70 space-y-2">
                   <li><strong>Barclays:</strong> Credit card operations center (~3,000 employees)</li>
                   <li><strong>Credit One Bank:</strong> Corporate headquarters</li>
                   <li><strong>City of Henderson:</strong> Municipal services</li>
                   <li><strong>Henderson Hospital:</strong> Healthcare services</li>
                 </ul>
-                <ul className="text-slate-600 space-y-2">
+                <ul className="text-lmhy-charcoal/70 space-y-2">
                   <li><strong>Station Casinos:</strong> Green Valley Ranch, Sunset Station</li>
                   <li><strong>Levi Strauss:</strong> Distribution center</li>
                   <li><strong>Amazon:</strong> Fulfillment center nearby</li>
@@ -276,20 +276,20 @@ export default function HendersonPage() {
               </div>
 
               {/* Local Amenities */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Shopping, Dining & Healthcare</h3>
+              <h3 className="text-2xl font-bold text-lmhy-charcoal mt-12 mb-6">Shopping, Dining & Healthcare</h3>
               <div className="not-prose grid md:grid-cols-2 gap-6">
-                <div className="bg-slate-50 rounded-xl p-6">
-                  <h5 className="font-bold text-slate-900 mb-3">Shopping & Entertainment</h5>
-                  <ul className="text-slate-600 text-sm space-y-2">
+                <div className="bg-lmhy-sand/20 rounded-xl p-6">
+                  <h5 className="font-bold text-lmhy-charcoal mb-3">Shopping & Entertainment</h5>
+                  <ul className="text-lmhy-charcoal/70 text-sm space-y-2">
                     <li><strong>The District at Green Valley Ranch:</strong> Outdoor shopping, restaurants, movie theater.</li>
                     <li><strong>Galleria at Sunset:</strong> Major mall with Macy's, Dillard's, 140+ stores.</li>
                     <li><strong>Green Valley Ranch Resort:</strong> Casino, spa, restaurants, concerts.</li>
                     <li><strong>Henderson Farmers Market:</strong> Weekly local produce and artisan goods.</li>
                   </ul>
                 </div>
-                <div className="bg-slate-50 rounded-xl p-6">
-                  <h5 className="font-bold text-slate-900 mb-3">Healthcare Facilities</h5>
-                  <ul className="text-slate-600 text-sm space-y-2">
+                <div className="bg-lmhy-sand/20 rounded-xl p-6">
+                  <h5 className="font-bold text-lmhy-charcoal mb-3">Healthcare Facilities</h5>
+                  <ul className="text-lmhy-charcoal/70 text-sm space-y-2">
                     <li><strong>Henderson Hospital:</strong> Full-service hospital, 24/7 ER, labor & delivery.</li>
                     <li><strong>St. Rose Dominican:</strong> Three locations in Henderson—Siena, San Martin, Rose de Lima.</li>
                     <li><strong>Southwest Medical:</strong> Multiple clinics throughout Henderson.</li>
@@ -318,14 +318,14 @@ export default function HendersonPage() {
 
           {/* Expert Quote */}
           <section className="mb-16 max-w-4xl mx-auto">
-            <div className="bg-blue-50 border-l-4 border-blue-600 rounded-lg p-8">
-              <blockquote className="text-lg text-slate-700 italic mb-4">
+            <div className="bg-lmhy-coral/5 border-l-4 border-lmhy-coral rounded-lg p-8">
+              <blockquote className="text-lg text-lmhy-charcoal/80 italic mb-4">
                 "Henderson offers something for everyone—young professionals, growing families, active retirees.
                 As a Berkshire Hathaway HomeServices agent, I help clients cut through the options and find
                 the community that fits their lifestyle. There's a reason Henderson keeps winning 'Best Places
                 to Live' awards."
               </blockquote>
-              <cite className="text-slate-900 font-semibold">
+              <cite className="text-lmhy-charcoal font-semibold">
                 — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
               </cite>
             </div>
@@ -333,45 +333,45 @@ export default function HendersonPage() {
 
           {/* FAQ Section */}
           <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+            <h2 className="text-3xl font-bold text-lmhy-charcoal mb-8 text-center">
               Frequently Asked Questions About Henderson Real Estate
             </h2>
             <div className="space-y-6">
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
+              <div className="bg-white border border-lmhy-sand/60 rounded-lg p-6">
+                <h3 className="font-bold text-lmhy-charcoal mb-2">
                   What is the current median home price in Henderson?
                 </h3>
-                <p className="text-slate-600">
+                <p className="text-lmhy-charcoal/70">
                   As of January 2026, Henderson's median home price is $485,000, up 5.1% from last year.
                   Prices range from $350,000 for condos to over $2 million in luxury communities like
                   MacDonald Highlands.
                 </p>
               </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
+              <div className="bg-white border border-lmhy-sand/60 rounded-lg p-6">
+                <h3 className="font-bold text-lmhy-charcoal mb-2">
                   How safe is Henderson compared to Las Vegas?
                 </h3>
-                <p className="text-slate-600">
+                <p className="text-lmhy-charcoal/70">
                   Henderson consistently ranks as one of America's safest cities. It has been named the
                   safest city in Nevada and frequently appears in national "Best Places to Live" rankings
                   for its low crime rates and family-friendly environment.
                 </p>
               </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
+              <div className="bg-white border border-lmhy-sand/60 rounded-lg p-6">
+                <h3 className="font-bold text-lmhy-charcoal mb-2">
                   What are the best neighborhoods in Henderson?
                 </h3>
-                <p className="text-slate-600">
+                <p className="text-lmhy-charcoal/70">
                   Henderson's top neighborhoods include Green Valley (established, mature landscaping),
                   Inspirada (resort-style amenities), MacDonald Highlands (luxury), Anthem (family-oriented),
                   and Lake Las Vegas (waterfront living). Each offers distinct lifestyle options.
                 </p>
               </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
+              <div className="bg-white border border-lmhy-sand/60 rounded-lg p-6">
+                <h3 className="font-bold text-lmhy-charcoal mb-2">
                   Why choose Berkshire Hathaway HomeServices for Henderson real estate?
                 </h3>
-                <p className="text-slate-600">
+                <p className="text-lmhy-charcoal/70">
                   BHHS Nevada Properties has served Henderson for decades. Our agents like Dr. Jan Duffy
                   know every community, school district, and HOA. The Berkshire Hathaway name provides
                   trust and resources that benefit both buyers and sellers.
@@ -381,27 +381,27 @@ export default function HendersonPage() {
           </section>
 
           {/* CTA */}
-          <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
+          <section className="text-center bg-lmhy-coral text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Find Your Henderson Home Today
             </h2>
-            <p className="text-xl text-blue-100 mb-8">
+            <p className="text-xl text-white/85 mb-8">
               Contact Dr. Jan Duffy, your Berkshire Hathaway HomeServices Henderson expert,
               for personalized guidance and local market insights.
             </p>
             <a
               href="tel:+17025001942"
-              className="inline-flex items-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
+              className="inline-flex items-center bg-white text-lmhy-coral px-8 py-4 rounded-md font-bold text-lg hover:bg-lmhy-cream transition-colors"
             >
               <Phone className="h-5 w-5 mr-2" />
               Call (702) 500-1942
             </a>
-            <p className="mt-4 text-blue-200 text-sm">
+            <p className="mt-4 text-white/70 text-sm">
               Berkshire Hathaway HomeServices Nevada Properties
             </p>
           </section>
         </div>
-        <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
+        <div className="text-center text-sm text-lmhy-charcoal/60 mt-8">Last Updated: January 2026</div>
       </main>
       <RealScoutListings />
       <Footer />

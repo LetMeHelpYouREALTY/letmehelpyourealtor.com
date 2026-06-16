@@ -3,18 +3,34 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --lmhy-sand: #e8dcc4;
+    --lmhy-coral: #e85d4c;
+    --lmhy-sage: #5c7a6b;
+    --lmhy-charcoal: #1a2332;
+    --lmhy-gold: #c4a962;
+    --lmhy-cream: #faf7f2;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-lmhy-cream text-lmhy-charcoal antialiased;
+  }
+
   a,
   button {
     @apply transition;
   }
 
-  a {
-    @apply text-emerald-500 underline hover:bg-emerald-100
-        outline-0 focus:ring-2 focus:ring-offset-1 focus:ring-emerald-500;
+  a:not([class*="text-"]) {
+    @apply text-lmhy-coral underline-offset-2 hover:text-lmhy-coral-dark;
   }
 
   ::selection {
-    @apply bg-emerald-200 text-emerald-950;
+    @apply bg-lmhy-sand text-lmhy-charcoal;
   }
 
   label,
@@ -27,7 +43,7 @@
   h2,
   h3,
   h4 {
-    @apply text-balance;
+    @apply text-balance font-display;
   }
 
   p {
@@ -35,25 +51,47 @@
   }
 }
 
-/* ===== RealScout Widget Styling ===== */
+@layer components {
+  .lmhy-section {
+    @apply py-16 md:py-24;
+  }
 
-/* RealScout Simple Search - Desktop */
-realscout-simple-search {
-  --rs-ss-font-primary-color: #1e293b;
-  --rs-ss-searchbar-border-color: #e2e8f0;
-  --rs-ss-box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
-  --rs-ss-widget-width: 600px !important;
-  --rs-ss-border-radius: 9999px;
-  --rs-ss-background-color: rgba(255, 255, 255, 0.95);
+  .lmhy-container {
+    @apply container mx-auto px-4;
+  }
+
+  .lmhy-card {
+    @apply rounded-2xl border border-lmhy-sand/60 bg-white p-6 shadow-sm transition-all duration-300 hover:border-lmhy-coral/30 hover:shadow-md;
+  }
+
+  .lmhy-badge {
+    @apply inline-block rounded-full bg-lmhy-coral/10 px-4 py-1.5 text-sm font-semibold text-lmhy-coral;
+  }
+
+  .lmhy-btn-primary {
+    @apply inline-flex items-center justify-center rounded-lg bg-lmhy-coral px-6 py-3 font-semibold text-white transition-colors hover:bg-lmhy-coral-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lmhy-coral focus-visible:ring-offset-2;
+  }
+
+  .lmhy-btn-secondary {
+    @apply inline-flex items-center justify-center rounded-lg border-2 border-white/80 bg-transparent px-6 py-3 font-semibold text-white transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-lmhy-charcoal;
+  }
 }
 
-/* RealScout Office Listings */
+/* RealScout — Let Me Help You theme */
+realscout-simple-search {
+  --rs-ss-font-primary-color: #1a2332;
+  --rs-ss-searchbar-border-color: #e8dcc4;
+  --rs-ss-box-shadow: 0 12px 32px -8px rgba(26, 35, 50, 0.25);
+  --rs-ss-widget-width: 640px !important;
+  --rs-ss-border-radius: 9999px;
+  --rs-ss-background-color: rgba(250, 247, 242, 0.98);
+}
+
 realscout-office-listings {
-  --rs-listing-divider-color: #2563eb;
+  --rs-listing-divider-color: #e85d4c;
   width: 100%;
 }
 
-/* RealScout container wrapper */
 .realscout-wrapper {
   display: flex;
   justify-content: center;
@@ -62,26 +100,16 @@ realscout-office-listings {
   padding: 0 1rem;
 }
 
-/* Mobile Responsive: Tablet */
 @media (max-width: 768px) {
   realscout-simple-search {
     --rs-ss-widget-width: 100% !important;
     max-width: 500px;
   }
-
-  .realscout-wrapper {
-    padding: 0 1.5rem;
-  }
 }
 
-/* Mobile Responsive: Phone */
 @media (max-width: 480px) {
   realscout-simple-search {
     --rs-ss-widget-width: 100% !important;
     max-width: 100%;
-  }
-
-  .realscout-wrapper {
-    padding: 0 1rem;
   }
 }

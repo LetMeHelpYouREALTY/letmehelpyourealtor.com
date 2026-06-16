@@ -1,4 +1,4 @@
-// Google Business Profile Schema Data
+import { CANONICAL_SITE_URL } from "@/lib/site-config";
 // Supports GBP ranking factors: Relevance, Distance, Prominence
 
 export const businessInfo = {
@@ -16,7 +16,7 @@ export const businessInfo = {
     tel: "+17025001942",
   },
   email: "homes@heyberkshire.com",
-  url: "https://heyberkshire.com",
+  url: CANONICAL_SITE_URL,
 
   // Business Details
   license: "S.0197614.LLC",
@@ -213,9 +213,9 @@ export function generateLocalBusinessSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "RealEstateAgent",
-    "@id": "https://heyberkshire.com/#organization",
+    "@id": `${CANONICAL_SITE_URL}/#organization`,
     name: businessInfo.name,
-    image: "https://heyberkshire.com/images/dr-jan-duffy.jpg",
+    image: `${CANONICAL_SITE_URL}/images/dr-jan-duffy.jpg`,
     url: businessInfo.url,
     telephone: businessInfo.phone.tel,
     email: businessInfo.email,

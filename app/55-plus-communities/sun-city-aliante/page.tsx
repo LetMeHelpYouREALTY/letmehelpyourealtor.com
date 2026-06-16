@@ -63,19 +63,19 @@ export default function SunCityAliantePage() {
       />
       <Navbar />
       <main className="pt-24 pb-16">
-        <div className="container mx-auto px-4">
+        <div className="lmhy-container">
           {/* Breadcrumb */}
           <div className="max-w-6xl mx-auto mb-6">
-            <nav className="text-sm text-slate-500">
-              <Link href="/" className="hover:text-blue-600">
+            <nav className="text-sm text-lmhy-charcoal/60">
+              <Link href="/" className="hover:text-lmhy-coral">
                 Home
               </Link>
               {" / "}
-              <Link href="/55-plus-communities" className="hover:text-blue-600">
+              <Link href="/55-plus-communities" className="hover:text-lmhy-coral">
                 55+ Communities
               </Link>
               {" / "}
-              <span className="text-slate-900">Sun City Aliante</span>
+              <span className="text-lmhy-charcoal">Sun City Aliante</span>
             </nav>
           </div>
 
@@ -85,17 +85,17 @@ export default function SunCityAliantePage() {
               <DollarSign className="h-4 w-4 mr-2" />
               Most Affordable Sun City in Las Vegas
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-lmhy-charcoal mb-6">
               Sun City Aliante
             </h1>
-            <p className="text-xl text-slate-600">
+            <p className="text-xl text-lmhy-charcoal/70">
               Full Sun City amenities at the best value. Golf, pools, fitness, and
               100+ clubs—from $280K.
             </p>
           </div>
 
           {/* Quick Stats */}
-          <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
+          <section className="mb-16 bg-lmhy-charcoal text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-2xl font-bold mb-8 text-center">
               Sun City Aliante at a Glance
             </h2>
@@ -104,29 +104,29 @@ export default function SunCityAliantePage() {
                 <div className="text-3xl font-bold text-green-400 mb-1">
                   $280K-$550K
                 </div>
-                <div className="text-slate-300 text-sm">Price Range</div>
+                <div className="text-white/70 text-sm">Price Range</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-green-400 mb-1">
                   $140-$175
                 </div>
-                <div className="text-slate-300 text-sm">Monthly HOA</div>
+                <div className="text-white/70 text-sm">Monthly HOA</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold mb-1">2,800+</div>
-                <div className="text-slate-300 text-sm">Homes</div>
+                <div className="text-white/70 text-sm">Homes</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-green-400 mb-1">55+</div>
-                <div className="text-slate-300 text-sm">Age Requirement</div>
+                <div className="text-white/70 text-sm">Age Requirement</div>
               </div>
             </div>
           </section>
 
           {/* About */}
           <section className="mb-16 max-w-4xl mx-auto">
-            <div className="prose prose-lg max-w-none text-slate-700">
-              <h2 className="text-3xl font-bold text-slate-900 mb-6">
+            <div className="prose prose-lg max-w-none text-lmhy-charcoal/80">
+              <h2 className="text-3xl font-bold text-lmhy-charcoal mb-6">
                 About Sun City Aliante
               </h2>
               <p>
@@ -161,45 +161,45 @@ export default function SunCityAliantePage() {
               <div className="flex items-start">
                 <TrendingUp className="h-8 w-8 text-green-600 mr-4 flex-shrink-0 mt-1" />
                 <div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-4">
+                  <h3 className="text-xl font-bold text-lmhy-charcoal mb-4">
                     Why Sun City Aliante Is the Best Value
                   </h3>
-                  <p className="text-slate-700 mb-4">
+                  <p className="text-lmhy-charcoal/80 mb-4">
                     Compare Sun City Aliante to other Sun City communities and the
                     value becomes clear. You get the same lifestyle, amenities,
                     and community feel—at significantly lower prices.
                   </p>
                   <div className="grid md:grid-cols-3 gap-4">
                     <div className="bg-white rounded-lg p-4">
-                      <div className="text-sm text-slate-500 mb-1">
+                      <div className="text-sm text-lmhy-charcoal/60 mb-1">
                         Sun City Aliante
                       </div>
                       <div className="text-xl font-bold text-green-600">
                         From $280K
                       </div>
-                      <div className="text-xs text-slate-500">
+                      <div className="text-xs text-lmhy-charcoal/60">
                         HOA: $140-$175/mo
                       </div>
                     </div>
                     <div className="bg-white rounded-lg p-4">
-                      <div className="text-sm text-slate-500 mb-1">
+                      <div className="text-sm text-lmhy-charcoal/60 mb-1">
                         Sun City Summerlin
                       </div>
-                      <div className="text-xl font-bold text-slate-600">
+                      <div className="text-xl font-bold text-lmhy-charcoal/70">
                         From $320K
                       </div>
-                      <div className="text-xs text-slate-500">
+                      <div className="text-xs text-lmhy-charcoal/60">
                         HOA: $155-$195/mo
                       </div>
                     </div>
                     <div className="bg-white rounded-lg p-4">
-                      <div className="text-sm text-slate-500 mb-1">
+                      <div className="text-sm text-lmhy-charcoal/60 mb-1">
                         Sun City Anthem
                       </div>
-                      <div className="text-xl font-bold text-slate-600">
+                      <div className="text-xl font-bold text-lmhy-charcoal/70">
                         From $350K
                       </div>
-                      <div className="text-xs text-slate-500">
+                      <div className="text-xs text-lmhy-charcoal/60">
                         HOA: $180-$230/mo
                       </div>
                     </div>
@@ -211,46 +211,46 @@ export default function SunCityAliantePage() {
 
           {/* Amenities */}
           <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+            <h2 className="text-3xl font-bold text-lmhy-charcoal mb-8 text-center">
               Full Sun City Amenities
             </h2>
             <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-white border border-slate-200 rounded-xl p-6">
+              <div className="bg-white border border-lmhy-sand/60 rounded-xl p-6">
                 <div className="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
                   <Trophy className="h-6 w-6 text-green-600" />
                 </div>
-                <h3 className="font-bold text-slate-900 mb-2">
+                <h3 className="font-bold text-lmhy-charcoal mb-2">
                   18-Hole Golf Course
                 </h3>
-                <ul className="text-slate-600 text-sm space-y-1">
+                <ul className="text-lmhy-charcoal/70 text-sm space-y-1">
                   <li>• Championship layout</li>
                   <li>• Affordable resident rates</li>
                   <li>• Pro shop & instruction</li>
                   <li>• Golf club memberships</li>
                 </ul>
               </div>
-              <div className="bg-white border border-slate-200 rounded-xl p-6">
-                <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                  <Dumbbell className="h-6 w-6 text-blue-600" />
+              <div className="bg-white border border-lmhy-sand/60 rounded-xl p-6">
+                <div className="bg-lmhy-coral/10 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                  <Dumbbell className="h-6 w-6 text-lmhy-coral" />
                 </div>
-                <h3 className="font-bold text-slate-900 mb-2">
+                <h3 className="font-bold text-lmhy-charcoal mb-2">
                   Recreation Center (42,000 sf)
                 </h3>
-                <ul className="text-slate-600 text-sm space-y-1">
+                <ul className="text-lmhy-charcoal/70 text-sm space-y-1">
                   <li>• Indoor & outdoor pools</li>
                   <li>• Modern fitness center</li>
                   <li>• Tennis & pickleball</li>
                   <li>• Ballroom & meeting rooms</li>
                 </ul>
               </div>
-              <div className="bg-white border border-slate-200 rounded-xl p-6">
+              <div className="bg-white border border-lmhy-sand/60 rounded-xl p-6">
                 <div className="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
                   <Users className="h-6 w-6 text-purple-600" />
                 </div>
-                <h3 className="font-bold text-slate-900 mb-2">
+                <h3 className="font-bold text-lmhy-charcoal mb-2">
                   100+ Clubs & Activities
                 </h3>
-                <ul className="text-slate-600 text-sm space-y-1">
+                <ul className="text-lmhy-charcoal/70 text-sm space-y-1">
                   <li>• Sports leagues</li>
                   <li>• Arts & crafts</li>
                   <li>• Travel groups</li>
@@ -261,61 +261,61 @@ export default function SunCityAliantePage() {
           </section>
 
           {/* Location Benefits */}
-          <section className="mb-16 bg-slate-50 rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
+          <section className="mb-16 bg-lmhy-sand/20 rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
+            <h2 className="text-3xl font-bold text-lmhy-charcoal mb-6 text-center">
               Location Advantages
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-white rounded-xl p-6 border border-slate-200">
+              <div className="bg-white rounded-xl p-6 border border-lmhy-sand/60">
                 <div className="flex items-start">
-                  <Car className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0" />
+                  <Car className="h-6 w-6 text-lmhy-coral mr-3 flex-shrink-0" />
                   <div>
-                    <h3 className="font-bold text-slate-900 mb-2">
+                    <h3 className="font-bold text-lmhy-charcoal mb-2">
                       Easy Freeway Access
                     </h3>
-                    <p className="text-slate-600 text-sm">
+                    <p className="text-lmhy-charcoal/70 text-sm">
                       Direct access to I-215 and US-95. Downtown Las Vegas and the
                       Strip are just 20-25 minutes away.
                     </p>
                   </div>
                 </div>
               </div>
-              <div className="bg-white rounded-xl p-6 border border-slate-200">
+              <div className="bg-white rounded-xl p-6 border border-lmhy-sand/60">
                 <div className="flex items-start">
-                  <MapPin className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0" />
+                  <MapPin className="h-6 w-6 text-lmhy-coral mr-3 flex-shrink-0" />
                   <div>
-                    <h3 className="font-bold text-slate-900 mb-2">
+                    <h3 className="font-bold text-lmhy-charcoal mb-2">
                       Aliante Casino & Hotel
                     </h3>
-                    <p className="text-slate-600 text-sm">
+                    <p className="text-lmhy-charcoal/70 text-sm">
                       Walking distance to Aliante Casino with dining, entertainment,
                       and movie theater.
                     </p>
                   </div>
                 </div>
               </div>
-              <div className="bg-white rounded-xl p-6 border border-slate-200">
+              <div className="bg-white rounded-xl p-6 border border-lmhy-sand/60">
                 <div className="flex items-start">
-                  <DollarSign className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0" />
+                  <DollarSign className="h-6 w-6 text-lmhy-coral mr-3 flex-shrink-0" />
                   <div>
-                    <h3 className="font-bold text-slate-900 mb-2">
+                    <h3 className="font-bold text-lmhy-charcoal mb-2">
                       Lower Property Taxes
                     </h3>
-                    <p className="text-slate-600 text-sm">
+                    <p className="text-lmhy-charcoal/70 text-sm">
                       North Las Vegas offers some of the lowest property tax rates
                       in the valley.
                     </p>
                   </div>
                 </div>
               </div>
-              <div className="bg-white rounded-xl p-6 border border-slate-200">
+              <div className="bg-white rounded-xl p-6 border border-lmhy-sand/60">
                 <div className="flex items-start">
-                  <TrendingUp className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0" />
+                  <TrendingUp className="h-6 w-6 text-lmhy-coral mr-3 flex-shrink-0" />
                   <div>
-                    <h3 className="font-bold text-slate-900 mb-2">
+                    <h3 className="font-bold text-lmhy-charcoal mb-2">
                       Growing Area
                     </h3>
-                    <p className="text-slate-600 text-sm">
+                    <p className="text-lmhy-charcoal/70 text-sm">
                       North Las Vegas is one of the fastest-growing cities in
                       Nevada with ongoing development and improvements.
                     </p>
@@ -327,17 +327,17 @@ export default function SunCityAliantePage() {
 
           {/* Why Choose Sun City Aliante */}
           <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+            <h2 className="text-3xl font-bold text-lmhy-charcoal mb-8 text-center">
               Why Buyers Choose Sun City Aliante
             </h2>
             <div className="space-y-4">
               <div className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                 <div>
-                  <strong className="text-slate-900">
+                  <strong className="text-lmhy-charcoal">
                     Lowest entry price of any Sun City
                   </strong>
-                  <p className="text-slate-600 text-sm">
+                  <p className="text-lmhy-charcoal/70 text-sm">
                     Homes starting around $280K—$40K-$70K less than other Sun City
                     communities
                   </p>
@@ -346,10 +346,10 @@ export default function SunCityAliantePage() {
               <div className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                 <div>
-                  <strong className="text-slate-900">
+                  <strong className="text-lmhy-charcoal">
                     Lowest HOA fees in the Sun City family
                   </strong>
-                  <p className="text-slate-600 text-sm">
+                  <p className="text-lmhy-charcoal/70 text-sm">
                     $140-$175/month—up to $75/month less than other communities
                   </p>
                 </div>
@@ -357,10 +357,10 @@ export default function SunCityAliantePage() {
               <div className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                 <div>
-                  <strong className="text-slate-900">
+                  <strong className="text-lmhy-charcoal">
                     Same amenities as more expensive communities
                   </strong>
-                  <p className="text-slate-600 text-sm">
+                  <p className="text-lmhy-charcoal/70 text-sm">
                     Golf, pools, fitness, 100+ clubs—everything you'd expect from
                     Sun City
                   </p>
@@ -369,10 +369,10 @@ export default function SunCityAliantePage() {
               <div className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                 <div>
-                  <strong className="text-slate-900">
+                  <strong className="text-lmhy-charcoal">
                     Newer construction than Summerlin
                   </strong>
-                  <p className="text-slate-600 text-sm">
+                  <p className="text-lmhy-charcoal/70 text-sm">
                     Built 2003-2010, so homes have more modern floor plans and
                     features
                   </p>
@@ -383,8 +383,8 @@ export default function SunCityAliantePage() {
 
           {/* Expert Quote */}
           <section className="mb-16 max-w-4xl mx-auto">
-            <div className="bg-blue-50 border-l-4 border-blue-600 rounded-r-xl p-8">
-              <blockquote className="text-lg text-slate-700 italic mb-4">
+            <div className="bg-lmhy-coral/5 border-l-4 border-lmhy-coral rounded-r-xl p-8">
+              <blockquote className="text-lg text-lmhy-charcoal/80 italic mb-4">
                 "Sun City Aliante is my top recommendation for buyers who want the
                 full Sun City lifestyle at the best possible price. The amenities
                 are excellent, the community is active and welcoming, and you
@@ -393,7 +393,7 @@ export default function SunCityAliantePage() {
                 buyers compare all the Sun City options and understand why Aliante
                 often makes the most financial sense."
               </blockquote>
-              <cite className="text-slate-900 font-semibold">
+              <cite className="text-lmhy-charcoal font-semibold">
                 — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
               </cite>
             </div>
@@ -431,7 +431,7 @@ export default function SunCityAliantePage() {
             </p>
           </section>
         </div>
-        <div className="text-center text-sm text-slate-500 mt-8">
+        <div className="text-center text-sm text-lmhy-charcoal/60 mt-8">
           Last Updated: January 2026
         </div>
       </main>

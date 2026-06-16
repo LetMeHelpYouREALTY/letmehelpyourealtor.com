@@ -64,19 +64,19 @@ export default function HeritageAtStonebridgePage() {
       />
       <Navbar />
       <main className="pt-24 pb-16">
-        <div className="container mx-auto px-4">
+        <div className="lmhy-container">
           {/* Breadcrumb */}
           <div className="max-w-6xl mx-auto mb-6">
-            <nav className="text-sm text-slate-500">
-              <Link href="/" className="hover:text-blue-600">
+            <nav className="text-sm text-lmhy-charcoal/60">
+              <Link href="/" className="hover:text-lmhy-coral">
                 Home
               </Link>
               {" / "}
-              <Link href="/55-plus-communities" className="hover:text-blue-600">
+              <Link href="/55-plus-communities" className="hover:text-lmhy-coral">
                 55+ Communities
               </Link>
               {" / "}
-              <span className="text-slate-900">Heritage at Stonebridge</span>
+              <span className="text-lmhy-charcoal">Heritage at Stonebridge</span>
             </nav>
           </div>
 
@@ -86,17 +86,17 @@ export default function HeritageAtStonebridgePage() {
               <Shield className="h-4 w-4 mr-2" />
               Guard-Gated Summerlin 55+ Community
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-lmhy-charcoal mb-6">
               Heritage at Stonebridge
             </h1>
-            <p className="text-xl text-slate-600">
+            <p className="text-xl text-lmhy-charcoal/70">
               Boutique 55+ living with guard-gated privacy in the heart of
               Summerlin.
             </p>
           </div>
 
           {/* Quick Stats */}
-          <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
+          <section className="mb-16 bg-lmhy-charcoal text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-2xl font-bold mb-8 text-center">
               Heritage at Stonebridge at a Glance
             </h2>
@@ -105,31 +105,31 @@ export default function HeritageAtStonebridgePage() {
                 <div className="text-3xl font-bold text-purple-400 mb-1">
                   $400K-$750K
                 </div>
-                <div className="text-slate-300 text-sm">Price Range</div>
+                <div className="text-white/70 text-sm">Price Range</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-purple-400 mb-1">
                   $175-$220
                 </div>
-                <div className="text-slate-300 text-sm">Monthly HOA</div>
+                <div className="text-white/70 text-sm">Monthly HOA</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold mb-1">1,100+</div>
-                <div className="text-slate-300 text-sm">Homes</div>
+                <div className="text-white/70 text-sm">Homes</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-purple-400 mb-1">
                   Guard-Gated
                 </div>
-                <div className="text-slate-300 text-sm">24/7 Security</div>
+                <div className="text-white/70 text-sm">24/7 Security</div>
               </div>
             </div>
           </section>
 
           {/* About */}
           <section className="mb-16 max-w-4xl mx-auto">
-            <div className="prose prose-lg max-w-none text-slate-700">
-              <h2 className="text-3xl font-bold text-slate-900 mb-6">
+            <div className="prose prose-lg max-w-none text-lmhy-charcoal/80">
+              <h2 className="text-3xl font-bold text-lmhy-charcoal mb-6">
                 About Heritage at Stonebridge
               </h2>
               <p>
@@ -163,10 +163,10 @@ export default function HeritageAtStonebridgePage() {
               <div className="flex items-start">
                 <Shield className="h-8 w-8 text-purple-600 mr-4 flex-shrink-0 mt-1" />
                 <div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-4">
+                  <h3 className="text-xl font-bold text-lmhy-charcoal mb-4">
                     Guard-Gated Security & Privacy
                   </h3>
-                  <p className="text-slate-700 mb-4">
+                  <p className="text-lmhy-charcoal/80 mb-4">
                     Unlike many 55+ communities with simple gate codes, Heritage
                     at Stonebridge features 24/7 guard-gated security. Every
                     visitor is screened, providing genuine privacy and peace of
@@ -175,7 +175,7 @@ export default function HeritageAtStonebridgePage() {
                   <div className="grid md:grid-cols-3 gap-4">
                     <div className="bg-white rounded-lg p-4 text-center">
                       <div className="text-xl font-bold text-purple-600">24/7</div>
-                      <div className="text-sm text-slate-600">
+                      <div className="text-sm text-lmhy-charcoal/70">
                         Manned Guard Gate
                       </div>
                     </div>
@@ -183,7 +183,7 @@ export default function HeritageAtStonebridgePage() {
                       <div className="text-xl font-bold text-purple-600">
                         Visitor
                       </div>
-                      <div className="text-sm text-slate-600">
+                      <div className="text-sm text-lmhy-charcoal/70">
                         Verification Required
                       </div>
                     </div>
@@ -191,7 +191,7 @@ export default function HeritageAtStonebridgePage() {
                       <div className="text-xl font-bold text-purple-600">
                         Patrol
                       </div>
-                      <div className="text-sm text-slate-600">
+                      <div className="text-sm text-lmhy-charcoal/70">
                         Regular Security Rounds
                       </div>
                     </div>
@@ -203,40 +203,40 @@ export default function HeritageAtStonebridgePage() {
 
           {/* Amenities */}
           <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+            <h2 className="text-3xl font-bold text-lmhy-charcoal mb-8 text-center">
               Community Amenities
             </h2>
             <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-white border border-slate-200 rounded-xl p-6">
+              <div className="bg-white border border-lmhy-sand/60 rounded-xl p-6">
                 <div className="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
                   <HomeIcon className="h-6 w-6 text-purple-600" />
                 </div>
-                <h3 className="font-bold text-slate-900 mb-2">Clubhouse</h3>
-                <ul className="text-slate-600 text-sm space-y-1">
+                <h3 className="font-bold text-lmhy-charcoal mb-2">Clubhouse</h3>
+                <ul className="text-lmhy-charcoal/70 text-sm space-y-1">
                   <li>• Community gathering space</li>
                   <li>• Meeting rooms</li>
                   <li>• Social event venue</li>
                   <li>• Kitchen facilities</li>
                 </ul>
               </div>
-              <div className="bg-white border border-slate-200 rounded-xl p-6">
-                <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                  <Dumbbell className="h-6 w-6 text-blue-600" />
+              <div className="bg-white border border-lmhy-sand/60 rounded-xl p-6">
+                <div className="bg-lmhy-coral/10 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                  <Dumbbell className="h-6 w-6 text-lmhy-coral" />
                 </div>
-                <h3 className="font-bold text-slate-900 mb-2">Pool, Spa & Fitness</h3>
-                <ul className="text-slate-600 text-sm space-y-1">
+                <h3 className="font-bold text-lmhy-charcoal mb-2">Pool, Spa & Fitness</h3>
+                <ul className="text-lmhy-charcoal/70 text-sm space-y-1">
                   <li>• Resort-style pool</li>
                   <li>• Relaxing spa</li>
                   <li>• Fitness center</li>
                   <li>• Outdoor spaces</li>
                 </ul>
               </div>
-              <div className="bg-white border border-slate-200 rounded-xl p-6">
+              <div className="bg-white border border-lmhy-sand/60 rounded-xl p-6">
                 <div className="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
                   <Users className="h-6 w-6 text-green-600" />
                 </div>
-                <h3 className="font-bold text-slate-900 mb-2">Social Activities</h3>
-                <ul className="text-slate-600 text-sm space-y-1">
+                <h3 className="font-bold text-lmhy-charcoal mb-2">Social Activities</h3>
+                <ul className="text-lmhy-charcoal/70 text-sm space-y-1">
                   <li>• Organized clubs</li>
                   <li>• Community events</li>
                   <li>• Holiday parties</li>
@@ -247,61 +247,61 @@ export default function HeritageAtStonebridgePage() {
           </section>
 
           {/* Location Benefits */}
-          <section className="mb-16 bg-slate-50 rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
+          <section className="mb-16 bg-lmhy-sand/20 rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
+            <h2 className="text-3xl font-bold text-lmhy-charcoal mb-6 text-center">
               Premium Summerlin Location
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-white rounded-xl p-6 border border-slate-200">
+              <div className="bg-white rounded-xl p-6 border border-lmhy-sand/60">
                 <div className="flex items-start">
                   <ShoppingBag className="h-6 w-6 text-purple-600 mr-3 flex-shrink-0" />
                   <div>
-                    <h3 className="font-bold text-slate-900 mb-2">
+                    <h3 className="font-bold text-lmhy-charcoal mb-2">
                       Downtown Summerlin
                     </h3>
-                    <p className="text-slate-600 text-sm">
+                    <p className="text-lmhy-charcoal/70 text-sm">
                       Minutes from 125+ stores, restaurants, and entertainment.
                       Major retailers, fine dining, and a vibrant social scene.
                     </p>
                   </div>
                 </div>
               </div>
-              <div className="bg-white rounded-xl p-6 border border-slate-200">
+              <div className="bg-white rounded-xl p-6 border border-lmhy-sand/60">
                 <div className="flex items-start">
                   <Mountain className="h-6 w-6 text-purple-600 mr-3 flex-shrink-0" />
                   <div>
-                    <h3 className="font-bold text-slate-900 mb-2">
+                    <h3 className="font-bold text-lmhy-charcoal mb-2">
                       Red Rock Canyon
                     </h3>
-                    <p className="text-slate-600 text-sm">
+                    <p className="text-lmhy-charcoal/70 text-sm">
                       World-class hiking and scenic drives just 15 minutes away.
                       Stunning desert landscapes and outdoor recreation.
                     </p>
                   </div>
                 </div>
               </div>
-              <div className="bg-white rounded-xl p-6 border border-slate-200">
+              <div className="bg-white rounded-xl p-6 border border-lmhy-sand/60">
                 <div className="flex items-start">
                   <Star className="h-6 w-6 text-purple-600 mr-3 flex-shrink-0" />
                   <div>
-                    <h3 className="font-bold text-slate-900 mb-2">
+                    <h3 className="font-bold text-lmhy-charcoal mb-2">
                       TPC Las Vegas & Golf
                     </h3>
-                    <p className="text-slate-600 text-sm">
+                    <p className="text-lmhy-charcoal/70 text-sm">
                       Multiple championship courses nearby. Pay-as-you-play
                       flexibility without mandatory golf memberships.
                     </p>
                   </div>
                 </div>
               </div>
-              <div className="bg-white rounded-xl p-6 border border-slate-200">
+              <div className="bg-white rounded-xl p-6 border border-lmhy-sand/60">
                 <div className="flex items-start">
                   <MapPin className="h-6 w-6 text-purple-600 mr-3 flex-shrink-0" />
                   <div>
-                    <h3 className="font-bold text-slate-900 mb-2">
+                    <h3 className="font-bold text-lmhy-charcoal mb-2">
                       Central to Everything
                     </h3>
-                    <p className="text-slate-600 text-sm">
+                    <p className="text-lmhy-charcoal/70 text-sm">
                       Easy access to the Strip, airport, hospitals, and all major
                       Las Vegas attractions and services.
                     </p>
@@ -313,17 +313,17 @@ export default function HeritageAtStonebridgePage() {
 
           {/* Why Choose Heritage */}
           <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+            <h2 className="text-3xl font-bold text-lmhy-charcoal mb-8 text-center">
               Why Buyers Choose Heritage at Stonebridge
             </h2>
             <div className="space-y-4">
               <div className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                 <div>
-                  <strong className="text-slate-900">
+                  <strong className="text-lmhy-charcoal">
                     True guard-gated security
                   </strong>
-                  <p className="text-slate-600 text-sm">
+                  <p className="text-lmhy-charcoal/70 text-sm">
                     24/7 manned gate with visitor verification—genuine privacy, not
                     just a keypad
                   </p>
@@ -332,10 +332,10 @@ export default function HeritageAtStonebridgePage() {
               <div className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                 <div>
-                  <strong className="text-slate-900">
+                  <strong className="text-lmhy-charcoal">
                     Boutique community feel
                   </strong>
-                  <p className="text-slate-600 text-sm">
+                  <p className="text-lmhy-charcoal/70 text-sm">
                     1,100+ homes means you know your neighbors—intimate atmosphere
                     vs. massive 7,000+ home developments
                   </p>
@@ -344,10 +344,10 @@ export default function HeritageAtStonebridgePage() {
               <div className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                 <div>
-                  <strong className="text-slate-900">
+                  <strong className="text-lmhy-charcoal">
                     Unbeatable Summerlin location
                   </strong>
-                  <p className="text-slate-600 text-sm">
+                  <p className="text-lmhy-charcoal/70 text-sm">
                     Downtown Summerlin, Red Rock Canyon, and top golf courses all
                     minutes away
                   </p>
@@ -356,10 +356,10 @@ export default function HeritageAtStonebridgePage() {
               <div className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                 <div>
-                  <strong className="text-slate-900">
+                  <strong className="text-lmhy-charcoal">
                     No mandatory golf fees
                   </strong>
-                  <p className="text-slate-600 text-sm">
+                  <p className="text-lmhy-charcoal/70 text-sm">
                     Lower HOA because you're not subsidizing a golf course—play
                     when and where you want
                   </p>
@@ -370,8 +370,8 @@ export default function HeritageAtStonebridgePage() {
 
           {/* Expert Quote */}
           <section className="mb-16 max-w-4xl mx-auto">
-            <div className="bg-blue-50 border-l-4 border-blue-600 rounded-r-xl p-8">
-              <blockquote className="text-lg text-slate-700 italic mb-4">
+            <div className="bg-lmhy-coral/5 border-l-4 border-lmhy-coral rounded-r-xl p-8">
+              <blockquote className="text-lg text-lmhy-charcoal/80 italic mb-4">
                 "Heritage at Stonebridge attracts buyers who want exclusivity and
                 privacy without the sprawl of larger 55+ communities. The
                 guard-gated security is genuine—not just a code anyone can get.
@@ -380,7 +380,7 @@ export default function HeritageAtStonebridgePage() {
                 buyers who prioritize quality over quantity find their perfect
                 fit here."
               </blockquote>
-              <cite className="text-slate-900 font-semibold">
+              <cite className="text-lmhy-charcoal font-semibold">
                 — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
               </cite>
             </div>
@@ -418,7 +418,7 @@ export default function HeritageAtStonebridgePage() {
             </p>
           </section>
         </div>
-        <div className="text-center text-sm text-slate-500 mt-8">
+        <div className="text-center text-sm text-lmhy-charcoal/60 mt-8">
           Last Updated: January 2026
         </div>
       </main>

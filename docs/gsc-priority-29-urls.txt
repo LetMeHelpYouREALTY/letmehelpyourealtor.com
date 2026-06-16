@@ -1,0 +1,34 @@
+# Google Search Console — 29 priority URLs
+# Property: https://www.letmehelpyourealtor.com
+# Sitemap: https://www.letmehelpyourealtor.com/sitemap.xml
+# Submit sitemap once in GSC; use URL Inspection for high-priority pages only.
+
+https://www.letmehelpyourealtor.com/
+https://www.letmehelpyourealtor.com/about
+https://www.letmehelpyourealtor.com/contact
+https://www.letmehelpyourealtor.com/listings
+https://www.letmehelpyourealtor.com/why-berkshire-hathaway
+https://www.letmehelpyourealtor.com/market-report
+https://www.letmehelpyourealtor.com/market-update
+https://www.letmehelpyourealtor.com/market-insights
+https://www.letmehelpyourealtor.com/google-business
+https://www.letmehelpyourealtor.com/faq
+https://www.letmehelpyourealtor.com/buyers
+https://www.letmehelpyourealtor.com/sellers
+https://www.letmehelpyourealtor.com/luxury-homes
+https://www.letmehelpyourealtor.com/new-construction
+https://www.letmehelpyourealtor.com/investment-properties
+https://www.letmehelpyourealtor.com/relocation
+https://www.letmehelpyourealtor.com/home-valuation
+https://www.letmehelpyourealtor.com/55-plus-communities
+https://www.letmehelpyourealtor.com/services
+https://www.letmehelpyourealtor.com/buyers/california-relocator
+https://www.letmehelpyourealtor.com/buyers/first-time-buyers
+https://www.letmehelpyourealtor.com/buyers/luxury-homes-las-vegas
+https://www.letmehelpyourealtor.com/sellers/move-up
+https://www.letmehelpyourealtor.com/sellers/downsizing
+https://www.letmehelpyourealtor.com/sellers/divorce-probate
+https://www.letmehelpyourealtor.com/sellers/relocation
+https://www.letmehelpyourealtor.com/55-plus-communities/sun-city-summerlin
+https://www.letmehelpyourealtor.com/55-plus-communities/sun-city-anthem
+https://www.letmehelpyourealtor.com/55-plus-communities/del-webb-lake-las-vegas

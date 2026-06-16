@@ -1,18 +1,20 @@
-// Site Configuration - HeyBerkshire.com
+// Site Configuration — letmehelpyourealtor.com (canonical: www)
 // Berkshire Hathaway HomeServices Nevada Properties
 
+/** Production canonical URL — matches Vercel www + apex 308 redirect */
+export const CANONICAL_SITE_URL = "https://www.letmehelpyourealtor.com";
+
 export const siteConfig = {
-  name: "HeyBerkshire",
+  name: "Let Me Help You REALTOR",
   fullName: "Berkshire Hathaway HomeServices Nevada Properties",
-  tagline: "Private Client Real Estate Advisory",
-  /** Full brand line for titles and OG: Berkshire Hathaway HomeServices Nevada Properties | Private Client Real Estate Advisory */
+  tagline: "Hyperlocal Las Vegas Real Estate Services",
   brandLine:
-    "Berkshire Hathaway HomeServices Nevada Properties | Private Client Real Estate Advisory",
-  brandName: "Berkshire Hathaway HomeServices",
-  shortName: "BHHS",
-  url: "https://heyberkshire.com",
+    "Let Me Help You REALTOR | Dr. Jan Duffy | Berkshire Hathaway HomeServices Nevada Properties",
+  brandName: "Let Me Help You REALTOR",
+  shortName: "LMHY",
+  url: CANONICAL_SITE_URL,
   description:
-    "Expert real estate services in Las Vegas and Henderson, NV. Buy, sell, or invest with Dr. Jan Duffy, your trusted Berkshire Hathaway HomeServices Nevada Properties agent.",
+    "Let Me Help You with Las Vegas real estate. Dr. Jan Duffy offers hyperlocal buyer advocacy, seller strategy, relocation, 55+ communities, luxury, and new construction services across Clark County.",
 };
 
 export const agentInfo = {
@@ -43,17 +45,19 @@ export const officeInfo = {
   phoneTel: "tel:+17025001942",
 };
 
-// Market Statistics (Updated January 2026)
+// Market Statistics (Updated June 2026 — Clark County research)
 export const marketStats = {
-  lastUpdated: "January 2026",
+  lastUpdated: "June 2026",
   lasVegas: {
-    medianPrice: 450000,
-    medianPriceFormatted: "$450,000",
-    yearOverYearChange: "+4.2%",
-    daysOnMarket: 28,
+    medianPrice: 498000,
+    medianPriceFormatted: "$498,000",
+    yearOverYearChange: "Balanced market",
+    daysOnMarket: 38,
     activeListings: 4850,
     closedSales: 2340,
-    inventoryMonths: 2.1,
+    inventoryMonths: 4.6,
+    concessionRate: "31%",
+    avgConcession: "$7,800",
   },
   henderson: {
     medianPrice: 485000,

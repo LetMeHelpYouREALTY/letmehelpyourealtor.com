@@ -11,34 +11,34 @@ export interface FAQ {
 // Default FAQs for the section
 export const defaultFaqs: FAQ[] = [
   {
-    question: "What areas do you serve?",
+    question: "What realtor services do Las Vegas homeowners need in June 2026?",
     answer:
-      "We specialize in Las Vegas and Henderson, Nevada, including Summerlin, Green Valley, and surrounding communities. Our expertise covers residential, luxury, and investment properties throughout Southern Nevada.",
+      "In today's balanced market (~4.6 months supply), buyers need concession negotiation and pre-underwriting; sellers need smart pricing plus structured concessions like 2-1 buydowns. Relocation briefings, 55+ HOA review, and new-construction buyer advocacy are also in high demand across Clark County.",
   },
   {
-    question: "How long does the home buying process take?",
+    question: "Do I need a written buyer-broker agreement in Nevada?",
     answer:
-      "Typically, the home buying process takes 30-45 days from offer acceptance to closing. However, this can vary based on financing, inspections, and other factors. We'll guide you through each step to ensure a smooth transaction.",
+      "Yes. Nevada Assembly Bill 258 requires a written buyer-broker agreement before representation begins. Dr. Jan explains service tiers and compensation clearly — full-service, limited, or consultation-only — so you know exactly what you're getting.",
   },
   {
-    question: "Do you help with home valuations?",
+    question: "What areas does Let Me Help You REALTOR serve?",
     answer:
-      "Yes! We provide free, no-obligation home valuations using current market data and comparable sales. This helps you understand your home's value whether you're considering selling or just curious about your investment.",
+      "Dr. Jan Duffy serves the full Las Vegas Valley — Las Vegas, Henderson, Summerlin, North Las Vegas, Skye Canyon, Centennial Hills, Green Valley, Southern Highlands, and 55+ communities including Sun City Summerlin and Anthem.",
   },
   {
-    question: "What makes you different from other real estate agents?",
+    question: "Can you help with seller concessions and buyer credits?",
     answer:
-      "Serving Las Vegas since 2008 with 500+ successful transactions, we combine deep local market knowledge with personalized service. As part of Berkshire Hathaway HomeServices, we have access to extensive resources and technology to serve you better.",
+      "Absolutely. About 31% of Las Vegas closings now include seller concessions averaging around $7,800. Whether you're buying or selling, structuring credits strategically often beats blind price cuts.",
   },
   {
-    question: "Can you help with investment properties?",
+    question: "Do I need my own agent for new construction?",
     answer:
-      "Absolutely! We specialize in investment real estate including rental properties, fix-and-flip opportunities, and commercial properties. We'll help you identify profitable opportunities and navigate the investment process.",
+      "Yes. Builder sales representatives work for the builder. Register your agent on your first model-home visit — buyer representation costs you nothing and can save thousands in upgrades and contract terms.",
   },
   {
-    question: "What are your fees?",
+    question: "How do I get started?",
     answer:
-      "For buyers, our services are typically free as commissions are paid by the seller. For sellers, we offer competitive commission structures. Contact us for a personalized consultation to discuss your specific situation.",
+      "Call or text Dr. Jan at (702) 500-1942 for a free consultation. No pressure — just an honest conversation about your goals and which services fit your situation.",
   },
 ];
 
@@ -56,7 +56,7 @@ interface FAQSectionProps {
 export default function FAQSection({
   faqs = defaultFaqs,
   title = "Frequently Asked Questions",
-  subtitle = "Get answers to common questions about our real estate services",
+  subtitle = "Answers for Las Vegas buyers and sellers — June 2026 market",
   className = "",
 }: FAQSectionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -66,35 +66,37 @@ export default function FAQSection({
   };
 
   return (
-    <section className={`py-16 md:py-24 bg-white ${className}`}>
-      <div className="container mx-auto px-4">
+    <section className={`lmhy-section bg-lmhy-sand/20 ${className}`}>
+      <div className="lmhy-container">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
+          <span className="lmhy-badge mb-4">FAQ</span>
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-lmhy-charcoal mb-4">
             {title}
           </h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">{subtitle}</p>
+          <p className="text-lg text-lmhy-charcoal/70 max-w-3xl mx-auto">{subtitle}</p>
         </div>
 
         <div className="max-w-3xl mx-auto">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="border border-slate-200 rounded-lg mb-4 overflow-hidden"
+              className="border border-lmhy-sand rounded-xl mb-3 overflow-hidden bg-white"
             >
               <button
+                type="button"
                 onClick={() => toggleFAQ(index)}
-                className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-slate-50 transition-colors"
+                className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-lmhy-cream transition-colors"
               >
-                <span className="font-semibold text-slate-900 pr-4">{faq.question}</span>
+                <span className="font-semibold text-lmhy-charcoal pr-4">{faq.question}</span>
                 {openIndex === index ? (
-                  <ChevronUp className="h-5 w-5 text-blue-600 flex-shrink-0" />
+                  <ChevronUp className="h-5 w-5 text-lmhy-coral flex-shrink-0" />
                 ) : (
-                  <ChevronDown className="h-5 w-5 text-slate-400 flex-shrink-0" />
+                  <ChevronDown className="h-5 w-5 text-lmhy-sage flex-shrink-0" />
                 )}
               </button>
               {openIndex === index && (
-                <div className="px-6 py-4 bg-slate-50 border-t border-slate-200">
-                  <p className="text-slate-700">{faq.answer}</p>
+                <div className="px-6 py-4 bg-lmhy-cream border-t border-lmhy-sand">
+                  <p className="text-lmhy-charcoal/80 text-sm leading-relaxed">{faq.answer}</p>
                 </div>
               )}
             </div>

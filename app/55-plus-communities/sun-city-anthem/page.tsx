@@ -13,6 +13,7 @@ import {
   CheckCircle,
 } from "lucide-react";
 import type { Metadata } from "next";
+import { withPageCanonical } from "@/lib/page-metadata";
 import SchemaScript from "@/components/SchemaScript";
 import {
   generateBreadcrumbSchema,
@@ -21,7 +22,7 @@ import {
   combineSchemas,
 } from "@/lib/schema";
 
-export const metadata: Metadata = {
+const pageMetadata: Metadata = {
   title: "Sun City Anthem Homes for Sale | Berkshire Hathaway HomeServices",
   description:
     "Henderson's premier 55+ community. Sun City Anthem homes from $350K-$1.2M. 2 championship golf courses, stunning mountain views. Dr. Jan Duffy. Call (702) 500-1942.",
@@ -33,6 +34,8 @@ export const metadata: Metadata = {
     "Berkshire Hathaway Sun City Anthem",
   ],
 };
+
+export const metadata = withPageCanonical(pageMetadata, "/55-plus-communities/sun-city-anthem");
 
 // Breadcrumb items
 const breadcrumbs = [
@@ -105,15 +108,15 @@ export default function SunCityAnthemPage() {
       <SchemaScript schema={pageSchemas} id="sun-city-anthem-schema" />
       <Navbar />
       <main className="pt-24 pb-16">
-        <div className="container mx-auto px-4">
+        <div className="lmhy-container">
           {/* Breadcrumb */}
           <div className="max-w-6xl mx-auto mb-6">
-            <nav className="text-sm text-slate-500">
-              <Link href="/" className="hover:text-blue-600">Home</Link>
+            <nav className="text-sm text-lmhy-charcoal/60">
+              <Link href="/" className="hover:text-lmhy-coral">Home</Link>
               {" / "}
-              <Link href="/55-plus-communities" className="hover:text-blue-600">55+ Communities</Link>
+              <Link href="/55-plus-communities" className="hover:text-lmhy-coral">55+ Communities</Link>
               {" / "}
-              <span className="text-slate-900">Sun City Anthem</span>
+              <span className="text-lmhy-charcoal">Sun City Anthem</span>
             </nav>
           </div>
 
@@ -123,43 +126,43 @@ export default function SunCityAnthemPage() {
               <Mountain className="h-4 w-4 mr-2" />
               Henderson's Premier 55+ Community
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-lmhy-charcoal mb-6">
               Sun City Anthem
             </h1>
-            <p className="text-xl text-slate-600">
+            <p className="text-xl text-lmhy-charcoal/70">
               7,100+ homes. Mountain views. Henderson safety. Championship golf.
             </p>
           </div>
 
           {/* Quick Stats */}
-          <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
+          <section className="mb-16 bg-lmhy-charcoal text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-2xl font-bold mb-8 text-center">
               Sun City Anthem at a Glance
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="text-3xl font-bold text-green-400 mb-1">$350K-$1.2M</div>
-                <div className="text-slate-300 text-sm">Price Range</div>
+                <div className="text-white/70 text-sm">Price Range</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-green-400 mb-1">$180-$230</div>
-                <div className="text-slate-300 text-sm">Monthly HOA</div>
+                <div className="text-white/70 text-sm">Monthly HOA</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold mb-1">7,100+</div>
-                <div className="text-slate-300 text-sm">Homes</div>
+                <div className="text-white/70 text-sm">Homes</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-green-400 mb-1">55+</div>
-                <div className="text-slate-300 text-sm">Age Requirement</div>
+                <div className="text-white/70 text-sm">Age Requirement</div>
               </div>
             </div>
           </section>
 
           {/* About */}
           <section className="mb-16 max-w-4xl mx-auto">
-            <div className="prose prose-lg max-w-none text-slate-700">
-              <h2 className="text-3xl font-bold text-slate-900 mb-6">
+            <div className="prose prose-lg max-w-none text-lmhy-charcoal/80">
+              <h2 className="text-3xl font-bold text-lmhy-charcoal mb-6">
                 About Sun City Anthem
               </h2>
               <p>
@@ -188,10 +191,10 @@ export default function SunCityAnthemPage() {
               <div className="flex items-start">
                 <Shield className="h-8 w-8 text-green-600 mr-4 flex-shrink-0 mt-1" />
                 <div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-4">
+                  <h3 className="text-xl font-bold text-lmhy-charcoal mb-4">
                     Why Henderson Matters
                   </h3>
-                  <p className="text-slate-700 mb-4">
+                  <p className="text-lmhy-charcoal/80 mb-4">
                     Henderson consistently ranks as one of America's safest cities. For 55+ buyers,
                     this translates to peace of mind, stable property values, and a community that
                     attracts similar residents who value safety and quality of life.
@@ -199,15 +202,15 @@ export default function SunCityAnthemPage() {
                   <div className="grid md:grid-cols-3 gap-4">
                     <div className="text-center bg-white rounded-lg p-4">
                       <div className="text-2xl font-bold text-green-600">#2</div>
-                      <div className="text-sm text-slate-600">Safest Large City</div>
+                      <div className="text-sm text-lmhy-charcoal/70">Safest Large City</div>
                     </div>
                     <div className="text-center bg-white rounded-lg p-4">
                       <div className="text-2xl font-bold text-green-600">A+</div>
-                      <div className="text-sm text-slate-600">Livability Score</div>
+                      <div className="text-sm text-lmhy-charcoal/70">Livability Score</div>
                     </div>
                     <div className="text-center bg-white rounded-lg p-4">
                       <div className="text-2xl font-bold text-green-600">Low</div>
-                      <div className="text-sm text-slate-600">Property Crime</div>
+                      <div className="text-sm text-lmhy-charcoal/70">Property Crime</div>
                     </div>
                   </div>
                 </div>
@@ -217,40 +220,40 @@ export default function SunCityAnthemPage() {
 
           {/* Amenities */}
           <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+            <h2 className="text-3xl font-bold text-lmhy-charcoal mb-8 text-center">
               Sun City Anthem Amenities
             </h2>
             <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-white border border-slate-200 rounded-xl p-6">
+              <div className="bg-white border border-lmhy-sand/60 rounded-xl p-6">
                 <div className="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
                   <Trophy className="h-6 w-6 text-green-600" />
                 </div>
-                <h3 className="font-bold text-slate-900 mb-2">Championship Golf</h3>
-                <ul className="text-slate-600 text-sm space-y-1">
+                <h3 className="font-bold text-lmhy-charcoal mb-2">Championship Golf</h3>
+                <ul className="text-lmhy-charcoal/70 text-sm space-y-1">
                   <li>• Anthem Country Club (members)</li>
                   <li>• Revere Golf Club (public)</li>
                   <li>• Affordable resident rates</li>
                   <li>• Pro shops & instruction</li>
                 </ul>
               </div>
-              <div className="bg-white border border-slate-200 rounded-xl p-6">
-                <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                  <Dumbbell className="h-6 w-6 text-blue-600" />
+              <div className="bg-white border border-lmhy-sand/60 rounded-xl p-6">
+                <div className="bg-lmhy-coral/10 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                  <Dumbbell className="h-6 w-6 text-lmhy-coral" />
                 </div>
-                <h3 className="font-bold text-slate-900 mb-2">Anthem Center (64,000 sf)</h3>
-                <ul className="text-slate-600 text-sm space-y-1">
+                <h3 className="font-bold text-lmhy-charcoal mb-2">Anthem Center (64,000 sf)</h3>
+                <ul className="text-lmhy-charcoal/70 text-sm space-y-1">
                   <li>• Indoor & outdoor pools</li>
                   <li>• State-of-the-art fitness</li>
                   <li>• Tennis & pickleball</li>
                   <li>• On-site restaurant</li>
                 </ul>
               </div>
-              <div className="bg-white border border-slate-200 rounded-xl p-6">
+              <div className="bg-white border border-lmhy-sand/60 rounded-xl p-6">
                 <div className="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
                   <Users className="h-6 w-6 text-purple-600" />
                 </div>
-                <h3 className="font-bold text-slate-900 mb-2">Active Lifestyle</h3>
-                <ul className="text-slate-600 text-sm space-y-1">
+                <h3 className="font-bold text-lmhy-charcoal mb-2">Active Lifestyle</h3>
+                <ul className="text-lmhy-charcoal/70 text-sm space-y-1">
                   <li>• 80+ clubs & groups</li>
                   <li>• Organized travel</li>
                   <li>• Social events weekly</li>
@@ -261,34 +264,34 @@ export default function SunCityAnthemPage() {
           </section>
 
           {/* Neighborhoods */}
-          <section className="mb-16 bg-slate-50 rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
+          <section className="mb-16 bg-lmhy-sand/20 rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
+            <h2 className="text-3xl font-bold text-lmhy-charcoal mb-6 text-center">
               Sun City Anthem Neighborhoods
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-white rounded-xl p-6 border border-slate-200">
-                <h3 className="font-bold text-slate-900 mb-2">Liberty</h3>
-                <p className="text-slate-600 text-sm mb-3">
+              <div className="bg-white rounded-xl p-6 border border-lmhy-sand/60">
+                <h3 className="font-bold text-lmhy-charcoal mb-2">Liberty</h3>
+                <p className="text-lmhy-charcoal/70 text-sm mb-3">
                   Original phase with established landscaping. Close to Anthem Center. Most
                   affordable options starting around $350K.
                 </p>
               </div>
-              <div className="bg-white rounded-xl p-6 border border-slate-200">
-                <h3 className="font-bold text-slate-900 mb-2">Independence</h3>
-                <p className="text-slate-600 text-sm mb-3">
+              <div className="bg-white rounded-xl p-6 border border-lmhy-sand/60">
+                <h3 className="font-bold text-lmhy-charcoal mb-2">Independence</h3>
+                <p className="text-lmhy-charcoal/70 text-sm mb-3">
                   Mid-range pricing with mountain views. Popular floor plans and good lot sizes.
                   $450K-$700K range.
                 </p>
               </div>
-              <div className="bg-white rounded-xl p-6 border border-slate-200">
-                <h3 className="font-bold text-slate-900 mb-2">Heritage</h3>
-                <p className="text-slate-600 text-sm mb-3">
+              <div className="bg-white rounded-xl p-6 border border-lmhy-sand/60">
+                <h3 className="font-bold text-lmhy-charcoal mb-2">Heritage</h3>
+                <p className="text-lmhy-charcoal/70 text-sm mb-3">
                   Premium section with larger custom homes. Best views, largest lots. $700K-$1M+.
                 </p>
               </div>
-              <div className="bg-white rounded-xl p-6 border border-slate-200">
-                <h3 className="font-bold text-slate-900 mb-2">Eagle's Landing</h3>
-                <p className="text-slate-600 text-sm mb-3">
+              <div className="bg-white rounded-xl p-6 border border-lmhy-sand/60">
+                <h3 className="font-bold text-lmhy-charcoal mb-2">Eagle's Landing</h3>
+                <p className="text-lmhy-charcoal/70 text-sm mb-3">
                   Elevated homes with panoramic Strip and mountain views. Luxury finishes
                   throughout. $800K-$1.2M.
                 </p>
@@ -298,15 +301,15 @@ export default function SunCityAnthemPage() {
 
           {/* Expert Quote */}
           <section className="mb-16 max-w-4xl mx-auto">
-            <div className="bg-blue-50 border-l-4 border-blue-600 rounded-r-xl p-8">
-              <blockquote className="text-lg text-slate-700 italic mb-4">
+            <div className="bg-lmhy-coral/5 border-l-4 border-lmhy-coral rounded-r-xl p-8">
+              <blockquote className="text-lg text-lmhy-charcoal/80 italic mb-4">
                 "Sun City Anthem combines everything Henderson is known for—safety, quality, and
                 stunning scenery—with the Del Webb lifestyle. The views from the upper sections
                 are spectacular, and the Anthem Center rivals any resort clubhouse I've seen.
                 As a <strong>Berkshire Hathaway HomeServices</strong> agent, I help buyers find
                 the right balance of views, price, and proximity to amenities."
               </blockquote>
-              <cite className="text-slate-900 font-semibold">
+              <cite className="text-lmhy-charcoal font-semibold">
                 — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
               </cite>
             </div>
@@ -338,7 +341,7 @@ export default function SunCityAnthemPage() {
             </div>
           </section>
         </div>
-        <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
+        <div className="text-center text-sm text-lmhy-charcoal/60 mt-8">Last Updated: January 2026</div>
       </main>
       <RealScoutListings />
       <Footer />

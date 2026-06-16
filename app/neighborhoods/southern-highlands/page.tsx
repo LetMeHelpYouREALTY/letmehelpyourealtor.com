@@ -66,61 +66,61 @@ export default function SouthernHighlandsPage() {
       />
       <Navbar />
       <main className="pt-24 pb-16">
-        <div className="container mx-auto px-4">
+        <div className="lmhy-container">
           {/* Breadcrumb */}
           <div className="max-w-6xl mx-auto mb-6">
-            <nav className="text-sm text-slate-500">
-              <Link href="/" className="hover:text-blue-600">Home</Link>
+            <nav className="text-sm text-lmhy-charcoal/60">
+              <Link href="/" className="hover:text-lmhy-coral">Home</Link>
               {" / "}
-              <Link href="/neighborhoods" className="hover:text-blue-600">Neighborhoods</Link>
+              <Link href="/neighborhoods" className="hover:text-lmhy-coral">Neighborhoods</Link>
               {" / "}
-              <span className="text-slate-900">Southern Highlands</span>
+              <span className="text-lmhy-charcoal">Southern Highlands</span>
             </nav>
           </div>
 
           {/* Hero */}
           <div className="max-w-4xl mx-auto text-center mb-16">
-            <div className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <div className="inline-block bg-lmhy-coral/10 text-lmhy-coral-dark px-4 py-2 rounded-full text-sm font-semibold mb-6">
               Berkshire Hathaway HomeServices Nevada Properties
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-lmhy-charcoal mb-6">
               Berkshire Hathaway HomeServices Southern Highlands
             </h1>
-            <p className="text-xl text-slate-600">
+            <p className="text-xl text-lmhy-charcoal/70">
               Premier golf course living in southwest Las Vegas. Discover Southern Highlands with{" "}
               <strong>Berkshire Hathaway HomeServices</strong> and Dr. Jan Duffy.
             </p>
           </div>
 
           {/* Market Stats */}
-          <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
+          <section className="mb-16 bg-lmhy-charcoal text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-2xl font-bold mb-8 text-center">
               Southern Highlands Market | January 2026
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-400 mb-1">$750,000</div>
-                <div className="text-slate-300 text-sm">Median Home Price</div>
+                <div className="text-3xl font-bold text-lmhy-gold mb-1">$750,000</div>
+                <div className="text-white/70 text-sm">Median Home Price</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-green-400 mb-1">35 Days</div>
-                <div className="text-slate-300 text-sm">Avg. Days on Market</div>
+                <div className="text-white/70 text-sm">Avg. Days on Market</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold mb-1">156</div>
-                <div className="text-slate-300 text-sm">Active Listings</div>
+                <div className="text-white/70 text-sm">Active Listings</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-green-400 mb-1">+7.2%</div>
-                <div className="text-slate-300 text-sm">YoY Appreciation</div>
+                <div className="text-white/70 text-sm">YoY Appreciation</div>
               </div>
             </div>
           </section>
 
           {/* Main Content */}
           <section className="mb-16 max-w-5xl mx-auto">
-            <div className="prose prose-lg max-w-none text-slate-700">
-              <h2 className="text-3xl font-bold text-slate-900 mb-6">
+            <div className="prose prose-lg max-w-none text-lmhy-charcoal/80">
+              <h2 className="text-3xl font-bold text-lmhy-charcoal mb-6">
                 Southern Highlands: Southwest Las Vegas's Premier Master-Planned Community
               </h2>
               <p>
@@ -148,26 +148,26 @@ export default function SouthernHighlandsPage() {
               </p>
 
               {/* Community Highlights */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Community Highlights</h3>
+              <h3 className="text-2xl font-bold text-lmhy-charcoal mt-12 mb-6">Community Highlights</h3>
               <div className="grid md:grid-cols-2 gap-8 not-prose">
-                <div className="bg-slate-50 p-6 rounded-xl">
+                <div className="bg-lmhy-sand/20 p-6 rounded-xl">
                   <div className="flex items-center mb-4">
-                    <Star className="h-8 w-8 text-blue-600 mr-3" />
-                    <h4 className="font-bold text-slate-900 text-lg">Championship Golf Course</h4>
+                    <Star className="h-8 w-8 text-lmhy-coral mr-3" />
+                    <h4 className="font-bold text-lmhy-charcoal text-lg">Championship Golf Course</h4>
                   </div>
-                  <p className="text-slate-600">
+                  <p className="text-lmhy-charcoal/70">
                     The Robert Trent Jones Jr. designed course at Southern Highlands Golf Club is
                     consistently rated among Nevada's finest. The private club offers members exceptional
                     playing conditions year-round, a fully appointed clubhouse, fine dining, and a
                     calendar of social events. Golf course homes enjoy premium values and stunning views.
                   </p>
                 </div>
-                <div className="bg-slate-50 p-6 rounded-xl">
+                <div className="bg-lmhy-sand/20 p-6 rounded-xl">
                   <div className="flex items-center mb-4">
-                    <Shield className="h-8 w-8 text-blue-600 mr-3" />
-                    <h4 className="font-bold text-slate-900 text-lg">Guard-Gated Luxury Sections</h4>
+                    <Shield className="h-8 w-8 text-lmhy-coral mr-3" />
+                    <h4 className="font-bold text-lmhy-charcoal text-lg">Guard-Gated Luxury Sections</h4>
                   </div>
-                  <p className="text-slate-600">
+                  <p className="text-lmhy-charcoal/70">
                     Multiple guard-gated enclaves within Southern Highlands offer enhanced security
                     and exclusivity. These sections feature custom and semi-custom homes on larger lots,
                     with architectural standards ensuring estate-quality construction. 24/7 security
@@ -177,16 +177,16 @@ export default function SouthernHighlandsPage() {
               </div>
 
               {/* Schools */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Southern Highlands School Districts</h3>
-              <div className="not-prose bg-white border border-slate-200 rounded-xl p-6">
-                <p className="text-slate-700 mb-4">
+              <h3 className="text-2xl font-bold text-lmhy-charcoal mt-12 mb-6">Southern Highlands School Districts</h3>
+              <div className="not-prose bg-white border border-lmhy-sand/60 rounded-xl p-6">
+                <p className="text-lmhy-charcoal/80 mb-4">
                   Southern Highlands is served by Clark County School District with some of southwest
                   Las Vegas's highest-rated schools:
                 </p>
                 <div className="grid md:grid-cols-3 gap-4">
                   <div>
-                    <h5 className="font-bold text-slate-900 mb-2">Elementary Schools</h5>
-                    <ul className="text-slate-600 text-sm space-y-1">
+                    <h5 className="font-bold text-lmhy-charcoal mb-2">Elementary Schools</h5>
+                    <ul className="text-lmhy-charcoal/70 text-sm space-y-1">
                       <li>• Elise Wolff Elementary (9/10)</li>
                       <li>• Janet Lundahl Elementary</li>
                       <li>• Robert Forbuss Elementary</li>
@@ -194,8 +194,8 @@ export default function SouthernHighlandsPage() {
                     </ul>
                   </div>
                   <div>
-                    <h5 className="font-bold text-slate-900 mb-2">Middle & High Schools</h5>
-                    <ul className="text-slate-600 text-sm space-y-1">
+                    <h5 className="font-bold text-lmhy-charcoal mb-2">Middle & High Schools</h5>
+                    <ul className="text-lmhy-charcoal/70 text-sm space-y-1">
                       <li>• Coronado High School (8/10)</li>
                       <li>• Liberty High School</li>
                       <li>• Del Webb Middle School</li>
@@ -203,8 +203,8 @@ export default function SouthernHighlandsPage() {
                     </ul>
                   </div>
                   <div>
-                    <h5 className="font-bold text-slate-900 mb-2">Private Options</h5>
-                    <ul className="text-slate-600 text-sm space-y-1">
+                    <h5 className="font-bold text-lmhy-charcoal mb-2">Private Options</h5>
+                    <ul className="text-lmhy-charcoal/70 text-sm space-y-1">
                       <li>• Bishop Gorman High School</li>
                       <li>• Pinecrest Academy</li>
                       <li>• Henderson International</li>
@@ -215,46 +215,46 @@ export default function SouthernHighlandsPage() {
               </div>
 
               {/* Commute Times */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Commute Times from Southern Highlands</h3>
+              <h3 className="text-2xl font-bold text-lmhy-charcoal mt-12 mb-6">Commute Times from Southern Highlands</h3>
               <div className="not-prose overflow-x-auto">
-                <table className="w-full bg-white border border-slate-200 rounded-lg">
-                  <thead className="bg-slate-50">
+                <table className="w-full bg-white border border-lmhy-sand/60 rounded-lg">
+                  <thead className="bg-lmhy-sand/20">
                     <tr>
-                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Destination</th>
-                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Distance</th>
-                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Drive Time</th>
-                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Rush Hour</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold text-lmhy-charcoal">Destination</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold text-lmhy-charcoal">Distance</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold text-lmhy-charcoal">Drive Time</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold text-lmhy-charcoal">Rush Hour</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-slate-200">
                     <tr><td className="px-4 py-3">Las Vegas Strip</td><td className="px-4 py-3">8 miles</td><td className="px-4 py-3">12 min</td><td className="px-4 py-3">18-25 min</td></tr>
-                    <tr className="bg-slate-50"><td className="px-4 py-3">McCarran Airport (LAS)</td><td className="px-4 py-3">10 miles</td><td className="px-4 py-3">15 min</td><td className="px-4 py-3">20-30 min</td></tr>
+                    <tr className="bg-lmhy-sand/20"><td className="px-4 py-3">McCarran Airport (LAS)</td><td className="px-4 py-3">10 miles</td><td className="px-4 py-3">15 min</td><td className="px-4 py-3">20-30 min</td></tr>
                     <tr><td className="px-4 py-3">Downtown Las Vegas</td><td className="px-4 py-3">12 miles</td><td className="px-4 py-3">18 min</td><td className="px-4 py-3">25-35 min</td></tr>
-                    <tr className="bg-slate-50"><td className="px-4 py-3">Henderson</td><td className="px-4 py-3">15 miles</td><td className="px-4 py-3">20 min</td><td className="px-4 py-3">25-35 min</td></tr>
+                    <tr className="bg-lmhy-sand/20"><td className="px-4 py-3">Henderson</td><td className="px-4 py-3">15 miles</td><td className="px-4 py-3">20 min</td><td className="px-4 py-3">25-35 min</td></tr>
                     <tr><td className="px-4 py-3">Summerlin</td><td className="px-4 py-3">18 miles</td><td className="px-4 py-3">25 min</td><td className="px-4 py-3">35-45 min</td></tr>
                   </tbody>
                 </table>
               </div>
-              <p className="text-slate-600 text-sm mt-2 not-prose">
+              <p className="text-lmhy-charcoal/70 text-sm mt-2 not-prose">
                 Southern Highlands' I-15 access provides the fastest route to the Strip and airport from
                 any Las Vegas master-planned community—a key advantage for frequent travelers.
               </p>
 
               {/* Local Amenities */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Shopping, Dining & Healthcare</h3>
+              <h3 className="text-2xl font-bold text-lmhy-charcoal mt-12 mb-6">Shopping, Dining & Healthcare</h3>
               <div className="not-prose grid md:grid-cols-2 gap-6">
-                <div className="bg-slate-50 rounded-xl p-6">
-                  <h5 className="font-bold text-slate-900 mb-3">Shopping & Entertainment</h5>
-                  <ul className="text-slate-600 text-sm space-y-2">
+                <div className="bg-lmhy-sand/20 rounded-xl p-6">
+                  <h5 className="font-bold text-lmhy-charcoal mb-3">Shopping & Entertainment</h5>
+                  <ul className="text-lmhy-charcoal/70 text-sm space-y-2">
                     <li><strong>Southern Highlands Marketplace:</strong> Grocery, restaurants, services within the community.</li>
                     <li><strong>Town Square Las Vegas:</strong> 10 minutes—outdoor mall with Apple, Whole Foods, movie theater.</li>
                     <li><strong>Las Vegas Premium Outlets South:</strong> 5 minutes—designer outlet shopping.</li>
                     <li><strong>M Resort Spa Casino:</strong> Adjacent to community—gaming, dining, entertainment.</li>
                   </ul>
                 </div>
-                <div className="bg-slate-50 rounded-xl p-6">
-                  <h5 className="font-bold text-slate-900 mb-3">Healthcare & Services</h5>
-                  <ul className="text-slate-600 text-sm space-y-2">
+                <div className="bg-lmhy-sand/20 rounded-xl p-6">
+                  <h5 className="font-bold text-lmhy-charcoal mb-3">Healthcare & Services</h5>
+                  <ul className="text-lmhy-charcoal/70 text-sm space-y-2">
                     <li><strong>St. Rose Dominican - Siena:</strong> Full-service hospital, 10 minutes.</li>
                     <li><strong>Southern Hills Hospital:</strong> 24/7 ER, comprehensive services, 12 minutes.</li>
                     <li><strong>Southwest Medical:</strong> Multiple urgent care and primary care locations nearby.</li>
@@ -264,19 +264,19 @@ export default function SouthernHighlandsPage() {
               </div>
 
               {/* Golf Club Details */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Southern Highlands Golf Club</h3>
+              <h3 className="text-2xl font-bold text-lmhy-charcoal mt-12 mb-6">Southern Highlands Golf Club</h3>
               <div className="not-prose bg-green-50 border border-green-200 rounded-xl p-6">
-                <p className="text-slate-700 mb-4">
+                <p className="text-lmhy-charcoal/80 mb-4">
                   The Robert Trent Jones Jr. designed course is the community's centerpiece, offering
                   private membership to residents and non-residents:
                 </p>
                 <div className="grid md:grid-cols-2 gap-4">
-                  <ul className="text-slate-600 text-sm space-y-2">
+                  <ul className="text-lmhy-charcoal/70 text-sm space-y-2">
                     <li><strong>Course Rating:</strong> 74.1 / Slope 140 (Championship)</li>
                     <li><strong>Membership:</strong> Equity and non-equity options</li>
                     <li><strong>Facilities:</strong> 35,000 sq ft clubhouse, fine dining</li>
                   </ul>
-                  <ul className="text-slate-600 text-sm space-y-2">
+                  <ul className="text-lmhy-charcoal/70 text-sm space-y-2">
                     <li><strong>Practice:</strong> Full range, short game area, putting greens</li>
                     <li><strong>Events:</strong> Private tournaments, member socials</li>
                     <li><strong>Dining:</strong> Multiple restaurants, bars, banquet facilities</li>
@@ -304,14 +304,14 @@ export default function SouthernHighlandsPage() {
 
           {/* Expert Quote */}
           <section className="mb-16 max-w-4xl mx-auto">
-            <div className="bg-blue-50 border-l-4 border-blue-600 rounded-lg p-8">
-              <blockquote className="text-lg text-slate-700 italic mb-4">
+            <div className="bg-lmhy-coral/5 border-l-4 border-lmhy-coral rounded-lg p-8">
+              <blockquote className="text-lg text-lmhy-charcoal/80 italic mb-4">
                 "Southern Highlands delivers luxury living at prices that often surprise buyers—especially
                 those relocating from California. You get championship golf, guard-gated security, mountain
                 views, and excellent schools, all just 15 minutes from the Strip. As a Berkshire Hathaway
                 HomeServices agent, I help clients see beyond the golf course to the community's full potential."
               </blockquote>
-              <cite className="text-slate-900 font-semibold">
+              <cite className="text-lmhy-charcoal font-semibold">
                 — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
               </cite>
             </div>
@@ -319,45 +319,45 @@ export default function SouthernHighlandsPage() {
 
           {/* FAQ Section */}
           <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+            <h2 className="text-3xl font-bold text-lmhy-charcoal mb-8 text-center">
               Frequently Asked Questions About Southern Highlands
             </h2>
             <div className="space-y-6">
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
+              <div className="bg-white border border-lmhy-sand/60 rounded-lg p-6">
+                <h3 className="font-bold text-lmhy-charcoal mb-2">
                   What is the current median home price in Southern Highlands?
                 </h3>
-                <p className="text-slate-600">
+                <p className="text-lmhy-charcoal/70">
                   As of January 2026, Southern Highlands' median home price is $750,000, up 7.2%
                   year-over-year. Prices range from $500,000 for non-gated homes to over $3 million
                   in guard-gated sections.
                 </p>
               </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
+              <div className="bg-white border border-lmhy-sand/60 rounded-lg p-6">
+                <h3 className="font-bold text-lmhy-charcoal mb-2">
                   Does Southern Highlands have guard-gated sections?
                 </h3>
-                <p className="text-slate-600">
+                <p className="text-lmhy-charcoal/70">
                   Yes, Southern Highlands features multiple guard-gated luxury sections including
                   Southern Highlands Golf Club estates and exclusive enclaves with 24/7 security.
                   Non-gated sections also offer excellent value with community amenities.
                 </p>
               </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
+              <div className="bg-white border border-lmhy-sand/60 rounded-lg p-6">
+                <h3 className="font-bold text-lmhy-charcoal mb-2">
                   What is the Southern Highlands Golf Club like?
                 </h3>
-                <p className="text-slate-600">
+                <p className="text-lmhy-charcoal/70">
                   Southern Highlands Golf Club features an award-winning Robert Trent Jones Jr. designed
                   course. It offers private membership, a stunning clubhouse, fine dining, and is
                   consistently ranked among Nevada's best golf courses.
                 </p>
               </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
+              <div className="bg-white border border-lmhy-sand/60 rounded-lg p-6">
+                <h3 className="font-bold text-lmhy-charcoal mb-2">
                   How does Southern Highlands compare to Summerlin?
                 </h3>
-                <p className="text-slate-600">
+                <p className="text-lmhy-charcoal/70">
                   Southern Highlands offers similar luxury and amenities to Summerlin but in southwest
                   Las Vegas, providing faster access to the Strip, airport, and I-15. It's ideal for
                   buyers who want premier living with southern valley convenience.
@@ -367,27 +367,27 @@ export default function SouthernHighlandsPage() {
           </section>
 
           {/* CTA */}
-          <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
+          <section className="text-center bg-lmhy-coral text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Explore Southern Highlands Living
             </h2>
-            <p className="text-xl text-blue-100 mb-8">
+            <p className="text-xl text-white/85 mb-8">
               Contact Dr. Jan Duffy, your Berkshire Hathaway HomeServices Southern Highlands specialist,
               for expert guidance in this premier golf community.
             </p>
             <a
               href="tel:+17025001942"
-              className="inline-flex items-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
+              className="inline-flex items-center bg-white text-lmhy-coral px-8 py-4 rounded-md font-bold text-lg hover:bg-lmhy-cream transition-colors"
             >
               <Phone className="h-5 w-5 mr-2" />
               Call (702) 500-1942
             </a>
-            <p className="mt-4 text-blue-200 text-sm">
+            <p className="mt-4 text-white/70 text-sm">
               Berkshire Hathaway HomeServices Nevada Properties
             </p>
           </section>
         </div>
-        <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
+        <div className="text-center text-sm text-lmhy-charcoal/60 mt-8">Last Updated: January 2026</div>
       </main>
       <RealScoutListings />
       <Footer />

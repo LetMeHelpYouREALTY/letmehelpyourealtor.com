@@ -94,7 +94,7 @@ export default function ClaudeCostDashboard() {
     <div className="space-y-6">
       <div>
         <h2 className="text-2xl font-bold mb-2">Claude API Cost Dashboard</h2>
-        <p className="text-slate-600">
+        <p className="text-lmhy-charcoal/70">
           Monitor API usage, costs, and caching performance in real-time
         </p>
       </div>
@@ -103,37 +103,37 @@ export default function ClaudeCostDashboard() {
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         <Card>
           <CardHeader>
-            <CardTitle className="text-sm font-medium text-slate-600">
+            <CardTitle className="text-sm font-medium text-lmhy-charcoal/70">
               Total Requests
             </CardTitle>
           </CardHeader>
           <CardContent>
             <div className="text-3xl font-bold">{stats.costs.total.requests}</div>
-            <p className="text-xs text-slate-500 mt-1">All time</p>
+            <p className="text-xs text-lmhy-charcoal/60 mt-1">All time</p>
           </CardContent>
         </Card>
 
         <Card>
           <CardHeader>
-            <CardTitle className="text-sm font-medium text-slate-600">
+            <CardTitle className="text-sm font-medium text-lmhy-charcoal/70">
               Total Cost
             </CardTitle>
           </CardHeader>
           <CardContent>
             <div className="text-3xl font-bold">${stats.costs.total.cost.toFixed(4)}</div>
-            <p className="text-xs text-slate-500 mt-1">All time</p>
+            <p className="text-xs text-lmhy-charcoal/60 mt-1">All time</p>
           </CardContent>
         </Card>
 
         <Card>
           <CardHeader>
-            <CardTitle className="text-sm font-medium text-slate-600">
+            <CardTitle className="text-sm font-medium text-lmhy-charcoal/70">
               Last 24h Cost
             </CardTitle>
           </CardHeader>
           <CardContent>
             <div className="text-3xl font-bold">${stats.costs.last24h.cost.toFixed(4)}</div>
-            <p className="text-xs text-slate-500 mt-1">
+            <p className="text-xs text-lmhy-charcoal/60 mt-1">
               {stats.costs.last24h.requests} requests
             </p>
           </CardContent>
@@ -141,13 +141,13 @@ export default function ClaudeCostDashboard() {
 
         <Card>
           <CardHeader>
-            <CardTitle className="text-sm font-medium text-slate-600">
+            <CardTitle className="text-sm font-medium text-lmhy-charcoal/70">
               Cache Hit Rate
             </CardTitle>
           </CardHeader>
           <CardContent>
             <div className="text-3xl font-bold text-green-600">{cacheHitRate}%</div>
-            <p className="text-xs text-slate-500 mt-1">
+            <p className="text-xs text-lmhy-charcoal/60 mt-1">
               {stats.cache.entriesInMemory} cached responses
             </p>
           </CardContent>
@@ -165,13 +165,13 @@ export default function ClaudeCostDashboard() {
         <CardContent>
           <div className="space-y-2">
             <div className="flex justify-between items-center">
-              <span className="text-sm text-slate-600">Without caching:</span>
+              <span className="text-sm text-lmhy-charcoal/70">Without caching:</span>
               <span className="font-semibold">
                 ${(stats.costs.last24h.cost / 0.10).toFixed(4)}
               </span>
             </div>
             <div className="flex justify-between items-center">
-              <span className="text-sm text-slate-600">With caching:</span>
+              <span className="text-sm text-lmhy-charcoal/70">With caching:</span>
               <span className="font-semibold text-green-600">
                 ${stats.costs.last24h.cost.toFixed(4)}
               </span>
@@ -198,7 +198,7 @@ export default function ClaudeCostDashboard() {
           <div className="space-y-2">
             {Object.entries(stats.templates).map(([name, tokens]) => (
               <div key={name} className="flex justify-between items-center">
-                <span className="text-sm text-slate-600 capitalize">
+                <span className="text-sm text-lmhy-charcoal/70 capitalize">
                   {name.replace(/([A-Z])/g, ' $1').trim()}:
                 </span>
                 <span className="font-mono text-sm">
@@ -230,10 +230,10 @@ export default function ClaudeCostDashboard() {
                   ${stats.costs.last24h.cost.toFixed(4)}
                 </span>
               </div>
-              <div className="text-sm text-slate-600">
+              <div className="text-sm text-lmhy-charcoal/70">
                 {stats.costs.last24h.requests} requests
               </div>
-              <div className="text-xs text-slate-500 mt-1">
+              <div className="text-xs text-lmhy-charcoal/60 mt-1">
                 Avg: ${(stats.costs.last24h.cost / Math.max(stats.costs.last24h.requests, 1)).toFixed(6)}/request
               </div>
             </div>
@@ -245,10 +245,10 @@ export default function ClaudeCostDashboard() {
                   ${stats.costs.last7d.cost.toFixed(4)}
                 </span>
               </div>
-              <div className="text-sm text-slate-600">
+              <div className="text-sm text-lmhy-charcoal/70">
                 {stats.costs.last7d.requests} requests
               </div>
-              <div className="text-xs text-slate-500 mt-1">
+              <div className="text-xs text-lmhy-charcoal/60 mt-1">
                 Avg: ${(stats.costs.last7d.cost / Math.max(stats.costs.last7d.requests, 1)).toFixed(6)}/request
               </div>
             </div>
@@ -260,10 +260,10 @@ export default function ClaudeCostDashboard() {
                   ${stats.costs.total.cost.toFixed(4)}
                 </span>
               </div>
-              <div className="text-sm text-slate-600">
+              <div className="text-sm text-lmhy-charcoal/70">
                 {stats.costs.total.requests} requests
               </div>
-              <div className="text-xs text-slate-500 mt-1">
+              <div className="text-xs text-lmhy-charcoal/60 mt-1">
                 Avg: ${(stats.costs.total.cost / Math.max(stats.costs.total.requests, 1)).toFixed(6)}/request
               </div>
             </div>
@@ -272,7 +272,7 @@ export default function ClaudeCostDashboard() {
       </Card>
 
       {/* Optimization Tips */}
-      <Card className="border-blue-200 bg-blue-50">
+      <Card className="border-blue-200 bg-lmhy-coral/5">
         <CardHeader>
           <CardTitle>Optimization Tips</CardTitle>
         </CardHeader>
@@ -291,13 +291,13 @@ export default function ClaudeCostDashboard() {
               </span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-blue-600">→</span>
+              <span className="text-lmhy-coral">→</span>
               <span>
                 <strong>Rate limiting:</strong> 50 requests/min per client to prevent API limits
               </span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-blue-600">→</span>
+              <span className="text-lmhy-coral">→</span>
               <span>
                 <strong>Cost tracking:</strong> Real-time monitoring of API expenses
               </span>

@@ -4,6 +4,7 @@ import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import { Phone } from "lucide-react";
 import type { Metadata } from "next";
+import { withPageCanonical } from "@/lib/page-metadata";
 import SchemaScript from "@/components/SchemaScript";
 import {
   generateBreadcrumbSchema,
@@ -12,7 +13,7 @@ import {
   combineSchemas,
 } from "@/lib/schema";
 
-export const metadata: Metadata = {
+const pageMetadata: Metadata = {
   title: "FAQ | Berkshire Hathaway HomeServices Las Vegas Real Estate",
   description:
     "Frequently asked questions about Las Vegas real estate, Berkshire Hathaway HomeServices, buying, selling, and working with Dr. Jan Duffy at BHHS Nevada Properties.",
@@ -24,6 +25,8 @@ export const metadata: Metadata = {
     "BHHS agent questions",
   ],
 };
+
+export const metadata = withPageCanonical(pageMetadata, "/faq");
 
 // Breadcrumb items
 const breadcrumbs = [
@@ -184,16 +187,16 @@ export default function FAQPage() {
       <SchemaScript schema={pageSchemas} id="faq-page-schema" />
       <Navbar />
       <main className="pt-24 pb-16">
-        <div className="container mx-auto px-4">
+        <div className="lmhy-container">
           {/* Hero */}
           <div className="max-w-4xl mx-auto text-center mb-16">
-            <div className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <div className="inline-block bg-lmhy-coral/10 text-lmhy-coral-dark px-4 py-2 rounded-full text-sm font-semibold mb-6">
               Berkshire Hathaway HomeServices Nevada Properties
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-lmhy-charcoal mb-6">
               Frequently Asked Questions
             </h1>
-            <p className="text-xl text-slate-600">
+            <p className="text-xl text-lmhy-charcoal/70">
               Everything you need to know about working with{" "}
               <strong>Berkshire Hathaway HomeServices</strong> in Las Vegas
             </p>
@@ -203,14 +206,14 @@ export default function FAQPage() {
           <div className="max-w-4xl mx-auto space-y-12">
             {faqCategories.map((category) => (
               <section key={category.title}>
-                <h2 className="text-2xl font-bold text-slate-900 mb-6 pb-2 border-b border-slate-200">
+                <h2 className="text-2xl font-bold text-lmhy-charcoal mb-6 pb-2 border-b border-lmhy-sand/60">
                   {category.title}
                 </h2>
                 <div className="space-y-4">
                   {category.faqs.map((faq, index) => (
-                    <div key={index} className="bg-slate-50 rounded-lg p-6">
-                      <h3 className="font-bold text-slate-900 mb-2">{faq.q}</h3>
-                      <p className="text-slate-600">{faq.a}</p>
+                    <div key={index} className="bg-lmhy-sand/20 rounded-lg p-6">
+                      <h3 className="font-bold text-lmhy-charcoal mb-2">{faq.q}</h3>
+                      <p className="text-lmhy-charcoal/70">{faq.a}</p>
                     </div>
                   ))}
                 </div>
@@ -219,27 +222,27 @@ export default function FAQPage() {
           </div>
 
           {/* CTA */}
-          <section className="mt-16 text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
+          <section className="mt-16 text-center bg-lmhy-coral text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Still Have Questions?</h2>
-            <p className="text-xl text-blue-100 mb-8">
+            <p className="text-xl text-white/85 mb-8">
               Dr. Jan Duffy is happy to answer any questions about Las Vegas real estate or working
               with Berkshire Hathaway HomeServices.
             </p>
             <a
               href="tel:+17025001942"
-              className="inline-flex items-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
+              className="inline-flex items-center bg-white text-lmhy-coral px-8 py-4 rounded-md font-bold text-lg hover:bg-lmhy-cream transition-colors"
             >
               <Phone className="h-5 w-5 mr-2" />
               Call (702) 500-1942
             </a>
-            <p className="mt-4 text-blue-200 text-sm">
+            <p className="mt-4 text-white/70 text-sm">
               Berkshire Hathaway HomeServices Nevada Properties
             </p>
           </section>
         </div>
 
         {/* Last Updated */}
-        <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
+        <div className="text-center text-sm text-lmhy-charcoal/60 mt-8">Last Updated: January 2026</div>
       </main>
       <RealScoutListings />
       <Footer />

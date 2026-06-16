@@ -66,61 +66,61 @@ export default function CentennialHillsPage() {
       />
       <Navbar />
       <main className="pt-24 pb-16">
-        <div className="container mx-auto px-4">
+        <div className="lmhy-container">
           {/* Breadcrumb */}
           <div className="max-w-6xl mx-auto mb-6">
-            <nav className="text-sm text-slate-500">
-              <Link href="/" className="hover:text-blue-600">Home</Link>
+            <nav className="text-sm text-lmhy-charcoal/60">
+              <Link href="/" className="hover:text-lmhy-coral">Home</Link>
               {" / "}
-              <Link href="/neighborhoods" className="hover:text-blue-600">Neighborhoods</Link>
+              <Link href="/neighborhoods" className="hover:text-lmhy-coral">Neighborhoods</Link>
               {" / "}
-              <span className="text-slate-900">Centennial Hills</span>
+              <span className="text-lmhy-charcoal">Centennial Hills</span>
             </nav>
           </div>
 
           {/* Hero */}
           <div className="max-w-4xl mx-auto text-center mb-16">
-            <div className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <div className="inline-block bg-lmhy-coral/10 text-lmhy-coral-dark px-4 py-2 rounded-full text-sm font-semibold mb-6">
               Berkshire Hathaway HomeServices Nevada Properties
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-lmhy-charcoal mb-6">
               Berkshire Hathaway HomeServices Centennial Hills
             </h1>
-            <p className="text-xl text-slate-600">
+            <p className="text-xl text-lmhy-charcoal/70">
               Family-friendly northwest Las Vegas living. Find your Centennial Hills home with{" "}
               <strong>Berkshire Hathaway HomeServices</strong> and Dr. Jan Duffy.
             </p>
           </div>
 
           {/* Market Stats */}
-          <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
+          <section className="mb-16 bg-lmhy-charcoal text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-2xl font-bold mb-8 text-center">
               Centennial Hills Market | January 2026
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-400 mb-1">$495,000</div>
-                <div className="text-slate-300 text-sm">Median Home Price</div>
+                <div className="text-3xl font-bold text-lmhy-gold mb-1">$495,000</div>
+                <div className="text-white/70 text-sm">Median Home Price</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-green-400 mb-1">25 Days</div>
-                <div className="text-slate-300 text-sm">Avg. Days on Market</div>
+                <div className="text-white/70 text-sm">Avg. Days on Market</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold mb-1">203</div>
-                <div className="text-slate-300 text-sm">Active Listings</div>
+                <div className="text-white/70 text-sm">Active Listings</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-green-400 mb-1">+4.8%</div>
-                <div className="text-slate-300 text-sm">YoY Appreciation</div>
+                <div className="text-white/70 text-sm">YoY Appreciation</div>
               </div>
             </div>
           </section>
 
           {/* Main Content */}
           <section className="mb-16 max-w-5xl mx-auto">
-            <div className="prose prose-lg max-w-none text-slate-700">
-              <h2 className="text-3xl font-bold text-slate-900 mb-6">
+            <div className="prose prose-lg max-w-none text-lmhy-charcoal/80">
+              <h2 className="text-3xl font-bold text-lmhy-charcoal mb-6">
                 Centennial Hills: Northwest Las Vegas's Established Family Community
               </h2>
               <p>
@@ -148,26 +148,26 @@ export default function CentennialHillsPage() {
               </p>
 
               {/* Community Highlights */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Community Highlights</h3>
+              <h3 className="text-2xl font-bold text-lmhy-charcoal mt-12 mb-6">Community Highlights</h3>
               <div className="grid md:grid-cols-2 gap-8 not-prose">
-                <div className="bg-slate-50 p-6 rounded-xl">
+                <div className="bg-lmhy-sand/20 p-6 rounded-xl">
                   <div className="flex items-center mb-4">
-                    <Users className="h-8 w-8 text-blue-600 mr-3" />
-                    <h4 className="font-bold text-slate-900 text-lg">Established Family Community</h4>
+                    <Users className="h-8 w-8 text-lmhy-coral mr-3" />
+                    <h4 className="font-bold text-lmhy-charcoal text-lg">Established Family Community</h4>
                   </div>
-                  <p className="text-slate-600">
+                  <p className="text-lmhy-charcoal/70">
                     Centennial Hills has matured into a true community where neighbors know each other
                     and families put down roots. The area features multiple established parks including
                     the popular Centennial Hills Park, community events throughout the year, and the
                     kind of neighborhood stability that creates lifelong friendships and strong property values.
                   </p>
                 </div>
-                <div className="bg-slate-50 p-6 rounded-xl">
+                <div className="bg-lmhy-sand/20 p-6 rounded-xl">
                   <div className="flex items-center mb-4">
-                    <ShoppingBag className="h-8 w-8 text-blue-600 mr-3" />
-                    <h4 className="font-bold text-slate-900 text-lg">Centennial Center Convenience</h4>
+                    <ShoppingBag className="h-8 w-8 text-lmhy-coral mr-3" />
+                    <h4 className="font-bold text-lmhy-charcoal text-lg">Centennial Center Convenience</h4>
                   </div>
-                  <p className="text-slate-600">
+                  <p className="text-lmhy-charcoal/70">
                     Centennial Center provides residents with comprehensive shopping, dining, and
                     entertainment options without leaving the neighborhood. Major retailers like Target,
                     Costco, and Home Depot anchor the center, while diverse restaurants and services
@@ -177,15 +177,15 @@ export default function CentennialHillsPage() {
               </div>
 
               {/* Schools */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Centennial Hills School Districts</h3>
-              <div className="not-prose bg-white border border-slate-200 rounded-xl p-6">
-                <p className="text-slate-700 mb-4">
+              <h3 className="text-2xl font-bold text-lmhy-charcoal mt-12 mb-6">Centennial Hills School Districts</h3>
+              <div className="not-prose bg-white border border-lmhy-sand/60 rounded-xl p-6">
+                <p className="text-lmhy-charcoal/80 mb-4">
                   Centennial Hills is served by established, well-regarded schools with proven track records:
                 </p>
                 <div className="grid md:grid-cols-3 gap-4">
                   <div>
-                    <h5 className="font-bold text-slate-900 mb-2">Elementary Schools</h5>
-                    <ul className="text-slate-600 text-sm space-y-1">
+                    <h5 className="font-bold text-lmhy-charcoal mb-2">Elementary Schools</h5>
+                    <ul className="text-lmhy-charcoal/70 text-sm space-y-1">
                       <li>• Ober Elementary (8/10)</li>
                       <li>• Cashman Elementary</li>
                       <li>• Scherkenbach Elementary</li>
@@ -194,8 +194,8 @@ export default function CentennialHillsPage() {
                     </ul>
                   </div>
                   <div>
-                    <h5 className="font-bold text-slate-900 mb-2">Middle & High Schools</h5>
-                    <ul className="text-slate-600 text-sm space-y-1">
+                    <h5 className="font-bold text-lmhy-charcoal mb-2">Middle & High Schools</h5>
+                    <ul className="text-lmhy-charcoal/70 text-sm space-y-1">
                       <li>• Centennial High School (7/10)</li>
                       <li>• Shadow Ridge High School</li>
                       <li>• Arbor View High School</li>
@@ -204,8 +204,8 @@ export default function CentennialHillsPage() {
                     </ul>
                   </div>
                   <div>
-                    <h5 className="font-bold text-slate-900 mb-2">Charter/Private</h5>
-                    <ul className="text-slate-600 text-sm space-y-1">
+                    <h5 className="font-bold text-lmhy-charcoal mb-2">Charter/Private</h5>
+                    <ul className="text-lmhy-charcoal/70 text-sm space-y-1">
                       <li>• Pinecrest Academy</li>
                       <li>• Somerset Academy</li>
                       <li>• Coral Academy of Science</li>
@@ -217,45 +217,45 @@ export default function CentennialHillsPage() {
               </div>
 
               {/* Commute Times */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Commute Times from Centennial Hills</h3>
+              <h3 className="text-2xl font-bold text-lmhy-charcoal mt-12 mb-6">Commute Times from Centennial Hills</h3>
               <div className="not-prose overflow-x-auto">
-                <table className="w-full bg-white border border-slate-200 rounded-lg">
-                  <thead className="bg-slate-50">
+                <table className="w-full bg-white border border-lmhy-sand/60 rounded-lg">
+                  <thead className="bg-lmhy-sand/20">
                     <tr>
-                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Destination</th>
-                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Distance</th>
-                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Drive Time</th>
-                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Rush Hour</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold text-lmhy-charcoal">Destination</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold text-lmhy-charcoal">Distance</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold text-lmhy-charcoal">Drive Time</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold text-lmhy-charcoal">Rush Hour</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-slate-200">
                     <tr><td className="px-4 py-3">Downtown Summerlin</td><td className="px-4 py-3">6 miles</td><td className="px-4 py-3">12 min</td><td className="px-4 py-3">18-25 min</td></tr>
-                    <tr className="bg-slate-50"><td className="px-4 py-3">Las Vegas Strip</td><td className="px-4 py-3">15 miles</td><td className="px-4 py-3">22 min</td><td className="px-4 py-3">30-45 min</td></tr>
+                    <tr className="bg-lmhy-sand/20"><td className="px-4 py-3">Las Vegas Strip</td><td className="px-4 py-3">15 miles</td><td className="px-4 py-3">22 min</td><td className="px-4 py-3">30-45 min</td></tr>
                     <tr><td className="px-4 py-3">McCarran Airport (LAS)</td><td className="px-4 py-3">18 miles</td><td className="px-4 py-3">25 min</td><td className="px-4 py-3">35-50 min</td></tr>
-                    <tr className="bg-slate-50"><td className="px-4 py-3">Downtown Las Vegas</td><td className="px-4 py-3">12 miles</td><td className="px-4 py-3">18 min</td><td className="px-4 py-3">25-40 min</td></tr>
+                    <tr className="bg-lmhy-sand/20"><td className="px-4 py-3">Downtown Las Vegas</td><td className="px-4 py-3">12 miles</td><td className="px-4 py-3">18 min</td><td className="px-4 py-3">25-40 min</td></tr>
                     <tr><td className="px-4 py-3">Henderson</td><td className="px-4 py-3">25 miles</td><td className="px-4 py-3">30 min</td><td className="px-4 py-3">45-60 min</td></tr>
                   </tbody>
                 </table>
               </div>
-              <p className="text-slate-600 text-sm mt-2 not-prose">
+              <p className="text-lmhy-charcoal/70 text-sm mt-2 not-prose">
                 Centennial Hills' proximity to US-95 provides excellent north-south access throughout the valley.
               </p>
 
               {/* Shopping & Amenities */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Shopping, Dining & Healthcare</h3>
+              <h3 className="text-2xl font-bold text-lmhy-charcoal mt-12 mb-6">Shopping, Dining & Healthcare</h3>
               <div className="not-prose grid md:grid-cols-2 gap-6">
-                <div className="bg-slate-50 rounded-xl p-6">
-                  <h5 className="font-bold text-slate-900 mb-3">Centennial Center</h5>
-                  <ul className="text-slate-600 text-sm space-y-2">
+                <div className="bg-lmhy-sand/20 rounded-xl p-6">
+                  <h5 className="font-bold text-lmhy-charcoal mb-3">Centennial Center</h5>
+                  <ul className="text-lmhy-charcoal/70 text-sm space-y-2">
                     <li><strong>Major Retail:</strong> Target, Costco, Home Depot, Best Buy, Kohl's</li>
                     <li><strong>Grocery:</strong> Smith's, Trader Joe's, Whole Foods nearby</li>
                     <li><strong>Dining:</strong> 50+ restaurants including Red Robin, BJ's, Cheesecake Factory</li>
                     <li><strong>Entertainment:</strong> Century 18 Theatres, bowling, fitness centers</li>
                   </ul>
                 </div>
-                <div className="bg-slate-50 rounded-xl p-6">
-                  <h5 className="font-bold text-slate-900 mb-3">Healthcare & Services</h5>
-                  <ul className="text-slate-600 text-sm space-y-2">
+                <div className="bg-lmhy-sand/20 rounded-xl p-6">
+                  <h5 className="font-bold text-lmhy-charcoal mb-3">Healthcare & Services</h5>
+                  <ul className="text-lmhy-charcoal/70 text-sm space-y-2">
                     <li><strong>Centennial Hills Hospital:</strong> Full-service hospital, 24/7 ER, maternity center</li>
                     <li><strong>Southwest Medical:</strong> Multiple primary care and urgent care locations</li>
                     <li><strong>Dignity Health:</strong> Clinics and specialty services</li>
@@ -265,18 +265,18 @@ export default function CentennialHillsPage() {
               </div>
 
               {/* Parks & Recreation */}
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Parks & Recreation</h3>
+              <h3 className="text-2xl font-bold text-lmhy-charcoal mt-12 mb-6">Parks & Recreation</h3>
               <div className="not-prose bg-green-50 border border-green-200 rounded-xl p-6">
-                <p className="text-slate-700 mb-4">
+                <p className="text-lmhy-charcoal/80 mb-4">
                   Centennial Hills offers extensive parks and recreation facilities:
                 </p>
                 <div className="grid md:grid-cols-2 gap-4">
-                  <ul className="text-slate-600 text-sm space-y-2">
+                  <ul className="text-lmhy-charcoal/70 text-sm space-y-2">
                     <li><strong>Centennial Hills Park:</strong> 120 acres with sports fields, playground, skate park, dog park</li>
                     <li><strong>Centennial Hills YMCA:</strong> Full fitness facility, pools, youth programs</li>
                     <li><strong>Centennial Hills Library:</strong> Modern library with programs and events</li>
                   </ul>
-                  <ul className="text-slate-600 text-sm space-y-2">
+                  <ul className="text-lmhy-charcoal/70 text-sm space-y-2">
                     <li><strong>Angel Park Golf Club:</strong> Two public courses, 36 holes of golf</li>
                     <li><strong>Floyd Lamb Park:</strong> 15 minutes—680 acres, lakes, wildlife viewing</li>
                     <li><strong>Mountain Trails:</strong> Easy access to BLM land for hiking and biking</li>
@@ -304,15 +304,15 @@ export default function CentennialHillsPage() {
 
           {/* Expert Quote */}
           <section className="mb-16 max-w-4xl mx-auto">
-            <div className="bg-blue-50 border-l-4 border-blue-600 rounded-lg p-8">
-              <blockquote className="text-lg text-slate-700 italic mb-4">
+            <div className="bg-lmhy-coral/5 border-l-4 border-lmhy-coral rounded-lg p-8">
+              <blockquote className="text-lg text-lmhy-charcoal/80 italic mb-4">
                 "Centennial Hills offers something newer communities are still building: a genuine
                 sense of community. The schools have track records, the neighbors have history, and
                 the landscaping is mature. As a Berkshire Hathaway HomeServices agent, I help families
                 see beyond the shiny new construction to communities that have proven their value
                 over time."
               </blockquote>
-              <cite className="text-slate-900 font-semibold">
+              <cite className="text-lmhy-charcoal font-semibold">
                 — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
               </cite>
             </div>
@@ -320,45 +320,45 @@ export default function CentennialHillsPage() {
 
           {/* FAQ Section */}
           <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+            <h2 className="text-3xl font-bold text-lmhy-charcoal mb-8 text-center">
               Frequently Asked Questions About Centennial Hills
             </h2>
             <div className="space-y-6">
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
+              <div className="bg-white border border-lmhy-sand/60 rounded-lg p-6">
+                <h3 className="font-bold text-lmhy-charcoal mb-2">
                   What is the current median home price in Centennial Hills?
                 </h3>
-                <p className="text-slate-600">
+                <p className="text-lmhy-charcoal/70">
                   As of January 2026, Centennial Hills' median home price is $495,000, up 4.8%
                   year-over-year. Prices range from $380,000 for smaller homes to over $900,000
                   for larger properties with mountain views.
                 </p>
               </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
+              <div className="bg-white border border-lmhy-sand/60 rounded-lg p-6">
+                <h3 className="font-bold text-lmhy-charcoal mb-2">
                   Is Centennial Hills a good family neighborhood?
                 </h3>
-                <p className="text-slate-600">
+                <p className="text-lmhy-charcoal/70">
                   Yes, Centennial Hills is one of Las Vegas's best family neighborhoods with
                   highly-rated schools, safe streets, multiple parks including Centennial Hills
                   Park, and convenient shopping at Centennial Center.
                 </p>
               </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
+              <div className="bg-white border border-lmhy-sand/60 rounded-lg p-6">
+                <h3 className="font-bold text-lmhy-charcoal mb-2">
                   How far is Centennial Hills from the Las Vegas Strip?
                 </h3>
-                <p className="text-slate-600">
+                <p className="text-lmhy-charcoal/70">
                   Centennial Hills is approximately 20-25 minutes from the Strip via US-95.
                   The community offers easy freeway access while maintaining a suburban,
                   family-oriented atmosphere away from tourist areas.
                 </p>
               </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
+              <div className="bg-white border border-lmhy-sand/60 rounded-lg p-6">
+                <h3 className="font-bold text-lmhy-charcoal mb-2">
                   What shopping and amenities are near Centennial Hills?
                 </h3>
-                <p className="text-slate-600">
+                <p className="text-lmhy-charcoal/70">
                   Centennial Center provides extensive shopping, dining, and entertainment
                   including Target, Costco, and numerous restaurants. Downtown Summerlin is
                   also easily accessible for additional retail and entertainment options.
@@ -368,27 +368,27 @@ export default function CentennialHillsPage() {
           </section>
 
           {/* CTA */}
-          <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
+          <section className="text-center bg-lmhy-coral text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Find Your Centennial Hills Home
             </h2>
-            <p className="text-xl text-blue-100 mb-8">
+            <p className="text-xl text-white/85 mb-8">
               Contact Dr. Jan Duffy, your Berkshire Hathaway HomeServices Centennial Hills expert,
               for guidance in this established family community.
             </p>
             <a
               href="tel:+17025001942"
-              className="inline-flex items-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
+              className="inline-flex items-center bg-white text-lmhy-coral px-8 py-4 rounded-md font-bold text-lg hover:bg-lmhy-cream transition-colors"
             >
               <Phone className="h-5 w-5 mr-2" />
               Call (702) 500-1942
             </a>
-            <p className="mt-4 text-blue-200 text-sm">
+            <p className="mt-4 text-white/70 text-sm">
               Berkshire Hathaway HomeServices Nevada Properties
             </p>
           </section>
         </div>
-        <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
+        <div className="text-center text-sm text-lmhy-charcoal/60 mt-8">Last Updated: January 2026</div>
       </main>
       <RealScoutListings />
       <Footer />

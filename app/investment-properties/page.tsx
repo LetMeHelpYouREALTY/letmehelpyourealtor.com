@@ -4,8 +4,9 @@ import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import { Phone, TrendingUp, DollarSign, Building, BarChart, CheckCircle, Calculator } from "lucide-react";
 import type { Metadata } from "next";
+import { withPageCanonical } from "@/lib/page-metadata";
 
-export const metadata: Metadata = {
+const pageMetadata: Metadata = {
   title: "Las Vegas Investment Properties | Berkshire Hathaway HomeServices",
   description:
     "Invest in Las Vegas real estate with Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Rental properties, ROI analysis, 1031 exchanges. No state income tax. Call (702) 500-1942.",
@@ -18,6 +19,8 @@ export const metadata: Metadata = {
     "cash flow properties Las Vegas",
   ],
 };
+
+export const metadata = withPageCanonical(pageMetadata, "/investment-properties");
 
 const investmentAreas = [
   {
@@ -69,16 +72,16 @@ export default function InvestmentPropertiesPage() {
     <>
       <Navbar />
       <main className="pt-24 pb-16">
-        <div className="container mx-auto px-4">
+        <div className="lmhy-container">
           {/* Hero */}
           <div className="max-w-4xl mx-auto text-center mb-16">
-            <div className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <div className="inline-block bg-lmhy-coral/10 text-lmhy-coral-dark px-4 py-2 rounded-full text-sm font-semibold mb-6">
               Berkshire Hathaway HomeServices Nevada Properties
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-lmhy-charcoal mb-6">
               Las Vegas Investment Properties
             </h1>
-            <p className="text-xl text-slate-600">
+            <p className="text-xl text-lmhy-charcoal/70">
               No state income tax, strong appreciation, and excellent rental yields. Discover why
               investors choose Las Vegas—with guidance from{" "}
               <strong>Berkshire Hathaway HomeServices</strong>.
@@ -86,54 +89,54 @@ export default function InvestmentPropertiesPage() {
           </div>
 
           {/* Why Las Vegas */}
-          <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
+          <section className="mb-16 bg-lmhy-charcoal text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-2xl font-bold mb-8 text-center">Why Invest in Las Vegas?</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="text-center">
                 <DollarSign className="h-12 w-12 text-green-400 mx-auto mb-3" />
                 <h3 className="font-bold mb-1">No State Income Tax</h3>
-                <p className="text-slate-400 text-sm">Keep more of your rental income</p>
+                <p className="text-lmhy-charcoal/50 text-sm">Keep more of your rental income</p>
               </div>
               <div className="text-center">
-                <TrendingUp className="h-12 w-12 text-blue-400 mx-auto mb-3" />
+                <TrendingUp className="h-12 w-12 text-lmhy-gold mx-auto mb-3" />
                 <h3 className="font-bold mb-1">Strong Appreciation</h3>
-                <p className="text-slate-400 text-sm">+4.2% YoY in 2025</p>
+                <p className="text-lmhy-charcoal/50 text-sm">+4.2% YoY in 2025</p>
               </div>
               <div className="text-center">
                 <Building className="h-12 w-12 text-purple-400 mx-auto mb-3" />
                 <h3 className="font-bold mb-1">Growing Population</h3>
-                <p className="text-slate-400 text-sm">Constant rental demand</p>
+                <p className="text-lmhy-charcoal/50 text-sm">Constant rental demand</p>
               </div>
               <div className="text-center">
                 <BarChart className="h-12 w-12 text-yellow-400 mx-auto mb-3" />
                 <h3 className="font-bold mb-1">Strong Cap Rates</h3>
-                <p className="text-slate-400 text-sm">4-6% typical returns</p>
+                <p className="text-lmhy-charcoal/50 text-sm">4-6% typical returns</p>
               </div>
             </div>
           </section>
 
           {/* Market Stats */}
           <section className="mb-16 max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+            <h2 className="text-3xl font-bold text-lmhy-charcoal mb-8 text-center">
               Investment Property Markets | January 2026
             </h2>
             <div className="overflow-x-auto">
-              <table className="w-full bg-white border border-slate-200 rounded-lg">
-                <thead className="bg-slate-50">
+              <table className="w-full bg-white border border-lmhy-sand/60 rounded-lg">
+                <thead className="bg-lmhy-sand/20">
                   <tr>
-                    <th className="px-6 py-3 text-left text-sm font-semibold text-slate-900">
+                    <th className="px-6 py-3 text-left text-sm font-semibold text-lmhy-charcoal">
                       Area
                     </th>
-                    <th className="px-6 py-3 text-left text-sm font-semibold text-slate-900">
+                    <th className="px-6 py-3 text-left text-sm font-semibold text-lmhy-charcoal">
                       Avg Price
                     </th>
-                    <th className="px-6 py-3 text-left text-sm font-semibold text-slate-900">
+                    <th className="px-6 py-3 text-left text-sm font-semibold text-lmhy-charcoal">
                       Avg Rent
                     </th>
-                    <th className="px-6 py-3 text-left text-sm font-semibold text-slate-900">
+                    <th className="px-6 py-3 text-left text-sm font-semibold text-lmhy-charcoal">
                       Cap Rate
                     </th>
-                    <th className="px-6 py-3 text-left text-sm font-semibold text-slate-900">
+                    <th className="px-6 py-3 text-left text-sm font-semibold text-lmhy-charcoal">
                       Appreciation
                     </th>
                   </tr>
@@ -142,33 +145,33 @@ export default function InvestmentPropertiesPage() {
                   {investmentAreas.map((area, index) => (
                     <tr
                       key={area.area}
-                      className={index % 2 === 0 ? "bg-white" : "bg-slate-50"}
+                      className={index % 2 === 0 ? "bg-white" : "bg-lmhy-sand/20"}
                     >
-                      <td className="px-6 py-4 font-medium text-slate-900">{area.area}</td>
-                      <td className="px-6 py-4 text-slate-700">{area.avgPrice}</td>
-                      <td className="px-6 py-4 text-slate-700">{area.avgRent}/mo</td>
+                      <td className="px-6 py-4 font-medium text-lmhy-charcoal">{area.area}</td>
+                      <td className="px-6 py-4 text-lmhy-charcoal/80">{area.avgPrice}</td>
+                      <td className="px-6 py-4 text-lmhy-charcoal/80">{area.avgRent}/mo</td>
                       <td className="px-6 py-4 text-green-600 font-medium">{area.capRate}</td>
-                      <td className="px-6 py-4 text-blue-600 font-medium">{area.appreciation}</td>
+                      <td className="px-6 py-4 text-lmhy-coral font-medium">{area.appreciation}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
-            <p className="text-center text-slate-500 text-sm mt-4">
+            <p className="text-center text-lmhy-charcoal/60 text-sm mt-4">
               Data represents single-family rental properties. Actual returns vary by property.
             </p>
           </section>
 
           {/* Expert Quote */}
           <section className="mb-16 max-w-4xl mx-auto">
-            <div className="bg-slate-50 rounded-lg p-8">
-              <blockquote className="text-lg text-slate-700 italic mb-4">
+            <div className="bg-lmhy-sand/20 rounded-lg p-8">
+              <blockquote className="text-lg text-lmhy-charcoal/80 italic mb-4">
                 "Las Vegas rental yields are among the best in the country right now. But you need
                 to know which neighborhoods are appreciating and which have peaked. Not all zip
                 codes perform equally—I help investors identify the properties with the best
                 combination of cash flow and appreciation potential."
               </blockquote>
-              <cite className="text-slate-900 font-semibold">
+              <cite className="text-lmhy-charcoal font-semibold">
                 — Dr. Jan Duffy, BHHS Nevada Properties
               </cite>
             </div>
@@ -176,7 +179,7 @@ export default function InvestmentPropertiesPage() {
 
           {/* Investment Services */}
           <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+            <h2 className="text-3xl font-bold text-lmhy-charcoal mb-8 text-center">
               Investment Property Services
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
@@ -192,37 +195,37 @@ export default function InvestmentPropertiesPage() {
                 "Portfolio building strategy",
                 "Out-of-state investor support",
               ].map((service) => (
-                <div key={service} className="flex items-center bg-white p-4 rounded-lg border border-slate-200">
+                <div key={service} className="flex items-center bg-white p-4 rounded-lg border border-lmhy-sand/60">
                   <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
-                  <span className="text-slate-700">{service}</span>
+                  <span className="text-lmhy-charcoal/80">{service}</span>
                 </div>
               ))}
             </div>
           </section>
 
           {/* Investment Types */}
-          <section className="mb-16 bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
+          <section className="mb-16 bg-lmhy-coral text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-2xl font-bold mb-8 text-center">
               Investment Strategies We Support
             </h2>
             <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-blue-700 rounded-lg p-6">
+              <div className="bg-lmhy-coral-dark rounded-lg p-6">
                 <h3 className="font-bold text-lg mb-2">Buy & Hold Rentals</h3>
-                <p className="text-blue-200 text-sm">
+                <p className="text-white/70 text-sm">
                   Long-term wealth building through rental income and appreciation. Ideal for
                   passive investors seeking steady cash flow.
                 </p>
               </div>
-              <div className="bg-blue-700 rounded-lg p-6">
+              <div className="bg-lmhy-coral-dark rounded-lg p-6">
                 <h3 className="font-bold text-lg mb-2">Fix & Flip</h3>
-                <p className="text-blue-200 text-sm">
+                <p className="text-white/70 text-sm">
                   Value-add opportunities for active investors. We identify underpriced properties
                   with renovation potential.
                 </p>
               </div>
-              <div className="bg-blue-700 rounded-lg p-6">
+              <div className="bg-lmhy-coral-dark rounded-lg p-6">
                 <h3 className="font-bold text-lg mb-2">Short-Term Rentals</h3>
-                <p className="text-blue-200 text-sm">
+                <p className="text-white/70 text-sm">
                   Vacation rental opportunities in tourist-friendly areas. Higher yields with
                   active management.
                 </p>
@@ -232,10 +235,10 @@ export default function InvestmentPropertiesPage() {
 
           {/* Detailed Investment Analysis */}
           <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+            <h2 className="text-3xl font-bold text-lmhy-charcoal mb-8 text-center">
               Understanding Las Vegas Investment Metrics
             </h2>
-            <div className="prose prose-lg max-w-none text-slate-700 mb-8">
+            <div className="prose prose-lg max-w-none text-lmhy-charcoal/80 mb-8">
               <p>
                 Successful real estate investing requires understanding key metrics and how they apply
                 to the Las Vegas market specifically. Dr. Jan Duffy provides detailed analysis on every
@@ -243,47 +246,47 @@ export default function InvestmentPropertiesPage() {
               </p>
             </div>
             <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-white border border-slate-200 rounded-xl p-6">
-                <Calculator className="h-8 w-8 text-blue-600 mb-4" />
-                <h3 className="font-bold text-lg text-slate-900 mb-2">Cap Rate (Capitalization Rate)</h3>
-                <p className="text-slate-600 text-sm mb-4">
+              <div className="bg-white border border-lmhy-sand/60 rounded-xl p-6">
+                <Calculator className="h-8 w-8 text-lmhy-coral mb-4" />
+                <h3 className="font-bold text-lg text-lmhy-charcoal mb-2">Cap Rate (Capitalization Rate)</h3>
+                <p className="text-lmhy-charcoal/70 text-sm mb-4">
                   Net Operating Income ÷ Property Value. Las Vegas cap rates range from 4-6%,
                   competitive with major metros. Higher cap rates typically mean higher risk neighborhoods.
                 </p>
-                <div className="bg-slate-50 rounded p-3 text-sm">
+                <div className="bg-lmhy-sand/20 rounded p-3 text-sm">
                   <strong>Example:</strong> $485K Henderson home renting at $2,300/mo = ~4.5% cap rate
                 </div>
               </div>
-              <div className="bg-white border border-slate-200 rounded-xl p-6">
+              <div className="bg-white border border-lmhy-sand/60 rounded-xl p-6">
                 <TrendingUp className="h-8 w-8 text-green-600 mb-4" />
-                <h3 className="font-bold text-lg text-slate-900 mb-2">Cash-on-Cash Return</h3>
-                <p className="text-slate-600 text-sm mb-4">
+                <h3 className="font-bold text-lg text-lmhy-charcoal mb-2">Cash-on-Cash Return</h3>
+                <p className="text-lmhy-charcoal/70 text-sm mb-4">
                   Annual cash flow ÷ Cash invested. With 25% down payment and financing, Las Vegas
                   properties often achieve 8-12% cash-on-cash returns through leverage.
                 </p>
-                <div className="bg-slate-50 rounded p-3 text-sm">
+                <div className="bg-lmhy-sand/20 rounded p-3 text-sm">
                   <strong>Example:</strong> $121K down on $485K property with $400/mo net = 4% cash-on-cash
                 </div>
               </div>
-              <div className="bg-white border border-slate-200 rounded-xl p-6">
+              <div className="bg-white border border-lmhy-sand/60 rounded-xl p-6">
                 <BarChart className="h-8 w-8 text-purple-600 mb-4" />
-                <h3 className="font-bold text-lg text-slate-900 mb-2">Total Return</h3>
-                <p className="text-slate-600 text-sm mb-4">
+                <h3 className="font-bold text-lg text-lmhy-charcoal mb-2">Total Return</h3>
+                <p className="text-lmhy-charcoal/70 text-sm mb-4">
                   Cash flow + appreciation + loan paydown + tax benefits. Las Vegas's strong appreciation
                   (4-6% annually) combined with rental income creates total returns of 12-18%.
                 </p>
-                <div className="bg-slate-50 rounded p-3 text-sm">
+                <div className="bg-lmhy-sand/20 rounded p-3 text-sm">
                   <strong>Note:</strong> Tax benefits include depreciation, mortgage interest, and expense deductions
                 </div>
               </div>
-              <div className="bg-white border border-slate-200 rounded-xl p-6">
+              <div className="bg-white border border-lmhy-sand/60 rounded-xl p-6">
                 <DollarSign className="h-8 w-8 text-amber-600 mb-4" />
-                <h3 className="font-bold text-lg text-slate-900 mb-2">Price-to-Rent Ratio</h3>
-                <p className="text-slate-600 text-sm mb-4">
+                <h3 className="font-bold text-lg text-lmhy-charcoal mb-2">Price-to-Rent Ratio</h3>
+                <p className="text-lmhy-charcoal/70 text-sm mb-4">
                   Property price ÷ Annual rent. Las Vegas ratios of 15-18 indicate healthy investment
                   potential. Ratios above 20 suggest overpriced markets.
                 </p>
-                <div className="bg-slate-50 rounded p-3 text-sm">
+                <div className="bg-lmhy-sand/20 rounded p-3 text-sm">
                   <strong>Example:</strong> $385K ÷ $23,400/year = 16.5 ratio (favorable)
                 </div>
               </div>
@@ -291,14 +294,14 @@ export default function InvestmentPropertiesPage() {
           </section>
 
           {/* Neighborhood Deep Dives */}
-          <section className="mb-16 bg-slate-50 rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+          <section className="mb-16 bg-lmhy-sand/20 rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
+            <h2 className="text-3xl font-bold text-lmhy-charcoal mb-8 text-center">
               Las Vegas Investment Neighborhoods: Deep Dive
             </h2>
             <div className="space-y-6">
               <div className="bg-white rounded-xl p-6">
-                <h3 className="font-bold text-xl text-slate-900 mb-2">North Las Vegas</h3>
-                <p className="text-slate-600 mb-4">
+                <h3 className="font-bold text-xl text-lmhy-charcoal mb-2">North Las Vegas</h3>
+                <p className="text-lmhy-charcoal/70 mb-4">
                   <strong>Best for: Cash flow investors.</strong> Highest cap rates in the valley (5.2%+)
                   with lower entry prices. Growing population as Amazon, Fanatics, and other employers
                   expand. School quality varies by area—research specific zones.
@@ -310,8 +313,8 @@ export default function InvestmentPropertiesPage() {
                 </div>
               </div>
               <div className="bg-white rounded-xl p-6">
-                <h3 className="font-bold text-xl text-slate-900 mb-2">Henderson</h3>
-                <p className="text-slate-600 mb-4">
+                <h3 className="font-bold text-xl text-lmhy-charcoal mb-2">Henderson</h3>
+                <p className="text-lmhy-charcoal/70 mb-4">
                   <strong>Best for: Balanced investors.</strong> Premium tenant quality, excellent schools,
                   and steady appreciation. Lower vacancy rates and longer tenant retention offset
                   slightly lower cap rates.
@@ -323,8 +326,8 @@ export default function InvestmentPropertiesPage() {
                 </div>
               </div>
               <div className="bg-white rounded-xl p-6">
-                <h3 className="font-bold text-xl text-slate-900 mb-2">Summerlin</h3>
-                <p className="text-slate-600 mb-4">
+                <h3 className="font-bold text-xl text-lmhy-charcoal mb-2">Summerlin</h3>
+                <p className="text-lmhy-charcoal/70 mb-4">
                   <strong>Best for: Appreciation investors.</strong> Premium neighborhood with strongest
                   appreciation (6.8% YoY). Lower cap rates but exceptional tenant quality and
                   very low vacancy. Best-in-class schools and amenities.
@@ -340,11 +343,11 @@ export default function InvestmentPropertiesPage() {
 
           {/* 1031 Exchange Section */}
           <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+            <h2 className="text-3xl font-bold text-lmhy-charcoal mb-8 text-center">
               1031 Exchanges in Las Vegas
             </h2>
-            <div className="bg-white border border-slate-200 rounded-xl p-8">
-              <p className="text-slate-700 mb-6">
+            <div className="bg-white border border-lmhy-sand/60 rounded-xl p-8">
+              <p className="text-lmhy-charcoal/80 mb-6">
                 A 1031 exchange lets you defer capital gains taxes by reinvesting proceeds from
                 a sold investment property into a "like-kind" replacement property. Las Vegas is a
                 popular destination for 1031 exchanges due to no state income tax, strong cash flow,
@@ -352,8 +355,8 @@ export default function InvestmentPropertiesPage() {
               </p>
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div>
-                  <h3 className="font-bold text-slate-900 mb-3">Key Deadlines</h3>
-                  <ul className="space-y-2 text-slate-700">
+                  <h3 className="font-bold text-lmhy-charcoal mb-3">Key Deadlines</h3>
+                  <ul className="space-y-2 text-lmhy-charcoal/80">
                     <li className="flex items-start">
                       <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
                       <div><strong>45 days:</strong> Identify replacement properties</div>
@@ -369,24 +372,24 @@ export default function InvestmentPropertiesPage() {
                   </ul>
                 </div>
                 <div>
-                  <h3 className="font-bold text-slate-900 mb-3">Why Las Vegas for 1031s?</h3>
-                  <ul className="space-y-2 text-slate-700">
+                  <h3 className="font-bold text-lmhy-charcoal mb-3">Why Las Vegas for 1031s?</h3>
+                  <ul className="space-y-2 text-lmhy-charcoal/80">
                     <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="h-5 w-5 text-lmhy-coral mr-2 mt-0.5 flex-shrink-0" />
                       <div>No state income tax on rental income</div>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="h-5 w-5 text-lmhy-coral mr-2 mt-0.5 flex-shrink-0" />
                       <div>Strong appreciation outpaces many markets</div>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="h-5 w-5 text-lmhy-coral mr-2 mt-0.5 flex-shrink-0" />
                       <div>Excellent cash flow in most neighborhoods</div>
                     </li>
                   </ul>
                 </div>
               </div>
-              <p className="text-slate-600 text-sm">
+              <p className="text-lmhy-charcoal/70 text-sm">
                 Dr. Jan works with qualified intermediaries and can help identify replacement properties
                 within the 45-day window. Berkshire Hathaway's nationwide network is invaluable for
                 clients exchanging into or out of Las Vegas.
@@ -396,7 +399,7 @@ export default function InvestmentPropertiesPage() {
 
           {/* FAQ */}
           <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+            <h2 className="text-3xl font-bold text-lmhy-charcoal mb-8 text-center">
               Investment Property FAQs
             </h2>
             <div className="space-y-4">
@@ -418,38 +421,38 @@ export default function InvestmentPropertiesPage() {
                   a: "It depends on your strategy. North Las Vegas offers the best cap rates, while Summerlin provides stronger appreciation. Henderson balances both. Dr. Jan analyzes your goals to recommend the right areas.",
                 },
               ].map((faq, index) => (
-                <div key={index} className="bg-slate-50 rounded-lg p-6">
-                  <h3 className="font-bold text-slate-900 mb-2">{faq.q}</h3>
-                  <p className="text-slate-600">{faq.a}</p>
+                <div key={index} className="bg-lmhy-sand/20 rounded-lg p-6">
+                  <h3 className="font-bold text-lmhy-charcoal mb-2">{faq.q}</h3>
+                  <p className="text-lmhy-charcoal/70">{faq.a}</p>
                 </div>
               ))}
             </div>
           </section>
 
           {/* CTA */}
-          <section className="text-center bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
+          <section className="text-center bg-lmhy-charcoal text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Ready to Invest in Las Vegas?
             </h2>
-            <p className="text-xl text-slate-300 mb-8">
+            <p className="text-xl text-white/70 mb-8">
               Get expert guidance on Las Vegas investment properties from Dr. Jan Duffy and
               Berkshire Hathaway HomeServices.
             </p>
             <a
               href="tel:+17025001942"
-              className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-md font-bold text-lg transition-colors"
+              className="inline-flex items-center bg-lmhy-coral hover:bg-lmhy-coral-dark text-white px-8 py-4 rounded-md font-bold text-lg transition-colors"
             >
               <Phone className="h-5 w-5 mr-2" />
               Call (702) 500-1942
             </a>
-            <p className="mt-4 text-slate-400 text-sm">
+            <p className="mt-4 text-lmhy-charcoal/50 text-sm">
               Berkshire Hathaway HomeServices Nevada Properties
             </p>
           </section>
         </div>
 
         {/* Last Updated */}
-        <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
+        <div className="text-center text-sm text-lmhy-charcoal/60 mt-8">Last Updated: January 2026</div>
       </main>
       <RealScoutListings />
       <Footer />

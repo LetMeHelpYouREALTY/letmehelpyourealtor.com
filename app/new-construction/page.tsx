@@ -18,8 +18,9 @@ import {
   HelpCircle,
 } from "lucide-react";
 import type { Metadata } from "next";
+import { withPageCanonical } from "@/lib/page-metadata";
 
-export const metadata: Metadata = {
+const pageMetadata: Metadata = {
   title: "Berkshire Hathaway HomeServices New Construction Las Vegas | Buyer's Guide",
   description:
     "Free buyer representation on new construction homes in Las Vegas. Dr. Jan Duffy helps you navigate builder contracts, negotiate upgrades, and secure incentives. Call (702) 500-1942.",
@@ -33,6 +34,8 @@ export const metadata: Metadata = {
     "KB Home Las Vegas",
   ],
 };
+
+export const metadata = withPageCanonical(pageMetadata, "/new-construction");
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -237,15 +240,15 @@ export default function NewConstructionPage() {
       />
       <Navbar />
       <main className="pt-24 pb-16">
-        <div className="container mx-auto px-4">
+        <div className="lmhy-container">
           {/* Breadcrumb */}
           <div className="max-w-6xl mx-auto mb-6">
-            <nav className="text-sm text-slate-500">
-              <Link href="/" className="hover:text-blue-600">Home</Link>
+            <nav className="text-sm text-lmhy-charcoal/60">
+              <Link href="/" className="hover:text-lmhy-coral">Home</Link>
               {" / "}
-              <Link href="/services" className="hover:text-blue-600">Services</Link>
+              <Link href="/services" className="hover:text-lmhy-coral">Services</Link>
               {" / "}
-              <span className="text-slate-900">New Construction</span>
+              <span className="text-lmhy-charcoal">New Construction</span>
             </nav>
           </div>
 
@@ -254,10 +257,10 @@ export default function NewConstructionPage() {
             <div className="inline-block bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
               Free Buyer Representation
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-lmhy-charcoal mb-6">
               Berkshire Hathaway HomeServices New Construction Las Vegas
             </h1>
-            <p className="text-xl text-slate-600 mb-8">
+            <p className="text-xl text-lmhy-charcoal/70 mb-8">
               Your complete buyer's guide to new homes in Las Vegas. Free representation,
               expert contract review, and insider knowledge of builder incentives.
             </p>
@@ -280,54 +283,54 @@ export default function NewConstructionPage() {
           </div>
 
           {/* Why Free Representation */}
-          <section className="mb-16 bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
+          <section className="mb-16 bg-lmhy-coral text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold mb-8 text-center">
               Why Use a BHHS Agent for New Construction?
             </h2>
             <div className="grid md:grid-cols-2 gap-8 mb-8">
               <div className="flex items-start">
-                <div className="bg-blue-500 p-2 rounded-full mr-4 flex-shrink-0">
+                <div className="bg-lmhy-coral p-2 rounded-full mr-4 flex-shrink-0">
                   <DollarSign className="h-6 w-6 text-white" />
                 </div>
                 <div>
                   <h3 className="font-bold text-lg mb-2">100% Free to You</h3>
-                  <p className="text-blue-100">
+                  <p className="text-white/85">
                     Builders pay the buyer's agent commission (2-3%) as part of their marketing
                     budget. You get professional representation at zero cost.
                   </p>
                 </div>
               </div>
               <div className="flex items-start">
-                <div className="bg-blue-500 p-2 rounded-full mr-4 flex-shrink-0">
+                <div className="bg-lmhy-coral p-2 rounded-full mr-4 flex-shrink-0">
                   <FileText className="h-6 w-6 text-white" />
                 </div>
                 <div>
                   <h3 className="font-bold text-lg mb-2">Contract Review</h3>
-                  <p className="text-blue-100">
+                  <p className="text-white/85">
                     Builder contracts are 50+ pages of legal language favoring the builder.
                     Dr. Jan reviews every clause and explains your rights.
                   </p>
                 </div>
               </div>
               <div className="flex items-start">
-                <div className="bg-blue-500 p-2 rounded-full mr-4 flex-shrink-0">
+                <div className="bg-lmhy-coral p-2 rounded-full mr-4 flex-shrink-0">
                   <Shield className="h-6 w-6 text-white" />
                 </div>
                 <div>
                   <h3 className="font-bold text-lg mb-2">Your Advocate</h3>
-                  <p className="text-blue-100">
+                  <p className="text-white/85">
                     The builder's sales rep works for the builder. You deserve someone who works
                     exclusively for YOUR interests—negotiating, monitoring, and protecting you.
                   </p>
                 </div>
               </div>
               <div className="flex items-start">
-                <div className="bg-blue-500 p-2 rounded-full mr-4 flex-shrink-0">
+                <div className="bg-lmhy-coral p-2 rounded-full mr-4 flex-shrink-0">
                   <Building2 className="h-6 w-6 text-white" />
                 </div>
                 <div>
                   <h3 className="font-bold text-lg mb-2">Construction Oversight</h3>
-                  <p className="text-blue-100">
+                  <p className="text-white/85">
                     We schedule walkthroughs at framing, pre-drywall, and final stages. Problems
                     caught early are fixed—problems missed become your problems.
                   </p>
@@ -335,7 +338,7 @@ export default function NewConstructionPage() {
               </div>
             </div>
             <div className="text-center">
-              <p className="text-xl font-semibold text-blue-100">
+              <p className="text-xl font-semibold text-white/85">
                 "Why would you negotiate against professionals without professional help—
                 especially when that help is free?"
               </p>
@@ -346,7 +349,7 @@ export default function NewConstructionPage() {
           <section className="mb-16 max-w-5xl mx-auto">
             <div className="bg-green-50 border-2 border-green-200 rounded-2xl p-8">
               <div className="flex items-center justify-between flex-wrap gap-4 mb-6">
-                <h2 className="text-2xl font-bold text-slate-900 flex items-center">
+                <h2 className="text-2xl font-bold text-lmhy-charcoal flex items-center">
                   <Calendar className="h-7 w-7 text-green-600 mr-3" />
                   January 2026 Builder Incentives
                 </h2>
@@ -357,27 +360,27 @@ export default function NewConstructionPage() {
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="bg-white rounded-xl p-5 border border-green-100">
                   <div className="text-3xl font-bold text-green-600 mb-1">4.99%</div>
-                  <div className="text-slate-700 font-medium">Rate Buydowns</div>
-                  <div className="text-slate-500 text-sm mt-1">
+                  <div className="text-lmhy-charcoal/80 font-medium">Rate Buydowns</div>
+                  <div className="text-lmhy-charcoal/60 text-sm mt-1">
                     Multiple builders offering sub-5% rates with preferred lenders
                   </div>
                 </div>
                 <div className="bg-white rounded-xl p-5 border border-green-100">
                   <div className="text-3xl font-bold text-green-600 mb-1">$50K+</div>
-                  <div className="text-slate-700 font-medium">Upgrade Credits</div>
-                  <div className="text-slate-500 text-sm mt-1">
+                  <div className="text-lmhy-charcoal/80 font-medium">Upgrade Credits</div>
+                  <div className="text-lmhy-charcoal/60 text-sm mt-1">
                     Design center and premium options at no additional cost
                   </div>
                 </div>
                 <div className="bg-white rounded-xl p-5 border border-green-100">
                   <div className="text-3xl font-bold text-green-600 mb-1">6%</div>
-                  <div className="text-slate-700 font-medium">Closing Cost Credits</div>
-                  <div className="text-slate-500 text-sm mt-1">
+                  <div className="text-lmhy-charcoal/80 font-medium">Closing Cost Credits</div>
+                  <div className="text-lmhy-charcoal/60 text-sm mt-1">
                     Significant credits to offset buyer closing costs
                   </div>
                 </div>
               </div>
-              <p className="text-center text-slate-600 mt-6">
+              <p className="text-center text-lmhy-charcoal/70 mt-6">
                 Incentives change frequently. Contact Dr. Jan Duffy for current offers specific
                 to your preferred communities.
               </p>
@@ -386,33 +389,33 @@ export default function NewConstructionPage() {
 
           {/* Builders Grid */}
           <section className="mb-16 max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+            <h2 className="text-3xl font-bold text-lmhy-charcoal mb-8 text-center">
               Las Vegas New Home Builders
             </h2>
             <div className="grid lg:grid-cols-2 gap-6">
               {builders.map((builder) => (
                 <div
                   key={builder.name}
-                  className="bg-white border border-slate-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow"
+                  className="bg-white border border-lmhy-sand/60 rounded-xl overflow-hidden hover:shadow-lg transition-shadow"
                 >
-                  <div className="bg-slate-900 text-white p-5 flex justify-between items-center">
+                  <div className="bg-lmhy-charcoal text-white p-5 flex justify-between items-center">
                     <div>
                       <h3 className="text-xl font-bold">{builder.name}</h3>
-                      <span className="text-slate-400 text-sm">{builder.segment}</span>
+                      <span className="text-lmhy-charcoal/50 text-sm">{builder.segment}</span>
                     </div>
                     <div className="text-right">
-                      <div className="text-blue-400 font-bold">{builder.priceRange}</div>
+                      <div className="text-lmhy-gold font-bold">{builder.priceRange}</div>
                     </div>
                   </div>
                   <div className="p-5">
                     <div className="mb-4">
-                      <div className="text-xs text-slate-500 uppercase tracking-wide mb-2">
+                      <div className="text-xs text-lmhy-charcoal/60 uppercase tracking-wide mb-2">
                         Current Communities
                       </div>
-                      <ul className="text-sm text-slate-600 space-y-1">
+                      <ul className="text-sm text-lmhy-charcoal/70 space-y-1">
                         {builder.communities.map((community) => (
                           <li key={community} className="flex items-center">
-                            <MapPin className="h-3 w-3 text-slate-400 mr-2" />
+                            <MapPin className="h-3 w-3 text-lmhy-charcoal/50 mr-2" />
                             {community}
                           </li>
                         ))}
@@ -423,10 +426,10 @@ export default function NewConstructionPage() {
                       <div className="text-xs text-green-700 uppercase tracking-wide mb-1">
                         Current Incentive
                       </div>
-                      <div className="text-slate-900 font-medium text-sm">
+                      <div className="text-lmhy-charcoal font-medium text-sm">
                         {builder.currentIncentives}
                       </div>
-                      <div className="text-xs text-slate-500 mt-1 flex items-center">
+                      <div className="text-xs text-lmhy-charcoal/60 mt-1 flex items-center">
                         <Clock className="h-3 w-3 mr-1" />
                         Deadline: {builder.incentiveDeadline}
                       </div>
@@ -436,7 +439,7 @@ export default function NewConstructionPage() {
                       {builder.highlights.map((highlight) => (
                         <span
                           key={highlight}
-                          className="bg-slate-100 text-slate-600 px-3 py-1 rounded-full text-xs"
+                          className="bg-slate-100 text-lmhy-charcoal/70 px-3 py-1 rounded-full text-xs"
                         >
                           {highlight}
                         </span>
@@ -450,21 +453,21 @@ export default function NewConstructionPage() {
 
           {/* The Process */}
           <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+            <h2 className="text-3xl font-bold text-lmhy-charcoal mb-8 text-center">
               New Construction Buying Process with BHHS
             </h2>
             <div className="space-y-6">
               <div className="flex items-start">
-                <div className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">
+                <div className="bg-lmhy-coral text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">
                   1
                 </div>
-                <div className="bg-white border border-slate-200 rounded-xl p-6 flex-grow">
-                  <h3 className="font-bold text-slate-900 mb-2">
+                <div className="bg-white border border-lmhy-sand/60 rounded-xl p-6 flex-grow">
+                  <h3 className="font-bold text-lmhy-charcoal mb-2">
                     Register Dr. Jan Duffy as Your Agent BEFORE Visiting
                   </h3>
-                  <p className="text-slate-600">
+                  <p className="text-lmhy-charcoal/70">
                     Call{" "}
-                    <a href="tel:+17025001942" className="text-blue-600 font-semibold hover:underline">
+                    <a href="tel:+17025001942" className="text-lmhy-coral font-semibold hover:underline">
                       (702) 500-1942
                     </a>{" "}
                     to register Dr. Jan Duffy as your buyer's agent before any builder visits. We'll 
@@ -473,14 +476,14 @@ export default function NewConstructionPage() {
                 </div>
               </div>
               <div className="flex items-start">
-                <div className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">
+                <div className="bg-lmhy-coral text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">
                   2
                 </div>
-                <div className="bg-white border border-slate-200 rounded-xl p-6 flex-grow">
-                  <h3 className="font-bold text-slate-900 mb-2">
+                <div className="bg-white border border-lmhy-sand/60 rounded-xl p-6 flex-grow">
+                  <h3 className="font-bold text-lmhy-charcoal mb-2">
                     Explore Communities & Compare Builders
                   </h3>
-                  <p className="text-slate-600">
+                  <p className="text-lmhy-charcoal/70">
                     Tour model homes, review floor plans, and understand what's included vs.
                     upgrades. Dr. Jan provides objective comparisons—no builder pays us more than
                     another.
@@ -488,14 +491,14 @@ export default function NewConstructionPage() {
                 </div>
               </div>
               <div className="flex items-start">
-                <div className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">
+                <div className="bg-lmhy-coral text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">
                   3
                 </div>
-                <div className="bg-white border border-slate-200 rounded-xl p-6 flex-grow">
-                  <h3 className="font-bold text-slate-900 mb-2">
+                <div className="bg-white border border-lmhy-sand/60 rounded-xl p-6 flex-grow">
+                  <h3 className="font-bold text-lmhy-charcoal mb-2">
                     Negotiate Contract & Design Center Selections
                   </h3>
-                  <p className="text-slate-600">
+                  <p className="text-lmhy-charcoal/70">
                     We review the purchase agreement, negotiate upgrades and incentives, and guide
                     you through design center selections. Many buyers overspend here—we help you
                     prioritize.
@@ -503,28 +506,28 @@ export default function NewConstructionPage() {
                 </div>
               </div>
               <div className="flex items-start">
-                <div className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">
+                <div className="bg-lmhy-coral text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">
                   4
                 </div>
-                <div className="bg-white border border-slate-200 rounded-xl p-6 flex-grow">
-                  <h3 className="font-bold text-slate-900 mb-2">
+                <div className="bg-white border border-lmhy-sand/60 rounded-xl p-6 flex-grow">
+                  <h3 className="font-bold text-lmhy-charcoal mb-2">
                     Monitor Construction & Conduct Walkthroughs
                   </h3>
-                  <p className="text-slate-600">
+                  <p className="text-lmhy-charcoal/70">
                     We schedule walkthroughs at key stages: framing, pre-drywall (when systems are
                     visible), and final. Issues caught early are fixed properly.
                   </p>
                 </div>
               </div>
               <div className="flex items-start">
-                <div className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">
+                <div className="bg-lmhy-coral text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">
                   5
                 </div>
-                <div className="bg-white border border-slate-200 rounded-xl p-6 flex-grow">
-                  <h3 className="font-bold text-slate-900 mb-2">
+                <div className="bg-white border border-lmhy-sand/60 rounded-xl p-6 flex-grow">
+                  <h3 className="font-bold text-lmhy-charcoal mb-2">
                     Final Walkthrough & Closing
                   </h3>
-                  <p className="text-slate-600">
+                  <p className="text-lmhy-charcoal/70">
                     Comprehensive final inspection with punch list creation. We ensure everything
                     promised is delivered before you take possession of your new home.
                   </p>
@@ -535,8 +538,8 @@ export default function NewConstructionPage() {
 
           {/* Expert Quote */}
           <section className="mb-16 max-w-4xl mx-auto">
-            <div className="bg-blue-50 border-l-4 border-blue-600 rounded-r-xl p-8">
-              <blockquote className="text-lg text-slate-700 italic mb-4">
+            <div className="bg-lmhy-coral/5 border-l-4 border-lmhy-coral rounded-r-xl p-8">
+              <blockquote className="text-lg text-lmhy-charcoal/80 italic mb-4">
                 "I've seen buyers leave $30,000 on the table because they didn't know what to ask
                 for. Builders expect negotiation—their sales managers have authority to approve
                 upgrades and credits. As your <strong>Berkshire Hathaway HomeServices</strong>
@@ -544,7 +547,7 @@ export default function NewConstructionPage() {
                 which builder promises are legally binding. This representation costs you nothing
                 and can save you tens of thousands."
               </blockquote>
-              <cite className="text-slate-900 font-semibold">
+              <cite className="text-lmhy-charcoal font-semibold">
                 — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
               </cite>
             </div>
@@ -552,77 +555,77 @@ export default function NewConstructionPage() {
 
           {/* FAQ Section */}
           <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+            <h2 className="text-3xl font-bold text-lmhy-charcoal mb-8 text-center">
               New Construction FAQs
             </h2>
             <div className="space-y-6">
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2 flex items-center">
-                  <HelpCircle className="h-5 w-5 text-blue-600 mr-2" />
+              <div className="bg-white border border-lmhy-sand/60 rounded-lg p-6">
+                <h3 className="font-bold text-lmhy-charcoal mb-2 flex items-center">
+                  <HelpCircle className="h-5 w-5 text-lmhy-coral mr-2" />
                   Is buyer representation really free for new construction?
                 </h3>
-                <p className="text-slate-600">
+                <p className="text-lmhy-charcoal/70">
                   Yes, 100% free to buyers. The builder pays the buyer's agent commission (typically
                   2-3%) as part of their marketing budget. You pay nothing extra, and you get
                   professional representation to protect your interests.
                 </p>
               </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2 flex items-center">
-                  <HelpCircle className="h-5 w-5 text-blue-600 mr-2" />
+              <div className="bg-white border border-lmhy-sand/60 rounded-lg p-6">
+                <h3 className="font-bold text-lmhy-charcoal mb-2 flex items-center">
+                  <HelpCircle className="h-5 w-5 text-lmhy-coral mr-2" />
                   Why do I need an agent when buying new construction?
                 </h3>
-                <p className="text-slate-600">
+                <p className="text-lmhy-charcoal/70">
                   Builder sales reps work for the builder, not you. A BHHS agent reviews contracts
                   (often 50+ pages), negotiates upgrades and incentives, monitors construction
                   quality, and ensures deadlines are met. Without representation, you're negotiating
                   against experienced professionals alone.
                 </p>
               </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2 flex items-center">
-                  <HelpCircle className="h-5 w-5 text-blue-600 mr-2" />
+              <div className="bg-white border border-lmhy-sand/60 rounded-lg p-6">
+                <h3 className="font-bold text-lmhy-charcoal mb-2 flex items-center">
+                  <HelpCircle className="h-5 w-5 text-lmhy-coral mr-2" />
                   Do I have to register Dr. Jan Duffy as my agent on the first visit?
                 </h3>
-                <p className="text-slate-600">
+                <p className="text-lmhy-charcoal/70">
                   Yes, most builders require your agent to accompany you or be registered on your
                   FIRST visit. If you visit alone and sign the guest registry, you may forfeit your
                   right to free representation. Call{" "}
-                  <a href="tel:+17025001942" className="text-blue-600 font-semibold hover:underline">
+                  <a href="tel:+17025001942" className="text-lmhy-coral font-semibold hover:underline">
                     (702) 500-1942
                   </a>{" "}
                   to register Dr. Jan Duffy as your buyer's agent before visiting any model home.
                 </p>
               </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2 flex items-center">
-                  <HelpCircle className="h-5 w-5 text-blue-600 mr-2" />
+              <div className="bg-white border border-lmhy-sand/60 rounded-lg p-6">
+                <h3 className="font-bold text-lmhy-charcoal mb-2 flex items-center">
+                  <HelpCircle className="h-5 w-5 text-lmhy-coral mr-2" />
                   What builder incentives are currently available?
                 </h3>
-                <p className="text-slate-600">
+                <p className="text-lmhy-charcoal/70">
                   As of January 2026, builders are offering 4-6% toward closing costs, rate buydowns
                   (some as low as 4.99%), free upgrades ($15K-$50K value), and appliance packages.
                   Incentives change monthly. Dr. Jan tracks current offers across all builders.
                 </p>
               </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2 flex items-center">
-                  <HelpCircle className="h-5 w-5 text-blue-600 mr-2" />
+              <div className="bg-white border border-lmhy-sand/60 rounded-lg p-6">
+                <h3 className="font-bold text-lmhy-charcoal mb-2 flex items-center">
+                  <HelpCircle className="h-5 w-5 text-lmhy-coral mr-2" />
                   Can I negotiate on new construction pricing?
                 </h3>
-                <p className="text-slate-600">
+                <p className="text-lmhy-charcoal/70">
                   Base prices are typically firm, but everything else is negotiable—upgrades, lot
                   premiums, closing costs, and design center selections. A BHHS agent knows which
                   builders negotiate and how to maximize your leverage, especially on standing
                   inventory.
                 </p>
               </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2 flex items-center">
-                  <HelpCircle className="h-5 w-5 text-blue-600 mr-2" />
+              <div className="bg-white border border-lmhy-sand/60 rounded-lg p-6">
+                <h3 className="font-bold text-lmhy-charcoal mb-2 flex items-center">
+                  <HelpCircle className="h-5 w-5 text-lmhy-coral mr-2" />
                   Should I use the builder's preferred lender?
                 </h3>
-                <p className="text-slate-600">
+                <p className="text-lmhy-charcoal/70">
                   Builder lenders often offer significant incentives ($10K-$30K) to use their
                   services. Dr. Jan helps you compare: sometimes the incentive outweighs slightly
                   higher rates, sometimes it doesn't. We ensure you make an informed decision.
@@ -633,7 +636,7 @@ export default function NewConstructionPage() {
 
           {/* What We Negotiate */}
           <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+            <h2 className="text-3xl font-bold text-lmhy-charcoal mb-8 text-center">
               What Dr. Jan Negotiates for New Construction Buyers
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -651,20 +654,20 @@ export default function NewConstructionPage() {
                 "Garage upgrades",
                 "Smart home packages",
               ].map((item) => (
-                <div key={item} className="flex items-center bg-white border border-slate-200 rounded-lg p-4">
+                <div key={item} className="flex items-center bg-white border border-lmhy-sand/60 rounded-lg p-4">
                   <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
-                  <span className="text-slate-700">{item}</span>
+                  <span className="text-lmhy-charcoal/80">{item}</span>
                 </div>
               ))}
             </div>
           </section>
 
           {/* CTA */}
-          <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
+          <section className="text-center bg-lmhy-coral text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Ready to Tour New Construction?
             </h2>
-            <p className="text-xl text-blue-100 mb-8">
+            <p className="text-xl text-white/85 mb-8">
               Call <strong>(702) 500-1942</strong> to register Dr. Jan Duffy as your buyer's agent 
               <strong> before</strong> visiting any model home—or you may lose your right to free 
               professional representation. Current incentive information available.
@@ -672,24 +675,24 @@ export default function NewConstructionPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+17025001942"
-                className="inline-flex items-center justify-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
+                className="inline-flex items-center justify-center bg-white text-lmhy-coral px-8 py-4 rounded-md font-bold text-lg hover:bg-lmhy-cream transition-colors"
               >
                 <Phone className="h-5 w-5 mr-2" />
                 Call (702) 500-1942
               </a>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center bg-blue-500 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-400 transition-colors"
+                className="inline-flex items-center justify-center bg-lmhy-coral text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-lmhy-coral-dark transition-colors"
               >
                 Request Builder Info
               </Link>
             </div>
-            <p className="mt-6 text-blue-200 text-sm">
+            <p className="mt-6 text-white/70 text-sm">
               Berkshire Hathaway HomeServices Nevada Properties
             </p>
           </section>
         </div>
-        <div className="text-center text-sm text-slate-500 mt-8">
+        <div className="text-center text-sm text-lmhy-charcoal/60 mt-8">
           Last Updated: January 2026 | Incentives subject to change
         </div>
       </main>
