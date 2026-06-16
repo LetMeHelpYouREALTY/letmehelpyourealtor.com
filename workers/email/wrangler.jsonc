@@ -1,0 +1,18 @@
+{
+  "$schema": "../../node_modules/wrangler/config-schema.json",
+  "name": "letmehelpyourealtor-email",
+  "main": "index.ts",
+  "compatibility_date": "2026-02-13",
+  "observability": {
+    "enabled": true
+  },
+  "send_email": [
+    {
+      "name": "SEND_EMAIL"
+    }
+  ],
+  "vars": {
+    "INBOUND_ADDRESS": "DrDuffy@LetMeHelpYouRealtor.com",
+    "FORWARD_TO": "homes@heyberkshire.com"
+  }
+}

@@ -28,6 +28,8 @@
     "vercel:prod": "vercel deploy --prod --prebuilt",
     "cloudflare:dev": "wrangler dev",
     "cloudflare:deploy": "wrangler deploy",
+    "email:dev": "wrangler dev -c workers/email/wrangler.jsonc",
+    "email:deploy": "wrangler deploy -c workers/email/wrangler.jsonc",
     "cloudflare:pages": "npx @cloudflare/next-on-pages",
     "cloudflare:build": "npm run cloudflare:pages",
     "build:cloudflare": "npx @cloudflare/next-on-pages"
