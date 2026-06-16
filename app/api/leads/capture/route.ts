@@ -172,13 +172,18 @@ export async function POST(request: NextRequest) {
     // Create or update person
     const person = await fub.upsertPerson(personData);
 
-    // Add tags
+    // Add tags (deduped)
     const tags = [
-      ...(data.tags || []),
-      'website-lead',
-      getSourceTag(data.source),
-      ...getPropertyTags(data),
-    ].filter((t): t is string => Boolean(t));
+      ...new Set(
+        [
+          ...(data.tags || []),
+          "website-lead",
+          "lmhy",
+          getSourceTag(data.source),
+          ...getPropertyTags(data),
+        ].filter((t): t is string => Boolean(t)),
+      ),
+    ];
 
     for (const tag of tags) {
       try {
@@ -286,13 +291,25 @@ function getSourceTag(source?: string): string | null {
 
   const lowerSource = source.toLowerCase();
 
-  if (lowerSource.includes('facebook')) return 'facebook-lead';
-  if (lowerSource.includes('google')) return 'google-lead';
-  if (lowerSource.includes('zillow')) return 'zillow-lead';
-  if (lowerSource.includes('realtor')) return 'realtor-lead';
-  if (lowerSource.includes('instagram')) return 'instagram-lead';
-  
-  return null;
+  // Let Me Help You REALTOR page sources
+  if (lowerSource.includes("luxury")) return "luxury-page";
+  if (lowerSource.includes("relocation")) return "relocation-page";
+  if (lowerSource.includes("buyers")) return "buyers-page";
+  if (lowerSource.includes("sellers")) return "sellers-page";
+  if (lowerSource.includes("services")) return "services-page";
+  if (lowerSource.includes("homepage") || lowerSource.includes("quick-connect")) {
+    return "homepage-lead";
+  }
+  if (lowerSource.includes("home-valuation")) return "valuation-page";
+  if (lowerSource.includes("contact")) return "contact-page";
+
+  if (lowerSource.includes("facebook")) return "facebook-lead";
+  if (lowerSource.includes("google")) return "google-lead";
+  if (lowerSource.includes("zillow")) return "zillow-lead";
+  if (lowerSource.includes("realtor.com")) return "realtor-lead";
+  if (lowerSource.includes("instagram")) return "instagram-lead";
+
+  return "website-form";
 }
 
 /**

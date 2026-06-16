@@ -1,6 +1,7 @@
 import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
+import QuickConnectSection from "@/components/letmehelpyou/QuickConnectSection";
 import Link from "next/link";
 import { 
   Phone, 
@@ -20,6 +21,7 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import { withPageCanonical } from "@/lib/page-metadata";
+import { agentInfo } from "@/lib/site-config";
 
 const pageMetadata: Metadata = {
   title: "Relocating to Las Vegas | Berkshire Hathaway HomeServices",
@@ -452,6 +454,31 @@ export default function RelocationPage() {
         {/* Last Updated */}
         <div className="text-center text-sm text-lmhy-charcoal/60 mt-8">Last Updated: January 2026</div>
       </main>
+      <QuickConnectSection
+        id="relocation-consultation"
+        badge="Relocation · CA & beyond"
+        title="Moving to Las Vegas or Henderson?"
+        description="California relocations, corporate transfers, and retirement moves need neighborhood briefings — schools, commute, HOA, and true cost of living. Tell Dr. Jan Duffy where you're coming from and your move date; she'll send a tailored Valley plan."
+        bullets={[
+          {
+            icon: Plane,
+            text: "Virtual tours and remote offer strategy for out-of-state buyers",
+          },
+          {
+            icon: School,
+            text: "School district and commute mapping across Summerlin, Henderson, and Skye Canyon",
+          },
+          {
+            icon: Sun,
+            text: `Same-day consult available — ${agentInfo.phoneFormatted}`,
+          },
+        ]}
+        formHeading="Start your relocation plan"
+        formSubtext="Include your current city and target move date in the message field."
+        source="relocation-page"
+        formType="property-search"
+        defaultTags={["website", "relocation", "buyer-intent", "california-relocator"]}
+      />
       <RealScoutListings />
       <Footer />
     </>

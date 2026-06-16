@@ -1,6 +1,7 @@
 import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
+import QuickConnectSection from "@/components/letmehelpyou/QuickConnectSection";
 import Link from "next/link";
 import { 
   Phone, 
@@ -453,6 +454,31 @@ export default function LuxuryHomesPage() {
         {/* Last Updated */}
         <div className="text-center text-sm text-lmhy-charcoal/60 mt-8">Last Updated: January 2026</div>
       </main>
+      <QuickConnectSection
+        id="luxury-consultation"
+        badge="Luxury · $1M+"
+        title="Explore Las Vegas luxury estates"
+        description="The Ridges, MacDonald Highlands, Summerlin, and Southern Highlands demand discreet representation and pricing precision. Share your criteria — Dr. Jan Duffy curates off-market opportunities and negotiates with high-net-worth sellers."
+        bullets={[
+          {
+            icon: Star,
+            text: "Discreet showings and white-glove coordination for executive relocations",
+          },
+          {
+            icon: Shield,
+            text: "Berkshire Hathaway global buyer network — critical for out-of-state luxury purchasers",
+          },
+          {
+            icon: DollarSign,
+            text: "June 2026: luxury buyers still negotiate concessions — strategy beats list price alone",
+          },
+        ]}
+        formHeading="Request a luxury home consultation"
+        formSubtext="Set a $1M+ price range for automatic luxury tagging in FUB."
+        source="luxury-homes-page"
+        formType="property-search"
+        defaultTags={["website", "luxury-homes", "luxury", "buyer-intent"]}
+      />
       <RealScoutListings />
       <Footer />
     </>
