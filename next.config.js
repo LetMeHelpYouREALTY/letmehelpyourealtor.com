@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
+const { LEGACY_PATH_REDIRECTS } = require("./lib/legacy-path-redirects");
+
 const nextConfig = {
   // Standalone output for Docker/Vercel optimization
   output: 'standalone',
@@ -26,6 +28,11 @@ const nextConfig = {
   // Apex → www (308). Vercel also redirects at the edge; keep for self-host/Cloudflare.
   async redirects() {
     return [
+      ...LEGACY_PATH_REDIRECTS.map(({ source, destination }) => ({
+        source,
+        destination,
+        permanent: true,
+      })),
       {
         source: "/:path*",
         has: [{ type: "host", value: "letmehelpyourealtor.com" }],

@@ -78,6 +78,11 @@
       "source": "/home",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/mo",
+      "destination": "/",
+      "permanent": true
     }
   ]
 }
