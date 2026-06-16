@@ -460,15 +460,15 @@ export default function SellersPage() {
         description="With ~38 days on market and sellers offering concessions on nearly a third of deals, pricing and presentation decide your net. Share your address and timeline — Dr. Jan Duffy will outline a listing strategy built for today's market."
         bullets={[
           {
-            icon: TrendingUp,
+            icon: "trending-up",
             text: "Data-backed pricing — not wishful list prices that cost weeks on market",
           },
           {
-            icon: Clock,
+            icon: "clock",
             text: `Free valuation conversation — call ${agentInfo.phoneFormatted} or submit below`,
           },
           {
-            icon: Shield,
+            icon: "shield",
             text: "BHHS Nevada Properties marketing reach + skilled concession negotiation",
           },
         ]}

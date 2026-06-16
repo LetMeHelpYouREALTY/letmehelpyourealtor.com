@@ -461,15 +461,15 @@ export default function LuxuryHomesPage() {
         description="The Ridges, MacDonald Highlands, Summerlin, and Southern Highlands demand discreet representation and pricing precision. Share your criteria — Dr. Jan Duffy curates off-market opportunities and negotiates with high-net-worth sellers."
         bullets={[
           {
-            icon: Star,
+            icon: "star",
             text: "Discreet showings and white-glove coordination for executive relocations",
           },
           {
-            icon: Shield,
+            icon: "shield",
             text: "Berkshire Hathaway global buyer network — critical for out-of-state luxury purchasers",
           },
           {
-            icon: DollarSign,
+            icon: "dollar",
             text: "June 2026: luxury buyers still negotiate concessions — strategy beats list price alone",
           },
         ]}

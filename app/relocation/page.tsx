@@ -461,15 +461,15 @@ export default function RelocationPage() {
         description="California relocations, corporate transfers, and retirement moves need neighborhood briefings — schools, commute, HOA, and true cost of living. Tell Dr. Jan Duffy where you're coming from and your move date; she'll send a tailored Valley plan."
         bullets={[
           {
-            icon: Plane,
+            icon: "plane",
             text: "Virtual tours and remote offer strategy for out-of-state buyers",
           },
           {
-            icon: School,
+            icon: "school",
             text: "School district and commute mapping across Summerlin, Henderson, and Skye Canyon",
           },
           {
-            icon: Sun,
+            icon: "sun",
             text: `Same-day consult available — ${agentInfo.phoneFormatted}`,
           },
         ]}

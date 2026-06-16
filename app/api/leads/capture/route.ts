@@ -173,8 +173,8 @@ export async function POST(request: NextRequest) {
     const person = await fub.upsertPerson(personData);
 
     // Add tags (deduped)
-    const tags = [
-      ...new Set(
+    const tags = Array.from(
+      new Set(
         [
           ...(data.tags || []),
           "website-lead",
@@ -183,7 +183,7 @@ export async function POST(request: NextRequest) {
           ...getPropertyTags(data),
         ].filter((t): t is string => Boolean(t)),
       ),
-    ];
+    );
 
     for (const tag of tags) {
       try {

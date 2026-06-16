@@ -3,10 +3,45 @@
 import { LeadCaptureForm } from "@/components/forms/LeadCaptureForm";
 import type { LeadCaptureFormProps } from "@/components/forms/LeadCaptureForm";
 import { agentInfo } from "@/lib/site-config";
-import { Clock, Shield, Zap, type LucideIcon } from "lucide-react";
+import {
+  Clock,
+  DollarSign,
+  Plane,
+  School,
+  Shield,
+  Star,
+  Sun,
+  TrendingUp,
+  Zap,
+  type LucideIcon,
+} from "lucide-react";
+
+/** Serializable icon keys — safe to pass from Server Components */
+export type BulletIcon =
+  | "zap"
+  | "clock"
+  | "shield"
+  | "trending-up"
+  | "plane"
+  | "school"
+  | "sun"
+  | "star"
+  | "dollar";
+
+const BULLET_ICONS: Record<BulletIcon, LucideIcon> = {
+  zap: Zap,
+  clock: Clock,
+  shield: Shield,
+  "trending-up": TrendingUp,
+  plane: Plane,
+  school: School,
+  sun: Sun,
+  star: Star,
+  dollar: DollarSign,
+};
 
 type Bullet = {
-  icon: LucideIcon;
+  icon: BulletIcon;
   text: string;
 };
 
@@ -26,15 +61,15 @@ type QuickConnectSectionProps = {
 
 const defaultBullets: Bullet[] = [
   {
-    icon: Zap,
+    icon: "zap",
     text: "RealScout-powered search plus off-market insight across Clark County",
   },
   {
-    icon: Clock,
+    icon: "clock",
     text: `Same-day callback on business days — call ${agentInfo.phoneFormatted}`,
   },
   {
-    icon: Shield,
+    icon: "shield",
     text: `Berkshire Hathaway HomeServices Nevada Properties · License ${agentInfo.license}`,
   },
 ];
@@ -64,12 +99,15 @@ export default function QuickConnectSection({
             <p className="text-lg text-lmhy-charcoal/80 mb-8">{description}</p>
 
             <ul className="space-y-4">
-              {bullets.map((item) => (
-                <li key={item.text} className="flex gap-3">
-                  <item.icon className="h-5 w-5 text-lmhy-coral shrink-0 mt-0.5" />
-                  <span className="text-lmhy-charcoal/85">{item.text}</span>
-                </li>
-              ))}
+              {bullets.map((item) => {
+                const Icon = BULLET_ICONS[item.icon];
+                return (
+                  <li key={item.text} className="flex gap-3">
+                    <Icon className="h-5 w-5 text-lmhy-coral shrink-0 mt-0.5" />
+                    <span className="text-lmhy-charcoal/85">{item.text}</span>
+                  </li>
+                );
+              })}
             </ul>
           </div>
 
