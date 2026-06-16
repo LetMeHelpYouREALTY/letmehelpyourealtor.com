@@ -24,7 +24,7 @@ export const agentInfo = {
   phone: "(702) 500-1942",
   phoneFormatted: "(702) 500-1942",
   phoneTel: "tel:+17025001942",
-  email: "homes@heyberkshire.com",
+  email: "DrDuffy@LetMeHelpYouRealtor.com",
   brokerage: "Berkshire Hathaway HomeServices Nevada Properties",
 };
 

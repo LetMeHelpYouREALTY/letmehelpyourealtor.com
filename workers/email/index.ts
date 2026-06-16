@@ -14,7 +14,14 @@ export default {
   async email(message, env, ctx): Promise<void> {
     const forwardTo = env.FORWARD_TO?.trim();
     if (!forwardTo) {
-      console.error("FORWARD_TO is not configured");
+      console.error("FORWARD_TO secret is not configured");
+      message.setReject("Mail service misconfigured.");
+      return;
+    }
+
+    const inbound = env.INBOUND_ADDRESS?.trim().toLowerCase();
+    if (inbound && forwardTo.toLowerCase() === inbound) {
+      console.error("FORWARD_TO must differ from INBOUND_ADDRESS");
       message.setReject("Mail service misconfigured.");
       return;
     }

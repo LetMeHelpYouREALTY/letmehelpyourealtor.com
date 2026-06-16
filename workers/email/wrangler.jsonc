@@ -12,7 +12,6 @@
     }
   ],
   "vars": {
-    "INBOUND_ADDRESS": "DrDuffy@LetMeHelpYouRealtor.com",
-    "FORWARD_TO": "homes@heyberkshire.com"
+    "INBOUND_ADDRESS": "DrDuffy@LetMeHelpYouRealtor.com"
   }
 }

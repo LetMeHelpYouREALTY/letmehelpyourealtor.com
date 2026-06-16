@@ -44,7 +44,7 @@ const personSchema = {
   description:
     "Licensed real estate agent with Berkshire Hathaway HomeServices Nevada Properties, serving Las Vegas, Henderson, and Summerlin since 2008.",
   telephone: "+17025001942",
-  email: "homes@heyberkshire.com",
+  email: "DrDuffy@LetMeHelpYouRealtor.com",
   url: "https://www.letmehelpyourealtor.com/about",
   worksFor: {
     "@type": "RealEstateAgent",
@@ -192,7 +192,7 @@ export default function AboutPage() {
                       <span className="font-semibold">(702) 500-1942</span>
                     </a>
                     <a
-                      href="mailto:homes@heyberkshire.com"
+                      href="mailto:DrDuffy@LetMeHelpYouRealtor.com"
                       className="flex items-center text-lmhy-charcoal/80 hover:text-lmhy-coral"
                     >
                       <Mail className="h-5 w-5 mr-3 text-lmhy-coral" />
