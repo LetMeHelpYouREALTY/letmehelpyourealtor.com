@@ -10,7 +10,8 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import { FollowUpBossClient } from '@/lib/fub/client';
+import { createFollowUpBossClient } from '@/lib/fub/create-client';
+import { logLeadToNotion } from '@/lib/notion/log-lead';
 import { leadFormLimiter, getClientId, checkRateLimit, getRateLimitHeaders } from '@/lib/rate-limit';
 
 export interface LeadCaptureRequest {
@@ -132,11 +133,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Initialize FUB client
-    const fub = new FollowUpBossClient({
-      apiKey: process.env.FUB_API_KEY || '',
-      systemKey: process.env.FUB_SYSTEM_KEY,
-    });
+    const fub = createFollowUpBossClient();
 
     // Check for existing lead (deduplication)
     let existingPerson = null;
@@ -224,6 +221,16 @@ export async function POST(request: NextRequest) {
         },
       });
     }
+
+    void logLeadToNotion({
+      name: personData.name || 'Website lead',
+      email: data.email,
+      phone: data.phone,
+      source: data.source,
+      message: data.message,
+      fubPersonId: person.id,
+      tags,
+    }).catch((err) => console.error('[Notion] lead log error', err));
 
     return NextResponse.json(
       {

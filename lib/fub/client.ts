@@ -14,6 +14,7 @@
 export interface FUBConfig {
   apiKey: string;
   systemKey?: string; // Increases rate limits
+  baseUrl?: string;
   enableCaching?: boolean;
   enableRateLimiting?: boolean;
   retryAttempts?: number;
@@ -63,7 +64,7 @@ export interface FUBListOptions {
 
 export class FollowUpBossClient {
   private config: FUBConfig;
-  private baseUrl = 'https://api.followupboss.com/v1';
+  private baseUrl: string;
   private rateLimiter: FUBRateLimiter;
   private cache: Map<string, { data: any; timestamp: number }>;
   private cacheTTL = 60000; // 1 minute
@@ -75,6 +76,7 @@ export class FollowUpBossClient {
       retryAttempts: 3,
       ...config,
     };
+    this.baseUrl = config.baseUrl ?? "https://api.followupboss.com/v1";
 
     this.rateLimiter = new FUBRateLimiter({
       systemKey: config.systemKey,

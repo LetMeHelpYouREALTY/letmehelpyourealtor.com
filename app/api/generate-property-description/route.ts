@@ -1,10 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import OpenAI from "openai";
-
-const openrouter = new OpenAI({
-  apiKey: process.env.OPENROUTER_API_KEY,
-  baseURL: "https://openrouter.ai/api/v1",
-});
+import { createUnifiedChatCompletion } from "@/lib/ai/unified-chat";
 
 export async function POST(request: NextRequest) {
   try {
@@ -12,13 +7,6 @@ export async function POST(request: NextRequest) {
 
     if (!propertyDetails) {
       return NextResponse.json({ error: "Property details are required" }, { status: 400 });
-    }
-
-    if (!process.env.OPENROUTER_API_KEY) {
-      return NextResponse.json(
-        { error: "OpenRouter API key not configured" },
-        { status: 500 },
-      );
     }
 
     const prompt = `Generate a compelling, SEO-friendly property description for a real estate listing in Las Vegas or Henderson, Nevada. 
@@ -40,28 +28,22 @@ Requirements:
 - Make it compelling for potential buyers
 - Keep it professional and accurate`;
 
-    const response = await openrouter.chat.completions.create({
-      model: "anthropic/claude-3.5-haiku",
+    const { reply: description } = await createUnifiedChatCompletion({
       messages: [
         {
           role: "system",
           content:
-            "You are an expert real estate copywriter specializing in Las Vegas and Henderson, Nevada properties. Write compelling, accurate property descriptions that highlight features and benefits.",
+            "You are an expert real estate copywriter specializing in Las Vegas and Henderson, Nevada properties.",
         },
-        {
-          role: "user",
-          content: prompt,
-        },
+        { role: "user", content: prompt },
       ],
       temperature: 0.8,
-      max_tokens: 400,
+      maxTokens: 400,
     });
-
-    const description = response.choices[0].message.content;
 
     return NextResponse.json({ description });
   } catch (error) {
-    console.error("OpenRouter API error:", error);
+    console.error("Property description API error:", error);
     return NextResponse.json(
       { error: "Failed to generate property description" },
       { status: 500 },

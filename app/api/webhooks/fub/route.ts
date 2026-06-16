@@ -15,8 +15,10 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import { FollowUpBossClient } from '@/lib/fub/client';
+import { createFollowUpBossClient } from '@/lib/fub/create-client';
+import type { FollowUpBossClient } from '@/lib/fub/client';
 import { ClaudeClient } from '@/lib/claude/client';
+import { serverEnv } from '@/lib/server-env';
 import { propertySearchTemplate } from '@/lib/claude/prompt-templates';
 
 export async function POST(request: NextRequest) {
@@ -74,16 +76,14 @@ export async function POST(request: NextRequest) {
 async function handlePersonCreated(data: any) {
   console.log(`[FUB] New person created: ${data.name || data.id}`);
 
-  const fub = new FollowUpBossClient({
-    apiKey: process.env.FUB_API_KEY || '',
-  });
+  const fub = createFollowUpBossClient();
 
   try {
     // Get full person details
     const person = await fub.getPerson(data.id);
 
     // Auto-qualify lead with Claude AI
-    if (process.env.ANTHROPIC_API_KEY) {
+    if (serverEnv.anthropicApiKey) {
       await qualifyLeadWithAI(person, fub);
     }
 
@@ -137,9 +137,7 @@ async function handlePersonUpdated(data: any) {
 async function handleStageUpdated(data: any) {
   console.log(`[FUB] Stage updated for ${data.name || data.id}: ${data.stage}`);
 
-  const fub = new FollowUpBossClient({
-    apiKey: process.env.FUB_API_KEY || '',
-  });
+  const fub = createFollowUpBossClient();
 
   try {
     // Add stage-specific tags and actions
@@ -184,9 +182,7 @@ async function handleStageUpdated(data: any) {
 async function handleTagsCreated(data: any) {
   console.log(`[FUB] Tags added to ${data.name || data.id}: ${data.tags?.join(', ')}`);
 
-  const fub = new FollowUpBossClient({
-    apiKey: process.env.FUB_API_KEY || '',
-  });
+  const fub = createFollowUpBossClient();
 
   // Trigger actions based on specific tags
   for (const tag of data.tags || []) {
@@ -236,7 +232,7 @@ async function handlePersonDeleted(data: any) {
 async function qualifyLeadWithAI(person: any, fub: FollowUpBossClient) {
   try {
     const claude = new ClaudeClient({
-      apiKey: process.env.ANTHROPIC_API_KEY!,
+      apiKey: serverEnv.anthropicApiKey!,
     });
 
     // Build context about the lead
@@ -280,9 +276,7 @@ Based on this information, provide a brief lead qualification summary and recomm
  * Check for duplicate leads
  */
 async function checkForDuplicates(personId: number) {
-  const fub = new FollowUpBossClient({
-    apiKey: process.env.FUB_API_KEY || '',
-  });
+  const fub = createFollowUpBossClient();
 
   try {
     const person = await fub.getPerson(personId);
@@ -329,9 +323,7 @@ async function checkForDuplicates(personId: number) {
  * Trigger property search
  */
 async function triggerPropertySearch(personId: number, neighborhood?: string) {
-  const fub = new FollowUpBossClient({
-    apiKey: process.env.FUB_API_KEY || '',
-  });
+  const fub = createFollowUpBossClient();
 
   try {
     const person = await fub.getPerson(personId);

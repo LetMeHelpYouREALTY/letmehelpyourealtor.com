@@ -12,6 +12,7 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 import { ClaudeClient } from '@/lib/claude/client';
+import { serverEnv } from '@/lib/server-env';
 import { defaultCache } from '@/lib/claude/cache';
 import {
   realEstateAgentTemplate,
@@ -23,7 +24,7 @@ import {
 
 // Initialize Claude client
 const claude = new ClaudeClient({
-  apiKey: process.env.ANTHROPIC_API_KEY || '',
+  apiKey: serverEnv.anthropicApiKey || '',
   enableCaching: true,
   enableCostTracking: true,
 });
@@ -41,7 +42,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    if (!process.env.ANTHROPIC_API_KEY) {
+    if (!serverEnv.anthropicApiKey) {
       return NextResponse.json(
         { error: 'Claude API key not configured' },
         { status: 500 }
