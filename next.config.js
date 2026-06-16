@@ -20,6 +20,9 @@ const nextConfig = {
   // Performance optimizations
   swcMinify: true,
 
+  // One canonical URL shape site-wide (no trailing slash on paths; homepage via metadata).
+  trailingSlash: false,
+
   // Apex → www (308). Vercel also redirects at the edge; keep for self-host/Cloudflare.
   async redirects() {
     return [

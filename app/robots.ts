@@ -8,6 +8,7 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/"],
     },
+    host: "https://www.letmehelpyourealtor.com",
     sitemap: `${siteConfig.url}/sitemap.xml`,
   };
 }

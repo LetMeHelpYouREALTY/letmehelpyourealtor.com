@@ -14,6 +14,7 @@ import QuickConnectSection from "@/components/letmehelpyou/QuickConnectSection";
 import { getPageDomainConfig } from "@/lib/get-domain-config";
 import { agentInfo, officeInfo, siteConfig } from "@/lib/site-config";
 import { buildPageMetadata } from "@/lib/page-metadata";
+import { CANONICAL_HOME_URL } from "@/lib/site-url";
 
 export const metadata = buildPageMetadata({
   title: `${siteConfig.name} | Hyperlocal Las Vegas Real Estate`,
@@ -27,8 +28,9 @@ export default async function Home() {
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "RealEstateAgent",
+    "@id": `${CANONICAL_HOME_URL}#agent`,
     name: `${agentInfo.name} — ${siteConfig.name}`,
-    url: siteConfig.url,
+    url: CANONICAL_HOME_URL,
     telephone: agentInfo.phoneTel.replace("tel:", ""),
     email: agentInfo.email,
     description: siteConfig.description,
@@ -61,8 +63,25 @@ export default async function Home() {
     },
   };
 
+  const webSiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${CANONICAL_HOME_URL}#website`,
+    url: CANONICAL_HOME_URL,
+    name: siteConfig.name,
+    description: siteConfig.description,
+    publisher: {
+      "@id": `${CANONICAL_HOME_URL}#agent`,
+    },
+    inLanguage: "en-US",
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}

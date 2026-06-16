@@ -75,6 +75,29 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     ctaSubheadline:
       "Tell me what you need — I'll map the right services for today's market. Call or text (702) 500-1942.",
   },
+  "www.letmehelpyourealtor.com": {
+    domain: "www.letmehelpyourealtor.com",
+    neighborhood: "Las Vegas Valley",
+    tagline: "Let Me Help You — Hyperlocal Las Vegas REALTOR®",
+    description:
+      "Let Me Help You REALTOR — Dr. Jan Duffy, hyperlocal Las Vegas real estate services. Buying, selling, relocating, 55+ communities, luxury, and new construction across Clark County.",
+    heroHeadline: "Let Me Help You With Las Vegas Real Estate",
+    heroSubheadline:
+      "Buying, selling, relocating, or downsizing in the Valley? I'm Dr. Jan Duffy — your hyperlocal guide with 30+ years serving Southern Nevada.",
+    keywords: [
+      "Let Me Help You realtor Las Vegas",
+      "Las Vegas real estate services",
+      "Dr Jan Duffy realtor",
+      "hyperlocal Las Vegas homes",
+      "BHHS Nevada Properties",
+    ],
+    pageType: "search",
+    realscoutAgentId: REALSCOUT_AGENT_ID,
+    ctaBadge: "Let Me Help You",
+    ctaHeadline: "Ready for a Free Consultation?",
+    ctaSubheadline:
+      "Tell me what you need — I'll map the right services for today's market. Call or text (702) 500-1942.",
+  },
 };
 
 // Default config for any domain not specifically listed
