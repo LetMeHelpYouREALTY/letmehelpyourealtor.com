@@ -1,6 +1,7 @@
 import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
+import QuickConnectSection from "@/components/letmehelpyou/QuickConnectSection";
 import Link from "next/link";
 import {
   Phone,
@@ -19,6 +20,7 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import { withPageCanonical } from "@/lib/page-metadata";
+import { agentInfo } from "@/lib/site-config";
 
 const pageMetadata: Metadata = {
   title: "Sell Your Las Vegas Home | Berkshire Hathaway HomeServices",
@@ -451,6 +453,31 @@ export default function SellersPage() {
         {/* Last Updated */}
         <div className="text-center text-sm text-lmhy-charcoal/60 mt-8">Last Updated: January 2026</div>
       </main>
+      <QuickConnectSection
+        id="seller-consultation"
+        badge="Seller strategy · June 2026"
+        title="Thinking about selling in the Valley?"
+        description="With ~38 days on market and sellers offering concessions on nearly a third of deals, pricing and presentation decide your net. Share your address and timeline — Dr. Jan Duffy will outline a listing strategy built for today's market."
+        bullets={[
+          {
+            icon: TrendingUp,
+            text: "Data-backed pricing — not wishful list prices that cost weeks on market",
+          },
+          {
+            icon: Clock,
+            text: `Free valuation conversation — call ${agentInfo.phoneFormatted} or submit below`,
+          },
+          {
+            icon: Shield,
+            text: "BHHS Nevada Properties marketing reach + skilled concession negotiation",
+          },
+        ]}
+        formHeading="Get your selling game plan"
+        formSubtext="Describe your property and goals — tagged as seller lead in FUB."
+        source="sellers-page"
+        formType="contact"
+        defaultTags={["website", "sellers", "seller-intent"]}
+      />
       <RealScoutListings />
       <Footer />
     </>

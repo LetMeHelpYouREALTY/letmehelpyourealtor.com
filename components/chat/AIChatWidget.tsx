@@ -16,7 +16,7 @@ export default function AIChatWidget() {
     {
       role: "assistant",
       content:
-        "Hello! I'm your real estate assistant. How can I help you find your dream home in Las Vegas or Henderson today?",
+        "Hi! I'm Dr. Jan Duffy's assistant at Let Me Help You REALTOR. Ask about buying, selling, relocation, 55+ communities, or June 2026 Las Vegas market conditions — I'm here to help.",
     },
   ]);
   const [input, setInput] = useState("");
@@ -101,7 +101,7 @@ export default function AIChatWidget() {
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
-          className="fixed bottom-6 right-6 bg-lmhy-coral hover:bg-lmhy-coral-dark text-white rounded-full p-4 shadow-lg z-50 transition-all hover:scale-110"
+          className="fixed bottom-24 right-4 md:bottom-6 md:right-6 bg-lmhy-coral hover:bg-lmhy-coral-dark text-white rounded-full p-4 shadow-lg z-50 transition-all hover:scale-110"
           aria-label="Open chat"
         >
           <MessageCircle className="h-6 w-6" />
@@ -110,12 +110,12 @@ export default function AIChatWidget() {
 
       {/* Chat Widget */}
       {isOpen && (
-        <div className="fixed bottom-6 right-6 w-96 h-[600px] bg-white rounded-lg shadow-2xl z-50 flex flex-col border border-lmhy-sand/60">
+        <div className="fixed bottom-24 right-4 md:bottom-6 md:right-6 w-[min(100vw-2rem,24rem)] h-[min(100vh-8rem,600px)] bg-white rounded-lg shadow-2xl z-50 flex flex-col border border-lmhy-sand/60">
           {/* Header */}
           <div className="bg-lmhy-coral text-white p-4 rounded-t-lg flex justify-between items-center">
             <div>
-              <h3 className="font-semibold">Real Estate Assistant</h3>
-              <p className="text-xs text-white/85">Ask me anything!</p>
+              <h3 className="font-semibold">Let Me Help You</h3>
+              <p className="text-xs text-white/85">Dr. Jan Duffy&apos;s AI assistant</p>
             </div>
             <button
               onClick={() => setIsOpen(false)}

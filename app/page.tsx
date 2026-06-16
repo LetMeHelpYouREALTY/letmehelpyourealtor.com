@@ -10,6 +10,7 @@ import MarketSnapshotJune2026 from "@/components/letmehelpyou/MarketSnapshotJune
 import NeighborhoodsGrid from "@/components/letmehelpyou/NeighborhoodsGrid";
 import HowIHelpProcess from "@/components/letmehelpyou/HowIHelpProcess";
 import LMHYCTA from "@/components/letmehelpyou/LMHYCTA";
+import QuickConnectSection from "@/components/letmehelpyou/QuickConnectSection";
 import { getPageDomainConfig } from "@/lib/get-domain-config";
 import { agentInfo, officeInfo, siteConfig } from "@/lib/site-config";
 import { buildPageMetadata } from "@/lib/page-metadata";
@@ -77,6 +78,7 @@ export default async function Home() {
         <WhyChooseUs />
         <ReviewsSection />
         <FAQSection />
+        <QuickConnectSection />
         <LMHYCTA config={config} />
       </main>
       <Footer />

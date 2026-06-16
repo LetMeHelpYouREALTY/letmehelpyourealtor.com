@@ -1,0 +1,51 @@
+---
+description: Recurring agent loop for Let Me Help You REALTOR engagement, leads, SEO, and CRM health
+globs: "app/**/*.tsx,components/**/*.tsx,lib/**/*.ts"
+alwaysApply: false
+---
+
+# LMHY Engagement Agent Loop
+
+When improving **letmehelpyourealtor.com** for engagement, run this checklist in order. Prefer measurable conversion paths over cosmetic-only edits.
+
+## Engagement stack (do not duplicate)
+
+| Tool | Location | Purpose |
+|------|----------|---------|
+| RealScout AI Search | `LMHYHero`, `layout.tsx` scripts | Property search |
+| `LeadCaptureForm` | `QuickConnectSection`, `/contact` | FUB via `/api/leads/capture` |
+| `AIChatWidget` | `EngagementLayer` in `layout.tsx` | AI Q&A → `/api/chat` |
+| Calendly | `CalendlyBadge` (desktop), `/contact` widget | Scheduling |
+| `MobileStickyCTA` | `EngagementLayer` | Mobile call / message / search |
+| Widget tracker | `layout.tsx` | `WT-XQHVYQWW` |
+
+Load engagement widgets **once** from `EngagementLayer` — never add a second chat or Calendly script on individual pages.
+
+## Each optimization pass
+
+1. **NAP + trust** — `lib/site-config.ts`: phone `(702) 500-1942`, email `DrDuffy@LetMeHelpYouRealtor.com`, GBP address; match visible copy + JSON-LD.
+2. **CTA density** — Every money page needs: phone `tel:`, contact path, and search or lead form above the fold or within one scroll.
+3. **Speed-to-lead** — Confirm `/api/leads/capture` tags include page source; FUB webhook `/api/webhooks/fub` healthy.
+4. **SEO / GSC** — 29 priority URLs in `lib/gsc-index-pages.ts`; canonical via `withPageCanonical` / `buildPageMetadata`; sitemap uses `www`.
+5. **Core Web Vitals** — No duplicate third-party scripts; RealScout loaded once; images lazy-loaded.
+6. **Content integrity** — June 2026 market stats from `lib/letmehelpyou-services.ts` / research JSON only; no fabricated review counts.
+
+## Cursor loop usage
+
+For recurring passes, use:
+
+```
+/loop 1d Audit LMHY engagement: CTAs, lead forms, GSC canonicals, FUB capture tags, and mobile sticky bar on key pages. Fix highest-impact gap only.
+```
+
+Or dynamic mode after deploy:
+
+```
+/loop Watch Vercel deploy then verify homepage lead form, chat widget, and /sitemap.xml on www.
+```
+
+## Out of scope without explicit approval
+
+- Editing `/components/idx/*`
+- Replacing `homes@heyberkshire.com` on security@ / info@ addresses
+- Force-pushing `main`

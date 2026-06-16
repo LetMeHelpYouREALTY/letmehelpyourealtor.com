@@ -1,6 +1,7 @@
 import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
+import QuickConnectSection from "@/components/letmehelpyou/QuickConnectSection";
 import Link from "next/link";
 import {
   Phone,
@@ -468,6 +469,17 @@ export default function BuyersPage() {
         {/* Last Updated */}
         <div className="text-center text-sm text-lmhy-charcoal/60 mt-8">Last Updated: January 2026</div>
       </main>
+      <QuickConnectSection
+        id="buyer-consultation"
+        badge="Buyer representation"
+        title="Ready to buy in Las Vegas?"
+        description="June 2026 is a balanced market — concessions, buyer-broker agreements, and pre-underwriting matter. Tell Dr. Jan Duffy your budget and neighborhoods; she'll build a search plan and RealScout alerts tailored to you."
+        formHeading="Request a buyer consultation"
+        formSubtext="Include price range and timeline — leads are tagged for fast FUB follow-up."
+        source="buyers-page"
+        formType="property-search"
+        defaultTags={["website", "buyers", "buyer-intent"]}
+      />
       <RealScoutListings />
       <Footer />
     </>

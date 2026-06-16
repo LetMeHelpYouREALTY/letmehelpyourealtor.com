@@ -6,6 +6,12 @@ import { getDomainConfig } from "@/lib/domain-config";
 import { siteConfig, agentInfo } from "@/lib/site-config";
 import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
+import dynamic from "next/dynamic";
+
+const EngagementLayer = dynamic(
+  () => import("@/components/layouts/EngagementLayer"),
+  { ssr: false },
+);
 
 const libreBaskerville = Libre_Baskerville({
   subsets: ["latin"],
@@ -60,8 +66,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           window.widgetTracker("send","pageview");
         `}</Script>
       </head>
-      <body className="font-sans">
+      <body className="font-sans pb-16 md:pb-0">
         {children}
+        <EngagementLayer />
         <Analytics />
       </body>
     </html>

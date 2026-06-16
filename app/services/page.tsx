@@ -3,6 +3,7 @@ import Footer from "@/components/layouts/Footer";
 import ServicesGridJune2026 from "@/components/letmehelpyou/ServicesGridJune2026";
 import HowIHelpProcess from "@/components/letmehelpyou/HowIHelpProcess";
 import MarketSnapshotJune2026 from "@/components/letmehelpyou/MarketSnapshotJune2026";
+import QuickConnectSection from "@/components/letmehelpyou/QuickConnectSection";
 import LMHYCTA from "@/components/letmehelpyou/LMHYCTA";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import { getPageDomainConfig } from "@/lib/get-domain-config";
@@ -120,6 +121,17 @@ export default async function ServicesPage() {
         </section>
 
         <RealScoutListings />
+        <QuickConnectSection
+          id="services-consultation"
+          badge="Let Me Help You REALTOR"
+          title="Not sure which service fits you?"
+          description="Whether you're buying, selling, relocating from California, exploring 55+ communities, or investing — one conversation maps the right June 2026 strategy for your situation."
+          formHeading="Tell me what you need"
+          formSubtext="Dr. Jan Duffy reviews every submission personally."
+          source="services-page"
+          formType="contact"
+          defaultTags={["website", "services", "consultation"]}
+        />
         <LMHYCTA config={config} />
       </main>
       <Footer />
