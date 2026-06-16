@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Phone, TrendingUp, DollarSign, Building, BarChart, CheckCircle, Calculator } from "lucide-react";
 import type { Metadata } from "next";
 import { withPageCanonical } from "@/lib/page-metadata";
+import PageServicesFocus from "@/components/letmehelpyou/PageServicesFocus";
 
 const pageMetadata: Metadata = {
   title: "Las Vegas Investment Properties | Berkshire Hathaway HomeServices",
@@ -454,6 +455,7 @@ export default function InvestmentPropertiesPage() {
         {/* Last Updated */}
         <div className="text-center text-sm text-lmhy-charcoal/60 mt-8">Last Updated: January 2026</div>
       </main>
+      <PageServicesFocus pageKey="investment-properties" />
       <RealScoutListings />
       <Footer />
     </>

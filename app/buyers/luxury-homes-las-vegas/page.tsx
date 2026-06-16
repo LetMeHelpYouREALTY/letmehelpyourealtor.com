@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import { withPageCanonical } from "@/lib/page-metadata";
+import PageServicesFocus from "@/components/letmehelpyou/PageServicesFocus";
 
 const pageMetadata: Metadata = {
   title: "Luxury Homes Las Vegas | Berkshire Hathaway HomeServices",
@@ -414,6 +415,7 @@ export default function LuxuryHomesPage() {
         </div>
         <div className="text-center text-sm text-lmhy-charcoal/60 mt-8">Last Updated: January 2026</div>
       </main>
+      <PageServicesFocus pageKey="luxury-homes-las-vegas" />
       <RealScoutListings />
       <Footer />
     </>

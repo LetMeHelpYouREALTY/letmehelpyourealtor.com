@@ -2,6 +2,7 @@ import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import QuickConnectSection from "@/components/letmehelpyou/QuickConnectSection";
+import PageServicesFocus from "@/components/letmehelpyou/PageServicesFocus";
 import Link from "next/link";
 import { 
   Phone, 
@@ -452,8 +453,9 @@ export default function RelocationPage() {
         </div>
 
         {/* Last Updated */}
-        <div className="text-center text-sm text-lmhy-charcoal/60 mt-8">Last Updated: January 2026</div>
+        <div className="text-center text-sm text-lmhy-charcoal/60 mt-8">Last Updated: June 2026</div>
       </main>
+      <PageServicesFocus pageKey="relocation" showQuickConnect={false} />
       <QuickConnectSection
         id="relocation-consultation"
         badge="Relocation · CA & beyond"

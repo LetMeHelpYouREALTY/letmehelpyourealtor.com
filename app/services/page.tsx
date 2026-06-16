@@ -3,6 +3,7 @@ import Footer from "@/components/layouts/Footer";
 import ServicesGridJune2026 from "@/components/letmehelpyou/ServicesGridJune2026";
 import HowIHelpProcess from "@/components/letmehelpyou/HowIHelpProcess";
 import MarketSnapshotJune2026 from "@/components/letmehelpyou/MarketSnapshotJune2026";
+import PageServicesFocus from "@/components/letmehelpyou/PageServicesFocus";
 import QuickConnectSection from "@/components/letmehelpyou/QuickConnectSection";
 import LMHYCTA from "@/components/letmehelpyou/LMHYCTA";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
@@ -120,6 +121,7 @@ export default async function ServicesPage() {
           </div>
         </section>
 
+        <PageServicesFocus pageKey="services" showQuickConnect={false} />
         <RealScoutListings />
         <QuickConnectSection
           id="services-consultation"

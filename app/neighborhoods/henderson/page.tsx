@@ -4,19 +4,22 @@ import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import { Phone, Shield, Users, GraduationCap, TreePine } from "lucide-react";
 import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/page-metadata";
+import PageServicesFocus from "@/components/letmehelpyou/PageServicesFocus";
 
-export const metadata: Metadata = {
-  title: "Berkshire Hathaway HomeServices Henderson | Nevada Real Estate",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Henderson Real Estate Services | Buyer & Investment Expert",
   description:
-    "Find Henderson homes with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy specializes in Henderson's family-friendly communities. Median price $485K. Call (702) 500-1942.",
+    "June 2026 Henderson services: family buyer advocacy, rental investment consulting, and California relocation briefings. Dr. Jan Duffy, BHHS Nevada. Median near $485K.",
   keywords: [
-    "Berkshire Hathaway HomeServices Henderson",
+    "Henderson real estate services",
     "Henderson homes for sale",
-    "Henderson real estate agent",
-    "Henderson Nevada",
-    "Green Valley Henderson",
+    "Henderson investment property",
+    "Green Valley realtor",
+    "Let Me Help You Henderson",
   ],
-};
+  path: "/neighborhoods/henderson",
+});
 
 const neighborhoodSchema = {
   "@context": "https://schema.org",
@@ -401,8 +404,9 @@ export default function HendersonPage() {
             </p>
           </section>
         </div>
-        <div className="text-center text-sm text-lmhy-charcoal/60 mt-8">Last Updated: January 2026</div>
+        <div className="text-center text-sm text-lmhy-charcoal/60 mt-8">Last Updated: June 2026</div>
       </main>
+      <PageServicesFocus pageKey="henderson" />
       <RealScoutListings />
       <Footer />
     </>

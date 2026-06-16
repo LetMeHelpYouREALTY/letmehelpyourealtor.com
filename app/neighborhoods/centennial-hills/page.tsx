@@ -4,19 +4,22 @@ import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import { Phone, Mountain, Users, ShoppingBag, Home as HomeIcon } from "lucide-react";
 import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/page-metadata";
+import PageServicesFocus from "@/components/letmehelpyou/PageServicesFocus";
 
-export const metadata: Metadata = {
-  title: "Berkshire Hathaway HomeServices Centennial Hills | Las Vegas Homes",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Centennial Hills Real Estate Services | Northwest Las Vegas",
   description:
-    "Find Centennial Hills homes with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy specializes in this established northwest community. Median price $495K. Call (702) 500-1942.",
+    "June 2026 Centennial Hills buyer services: pre-underwriting, northwest relocation briefings, and hyperlocal school/commute analysis. Dr. Jan Duffy, BHHS Nevada. Median near $495K.",
   keywords: [
-    "Berkshire Hathaway HomeServices Centennial Hills",
+    "Centennial Hills real estate services",
     "Centennial Hills homes for sale",
-    "Centennial Hills Las Vegas",
-    "northwest Las Vegas real estate",
-    "family homes Las Vegas",
+    "northwest Las Vegas buyer agent",
+    "Centennial Hills relocation",
+    "Let Me Help You Centennial Hills",
   ],
-};
+  path: "/neighborhoods/centennial-hills",
+});
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -388,8 +391,9 @@ export default function CentennialHillsPage() {
             </p>
           </section>
         </div>
-        <div className="text-center text-sm text-lmhy-charcoal/60 mt-8">Last Updated: January 2026</div>
+        <div className="text-center text-sm text-lmhy-charcoal/60 mt-8">Last Updated: June 2026</div>
       </main>
+      <PageServicesFocus pageKey="centennial-hills" />
       <RealScoutListings />
       <Footer />
     </>

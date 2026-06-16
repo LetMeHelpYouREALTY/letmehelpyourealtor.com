@@ -69,6 +69,12 @@
   ],
   "redirects": [
     {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "letmehelpyourealtor.com" }],
+      "destination": "https://www.letmehelpyourealtor.com/:path*",
+      "permanent": true
+    },
+    {
       "source": "/home",
       "destination": "/",
       "permanent": true

@@ -4,19 +4,22 @@ import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import { Phone, Shield, Mountain, Star, MapPin } from "lucide-react";
 import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/page-metadata";
+import PageServicesFocus from "@/components/letmehelpyou/PageServicesFocus";
 
-export const metadata: Metadata = {
-  title: "Berkshire Hathaway HomeServices Southern Highlands | Las Vegas Golf Community",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Southern Highlands Real Estate Services | Las Vegas Luxury Golf",
   description:
-    "Find Southern Highlands homes with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy specializes in this premier golf community. Median price $750K. Call (702) 500-1942.",
+    "June 2026 Southern Highlands services: luxury buyer/seller strategy, guard-gated golf community expertise, and custom-lot guidance. Dr. Jan Duffy, BHHS Nevada. Median near $750K.",
   keywords: [
-    "Berkshire Hathaway HomeServices Southern Highlands",
-    "Southern Highlands homes for sale",
-    "Southern Highlands golf",
-    "Las Vegas golf community",
-    "guard gated Las Vegas",
+    "Southern Highlands real estate services",
+    "Southern Highlands luxury homes",
+    "Las Vegas golf community realtor",
+    "Southern Highlands seller agent",
+    "Let Me Help You Southern Highlands",
   ],
-};
+  path: "/neighborhoods/southern-highlands",
+});
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -387,8 +390,9 @@ export default function SouthernHighlandsPage() {
             </p>
           </section>
         </div>
-        <div className="text-center text-sm text-lmhy-charcoal/60 mt-8">Last Updated: January 2026</div>
+        <div className="text-center text-sm text-lmhy-charcoal/60 mt-8">Last Updated: June 2026</div>
       </main>
+      <PageServicesFocus pageKey="southern-highlands" />
       <RealScoutListings />
       <Footer />
     </>

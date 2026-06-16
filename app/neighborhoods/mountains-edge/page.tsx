@@ -4,19 +4,22 @@ import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import { Phone, Mountain, TreePine, DollarSign, Home as HomeIcon } from "lucide-react";
 import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/page-metadata";
+import PageServicesFocus from "@/components/letmehelpyou/PageServicesFocus";
 
-export const metadata: Metadata = {
-  title: "Berkshire Hathaway HomeServices Mountains Edge | Southwest Las Vegas",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Mountains Edge Real Estate Services | Southwest Las Vegas",
   description:
-    "Find Mountains Edge homes with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy specializes in this southwest Las Vegas community. Median price $475K. Call (702) 500-1942.",
+    "June 2026 Mountains Edge buyer services: new construction advocacy, concession negotiation, and southwest Las Vegas hyperlocal expertise. Dr. Jan Duffy, BHHS Nevada. Median near $475K.",
   keywords: [
-    "Berkshire Hathaway HomeServices Mountains Edge",
+    "Mountains Edge real estate services",
     "Mountains Edge homes for sale",
-    "Mountains Edge Las Vegas",
-    "southwest Las Vegas homes",
-    "affordable Las Vegas",
+    "southwest Las Vegas buyer agent",
+    "Mountains Edge new construction",
+    "Let Me Help You Mountains Edge",
   ],
-};
+  path: "/neighborhoods/mountains-edge",
+});
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -386,8 +389,9 @@ export default function MountainsEdgePage() {
             </p>
           </section>
         </div>
-        <div className="text-center text-sm text-lmhy-charcoal/60 mt-8">Last Updated: January 2026</div>
+        <div className="text-center text-sm text-lmhy-charcoal/60 mt-8">Last Updated: June 2026</div>
       </main>
+      <PageServicesFocus pageKey="mountains-edge" />
       <RealScoutListings />
       <Footer />
     </>

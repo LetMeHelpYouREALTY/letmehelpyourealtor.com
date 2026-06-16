@@ -4,19 +4,22 @@ import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import { Phone, Shield, Star, Mountain, Home as HomeIcon } from "lucide-react";
 import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/page-metadata";
+import PageServicesFocus from "@/components/letmehelpyou/PageServicesFocus";
 
-export const metadata: Metadata = {
-  title: "Berkshire Hathaway HomeServices The Ridges | Las Vegas Luxury Real Estate",
+export const metadata: Metadata = buildPageMetadata({
+  title: "The Ridges Luxury Real Estate Services | Summerlin Las Vegas",
   description:
-    "Find luxury homes in The Ridges with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy specializes in Summerlin's most exclusive guard-gated community. Median price $2.5M. Call (702) 500-1942.",
+    "June 2026 The Ridges luxury services: discreet buyer representation, guard-gated coordination, and California relocation support. Dr. Jan Duffy, BHHS Nevada. Median near $2.5M.",
   keywords: [
-    "Berkshire Hathaway HomeServices The Ridges",
-    "The Ridges homes for sale",
-    "The Ridges Summerlin",
-    "luxury homes Las Vegas",
-    "guard gated Summerlin",
+    "The Ridges real estate services",
+    "The Ridges luxury homes",
+    "Summerlin guard gated realtor",
+    "luxury buyer agent Las Vegas",
+    "Let Me Help You The Ridges",
   ],
-};
+  path: "/neighborhoods/the-ridges",
+});
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -385,8 +388,9 @@ export default function TheRidgesPage() {
             </p>
           </section>
         </div>
-        <div className="text-center text-sm text-lmhy-charcoal/60 mt-8">Last Updated: January 2026</div>
+        <div className="text-center text-sm text-lmhy-charcoal/60 mt-8">Last Updated: June 2026</div>
       </main>
+      <PageServicesFocus pageKey="the-ridges" />
       <RealScoutListings />
       <Footer />
     </>

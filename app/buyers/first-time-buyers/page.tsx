@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import { withPageCanonical } from "@/lib/page-metadata";
+import PageServicesFocus from "@/components/letmehelpyou/PageServicesFocus";
 
 const pageMetadata: Metadata = {
   title: "First-Time Home Buyers Las Vegas | Berkshire Hathaway HomeServices",
@@ -527,6 +528,7 @@ export default function FirstTimeBuyersPage() {
         </div>
         <div className="text-center text-sm text-lmhy-charcoal/60 mt-8">Last Updated: January 2026</div>
       </main>
+      <PageServicesFocus pageKey="first-time-buyers" />
       <RealScoutListings />
       <Footer />
     </>
