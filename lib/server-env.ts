@@ -100,6 +100,12 @@ export const serverEnv = {
   get smsAutoReplyMessage() {
     return firstDefined(process.env.SMS_AUTO_REPLY_MESSAGE);
   },
+  get twilioAuthToken() {
+    return firstDefined(process.env.TWILIO_AUTH_TOKEN);
+  },
+  get twilioAccountSid() {
+    return firstDefined(process.env.TWILIO_ACCOUNT_SID);
+  },
 
   /** Design / ops (MCP & automations — not used in runtime routes) */
   get v0ApiKey() {
@@ -120,6 +126,7 @@ export type StackIntegrationStatus = {
   cloudinary: boolean;
   googleMaps: boolean;
   smsAutoReply: boolean;
+  twilioWebhook: boolean;
   realScout: boolean;
   turnstile: boolean;
 };
@@ -137,6 +144,7 @@ export function getStackIntegrationStatus(): StackIntegrationStatus {
     smsAutoReply:
       serverEnv.smsAutoReplyEnabled &&
       Boolean(serverEnv.smsPhoneNumber && serverEnv.smsAutoReplyMessage),
+    twilioWebhook: Boolean(serverEnv.twilioAuthToken),
     realScout: Boolean(process.env.NEXT_PUBLIC_REALSCOUT_AGENT_ID),
     turnstile: Boolean(
       process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY &&

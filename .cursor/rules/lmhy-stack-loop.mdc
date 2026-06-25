@@ -1,0 +1,51 @@
+---
+description: Daily stack health loop — FUB, Notion, SMS TCPA, AI failover, Vercel integrations
+globs: "lib/server-env.ts,lib/sms/**/*.ts,app/api/**/*.ts,.env.stack.example"
+alwaysApply: false
+---
+
+# LMHY Stack Health Loop
+
+Recurring pass for **integration wiring** on letmehelpyourealtor.com. Complements `lmhy-engagement-loop.mdc` (conversion/SEO).
+
+## Stack endpoints
+
+| Check | URL / action |
+|-------|----------------|
+| Integration status | `GET /api/health/stack` |
+| Claude advisor | `GET /api/health/stack?advise=1` |
+| SMS webhook | `GET /api/webhooks/sms` (config) · `POST` Twilio inbound |
+| Lead capture | `POST /api/leads/capture` |
+| FUB webhook | `POST /api/webhooks/fub` |
+
+## Each stack pass (priority order)
+
+1. **FUB** — `followUpBoss: true`; test capture tags include page source.
+2. **Notion** — `notionLeads: true`; if false run `node scripts/bootstrap-notion-leads.mjs` and add `NOTION_LEADS_DATABASE_ID` in Vercel.
+3. **SMS / TCPA** — `smsAutoReply` + `twilioWebhook`; webhook `https://www.letmehelpyourealtor.com/api/webhooks/sms`; STOP/HELP honored; auto-reply includes opt-out language.
+4. **AI** — At least one of `aiGateway`, `openRouter`, or `anthropic` for chat + advisor.
+5. **Turnstile** — Form CAPTCHA when keys present.
+6. **GA4 + Cloudinary** — Public IDs set; no duplicate scripts.
+
+## Cursor loop
+
+```
+/loop 1d LMHY stack health: GET /api/health/stack?advise=1 on production www; fix highest-priority gap from advisor.actions (Notion DB, Twilio webhook, Turnstile, or FUB tags). One focused fix per pass.
+```
+
+Dynamic after deploy:
+
+```
+/loop Watch Vercel production deploy then curl /api/health/stack?advise=1 and /api/webhooks/sms; confirm integrations count increased.
+```
+
+## SMS provider setup (Twilio)
+
+1. Messaging Service → inbound webhook: `POST https://www.letmehelpyourealtor.com/api/webhooks/sms`
+2. Vercel env: `TWILIO_AUTH_TOKEN`, `SMS_AUTO_REPLY_ENABLED=true`, `SMS_PHONE_NUMBER`, `SMS_AUTO_REPLY_MESSAGE`
+3. Enable Advanced Opt-Out on Messaging Service (carrier-level STOP)
+4. First auto-reply template must identify Dr. Jan Duffy / LMHY; code appends STOP/HELP footer if missing
+
+## Advisor output
+
+When `?advise=1`, Claude (via AI Gateway failover) returns JSON `actions[]` — implement **one** `effort: "S"` item per loop unless user requests more.

@@ -8,6 +8,7 @@ export type NotionLeadPayload = {
   message?: string;
   fubPersonId?: number;
   tags?: string[];
+  channel?: string;
 };
 
 /**
@@ -33,8 +34,11 @@ export async function logLeadToNotion(payload: NotionLeadPayload): Promise<void>
     properties.Email = { email: payload.email };
   }
   if (payload.phone) {
-    properties.Phone = {
-      rich_text: [{ text: { content: payload.phone.slice(0, 100) } }],
+    properties.Phone = { phone_number: payload.phone.slice(0, 100) };
+  }
+  if (payload.channel) {
+    properties.Channel = {
+      rich_text: [{ text: { content: payload.channel.slice(0, 100) } }],
     };
   }
   if (payload.source) {

@@ -25,7 +25,7 @@ Load engagement widgets **once** from `EngagementLayer` — never add a second c
 
 1. **NAP + trust** — `lib/site-config.ts`: phone `(702) 500-1942`, email `DrDuffy@LetMeHelpYouRealtor.com`, GBP address; match visible copy + JSON-LD.
 2. **CTA density** — Every money page needs: phone `tel:`, contact path, and search or lead form above the fold or within one scroll.
-3. **Speed-to-lead** — Confirm `/api/leads/capture` tags include page source; FUB webhook `/api/webhooks/fub` healthy.
+3. **Speed-to-lead** — Confirm `/api/leads/capture` tags include page source; FUB webhook `/api/webhooks/fub` healthy; SMS inbound `/api/webhooks/sms` when enabled.
 4. **SEO / GSC** — 29 priority URLs in `lib/gsc-index-pages.ts`; canonical via `withPageCanonical` / `buildPageMetadata`; sitemap uses `www`.
 5. **Core Web Vitals** — No duplicate third-party scripts; RealScout loaded once; images lazy-loaded.
 6. **Content integrity** — June 2026 market stats from `lib/letmehelpyou-services.ts` / research JSON only; no fabricated review counts.
@@ -35,8 +35,10 @@ Load engagement widgets **once** from `EngagementLayer` — never add a second c
 For recurring passes, use:
 
 ```
-/loop 1d Audit LMHY engagement: CTAs, lead forms, GSC canonicals, FUB capture tags, and mobile sticky bar on key pages. Fix highest-impact gap only.
+/loop 1d Audit LMHY engagement: CTAs, lead forms, GSC canonicals, FUB capture tags, SMS webhook, and mobile sticky bar on key pages. Fix highest-impact gap only.
 ```
+
+Stack integrations (Notion, Twilio, AI advisor): see `lmhy-stack-loop.mdc`.
 
 Or dynamic mode after deploy:
 
