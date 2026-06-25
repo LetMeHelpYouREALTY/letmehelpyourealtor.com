@@ -4,6 +4,12 @@
   "devCommand": "npm run dev",
   "outputDirectory": ".next",
   "regions": ["iad1"],
+  "crons": [
+    {
+      "path": "/api/cron/stack-loop",
+      "schedule": "0 14 * * *"
+    }
+  ],
   "functions": {
     "app/**/*.tsx": {
       "maxDuration": 10

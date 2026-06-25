@@ -1,54 +1,53 @@
 import { NextRequest, NextResponse } from "next/server";
 import { adviseStackHealth } from "@/lib/ai/stack-advisor";
-import { buildNextPassPrompt } from "@/lib/loop/state";
+import { createLoopState } from "@/lib/loop/state";
+import { verifyCronSecret } from "@/lib/loop/verify-cron";
 import { getStackIntegrationStatus } from "@/lib/server-env";
 
 function buildHints(integrations: ReturnType<typeof getStackIntegrationStatus>) {
   return {
     notionLeads:
       !integrations.notionLeads && integrations.followUpBoss
-        ? "Add NOTION_LEADS_DATABASE_ID in Vercel. Run: node scripts/bootstrap-notion-leads.mjs"
+        ? "Run GET /api/cron/bootstrap-notion with CRON_SECRET, then add NOTION_LEADS_DATABASE_ID to Vercel."
         : undefined,
     turnstile: !integrations.turnstile
       ? "Add NEXT_PUBLIC_TURNSTILE_SITE_KEY + TURNSTILE_SECRET_KEY for form CAPTCHA."
       : undefined,
     smsWebhook:
       integrations.smsAutoReply && !integrations.twilioWebhook
-        ? "Set TWILIO_AUTH_TOKEN and point Twilio webhook to /api/webhooks/sms for signature validation."
+        ? "Set TWILIO_AUTH_TOKEN; point Twilio POST to /api/webhooks/sms"
         : undefined,
     smsAutoReply: !integrations.smsAutoReply
-      ? "Enable SMS_AUTO_REPLY_ENABLED with SMS_PHONE_NUMBER and SMS_AUTO_REPLY_MESSAGE; configure Twilio inbound webhook."
+      ? "Enable SMS_AUTO_REPLY_* and configure Twilio inbound webhook."
       : undefined,
   };
 }
 
-/** Public-safe integration checklist (no secret values). */
+/**
+ * Daily outer loop (Boris Cherny / loop engineering pattern):
+ * discover gaps → Claude advisor → durable next-pass prompt for agents.
+ */
 export async function GET(request: NextRequest) {
+  if (!verifyCronSecret(request)) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
   const integrations = getStackIntegrationStatus();
   const active = Object.values(integrations).filter(Boolean).length;
   const total = Object.keys(integrations).length;
   const hints = buildHints(integrations);
+  const advisor = await adviseStackHealth(integrations, hints);
 
-  const advise = request.nextUrl.searchParams.get("advise") === "1";
-  const advisor = advise ? await adviseStackHealth(integrations, hints) : undefined;
+  const state = createLoopState({
+    integrations,
+    summary: `${active}/${total} integrations configured`,
+    advisor,
+  });
 
   return NextResponse.json({
     ok: integrations.followUpBoss,
-    site: "letmehelpyourealtor.com",
-    integrations,
-    summary: `${active}/${total} integrations configured`,
-    hints,
-    advisor,
-    loopState: advisor
-      ? {
-          nextPassPrompt: buildNextPassPrompt(advisor),
-          cursorCommand: `/loop 1d ${buildNextPassPrompt(advisor)}`,
-        }
-      : undefined,
-    endpoints: {
-      smsWebhook: "/api/webhooks/sms",
-      fubWebhook: "/api/webhooks/fub",
-      leadCapture: "/api/leads/capture",
-    },
+    loop: "lmhy-stack",
+    state,
+    cursorLoop: `/loop 1d ${state.nextPassPrompt}`,
   });
 }

@@ -1,51 +1,52 @@
 ---
-description: Daily stack health loop — FUB, Notion, SMS TCPA, AI failover, Vercel integrations
-globs: "lib/server-env.ts,lib/sms/**/*.ts,app/api/**/*.ts,.env.stack.example"
+description: Daily stack health loop — FUB, Notion, SMS TCPA, AI advisor, Boris Cherny /loop patterns
+globs: "lib/server-env.ts,lib/sms/**/*.ts,lib/loop/**/*.ts,app/api/**/*.ts,.env.stack.example,docs/LOOP-STATE.md"
 alwaysApply: false
 ---
 
 # LMHY Stack Health Loop
 
-Recurring pass for **integration wiring** on letmehelpyourealtor.com. Complements `lmhy-engagement-loop.mdc` (conversion/SEO).
+Recurring **outer loop** for integration wiring. Complements `lmhy-engagement-loop.mdc`.
+
+> "I don't prompt Claude anymore. I write loops." — [Boris Cherny](https://x.com/bcherny/status/2038454341884154269)
 
 ## Stack endpoints
 
-| Check | URL / action |
-|-------|----------------|
-| Integration status | `GET /api/health/stack` |
-| Claude advisor | `GET /api/health/stack?advise=1` |
-| SMS webhook | `GET /api/webhooks/sms` (config) · `POST` Twilio inbound |
+| Check | URL |
+|-------|-----|
+| Health + advisor | `GET /api/health/stack?advise=1` |
+| Cron outer loop | `GET /api/cron/stack-loop` (Bearer `CRON_SECRET`) |
+| Notion bootstrap | `GET /api/cron/bootstrap-notion` (Bearer `CRON_SECRET`) |
+| SMS webhook | `POST /api/webhooks/sms` |
 | Lead capture | `POST /api/leads/capture` |
-| FUB webhook | `POST /api/webhooks/fub` |
 
-## Each stack pass (priority order)
+## Boris Cherny-style `/loop` commands
 
-1. **FUB** — `followUpBoss: true`; test capture tags include page source.
-2. **Notion** — `notionLeads: true`; if false run `node scripts/bootstrap-notion-leads.mjs` and add `NOTION_LEADS_DATABASE_ID` in Vercel.
-3. **SMS / TCPA** — `smsAutoReply` + `twilioWebhook`; webhook `https://www.letmehelpyourealtor.com/api/webhooks/sms`; STOP/HELP honored; auto-reply includes opt-out language.
-4. **AI** — At least one of `aiGateway`, `openRouter`, or `anthropic` for chat + advisor.
-5. **Turnstile** — Form CAPTCHA when keys present.
-6. **GA4 + Cloudinary** — Public IDs set; no duplicate scripts.
-
-## Cursor loop
-
-```
-/loop 1d LMHY stack health: GET /api/health/stack?advise=1 on production www; fix highest-priority gap from advisor.actions (Notion DB, Twilio webhook, Turnstile, or FUB tags). One focused fix per pass.
+```text
+/loop 1d LMHY stack: GET https://www.letmehelpyourealtor.com/api/health/stack?advise=1; implement top advisor.actions[0] only; verify successCriteria.
 ```
 
-Dynamic after deploy:
-
-```
-/loop Watch Vercel production deploy then curl /api/health/stack?advise=1 and /api/webhooks/sms; confirm integrations count increased.
+```text
+/loop 6h LMHY GSC: audit lib/gsc-index-pages.ts canonicals on www; fix one GSC error class per pass.
 ```
 
-## SMS provider setup (Twilio)
+```text
+/loop 1d LMHY engagement: homepage + /contact CTAs, LeadCaptureForm, AIChatWidget, MobileStickyCTA — one gap per pass.
+```
 
-1. Messaging Service → inbound webhook: `POST https://www.letmehelpyourealtor.com/api/webhooks/sms`
-2. Vercel env: `TWILIO_AUTH_TOKEN`, `SMS_AUTO_REPLY_ENABLED=true`, `SMS_PHONE_NUMBER`, `SMS_AUTO_REPLY_MESSAGE`
-3. Enable Advanced Opt-Out on Messaging Service (carrier-level STOP)
-4. First auto-reply template must identify Dr. Jan Duffy / LMHY; code appends STOP/HELP footer if missing
+## Each stack pass
 
-## Advisor output
+1. **Discover** — health + advisor JSON
+2. **One fix** — smallest effort that unblocks leads (Karpathy discipline)
+3. **Checker** — re-run health; type-check if code changed
+4. **State** — update `docs/LOOP-STATE.md` when priority shifts
 
-When `?advise=1`, Claude (via AI Gateway failover) returns JSON `actions[]` — implement **one** `effort: "S"` item per loop unless user requests more.
+## Priority order
+
+1. FUB (`followUpBoss`)
+2. Notion (`notionLeads` + valid `NOTION_TOKEN`)
+3. Twilio signature when `smsAutoReply` is on
+4. Turnstile
+5. Engagement / GSC loops
+
+Skill: `.cursor/skills/lmhy-stack-loop/SKILL.md`

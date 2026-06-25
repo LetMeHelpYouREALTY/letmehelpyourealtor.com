@@ -1,0 +1,27 @@
+---
+description: Karpathy agent discipline — verify assumptions, minimal diffs, explicit success criteria
+globs: "**/*.{ts,tsx,md,mdc}"
+alwaysApply: true
+---
+
+# Karpathy Agent Discipline (LMHY)
+
+Adapted from [Andrej Karpathy's agentic coding principles](https://github.com/forrestchang/andrej-karpathy-skills) and vibe → agentic engineering shift.
+
+## Before acting
+
+1. **No silent assumptions** — If NAP, env vars, GBP data, or provider config is unclear, verify in `lib/site-config.ts` / Vercel / `/api/health/stack` first.
+2. **State the tradeoff** — When multiple fixes exist, pick one and say why (scope, risk, lead impact).
+3. **Success criteria** — Every change needs a falsifiable check (endpoint, GSC URL, FUB tag, Notion row).
+
+## While coding
+
+4. **Minimal diff** — Smallest change that solves the root problem; no drive-by refactors.
+5. **No hypertrophy** — No extra abstractions for one-off logic; match existing patterns in `lib/` and `app/api/`.
+6. **Verify, don't vibe** — Run `pnpm run type-check` or hit the relevant route; do not ship unreviewed AI output on IDX/compliance paths.
+
+## Real estate specifics
+
+- Agent is **Dr. Jan Duffy** (never Janet); phone `(702) 500-1942`.
+- Do not edit `/components/idx/*` without explicit approval.
+- SMS/TCPA: honor STOP/HELP; log opt-outs to FUB tag `sms-opt-out`.
