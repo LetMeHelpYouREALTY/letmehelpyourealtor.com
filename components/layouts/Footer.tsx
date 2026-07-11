@@ -27,6 +27,8 @@ export default function Footer() {
               {[
                 { href: "/services", label: "All Services" },
                 { href: "/neighborhoods", label: "Neighborhoods" },
+                { href: "/new-construction", label: "New Construction" },
+                { href: "/market-insights", label: "Market Insights" },
                 { href: "/market-report", label: "Market Report" },
                 { href: "/home-valuation", label: "Free Home Valuation" },
                 { href: "/about", label: "About Dr. Jan" },

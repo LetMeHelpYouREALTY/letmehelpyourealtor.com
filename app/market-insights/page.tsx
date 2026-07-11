@@ -16,33 +16,63 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import { withPageCanonical } from "@/lib/page-metadata";
+import SchemaScript from "@/components/SchemaScript";
+import {
+  combineSchemas,
+  generateBreadcrumbSchema,
+  generateWebPageSchema,
+} from "@/lib/schema";
+import { absoluteUrl } from "@/lib/site-url";
+
+const PAGE_PATH = "/market-insights";
+const PAGE_TITLE =
+  "Las Vegas Real Estate Market Insights 2026 | Let Me Help You REALTOR®";
+const PAGE_DESCRIPTION =
+  "Macro market insights for Las Vegas real estate in 2026—tech corridors, California migration, and job growth—from Let Me Help You REALTOR® Dr. Jan Duffy. Distinct from our monthly market report and weekly update.";
 
 const pageMetadata: Metadata = {
-  title: "Las Vegas Real Estate Market Insights 2026 | Berkshire Hathaway HomeServices",
-  description:
-    "Technology trends, economic forecasts, and market analysis shaping Las Vegas real estate in 2026. AI, data centers, California migration, and what it means for buyers and sellers. Call (702) 500-1942.",
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
   keywords: [
+    "Let Me Help You Las Vegas market insights",
     "Las Vegas real estate trends 2026",
-    "Las Vegas market forecast",
-    "Nevada economic outlook",
-    "California to Las Vegas migration",
-    "Las Vegas tech hub",
-    "Berkshire Hathaway market insights",
+    "Las Vegas tech corridor housing",
+    "California to Las Vegas migration housing",
+    "Nevada economic outlook real estate",
+    "Clark County long-term housing drivers",
   ],
 };
 
-export const metadata = withPageCanonical(pageMetadata, "/market-insights");
+export const metadata = withPageCanonical(pageMetadata, PAGE_PATH);
+
+const pageSchemas = combineSchemas(
+  generateBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "Market Insights", url: PAGE_PATH },
+  ]),
+  generateWebPageSchema({
+    name: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    url: absoluteUrl(PAGE_PATH),
+    datePublished: "2026-01-23",
+    dateModified: "2026-07-11",
+  }),
+);
 
 const reportSchema = {
   "@context": "https://schema.org",
   "@type": "Report",
-  name: "Las Vegas Real Estate Market Insights 2026",
+  "@id": `${absoluteUrl(PAGE_PATH)}#report`,
+  name: "Las Vegas Real Estate Market Insights 2026 — Let Me Help You REALTOR®",
+  url: absoluteUrl(PAGE_PATH),
   author: {
     "@type": "RealEstateAgent",
     name: "Dr. Jan Duffy",
+    url: absoluteUrl("/about"),
     worksFor: "Berkshire Hathaway HomeServices Nevada Properties",
   },
   datePublished: "2026-01-23",
+  dateModified: "2026-07-11",
   about: {
     "@type": "Place",
     name: "Las Vegas, Nevada",
@@ -52,6 +82,7 @@ const reportSchema = {
 export default function MarketInsightsPage() {
   return (
     <>
+      <SchemaScript schema={pageSchemas} id="market-insights-webpage-schema" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(reportSchema) }}
@@ -61,7 +92,7 @@ export default function MarketInsightsPage() {
         <div className="lmhy-container">
           {/* Breadcrumb */}
           <div className="max-w-6xl mx-auto mb-6">
-            <nav className="text-sm text-lmhy-charcoal/60">
+            <nav className="text-sm text-lmhy-charcoal/60" aria-label="Breadcrumb">
               <Link href="/" className="hover:text-lmhy-coral">Home</Link>
               {" / "}
               <span className="text-lmhy-charcoal">Market Insights</span>
@@ -72,14 +103,25 @@ export default function MarketInsightsPage() {
           <div className="max-w-4xl mx-auto text-center mb-16">
             <div className="inline-flex items-center bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
               <TrendingUp className="h-4 w-4 mr-2" />
-              2026 Economic & Real Estate Analysis
+              Let Me Help You · 2026 Macro Drivers
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-lmhy-charcoal mb-6">
-              Las Vegas Market Insights
+              Las Vegas Market Insights: Forces Behind the Numbers
             </h1>
-            <p className="text-xl text-lmhy-charcoal/70">
-              Technology trends, economic forces, and market dynamics shaping Las Vegas
-              real estate in 2026 and beyond.
+            <p className="text-xl text-lmhy-charcoal/70 mb-6">
+              Technology corridors, California migration, and job growth—the long-horizon
+              drivers Let Me Help You REALTOR® uses when advising Clark County buyers and sellers.
+            </p>
+            <p className="text-sm text-lmhy-charcoal/60 max-w-2xl mx-auto">
+              Looking for current pricing stats? See the{" "}
+              <Link href="/market-report" className="text-lmhy-coral hover:underline">
+                monthly market report
+              </Link>{" "}
+              or the{" "}
+              <Link href="/market-update" className="text-lmhy-coral hover:underline">
+                latest market update
+              </Link>
+              . This page covers macro forces, not month-to-month medians.
             </p>
           </div>
 
@@ -419,8 +461,35 @@ export default function MarketInsightsPage() {
                 themselves for where the market is going, not just where it's been."
               </blockquote>
               <cite className="text-white/70 font-semibold">
-                — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
+                — Dr. Jan Duffy, Let Me Help You REALTOR® · Berkshire Hathaway HomeServices Nevada Properties
               </cite>
+            </div>
+          </section>
+
+          {/* Related market pages — distinct intent for GSC canonical clarity */}
+          <section className="mb-16 max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold text-lmhy-charcoal mb-4 text-center">
+              Related Let Me Help You market pages
+            </h2>
+            <div className="grid md:grid-cols-2 gap-4 text-sm">
+              <Link
+                href="/market-report"
+                className="block rounded-xl border border-lmhy-sand/60 bg-lmhy-sand/10 p-5 no-underline hover:border-lmhy-coral"
+              >
+                <span className="font-semibold text-lmhy-charcoal">Monthly Market Report</span>
+                <p className="text-lmhy-charcoal/70 mt-1 mb-0">
+                  Medians, inventory, and neighborhood pricing snapshots for the current month.
+                </p>
+              </Link>
+              <Link
+                href="/market-update"
+                className="block rounded-xl border border-lmhy-sand/60 bg-lmhy-sand/10 p-5 no-underline hover:border-lmhy-coral"
+              >
+                <span className="font-semibold text-lmhy-charcoal">Market Update</span>
+                <p className="text-lmhy-charcoal/70 mt-1 mb-0">
+                  Short-cycle buyer/seller takeaways and what changed since the last briefing.
+                </p>
+              </Link>
             </div>
           </section>
 
@@ -450,7 +519,7 @@ export default function MarketInsightsPage() {
             </div>
           </section>
         </div>
-        <div className="text-center text-sm text-lmhy-charcoal/60 mt-8">Last Updated: January 2026</div>
+        <div className="text-center text-sm text-lmhy-charcoal/60 mt-8">Last Updated: July 2026</div>
       </main>
       <RealScoutListings />
       <Footer />
