@@ -27,6 +27,7 @@ export default function Footer() {
               {[
                 { href: "/services", label: "All Services" },
                 { href: "/neighborhoods", label: "Neighborhoods" },
+                { href: "/buyers/california-relocator", label: "CA → Las Vegas" },
                 { href: "/new-construction", label: "New Construction" },
                 { href: "/market-insights", label: "Market Insights" },
                 { href: "/market-report", label: "Market Report" },
