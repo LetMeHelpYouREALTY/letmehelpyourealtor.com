@@ -8,6 +8,7 @@ import { serverEnv } from "@/lib/server-env";
 import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
 import dynamic from "next/dynamic";
+import GlobalHeroBanner from "@/components/layout/GlobalHeroBanner";
 
 const GoogleAnalytics = dynamic(
   () => import("@/components/analytics/GoogleAnalytics"),
@@ -73,6 +74,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         `}</Script>
       </head>
       <body className="font-sans pb-16 md:pb-0">
+        <GlobalHeroBanner />
         {children}
         <EngagementLayer />
         {serverEnv.gaMeasurementId ? (
