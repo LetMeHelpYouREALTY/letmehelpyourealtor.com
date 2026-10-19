@@ -19,23 +19,49 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import { withPageCanonical } from "@/lib/page-metadata";
+import SchemaScript from "@/components/SchemaScript";
+import {
+  combineSchemas,
+  generateBreadcrumbSchema,
+  generateWebPageSchema,
+} from "@/lib/schema";
+import { absoluteUrl } from "@/lib/site-url";
+
+const PAGE_PATH = "/new-construction";
+const PAGE_TITLE =
+  "New Construction Homes Las Vegas | Let Me Help You REALTOR® Buyer Guide";
+const PAGE_DESCRIPTION =
+  "Free buyer representation on new construction in Las Vegas, Henderson, and Summerlin. Let Me Help You REALTOR® Dr. Jan Duffy reviews builder contracts, negotiates upgrades, and locks incentives before you register at the model home.";
 
 const pageMetadata: Metadata = {
-  title: "Berkshire Hathaway HomeServices New Construction Las Vegas | Buyer's Guide",
-  description:
-    "Free buyer representation on new construction homes in Las Vegas. Dr. Jan Duffy helps you navigate builder contracts, negotiate upgrades, and secure incentives. Call (702) 500-1942.",
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
   keywords: [
-    "Berkshire Hathaway HomeServices new construction Las Vegas",
-    "new homes Las Vegas",
+    "Let Me Help You new construction Las Vegas",
+    "new homes Las Vegas buyer agent",
     "new construction Henderson",
-    "Las Vegas builders",
-    "Toll Brothers Las Vegas",
-    "Lennar Las Vegas",
-    "KB Home Las Vegas",
+    "Las Vegas builders buyer representation",
+    "Toll Brothers Las Vegas agent",
+    "Lennar Las Vegas buyer guide",
+    "KB Home Las Vegas representation",
   ],
 };
 
-export const metadata = withPageCanonical(pageMetadata, "/new-construction");
+export const metadata = withPageCanonical(pageMetadata, PAGE_PATH);
+
+const pageSchemas = combineSchemas(
+  generateBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "Services", url: "/services" },
+    { name: "New Construction", url: PAGE_PATH },
+  ]),
+  generateWebPageSchema({
+    name: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    url: absoluteUrl(PAGE_PATH),
+    dateModified: "2026-07-11",
+  }),
+);
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -234,6 +260,7 @@ const builders = [
 export default function NewConstructionPage() {
   return (
     <>
+      <SchemaScript schema={pageSchemas} id="new-construction-webpage-schema" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -243,7 +270,7 @@ export default function NewConstructionPage() {
         <div className="lmhy-container">
           {/* Breadcrumb */}
           <div className="max-w-6xl mx-auto mb-6">
-            <nav className="text-sm text-lmhy-charcoal/60">
+            <nav className="text-sm text-lmhy-charcoal/60" aria-label="Breadcrumb">
               <Link href="/" className="hover:text-lmhy-coral">Home</Link>
               {" / "}
               <Link href="/services" className="hover:text-lmhy-coral">Services</Link>
@@ -255,14 +282,15 @@ export default function NewConstructionPage() {
           {/* Hero */}
           <div className="max-w-4xl mx-auto text-center mb-16">
             <div className="inline-block bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              Free Buyer Representation
+              Let Me Help You · Free Buyer Representation
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-lmhy-charcoal mb-6">
-              Berkshire Hathaway HomeServices New Construction Las Vegas
+              New Construction Buyer Guide for Las Vegas
             </h1>
             <p className="text-xl text-lmhy-charcoal/70 mb-8">
-              Your complete buyer's guide to new homes in Las Vegas. Free representation,
-              expert contract review, and insider knowledge of builder incentives.
+              Let Me Help You REALTOR® walks Clark County buyers through builder contracts,
+              upgrade credits, and first-visit registration—so you keep free representation
+              and negotiate from day one.
             </p>
             <div className="bg-amber-50 border border-amber-200 rounded-xl p-6 text-left max-w-2xl mx-auto">
               <div className="flex items-start">

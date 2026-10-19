@@ -4,13 +4,9 @@ import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import {
   Phone,
-  DollarSign,
   Sun,
-  Home as HomeIcon,
   Briefcase,
   Plane,
-  GraduationCap,
-  Heart,
   Calculator,
   MapPin,
   CheckCircle,
@@ -18,22 +14,51 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import { withPageCanonical } from "@/lib/page-metadata";
+import SchemaScript from "@/components/SchemaScript";
+import {
+  combineSchemas,
+  generateBreadcrumbSchema,
+  generateWebPageSchema,
+} from "@/lib/schema";
+import { absoluteUrl } from "@/lib/site-url";
+import { agentInfo, officeInfo } from "@/lib/site-config";
+
+const PAGE_PATH = "/buyers/california-relocator";
+const PAGE_TITLE =
+  "California to Las Vegas Relocation Guide | Let Me Help You REALTOR®";
+const PAGE_DESCRIPTION =
+  "California-to-Las Vegas buyer guide from Let Me Help You REALTOR® Dr. Jan Duffy: equity stretch math, CA metro → Clark County neighborhood matches, residency steps, and remote-work logistics. Call (702) 500-1942.";
 
 const pageMetadata: Metadata = {
-  title: "Relocating from California to Las Vegas | Berkshire Hathaway HomeServices",
-  description:
-    "Moving from California to Las Vegas? Zero state income tax, 40-60% lower home prices, same sunshine. Dr. Jan Duffy helps CA relocators find their perfect Las Vegas home. Call (702) 500-1942.",
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
   keywords: [
-    "California to Las Vegas relocation",
-    "moving from California to Nevada",
-    "California relocator Las Vegas",
-    "no state income tax Nevada",
-    "Las Vegas homes California buyers",
-    "Berkshire Hathaway HomeServices relocation",
+    "California to Las Vegas relocation realtor",
+    "Let Me Help You California relocator",
+    "moving from California to Nevada homes",
+    "Bay Area to Summerlin home buyer",
+    "Orange County to Las Vegas relocation",
+    "San Diego to Henderson homes",
+    "Nevada no state income tax relocation",
   ],
 };
 
-export const metadata = withPageCanonical(pageMetadata, "/buyers/california-relocator");
+export const metadata = withPageCanonical(pageMetadata, PAGE_PATH);
+
+const pageSchemas = combineSchemas(
+  generateBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "Buyers", url: "/buyers" },
+    { name: "California Relocator", url: PAGE_PATH },
+  ]),
+  generateWebPageSchema({
+    name: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    url: absoluteUrl(PAGE_PATH),
+    datePublished: "2024-01-13",
+    dateModified: "2026-07-11",
+  }),
+);
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -79,29 +104,70 @@ const faqSchema = {
         text: "Yes, Las Vegas has extensive flight options to California. Southwest, United, and other carriers offer dozens of daily flights to LAX, SFO, SAN, and other California airports. Flight times are typically 1-1.5 hours.",
       },
     },
+    {
+      "@type": "Question",
+      name: "What about schools compared to California?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Compare specific campuses—not statewide averages. Ask for current district data for the Summerlin and Henderson addresses on your shortlist; many California families also evaluate nearby charter and private options. Dr. Jan Duffy shares school-boundary maps with every neighborhood tour packet.",
+      },
+    },
   ],
 };
 
 const realEstateAgentSchema = {
   "@context": "https://schema.org",
   "@type": "RealEstateAgent",
-  name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
-  telephone: "+17025001942",
-  url: "https://www.letmehelpyourealtor.com/buyers/california-relocator",
+  "@id": `${absoluteUrl("/about")}#agent`,
+  name: agentInfo.name,
+  telephone: agentInfo.phoneTel.replace("tel:", ""),
+  url: absoluteUrl(PAGE_PATH),
   address: {
     "@type": "PostalAddress",
-    streetAddress: "9406 W Lake Mead Blvd, Suite 100",
-    addressLocality: "Las Vegas",
-    addressRegion: "NV",
-    postalCode: "89134",
+    streetAddress: officeInfo.address.street,
+    addressLocality: officeInfo.address.city,
+    addressRegion: officeInfo.address.state,
+    postalCode: officeInfo.address.zip,
   },
   areaServed: ["Las Vegas", "Henderson", "Summerlin", "North Las Vegas"],
   priceRange: "$350,000 - $10,000,000+",
 };
 
+const caMetroMatches = [
+  {
+    from: "Bay Area / Silicon Valley",
+    to: "Summerlin & Henderson tech corridor",
+    detail:
+      "Keep Bay Area remote pay, cut state income tax to 0%, and trade a 1,600 sq ft condo for a 2,800+ sq ft home near Red Rock and the I-215 employment belt.",
+    href: "/neighborhoods/summerlin",
+  },
+  {
+    from: "Orange County / Irvine",
+    to: "Summerlin master-planned villages",
+    detail:
+      "Irvine-style amenities without OC pricing: parks, trails, Downtown Summerlin retail, and commute options toward the Strip and Summerlin Hospital corridor.",
+    href: "/neighborhoods/summerlin",
+  },
+  {
+    from: "San Diego County",
+    to: "Henderson / Inspirada / Green Valley",
+    detail:
+      "Family floor plans, newer inventory, and Henderson’s data-center employment base—plus 1–1.5 hour flights back to SAN when you need them.",
+    href: "/neighborhoods/henderson",
+  },
+  {
+    from: "LA / Westside / South Bay",
+    to: "The Ridges, MacDonald Highlands, Southern Highlands",
+    detail:
+      "Stretch Westside equity into guard-gated or golf-course living with Strip or mountain views—and still pocket cash for reserves or a second property.",
+    href: "/neighborhoods/the-ridges",
+  },
+];
+
 export default function CaliforniaRelocatorPage() {
   return (
     <>
+      <SchemaScript schema={pageSchemas} id="california-relocator-webpage-schema" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -115,7 +181,7 @@ export default function CaliforniaRelocatorPage() {
         <div className="lmhy-container">
           {/* Breadcrumb */}
           <div className="max-w-6xl mx-auto mb-6">
-            <nav className="text-sm text-lmhy-charcoal/60">
+            <nav className="text-sm text-lmhy-charcoal/60" aria-label="Breadcrumb">
               <Link href="/" className="hover:text-lmhy-coral">Home</Link>
               {" / "}
               <Link href="/buyers" className="hover:text-lmhy-coral">Buyers</Link>
@@ -128,14 +194,21 @@ export default function CaliforniaRelocatorPage() {
           <div className="max-w-4xl mx-auto text-center mb-16">
             <div className="inline-flex items-center bg-amber-100 text-amber-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
               <Sun className="h-4 w-4 mr-2" />
-              37% of Las Vegas Buyers Are From California
+              Let Me Help You · California Buyer Desk
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-lmhy-charcoal mb-6">
-              Relocating from California?<br />
-              <span className="text-lmhy-coral">Welcome Home to Las Vegas</span>
+              California to Las Vegas Relocation Guide
             </h1>
-            <p className="text-xl md:text-2xl text-lmhy-charcoal/70 mb-8">
-              Zero state income tax. 40-60% lower home prices. Same sunshine.
+            <p className="text-xl md:text-2xl text-lmhy-charcoal/70 mb-4">
+              Zero state income tax. 40–60% more home for the equity. Same sunshine—
+              with a Let Me Help You REALTOR® who coordinates the CA sale and NV purchase.
+            </p>
+            <p className="text-sm text-lmhy-charcoal/60 mb-8 max-w-2xl mx-auto">
+              This page is for California-origin buyers. For general out-of-state moves, see our{" "}
+              <Link href="/relocation" className="text-lmhy-coral hover:underline">
+                Las Vegas relocation services
+              </Link>
+              .
             </p>
             <a
               href="tel:+17025001942"
@@ -225,6 +298,37 @@ export default function CaliforniaRelocatorPage() {
             </div>
           </section>
 
+          {/* CA metro → LV match — unique indexable content */}
+          <section className="mb-16 max-w-5xl mx-auto">
+            <h2 className="text-3xl font-bold text-lmhy-charcoal mb-4 text-center">
+              California Metro → Las Vegas Neighborhood Match
+            </h2>
+            <p className="text-center text-lmhy-charcoal/70 mb-8 max-w-3xl mx-auto">
+              Let Me Help You REALTOR® maps where you are coming from—not just a generic
+              “move to Vegas” brief. Use this as a starting shortlist before your first tour day.
+            </p>
+            <div className="grid md:grid-cols-2 gap-5">
+              {caMetroMatches.map((match) => (
+                <div
+                  key={match.from}
+                  className="rounded-xl border border-lmhy-sand/60 bg-white p-6"
+                >
+                  <p className="text-xs font-semibold uppercase tracking-wide text-lmhy-coral mb-2">
+                    From {match.from}
+                  </p>
+                  <h3 className="font-bold text-lg text-lmhy-charcoal mb-2">{match.to}</h3>
+                  <p className="text-lmhy-charcoal/70 text-sm mb-4">{match.detail}</p>
+                  <Link
+                    href={match.href}
+                    className="text-lmhy-coral font-semibold text-sm hover:text-lmhy-coral-dark"
+                  >
+                    View neighborhood guide →
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </section>
+
           {/* Top Neighborhoods for CA Relocators */}
           <section className="mb-16 max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold text-lmhy-charcoal mb-8 text-center">
@@ -238,8 +342,9 @@ export default function CaliforniaRelocatorPage() {
                 </div>
                 <div className="p-6">
                   <p className="text-lmhy-charcoal/70 mb-4">
-                    "The Irvine of Las Vegas" - Master-planned perfection with top schools,
-                    Downtown Summerlin shopping, and Red Rock Canyon views.
+                    "The Irvine of Las Vegas" — master-planned villages with Downtown Summerlin
+                    shopping, Red Rock Canyon access, and short drives to employment centers along
+                    the 215.
                   </p>
                   <div className="text-sm text-lmhy-charcoal/60 mb-4">
                     <strong>Best for:</strong> Families from Orange County, coastal CA
@@ -247,7 +352,7 @@ export default function CaliforniaRelocatorPage() {
                   <ul className="text-sm space-y-1 text-lmhy-charcoal/80">
                     <li className="flex items-center">
                       <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      Top-rated schools
+                      CCSD / charter options nearby
                     </li>
                     <li className="flex items-center">
                       <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
@@ -274,8 +379,9 @@ export default function CaliforniaRelocatorPage() {
                 </div>
                 <div className="p-6">
                   <p className="text-lmhy-charcoal/70 mb-4">
-                    Henderson = San Diego suburbs meets tech corridor. Google's data center,
-                    top schools, and "America's Safest City" accolades.
+                    Henderson = San Diego-suburb floor plans plus a growing tech corridor. Google’s
+                    data center campus, newer inventory in Inspirada, and ~20–30 minute drives to
+                    the airport and Strip employment.
                   </p>
                   <div className="text-sm text-lmhy-charcoal/60 mb-4">
                     <strong>Best for:</strong> Tech workers, young families, San Diego relocators
@@ -287,7 +393,7 @@ export default function CaliforniaRelocatorPage() {
                     </li>
                     <li className="flex items-center">
                       <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      Lowest crime rates
+                      Newer master-planned inventory
                     </li>
                     <li className="flex items-center">
                       <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
@@ -339,6 +445,53 @@ export default function CaliforniaRelocatorPage() {
                 </div>
               </div>
             </div>
+          </section>
+
+          {/* 5-step CA → NV process */}
+          <section className="mb-16 max-w-5xl mx-auto">
+            <h2 className="text-3xl font-bold text-lmhy-charcoal mb-4 text-center">
+              How Let Me Help You Runs a California → Nevada Move
+            </h2>
+            <p className="text-center text-lmhy-charcoal/70 mb-8 max-w-3xl mx-auto">
+              Most CA buyers need a coordinated sale and purchase—not just a Vegas listing tour.
+            </p>
+            <ol className="space-y-4">
+              {[
+                {
+                  title: "Equity & payment briefing",
+                  text: "We model what your California sale proceeds buy in Summerlin, Henderson, and luxury pockets—including HOA, insurance, and Nevada property-tax ranges.",
+                },
+                {
+                  title: "Metro-matched shortlist",
+                  text: "Bay Area, OC, San Diego, or LA origins get different first-tour maps. You get 6–10 addresses before you book flights.",
+                },
+                {
+                  title: "BHHS California handoff",
+                  text: "Berkshire Hathaway’s California network helps list or close your current home while we lock Nevada inventory and builder registration if needed.",
+                },
+                {
+                  title: "Tour + remote offer desk",
+                  text: "Two-day tour blocks or video walkthroughs; we write offers with CA timeline contingencies so you are not forced into a bridge-loan surprise.",
+                },
+                {
+                  title: "Residency checklist",
+                  text: "After closing: DMV, vehicle registration, voter registration, and utility setup so Nevada residency is documented for tax purposes.",
+                },
+              ].map((step, i) => (
+                <li
+                  key={step.title}
+                  className="flex gap-4 rounded-xl border border-lmhy-sand/60 bg-lmhy-sand/10 p-5"
+                >
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-lmhy-coral text-white font-bold text-sm">
+                    {i + 1}
+                  </span>
+                  <div>
+                    <h3 className="font-bold text-lmhy-charcoal mb-1">{step.title}</h3>
+                    <p className="text-sm text-lmhy-charcoal/70 mb-0">{step.text}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
           </section>
 
           {/* Remote Work Lifestyle */}
@@ -436,10 +589,10 @@ export default function CaliforniaRelocatorPage() {
                   What about schools compared to California?
                 </h3>
                 <p className="text-lmhy-charcoal/70">
-                  Nevada public schools overall rank lower than California's, but individual schools
-                  in Summerlin and Henderson rate highly. Many California families choose areas with
-                  top-rated schools or consider private options. Dr. Jan provides school-specific
-                  guidance for every neighborhood.
+                  Compare specific campuses—not statewide averages. Ask for current GreatSchools
+                  or district data for the Summerlin and Henderson addresses on your shortlist;
+                  many California families also evaluate nearby charter and private options.
+                  Dr. Jan shares school-boundary maps with every neighborhood tour packet.
                 </p>
               </div>
             </div>
@@ -452,12 +605,11 @@ export default function CaliforniaRelocatorPage() {
                 "I've helped hundreds of California families make the move to Las Vegas. The most
                 common reaction? 'Why didn't we do this sooner?' Between the tax savings, the space,
                 and the lifestyle, most clients can't believe what their California equity buys here.
-                As a <strong>Berkshire Hathaway HomeServices</strong> agent, I coordinate with our
-                California offices to make the transition seamless—you don't have to figure this
-                out alone."
+                As a <strong>Let Me Help You REALTOR®</strong> with Berkshire Hathaway HomeServices,
+                I coordinate with California offices so the sale and purchase stay on one timeline."
               </blockquote>
               <cite className="text-lmhy-charcoal font-semibold">
-                — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
+                — Dr. Jan Duffy, Let Me Help You REALTOR® · Berkshire Hathaway HomeServices Nevada Properties
               </cite>
             </div>
           </section>
@@ -468,8 +620,8 @@ export default function CaliforniaRelocatorPage() {
               Ready to Start Your Tax-Free Life?
             </h2>
             <p className="text-xl text-white/85 mb-8">
-              Get a personalized relocation consultation with Dr. Jan Duffy. She'll show you exactly
-              what your California equity buys in Las Vegas and help you find the perfect neighborhood.
+              Get a personalized California relocation consultation with Dr. Jan Duffy. She'll show
+              you exactly what your California equity buys in Las Vegas and map the right first-tour day.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -487,11 +639,11 @@ export default function CaliforniaRelocatorPage() {
               </Link>
             </div>
             <p className="mt-6 text-white/70 text-sm">
-              Berkshire Hathaway HomeServices Nevada Properties
+              Let Me Help You REALTOR® · Berkshire Hathaway HomeServices Nevada Properties
             </p>
           </section>
         </div>
-        <div className="text-center text-sm text-lmhy-charcoal/60 mt-8">Last Updated: January 2026</div>
+        <div className="text-center text-sm text-lmhy-charcoal/60 mt-8">Last Updated: July 2026</div>
       </main>
       <RealScoutListings />
       <Footer />
