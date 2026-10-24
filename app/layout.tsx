@@ -54,12 +54,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${libreBaskerville.variable} ${dmSans.variable}`}>
       <head>
+        {/* RealScout's embed code loads every widget from this one module,
+            replacing the per-widget simple-search.js / office-listings.js
+            URLs that were here before. */}
         <Script
-          src="https://em.realscout.com/widgets/simple-search.js"
-          strategy="afterInteractive"
-        />
-        <Script
-          src="https://em.realscout.com/widgets/office-listings.js"
+          id="realscout-web-components"
+          type="module"
+          src="https://em.realscout.com/widgets/realscout-web-components.umd.js"
           strategy="afterInteractive"
         />
         <Script id="widget-tracker" strategy="afterInteractive">{`
