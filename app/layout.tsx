@@ -7,17 +7,8 @@ import { siteConfig, agentInfo } from "@/lib/site-config";
 import { serverEnv } from "@/lib/server-env";
 import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
-import dynamic from "next/dynamic";
-
-const GoogleAnalytics = dynamic(
-  () => import("@/components/analytics/GoogleAnalytics"),
-  { ssr: false },
-);
-
-const EngagementLayer = dynamic(
-  () => import("@/components/layouts/EngagementLayer"),
-  { ssr: false },
-);
+import GoogleAnalytics from "./GoogleAnalytics.client";
+import EngagementLayer from "./EngagementLayer.client";
 
 const libreBaskerville = Libre_Baskerville({
   subsets: ["latin"],
@@ -34,7 +25,7 @@ const dmSans = DM_Sans({
 });
 
 export async function generateMetadata(): Promise<Metadata> {
-  const domain = headers().get("x-domain") || "";
+  const domain = (await headers()).get("x-domain") || "";
   const config = getDomainConfig(domain);
   return {
     title: `${config.tagline} | ${agentInfo.name}, REALTOR®`,
