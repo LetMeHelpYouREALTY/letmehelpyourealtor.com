@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
 import Image from "next/image";
@@ -7,7 +8,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Property Details | Las Vegas & Henderson Real Estate",
-  description: "View detailed information about this property listing in Las Vegas or Henderson, NV.",
+  description:
+    "View detailed information about this property listing in Las Vegas or Henderson, NV.",
 };
 
 // This would typically fetch from RealScout API
@@ -45,13 +47,18 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
           <nav className="mb-6 text-sm">
             <ol className="flex items-center space-x-2 text-lmhy-charcoal/70">
               <li>
-                <a href="/" className="hover:text-lmhy-coral">
+                <Link href="/" className="hover:text-lmhy-coral">
                   Home
-                </a>
+                </Link>
               </li>
               <li>/</li>
               <li>
-                <a href="http://drjanduffy.realscout.com/" target="_blank" rel="noopener noreferrer" className="hover:text-lmhy-coral">
+                <a
+                  href="http://drjanduffy.realscout.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-lmhy-coral"
+                >
                   Properties
                 </a>
               </li>
@@ -69,7 +76,9 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
               <MapPin className="h-5 w-5 mr-2" />
               {property.location}
             </div>
-            <div className="text-3xl font-bold text-lmhy-coral">{property.price}</div>
+            <div className="text-3xl font-bold text-lmhy-coral">
+              {property.price}
+            </div>
           </div>
 
           {/* Main Image */}
@@ -87,19 +96,29 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {/* Main Content */}
             <div className="md:col-span-2">
-              <h2 className="text-2xl font-bold text-lmhy-charcoal mb-4">Property Details</h2>
-              <p className="text-lmhy-charcoal/80 mb-6">{property.description}</p>
+              <h2 className="text-2xl font-bold text-lmhy-charcoal mb-4">
+                Property Details
+              </h2>
+              <p className="text-lmhy-charcoal/80 mb-6">
+                {property.description}
+              </p>
 
               <div className="bg-lmhy-sand/20 rounded-lg p-6 mb-6">
-                <h3 className="text-xl font-bold text-lmhy-charcoal mb-4">Features</h3>
+                <h3 className="text-xl font-bold text-lmhy-charcoal mb-4">
+                  Features
+                </h3>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="flex items-center">
                     <Bed className="h-5 w-5 text-lmhy-coral mr-2" />
-                    <span className="text-lmhy-charcoal/80">{property.bedrooms} Bedrooms</span>
+                    <span className="text-lmhy-charcoal/80">
+                      {property.bedrooms} Bedrooms
+                    </span>
                   </div>
                   <div className="flex items-center">
                     <Bath className="h-5 w-5 text-lmhy-coral mr-2" />
-                    <span className="text-lmhy-charcoal/80">{property.bathrooms} Bathrooms</span>
+                    <span className="text-lmhy-charcoal/80">
+                      {property.bathrooms} Bathrooms
+                    </span>
                   </div>
                   <div className="flex items-center">
                     <Square className="h-5 w-5 text-lmhy-coral mr-2" />
@@ -109,18 +128,25 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
                   </div>
                   <div className="flex items-center">
                     <Calendar className="h-5 w-5 text-lmhy-coral mr-2" />
-                    <span className="text-lmhy-charcoal/80">Built {property.yearBuilt}</span>
+                    <span className="text-lmhy-charcoal/80">
+                      Built {property.yearBuilt}
+                    </span>
                   </div>
                 </div>
               </div>
 
               {/* RealScout Widget Integration Point */}
               <div className="bg-lmhy-coral/5 rounded-lg p-6">
-                <h3 className="text-xl font-bold text-lmhy-charcoal mb-2">Schedule a Showing</h3>
+                <h3 className="text-xl font-bold text-lmhy-charcoal mb-2">
+                  Schedule a Showing
+                </h3>
                 <p className="text-lmhy-charcoal/80 mb-4">
                   Contact us to schedule a private viewing of this property.
                 </p>
-                <Button asChild className="bg-lmhy-coral hover:bg-lmhy-coral-dark">
+                <Button
+                  asChild
+                  className="bg-lmhy-coral hover:bg-lmhy-coral-dark"
+                >
                   <a href="/contact">Contact Agent</a>
                 </Button>
               </div>
@@ -129,13 +155,18 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
             {/* Sidebar */}
             <div className="md:col-span-1">
               <div className="bg-white border border-lmhy-sand/60 rounded-lg p-6 sticky top-24">
-                <h3 className="text-xl font-bold text-lmhy-charcoal mb-4">Contact Agent</h3>
+                <h3 className="text-xl font-bold text-lmhy-charcoal mb-4">
+                  Contact Agent
+                </h3>
                 <p className="text-lmhy-charcoal/70 mb-4">Dr. Jan Duffy</p>
                 <p className="text-sm text-lmhy-charcoal/70 mb-6">
                   Berkshire Hathaway HomeServices Nevada Properties
                 </p>
                 <div className="space-y-3">
-                  <Button asChild className="w-full bg-lmhy-coral hover:bg-lmhy-coral-dark">
+                  <Button
+                    asChild
+                    className="w-full bg-lmhy-coral hover:bg-lmhy-coral-dark"
+                  >
                     <a href="tel:+17025001942">Call (702) 500-1942</a>
                   </Button>
                   <Button asChild variant="outline" className="w-full">
