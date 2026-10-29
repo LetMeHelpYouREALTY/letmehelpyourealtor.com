@@ -52,11 +52,6 @@ export default async function Home() {
       name: "Las Vegas",
       containedInPlace: { "@type": "State", name: "Nevada" },
     },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.9",
-      reviewCount: "200",
-    },
     memberOf: {
       "@type": "Organization",
       name: agentInfo.brokerage,

@@ -82,7 +82,7 @@ export default function HeroSection() {
             <strong className="text-white">500+</strong> families helped
           </span>
           <span>
-            <strong className="text-white">4.9★</strong> rating
+            <strong className="text-white">5.0★</strong> on Realtor.com
           </span>
           <span>Las Vegas · Henderson · Summerlin</span>
         </div>
