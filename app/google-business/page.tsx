@@ -113,8 +113,15 @@ export default function GoogleBusinessPage() {
                       <Star key={star} className="h-8 w-8 text-yellow-400 fill-yellow-400" />
                     ))}
                   </div>
-                  <p className="text-3xl font-bold mb-2">4.9 / 5.0</p>
-                  <p className="text-white/70 mb-6">200+ Client Reviews</p>
+                  <p className="text-3xl font-bold mb-2">5.0 / 5.0</p>
+                  <a
+                    href="https://www.realtor.com/realestateagents/63340593275bf055fedf5ff1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-white/70 mb-6 underline-offset-2 hover:underline"
+                  >
+                    50 reviews on Realtor.com
+                  </a>
                   <a
                     href={`tel:${businessInfo.phone.tel}`}
                     className="inline-block w-full bg-lmhy-coral hover:bg-lmhy-cream0 text-white px-6 py-4 rounded-lg font-bold text-lg transition-colors"

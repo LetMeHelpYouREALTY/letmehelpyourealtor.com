@@ -2,6 +2,7 @@
 
 import { Star, Quote } from "lucide-react";
 import Image from "next/image";
+import { agentStats } from "@/lib/site-config";
 
 export interface Review {
   id: number;
@@ -44,10 +45,10 @@ export const defaultReviews: Review[] = [
   },
 ];
 
-// Aggregate rating stats
+/** Mirrors `agentStats` (Realtor.com profile) — single source for the stars and count shown in the UI */
 export const aggregateRating = {
-  ratingValue: 4.9,
-  reviewCount: 500,
+  ratingValue: agentStats.averageRating,
+  reviewCount: agentStats.reviewCount,
   bestRating: 5,
   worstRating: 1,
 };
@@ -66,9 +67,11 @@ interface ReviewsSectionProps {
 }
 
 export default function ReviewsSection({
-  reviews = defaultReviews,
+  // Named testimonials are held until each one is confirmed as a real client (Oct 29, 2026).
+  // Pass `reviews` explicitly to show verified quotes.
+  reviews = [],
   title = "What Clients Say",
-  subtitle = "Real reviews from Las Vegas Valley buyers and sellers",
+  subtitle = "Read verified client reviews on Realtor.com and Google",
   googleReviewsUrl = "/google-business",
   className = "",
 }: ReviewsSectionProps) {
@@ -95,14 +98,20 @@ export default function ReviewsSection({
               ))}
             </div>
             <span className="text-lg font-semibold text-lmhy-charcoal">
-              {aggregateRating.ratingValue}
+              {aggregateRating.ratingValue.toFixed(1)}
             </span>
-            <span className="text-lmhy-charcoal/60">
-              ({aggregateRating.reviewCount}+ reviews)
-            </span>
+            <a
+              href={agentStats.reviewSourceUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-lmhy-charcoal/60 underline-offset-2 hover:underline"
+            >
+              ({aggregateRating.reviewCount} reviews on {agentStats.reviewSourceName})
+            </a>
           </div>
         </div>
 
+        {reviews.length > 0 && (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {reviews.map((review) => (
             <div
@@ -156,6 +165,7 @@ export default function ReviewsSection({
             </div>
           ))}
         </div>
+        )}
 
         {/* Google Reviews CTA */}
         <div className="text-center mt-12">

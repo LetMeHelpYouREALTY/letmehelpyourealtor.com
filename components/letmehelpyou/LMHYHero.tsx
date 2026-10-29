@@ -68,7 +68,7 @@ export default function LMHYHero({ config }: LMHYHeroProps) {
               <strong className="text-white">30+</strong> years in the Valley
             </span>
             <span>
-              <strong className="text-white">4.9★</strong> client rating
+              <strong className="text-white">5.0★</strong> on Realtor.com
             </span>
           </div>
         </div>
