@@ -150,7 +150,7 @@ export const gscPageServicesFocus: Record<GscServicePageKey, PageServicesFocusCo
     badge: "Henderson NV · Family market",
     headline: "Henderson buyer, rental & relocation services",
     intro:
-      "Henderson remains a top-performing submarket for families and investors—strong schools, Green Valley maturity, and rental demand above the metro average in 2026.",
+      "Henderson remains a top-performing submarket for families and investors—nearby public schools, Green Valley maturity, and rental demand above the metro average in 2026.",
     serviceIds: ["investment", "california-relocation", "buyer-advocacy"],
     localInsight:
       "Henderson’s stable tenant base and planned communities support consistent rental income; inbound California relocators still drive buyer demand across Green Valley and Inspirada.",
