@@ -12,7 +12,6 @@ import {
   CheckCircle, 
   MapPin,
   Shield,
-  Star,
   Clock,
   ArrowRight,
 } from "lucide-react";
@@ -80,7 +79,7 @@ const specializations = [
   },
   {
     title: "Luxury Properties ($1M+)",
-    description: "The Ridges, MacDonald Highlands, Southern Highlands, and exclusive communities",
+    description: "The Ridges, MacDonald Highlands, Southern Highlands, and other guard-gated communities",
   },
   {
     title: "New Construction",
@@ -250,8 +249,8 @@ export default function AboutPage() {
                     <div className="text-sm text-lmhy-charcoal/70">Transactions</div>
                   </div>
                   <div className="bg-lmhy-coral/5 rounded-lg p-6 text-center">
-                    <div className="text-3xl font-bold text-lmhy-coral mb-1">4.9★</div>
-                    <div className="text-sm text-lmhy-charcoal/70">Client Rating</div>
+                    <div className="text-3xl font-bold text-lmhy-coral mb-1">5.0★</div>
+                    <div className="text-sm text-lmhy-charcoal/70">Realtor.com Rating</div>
                   </div>
                 </div>
 
@@ -391,41 +390,12 @@ export default function AboutPage() {
               What Clients Say About Dr. Jan Duffy
             </h2>
             <p className="text-lmhy-charcoal/70 text-center max-w-3xl mx-auto mb-8">
-              With a 4.9-star rating and hundreds of satisfied clients, Dr. Jan has built a 
-              reputation for excellence, integrity, and personalized service.
+              5.0 stars across 50 reviews on{" "}
+              <a href="https://www.realtor.com/realestateagents/63340593275bf055fedf5ff1" target="_blank" rel="noopener noreferrer" className="underline">
+                Realtor.com
+              </a>
+              , and 500+ transactions closed in Las Vegas.
             </p>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-white border border-lmhy-sand/60 rounded-lg p-6">
-                <div className="flex items-center mb-3">
-                  <Star className="h-5 w-5 text-yellow-400" />
-                  <Star className="h-5 w-5 text-yellow-400" />
-                  <Star className="h-5 w-5 text-yellow-400" />
-                  <Star className="h-5 w-5 text-yellow-400" />
-                  <Star className="h-5 w-5 text-yellow-400" />
-                </div>
-                <p className="text-lmhy-charcoal/70 italic mb-3">
-                  "Dr. Jan made our California to Las Vegas relocation seamless. She understood 
-                  exactly what we were looking for and found us the perfect home in Summerlin. 
-                  Her knowledge of the market is exceptional."
-                </p>
-                <p className="text-lmhy-charcoal font-semibold">— Michael & Sarah T., Summerlin</p>
-              </div>
-              <div className="bg-white border border-lmhy-sand/60 rounded-lg p-6">
-                <div className="flex items-center mb-3">
-                  <Star className="h-5 w-5 text-yellow-400" />
-                  <Star className="h-5 w-5 text-yellow-400" />
-                  <Star className="h-5 w-5 text-yellow-400" />
-                  <Star className="h-5 w-5 text-yellow-400" />
-                  <Star className="h-5 w-5 text-yellow-400" />
-                </div>
-                <p className="text-lmhy-charcoal/70 italic mb-3">
-                  "As first-time home buyers, we were nervous about the process. Dr. Jan walked 
-                  us through every step, explained everything clearly, and helped us get a great 
-                  deal. Highly recommend!"
-                </p>
-                <p className="text-lmhy-charcoal font-semibold">— Jennifer & David K., Henderson</p>
-              </div>
-            </div>
           </section>
 
           {/* CTA */}
