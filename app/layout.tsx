@@ -11,6 +11,7 @@ import {
   EngagementLayer,
   GoogleAnalytics,
 } from "@/components/layouts/ClientOnlyWidgets";
+import { SpeedInsights as VercelSpeedInsights } from "@vercel/speed-insights/next";
 
 const libreBaskerville = Libre_Baskerville({
   subsets: ["latin"],
@@ -79,6 +80,7 @@ export default function RootLayout({
           <GoogleAnalytics measurementId={serverEnv.gaMeasurementId} />
         ) : null}
         <Analytics />
+        <VercelSpeedInsights />
       </body>
     </html>
   );
