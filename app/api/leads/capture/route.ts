@@ -135,41 +135,11 @@ export async function POST(request: NextRequest) {
 
     const fub = createFollowUpBossClient();
 
-    // Check for existing lead (deduplication)
-    let existingPerson = null;
-    if (data.email) {
-      existingPerson = await fub.findPerson({ email: data.email });
-    } else if (data.phone) {
-      existingPerson = await fub.findPerson({ phone: data.phone });
-    }
+    // Split a single name field into first/last for FUB
+    const fullName = (data.name || `${data.firstName || ''} ${data.lastName || ''}`).trim();
+    const [firstName, ...rest] = fullName.split(/\s+/);
+    const lastName = data.lastName || rest.join(' ') || undefined;
 
-    // Prepare person data
-    const personData: any = {
-      name: data.name || `${data.firstName || ''} ${data.lastName || ''}`.trim(),
-      emails: data.email ? [{ value: data.email }] : undefined,
-      phones: data.phone ? [{ value: data.phone }] : undefined,
-      source: enrichSource(data.source, request),
-      stage: data.stage || 'New Lead',
-      customFields: {
-        ...data.customFields,
-        propertyType: data.propertyType,
-        priceMin: data.priceMin,
-        priceMax: data.priceMax,
-        bedrooms: data.bedrooms,
-        bathrooms: data.bathrooms,
-        neighborhoods: data.neighborhoods?.join(', '),
-        timeline: data.timeline,
-        financing: data.financing,
-        preApproved: data.preApproved,
-        capturedAt: new Date().toISOString(),
-        captureUrl: request.headers.get('referer') || 'direct',
-      },
-    };
-
-    // Create or update person
-    const person = await fub.upsertPerson(personData);
-
-    // Add tags (deduped)
     const tags = Array.from(
       new Set(
         [
@@ -182,60 +152,51 @@ export async function POST(request: NextRequest) {
       ),
     );
 
-    for (const tag of tags) {
-      try {
-        await fub.addTag(person.id, tag);
-      } catch (error) {
-        console.error(`Error adding tag "${tag}":`, error);
-      }
-    }
+    // Extra details go in the event description so the agent sees them
+    const details = [
+      buildSearchCriteria(data),
+      data.preApproved !== undefined ? `Pre-approved: ${data.preApproved ? 'Yes' : 'No'}` : null,
+      `Page: ${request.headers.get('referer') || 'direct'}`,
+    ].filter(Boolean).join('\n');
 
-    // Create initial event with message
-    if (data.message) {
-      await fub.createEvent({
-        source: 'website',
-        type: 'Inbound Lead',
-        message: `Lead message: ${data.message}`,
-        personId: person.id,
-        data: {
-          formType: data.source || 'contact-form',
-          url: request.headers.get('referer'),
-        },
-      });
-    }
+    // Send the lead with POST /events, FUB's supported way to add website
+    // leads (dedupes by email/phone, assigns the agent, runs automations).
+    // The old PUT /people call is not a FUB endpoint and returned 405.
+    const { status, person } = await fub.sendLead({
+      source: enrichSource(data.source, request),
+      system: 'letmehelpyourealtor.com',
+      type: 'General Inquiry',
+      message: data.message || 'Website form submission',
+      description: details,
+      person: {
+        firstName: data.firstName || firstName || undefined,
+        lastName,
+        emails: data.email ? [{ value: data.email }] : undefined,
+        phones: data.phone ? [{ value: data.phone }] : undefined,
+        tags,
+      },
+    });
 
-    // Build search criteria summary
-    const searchCriteria = buildSearchCriteria(data);
-    if (searchCriteria) {
-      await fub.createEvent({
-        source: 'website',
-        type: 'Property Search',
-        message: `Search criteria:\n${searchCriteria}`,
-        personId: person.id,
-        data: {
-          priceMin: data.priceMin,
-          priceMax: data.priceMax,
-          bedrooms: data.bedrooms,
-          bathrooms: data.bathrooms,
-          neighborhoods: data.neighborhoods,
-        },
-      });
+    if (status === 204 || !person) {
+      // FUB accepted the request but the lead flow for this source is archived
+      console.warn('[Lead Capture] FUB lead flow for this source is archived; lead ignored');
     }
+    const existingPerson = status === 200;
 
     void logLeadToNotion({
-      name: personData.name || 'Website lead',
+      name: fullName || 'Website lead',
       email: data.email,
       phone: data.phone,
       source: data.source,
       message: data.message,
-      fubPersonId: person.id,
+      fubPersonId: person?.id,
       tags,
     }).catch((err) => console.error('[Notion] lead log error', err));
 
     return NextResponse.json(
       {
         success: true,
-        personId: person.id,
+        personId: person?.id ?? null,
         isNew: !existingPerson,
         message: existingPerson 
           ? 'Lead updated successfully' 

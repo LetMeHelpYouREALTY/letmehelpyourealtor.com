@@ -48,6 +48,22 @@ export interface FUBEvent {
   data?: Record<string, any>;
 }
 
+export interface FUBLeadEvent {
+  source: string;
+  system?: string;
+  type: 'Registration' | 'General Inquiry' | 'Property Inquiry' | 'Seller Inquiry' | 'Property Search' | 'Visited Open House';
+  message?: string;
+  description?: string;
+  person: {
+    firstName?: string;
+    lastName?: string;
+    emails?: Array<{ value: string }>;
+    phones?: Array<{ value: string }>;
+    tags?: string[];
+    [customField: `custom${string}`]: unknown;
+  };
+}
+
 export interface FUBListOptions {
   limit?: number; // Max 100, recommended 25-50
   offset?: number;
@@ -149,11 +165,19 @@ export class FollowUpBossClient {
       ),
     };
 
-    // Use PUT for upsert
-    const response = await this.request('/people', {
-      method: 'PUT',
-      body: JSON.stringify(normalizedData),
-    });
+    // FUB has no PUT /people (that returned 405). Update the match, or create.
+    const email = normalizedData.emails?.[0]?.value;
+    const phone = normalizedData.phones?.[0]?.value;
+    const existing = await this.findPerson({ email, phone });
+    const response = existing
+      ? await this.request(`/people/${existing.id}?mergeTags=true`, {
+          method: 'PUT',
+          body: JSON.stringify(normalizedData),
+        })
+      : await this.request('/people?deduplicate=true', {
+          method: 'POST',
+          body: JSON.stringify(normalizedData),
+        });
 
     // Invalidate cache
     this.clearCache('people:');
@@ -168,9 +192,9 @@ export class FollowUpBossClient {
    * Add a tag to a person
    */
   async addTag(personId: number, tag: string): Promise<void> {
-    await this.request(`/people/${personId}/tags`, {
-      method: 'POST',
-      body: JSON.stringify({ tag }),
+    await this.request(`/people/${personId}?mergeTags=true`, {
+      method: 'PUT',
+      body: JSON.stringify({ tags: [tag] }),
     });
 
     this.clearCache(`person:${personId}`);
@@ -197,6 +221,23 @@ export class FollowUpBossClient {
       method: 'POST',
       body: JSON.stringify(event),
     }, 'events');
+  }
+
+  /**
+   * Send a website lead the way FUB requires: POST /events.
+   * FUB de-duplicates by email/phone, assigns the agent, and runs
+   * action plans and automations. 201 = new person, 200 = existing person,
+   * 204 = the lead flow for this source is archived (lead ignored).
+   */
+  async sendLead(lead: FUBLeadEvent): Promise<{ status: number; person: FUBPerson | null }> {
+    const { status, body } = await this.request(
+      '/events',
+      { method: 'POST', body: JSON.stringify(lead) },
+      'events',
+      true
+    );
+    this.clearCache('people:');
+    return { status, person: body };
   }
 
   /**
@@ -247,7 +288,8 @@ export class FollowUpBossClient {
   private async request(
     path: string,
     options: RequestInit = {},
-    context: 'global' | 'events' | 'people' = 'global'
+    context: 'global' | 'events' | 'people' = 'global',
+    withStatus = false
   ): Promise<any> {
     // Check rate limit
     if (this.config.enableRateLimiting) {
@@ -288,15 +330,24 @@ export class FollowUpBossClient {
         // Handle other errors
         if (!response.ok) {
           const error = await response.json().catch(() => ({}));
-          throw new Error(
-            `FUB API Error (${response.status}): ${error.message || response.statusText}`
-          );
+          const err = new Error(
+            `FUB API Error (${response.status}): ${error.errorMessage || error.message || response.statusText}`
+          ) as Error & { status?: number };
+          err.status = response.status;
+          throw err;
         }
 
-        return await response.json();
+        // 201/204 can come back with an empty body
+        const text = await response.text();
+        const body = text ? JSON.parse(text) : null;
+        if (withStatus) return { status: response.status, body };
+        return body;
       } catch (error) {
         lastError = error as Error;
-        
+        const status = (error as { status?: number }).status;
+        // Client errors (other than rate limits) will not succeed on retry
+        if (status && status >= 400 && status < 500) break;
+
         if (attempt < (this.config.retryAttempts || 3)) {
           await this.sleep(delay);
           delay *= 2;
